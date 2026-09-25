@@ -1,0 +1,21 @@
+{
+  "name": "types-mediawiki-response-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/generate-api.ts && node scripts/generate-hero.ts && rspress dev",
+    "build": "node scripts/generate-api.ts && node scripts/generate-hero.ts && rspress build",
+    "preview": "rspress preview"
+  },
+  "devDependencies": {
+    "@rspress/core": "^2.0.22",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "hast-util-to-html": "^9.0.5",
+    "shiki": "^4.4.3",
+    "typedoc": "0.28.20",
+    "typedoc-plugin-markdown": "4.13.1",
+    "typescript": "^6.0.3"
+  }
+}

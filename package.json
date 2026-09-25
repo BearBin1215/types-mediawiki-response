@@ -1,0 +1,71 @@
+{
+  "name": "types-mediawiki-response",
+  "version": "1.0.0-alpha.1",
+  "description": "TypeScript type definitions for MediaWiki Action API responses",
+  "keywords": [
+    "action-api",
+    "api-response",
+    "mediawiki",
+    "types",
+    "typescript",
+    "wiki"
+  ],
+  "homepage": "https://bearbin1215.github.io/types-mediawiki-response/",
+  "bugs": {
+    "url": "https://github.com/BearBin1215/types-mediawiki-response/issues"
+  },
+  "license": "MIT",
+  "author": "BearBin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BearBin1215/types-mediawiki-response.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh.md"
+  ],
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    },
+    "./ext/*": {
+      "types": "./dist/extensions/*.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "pnpm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "test": "pnpm run typecheck",
+    "docs:dev": "pnpm --filter types-mediawiki-response-docs dev",
+    "docs:build": "pnpm --filter types-mediawiki-response-docs build",
+    "docs:preview": "pnpm --filter types-mediawiki-response-docs preview"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "@types/node": "^20.19.43",
+    "bumpp": "^12.3.0",
+    "expect-type": "1.4.0",
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.34.3",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
