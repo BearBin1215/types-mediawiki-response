@@ -1,0 +1,305 @@
+{
+  "errors": [
+    {
+      "code": "badvalue",
+      "key": "paramvalidator-badvalue-enumnotmulti",
+      "params": [
+        {
+          "plaintext": "action"
+        },
+        {
+          "plaintext": "nonexistentaction"
+        },
+        {
+          "list": [
+            {
+              "plaintext": "login"
+            },
+            {
+              "plaintext": "clientlogin"
+            },
+            {
+              "plaintext": "logout"
+            },
+            {
+              "plaintext": "createaccount"
+            },
+            {
+              "plaintext": "linkaccount"
+            },
+            {
+              "plaintext": "unlinkaccount"
+            },
+            {
+              "plaintext": "changeauthenticationdata"
+            },
+            {
+              "plaintext": "removeauthenticationdata"
+            },
+            {
+              "plaintext": "resetpassword"
+            },
+            {
+              "plaintext": "query"
+            },
+            {
+              "plaintext": "expandtemplates"
+            },
+            {
+              "plaintext": "parse"
+            },
+            {
+              "plaintext": "stashedit"
+            },
+            {
+              "plaintext": "opensearch"
+            },
+            {
+              "plaintext": "feedcontributions"
+            },
+            {
+              "plaintext": "feedrecentchanges"
+            },
+            {
+              "plaintext": "feedwatchlist"
+            },
+            {
+              "plaintext": "help"
+            },
+            {
+              "plaintext": "paraminfo"
+            },
+            {
+              "plaintext": "rsd"
+            },
+            {
+              "plaintext": "compare"
+            },
+            {
+              "plaintext": "checktoken"
+            },
+            {
+              "plaintext": "cspreport"
+            },
+            {
+              "plaintext": "validatepassword"
+            },
+            {
+              "plaintext": "purge"
+            },
+            {
+              "plaintext": "setnotificationtimestamp"
+            },
+            {
+              "plaintext": "rollback"
+            },
+            {
+              "plaintext": "delete"
+            },
+            {
+              "plaintext": "undelete"
+            },
+            {
+              "plaintext": "protect"
+            },
+            {
+              "plaintext": "block"
+            },
+            {
+              "plaintext": "unblock"
+            },
+            {
+              "plaintext": "move"
+            },
+            {
+              "plaintext": "edit"
+            },
+            {
+              "plaintext": "upload"
+            },
+            {
+              "plaintext": "filerevert"
+            },
+            {
+              "plaintext": "emailuser"
+            },
+            {
+              "plaintext": "watch"
+            },
+            {
+              "plaintext": "patrol"
+            },
+            {
+              "plaintext": "import"
+            },
+            {
+              "plaintext": "clearhasmsg"
+            },
+            {
+              "plaintext": "userrights"
+            },
+            {
+              "plaintext": "options"
+            },
+            {
+              "plaintext": "imagerotate"
+            },
+            {
+              "plaintext": "revisiondelete"
+            },
+            {
+              "plaintext": "managetags"
+            },
+            {
+              "plaintext": "tag"
+            },
+            {
+              "plaintext": "mergehistory"
+            },
+            {
+              "plaintext": "setpagelanguage"
+            },
+            {
+              "plaintext": "changecontentmodel"
+            },
+            {
+              "plaintext": "acquiretempusername"
+            },
+            {
+              "plaintext": "abusefilterchecksyntax"
+            },
+            {
+              "plaintext": "abusefilterevalexpression"
+            },
+            {
+              "plaintext": "abusefilterunblockautopromote"
+            },
+            {
+              "plaintext": "abusefiltercheckmatch"
+            },
+            {
+              "plaintext": "abuselogprivatedetails"
+            },
+            {
+              "plaintext": "review"
+            },
+            {
+              "plaintext": "flagconfig"
+            },
+            {
+              "plaintext": "templatedata"
+            },
+            {
+              "plaintext": "thank"
+            },
+            {
+              "plaintext": "echomarkread"
+            },
+            {
+              "plaintext": "echomarkseen"
+            },
+            {
+              "plaintext": "echocreateevent"
+            },
+            {
+              "plaintext": "echoarticlereminder"
+            },
+            {
+              "plaintext": "echomute"
+            },
+            {
+              "plaintext": "spamblacklist"
+            },
+            {
+              "plaintext": "titleblacklist"
+            },
+            {
+              "plaintext": "categorytree"
+            },
+            {
+              "plaintext": "visualeditor"
+            },
+            {
+              "plaintext": "visualeditoredit"
+            },
+            {
+              "plaintext": "editcheckreferenceurl"
+            },
+            {
+              "plaintext": "discussiontoolscompare"
+            },
+            {
+              "plaintext": "discussiontoolsedit"
+            },
+            {
+              "plaintext": "discussiontoolsfindcomment"
+            },
+            {
+              "plaintext": "discussiontoolsgetsubscriptions"
+            },
+            {
+              "plaintext": "discussiontoolspageinfo"
+            },
+            {
+              "plaintext": "discussiontoolspreview"
+            },
+            {
+              "plaintext": "discussiontoolssubscribe"
+            },
+            {
+              "plaintext": "scribunto-console"
+            },
+            {
+              "plaintext": "oathvalidate"
+            },
+            {
+              "plaintext": "timedtext"
+            },
+            {
+              "plaintext": "transcodereset"
+            },
+            {
+              "plaintext": "massmessage"
+            },
+            {
+              "plaintext": "editmassmessagelist"
+            },
+            {
+              "plaintext": "shortenurl"
+            },
+            {
+              "plaintext": "globalpreferences"
+            },
+            {
+              "plaintext": "globalpreferenceoverrides"
+            },
+            {
+              "plaintext": "sitematrix"
+            },
+            {
+              "plaintext": "wikilove"
+            },
+            {
+              "plaintext": "globalblock"
+            },
+            {
+              "plaintext": "stabilize"
+            },
+            {
+              "plaintext": "echopushsubscriptions"
+            },
+            {
+              "plaintext": "discussiontoolsthank"
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "num": 93
+        }
+      ],
+      "module": "main"
+    }
+  ],
+  "docref": "See http://localhost:8080/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
+}

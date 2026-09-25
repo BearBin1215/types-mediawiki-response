@@ -1,0 +1,15 @@
+{
+  "warnings": [
+    {
+      "code": "unrecognizedparams",
+      "text": "Unrecognized parameter: unknownparam.",
+      "module": "main"
+    }
+  ],
+  "batchcomplete": true,
+  "query": {
+    "tokens": {
+      "csrftoken": "+\\"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "code": "badvalue",
+      "text": "Unrecognized value for parameter \"action\": nonexistentaction.",
+      "module": "main"
+    }
+  ],
+  "docref": "See https://www.mediawiki.org/w/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes.",
+  "servedby": "mw-api-ext.codfw.main-6db95f5649-zpdbx"
+}
