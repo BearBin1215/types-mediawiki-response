@@ -1,0 +1,255 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 600,
+        "ns": 6,
+        "title": "File:Gap exif gps.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2026-10-02T10:16:30Z",
+            "user": "Capadmin",
+            "userid": 3,
+            "size": 1730,
+            "width": 64,
+            "height": 48,
+            "canonicaltitle": "File:Gap exif gps.jpg",
+            "url": "http://localhost:8080/images/1/19/Gap_exif_gps.jpg",
+            "descriptionurl": "http://localhost:8080/index.php/File:Gap_exif_gps.jpg",
+            "descriptionshorturl": "http://localhost:8080/index.php?curid=600",
+            "sha1": "5b00a9f3d7cb622fd72329f2289eb03b09cef2d0",
+            "metadata": [
+              {
+                "name": "ImageDescription",
+                "value": "Fixture GPS sample"
+              },
+              {
+                "name": "XResolution",
+                "value": "96/1"
+              },
+              {
+                "name": "YResolution",
+                "value": "96/1"
+              },
+              {
+                "name": "ResolutionUnit",
+                "value": 2
+              },
+              {
+                "name": "Artist",
+                "value": "Fixture Author"
+              },
+              {
+                "name": "YCbCrPositioning",
+                "value": 1
+              },
+              {
+                "name": "Copyright",
+                "value": "Fixture Copyright"
+              },
+              {
+                "name": "ExposureTime",
+                "value": "1/250"
+              },
+              {
+                "name": "FNumber",
+                "value": "14/5"
+              },
+              {
+                "name": "ISOSpeedRatings",
+                "value": 200
+              },
+              {
+                "name": "ExifVersion",
+                "value": "0232"
+              },
+              {
+                "name": "DateTimeOriginal",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "DateTimeDigitized",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "ComponentsConfiguration",
+                "value": "\n#1\n#2\n#3\n#0"
+              },
+              {
+                "name": "FocalLength",
+                "value": "24/1"
+              },
+              {
+                "name": "ColorSpace",
+                "value": 65535
+              },
+              {
+                "name": "FocalLengthIn35mmFilm",
+                "value": 36
+              },
+              {
+                "name": "GPSLatitude",
+                "value": 48.8566
+              },
+              {
+                "name": "GPSLongitude",
+                "value": 2.3522000000000003
+              },
+              {
+                "name": "GPSAltitude",
+                "value": 35
+              },
+              {
+                "name": "GPSImgDirectionRef",
+                "value": "M"
+              },
+              {
+                "name": "GPSImgDirection",
+                "value": "180/1"
+              },
+              {
+                "name": "GPSVersionID",
+                "value": "2.3.0.0"
+              },
+              {
+                "name": "MEDIAWIKI_EXIF_VERSION",
+                "value": 1
+              }
+            ],
+            "commonmetadata": [
+              {
+                "name": "ImageDescription",
+                "value": "Fixture GPS sample"
+              },
+              {
+                "name": "XResolution",
+                "value": "96/1"
+              },
+              {
+                "name": "YResolution",
+                "value": "96/1"
+              },
+              {
+                "name": "ResolutionUnit",
+                "value": 2
+              },
+              {
+                "name": "Artist",
+                "value": "Fixture Author"
+              },
+              {
+                "name": "YCbCrPositioning",
+                "value": 1
+              },
+              {
+                "name": "Copyright",
+                "value": "Fixture Copyright"
+              },
+              {
+                "name": "ExposureTime",
+                "value": "1/250"
+              },
+              {
+                "name": "FNumber",
+                "value": "14/5"
+              },
+              {
+                "name": "ISOSpeedRatings",
+                "value": 200
+              },
+              {
+                "name": "ExifVersion",
+                "value": "0232"
+              },
+              {
+                "name": "DateTimeOriginal",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "DateTimeDigitized",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "ComponentsConfiguration",
+                "value": [
+                  {
+                    "name": 0,
+                    "value": 1
+                  },
+                  {
+                    "name": 1,
+                    "value": 2
+                  },
+                  {
+                    "name": 2,
+                    "value": 3
+                  },
+                  {
+                    "name": 3,
+                    "value": 0
+                  },
+                  {
+                    "name": "_type",
+                    "value": "ol"
+                  }
+                ]
+              },
+              {
+                "name": "FocalLength",
+                "value": "24/1"
+              },
+              {
+                "name": "ColorSpace",
+                "value": 65535
+              },
+              {
+                "name": "FocalLengthIn35mmFilm",
+                "value": 36
+              },
+              {
+                "name": "GPSLatitude",
+                "value": 48.8566
+              },
+              {
+                "name": "GPSLongitude",
+                "value": 2.3522000000000003
+              },
+              {
+                "name": "GPSAltitude",
+                "value": 35
+              },
+              {
+                "name": "GPSImgDirectionRef",
+                "value": "M"
+              },
+              {
+                "name": "GPSImgDirection",
+                "value": "180/1"
+              },
+              {
+                "name": "GPSVersionID",
+                "value": "2.3.0.0"
+              }
+            ],
+            "extmetadata": {
+              "DateTime": {
+                "value": "2026-10-02T10:16:30Z",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Gap exif gps",
+                "source": "mediawiki-metadata"
+              }
+            },
+            "mime": "image/jpeg",
+            "mediatype": "BITMAP",
+            "bitdepth": 8
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 17867,
+        "ns": 0,
+        "title": "London",
+        "wbentityusage": {
+          "Q84": {
+            "aspects": ["CQR", "D.en", "O", "S", "T"],
+            "url": "https://www.wikidata.org/wiki/Special:EntityPage/Q84"
+          }
+        }
+      }
+    ]
+  }
+}

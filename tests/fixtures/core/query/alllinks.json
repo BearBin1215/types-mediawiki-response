@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "alcontinue": "6|23",
+    "continue": "-||"
+  },
+  "query": {
+    "alllinks": [
+      {
+        "fromid": 8,
+        "ns": 0,
+        "title": "MT2 1790361822"
+      },
+      {
+        "fromid": 14,
+        "ns": 0,
+        "title": "MT2 1790361887"
+      },
+      {
+        "fromid": 18,
+        "ns": 0,
+        "title": "MT3 1790361887"
+      }
+    ]
+  }
+}

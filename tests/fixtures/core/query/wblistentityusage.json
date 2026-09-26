@@ -1,0 +1,22 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "wbleucontinue": "8221|Q4|S",
+    "continue": "-||"
+  },
+  "query": {
+    "entityusage": [
+      {
+        "ns": 0,
+        "title": "Death",
+        "pageid": 8221,
+        "wblistentityusage": {
+          "Q4": {
+            "aspects": ["CQR", "D.en", "O"],
+            "url": "https://www.wikidata.org/wiki/Special:EntityPage/Q4"
+          }
+        }
+      }
+    ]
+  }
+}

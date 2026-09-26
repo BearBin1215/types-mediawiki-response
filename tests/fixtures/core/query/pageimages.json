@@ -1,0 +1,18 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Wikimedia_Hackathon_2026_group_photo_01.jpg/120px-Wikimedia_Hackathon_2026_group_photo_01.jpg?utm_source=www.mediawiki.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 120,
+          "height": 80
+        },
+        "pageimage": "Wikimedia_Hackathon_2026_group_photo_01.jpg"
+      }
+    ]
+  }
+}

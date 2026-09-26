@@ -1,0 +1,36 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 398,
+        "ns": 0,
+        "title": "Deleted revisions target 1790422997240",
+        "deletedrevisions": [
+          {
+            "revid": 645,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T11:43:25Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "size": 19,
+                "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ]
+      }
+    ]
+  }
+}

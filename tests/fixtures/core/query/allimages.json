@@ -1,0 +1,71 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "aicontinue": "WikiFarmChanges.png",
+    "continue": "-||"
+  },
+  "query": {
+    "allimages": [
+      {
+        "timestamp": "2010-12-05T09:37:55Z",
+        "user": "Dantman",
+        "userid": 8614,
+        "size": 5026,
+        "width": 150,
+        "height": 150,
+        "comment": "{{Information\n|Description = Logo for Daniel Freisen's Wiki-Tools project.\n|Source      = \n|Date        = \n|Author      = [[User:Dantman|Daniel Friesen]]\n|Permission  = Copyright Daniel Friesen, uploaded by author for use in anything making reference to t",
+        "canonicaltitle": "File:Wiki-Tools.svg",
+        "url": "https://upload.wikimedia.org/wikipedia/mediawiki/6/69/Wiki-Tools.svg?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://www.mediawiki.org/wiki/File:Wiki-Tools.svg",
+        "descriptionshorturl": "https://www.mediawiki.org/w/index.php?curid=53339",
+        "sha1": "7486ef421847a9849ebabf94eb67cf21822e1609",
+        "mime": "image/svg+xml",
+        "mediatype": "DRAWING",
+        "bitdepth": 0,
+        "name": "Wiki-Tools.svg",
+        "ns": 6,
+        "title": "File:Wiki-Tools.svg"
+      },
+      {
+        "timestamp": "2012-10-12T20:50:47Z",
+        "user": "Cgeroux",
+        "userid": 77168,
+        "size": 18766,
+        "width": 805,
+        "height": 257,
+        "comment": "Error when using the math extension",
+        "canonicaltitle": "File:Wiki-math-error.png",
+        "url": "https://upload.wikimedia.org/wikipedia/mediawiki/1/12/Wiki-math-error.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://www.mediawiki.org/wiki/File:Wiki-math-error.png",
+        "descriptionshorturl": "https://www.mediawiki.org/w/index.php?curid=100837",
+        "sha1": "00952069469ccedc21ffc369fdde6484e8570c9a",
+        "mime": "image/png",
+        "mediatype": "BITMAP",
+        "bitdepth": 8,
+        "name": "Wiki-math-error.png",
+        "ns": 6,
+        "title": "File:Wiki-math-error.png"
+      },
+      {
+        "timestamp": "2015-02-27T16:48:36Z",
+        "user": "Kaldari",
+        "userid": 31661,
+        "size": 31040,
+        "width": 135,
+        "height": 135,
+        "comment": "Reverted to version as of 19:38, 6 September 2005",
+        "canonicaltitle": "File:Wiki.png",
+        "url": "https://upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://www.mediawiki.org/wiki/File:Wiki.png",
+        "descriptionshorturl": "https://www.mediawiki.org/w/index.php?curid=1345",
+        "sha1": "42fff239b5cd83bf3814f2556bae36801587e9be",
+        "mime": "image/png",
+        "mediatype": "BITMAP",
+        "bitdepth": 8,
+        "name": "Wiki.png",
+        "ns": 6,
+        "title": "File:Wiki.png"
+      }
+    ]
+  }
+}

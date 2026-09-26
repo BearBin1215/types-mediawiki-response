@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "rncontinue": "0.045571002965|0.086889066764|17|0",
+    "continue": "-||"
+  },
+  "query": {
+    "random": [
+      {
+        "id": 85,
+        "ns": 0,
+        "title": "MT3 1790390394775"
+      },
+      {
+        "id": 136,
+        "ns": 0,
+        "title": "Flagged revs probe"
+      },
+      {
+        "id": 133,
+        "ns": 0,
+        "title": "Delete target 1790394686603"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "Main Page",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-09-25T18:39:26Z",
+        "lastrevid": 1,
+        "length": 755,
+        "new": true,
+        "watched": false,
+        "watchers": 0,
+        "visitingwatchers": 0,
+        "notificationtimestamp": ""
+      },
+      {
+        "pageid": 380,
+        "ns": 0,
+        "title": "Fixture edit target 1790422997240",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-09-26T11:43:20Z",
+        "lastrevid": 617,
+        "length": 64,
+        "watched": true,
+        "watchers": 1,
+        "visitingwatchers": 1,
+        "notificationtimestamp": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"batchcomplete":true,"query":{"globalblocks":[{"id":"2","address":"10.255.2.0/24","by":"Admin","bywiki":"wiki141","timestamp":"2026-10-02T11:16:35Z","expiry":"infinity","reason":"Fixture global range block"},{"id":"1","address":"10.255.1.2","by":"Admin","bywiki":"wiki141","timestamp":"2026-10-02T11:16:34Z","expiry":"infinity","reason":"Fixture global block"}]}}

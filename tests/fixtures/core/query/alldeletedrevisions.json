@@ -1,0 +1,146 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "adrcontinue": "0|Deleted_revisions_target_1790419669797|20260926104757|24",
+    "continue": "-||"
+  },
+  "query": {
+    "alldeletedrevisions": [
+      {
+        "pageid": 398,
+        "revisions": [
+          {
+            "revid": 645,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T11:43:25Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422997240"
+      },
+      {
+        "pageid": 377,
+        "revisions": [
+          {
+            "revid": 611,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T11:41:44Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422895781"
+      },
+      {
+        "pageid": 356,
+        "revisions": [
+          {
+            "revid": 577,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T11:40:17Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422809652"
+      },
+      {
+        "pageid": 334,
+        "revisions": [
+          {
+            "revid": 542,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T11:26:33Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790421984253"
+      },
+      {
+        "pageid": 313,
+        "revisions": [
+          {
+            "revid": 508,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "timestamp": "2026-09-26T10:48:45Z",
+            "size": 19,
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790419716433"
+      }
+    ]
+  }
+}

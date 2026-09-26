@@ -1,0 +1,89 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "redirects": [
+      {
+        "ns": 0,
+        "title": "Audit probe redirect",
+        "pageid": 521,
+        "size": 30,
+        "wordcount": 4,
+        "snippet": "#REDIRECT [[<span class=\"searchmatch\">Audit</span> <span class=\"searchmatch\">probe</span> link]]\n",
+        "timestamp": "2026-09-27T17:11:05Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 4,
+        "from": "Audit probe redirect",
+        "to": "Audit probe link"
+      }
+    ],
+    "pages": [
+      {
+        "pageid": 517,
+        "ns": 0,
+        "title": "Audit probe source",
+        "size": 298,
+        "wordcount": 36,
+        "snippet": "=[[<span class=\"searchmatch\">Audit</span> <span class=\"searchmatch\">probe</span> display]]==\n{{DEFAULTSORT:<span class=\"searchmatch\">Probe</span>, <span class=\"searchmatch\">Audit</span>}}\n",
+        "timestamp": "2026-09-27T17:11:04Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 1
+      },
+      {
+        "pageid": 518,
+        "ns": 0,
+        "title": "Audit probe link",
+        "size": 39,
+        "wordcount": 5,
+        "snippet": "Linked target. [[Category:<span class=\"searchmatch\">Audit</span> <span class=\"searchmatch\">probe</span>]]\n",
+        "timestamp": "2026-09-27T17:11:05Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 2
+      },
+      {
+        "pageid": 519,
+        "ns": 0,
+        "title": "Audit probe copy",
+        "size": 67,
+        "wordcount": 10,
+        "snippet": "Same links as source. [[<span class=\"searchmatch\">Audit</span> <span class=\"searchmatch\">probe</span> link]] [[Category:<span class=\"searchmatch\">Audit</span> <span class=\"searchmatch\">probe</span>]]\n",
+        "timestamp": "2026-09-27T17:11:05Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 3
+      },
+      {
+        "pageid": 524,
+        "ns": 0,
+        "title": "Audit probe display",
+        "size": 19,
+        "wordcount": 2,
+        "snippet": "",
+        "timestamp": "2026-09-27T17:11:05Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 5
+      },
+      {
+        "pageid": 525,
+        "ns": 0,
+        "title": "Audit probe stub",
+        "size": 12,
+        "wordcount": 3,
+        "snippet": "",
+        "timestamp": "2026-09-27T17:11:05Z",
+        "titlesnippet": "",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 6
+      }
+    ]
+  }
+}

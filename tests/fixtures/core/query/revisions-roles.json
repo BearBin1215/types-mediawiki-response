@@ -1,0 +1,32 @@
+{
+  "continue": {
+    "rvcontinue": "20231024172057|6167770",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "revisions": [
+          {
+            "revid": 6287429,
+            "parentid": 6167770,
+            "timestamp": "2023-12-29T18:14:25Z",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "size": 250,
+                "sha1": "793751947729f922bfded02904a3e63efeb7ea22",
+                "contentmodel": "wikitext"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

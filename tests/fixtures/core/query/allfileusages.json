@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "afcontinue": "18626|18669",
+    "continue": "-||"
+  },
+  "query": {
+    "allfileusages": [
+      {
+        "fromid": 18666,
+        "ns": 6,
+        "title": "File:Foo.jpg"
+      },
+      {
+        "fromid": 18667,
+        "ns": 6,
+        "title": "File:Foo.jpg"
+      },
+      {
+        "fromid": 18668,
+        "ns": 6,
+        "title": "File:Foo.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "accontinue": "$wgSMTP/en",
+    "continue": "-||"
+  },
+  "query": {
+    "allcategories": [
+      {
+        "category": "$wgSMTP",
+        "size": 7,
+        "pages": 7,
+        "files": 0,
+        "subcats": 0,
+        "hidden": false
+      },
+      {
+        "category": "$wgSMTP/cs",
+        "size": 1,
+        "pages": 1,
+        "files": 0,
+        "subcats": 0,
+        "hidden": false
+      },
+      {
+        "category": "$wgSMTP/de",
+        "size": 1,
+        "pages": 1,
+        "files": 0,
+        "subcats": 0,
+        "hidden": false
+      }
+    ]
+  }
+}

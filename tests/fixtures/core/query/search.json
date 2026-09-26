@@ -1,0 +1,47 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "sroffset": 3,
+    "continue": "-||"
+  },
+  "query": {
+    "searchinfo": {
+      "totalhits": 19144
+    },
+    "search": [
+      {
+        "ns": 0,
+        "title": "MediaWiki",
+        "pageid": 1,
+        "size": 250,
+        "wordcount": 295,
+        "snippet": "The <span class=\"searchmatch\">MediaWiki</span> software is used by tens of thousands of websites and thousands of companies and organisations. It powers Wikipedia and also this website",
+        "timestamp": "2023-12-29T18:14:25Z",
+        "titlesnippet": "<span class=\"searchmatch\">MediaWiki</span>",
+        "categorysnippet": ""
+      },
+      {
+        "ns": 0,
+        "title": "MediaWiki-Vagrant",
+        "pageid": 116892,
+        "size": 72949,
+        "wordcount": 6399,
+        "snippet": "corresponds to the <span class=\"searchmatch\">MediaWiki</span>-Vagrant folder on your host machine, and its contents is shared. <span class=\"searchmatch\">Media</span><span class=\"searchmatch\">Wiki&#039;s</span> code is installed in /vagrant/<span class=\"searchmatch\">mediawiki</span>. This allows",
+        "timestamp": "2026-05-31T21:48:22Z",
+        "titlesnippet": "<span class=\"searchmatch\">MediaWiki</span>-Vagrant",
+        "categorysnippet": "<span class=\"searchmatch\">MediaWiki</span>-Vagrant"
+      },
+      {
+        "ns": 0,
+        "title": "How to become a MediaWiki hacker",
+        "pageid": 15934,
+        "size": 22199,
+        "wordcount": 2505,
+        "snippet": "skills needed to contribute to development of <span class=\"searchmatch\">MediaWiki</span> core and <span class=\"searchmatch\">MediaWiki</span> extensions. Contributing to <span class=\"searchmatch\">MediaWiki</span> is often difficult, so if you would like to",
+        "timestamp": "2026-09-18T21:16:28Z",
+        "titlesnippet": "How to become a <span class=\"searchmatch\">MediaWiki</span> hacker",
+        "categorysnippet": "<span class=\"searchmatch\">MediaWiki</span> development"
+      }
+    ]
+  }
+}

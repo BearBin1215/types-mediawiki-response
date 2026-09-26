@@ -1,0 +1,42 @@
+{
+  "continue": {
+    "rdcontinue": "22538",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "redirects": [
+          {
+            "pageid": 1423,
+            "ns": 0,
+            "title": "Main Page"
+          },
+          {
+            "pageid": 3513,
+            "ns": 0,
+            "title": "MediaWiki/"
+          },
+          {
+            "pageid": 4092,
+            "ns": 0,
+            "title": "Mediawiki"
+          },
+          {
+            "pageid": 6964,
+            "ns": 0,
+            "title": "Current events"
+          },
+          {
+            "pageid": 7102,
+            "ns": 0,
+            "title": "Main page"
+          }
+        ]
+      }
+    ]
+  }
+}

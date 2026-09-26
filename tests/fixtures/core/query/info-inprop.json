@@ -1,0 +1,99 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "ns": 8,
+        "title": "MediaWiki:Vector.js",
+        "missing": true,
+        "known": true,
+        "contentmodel": "javascript",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "protection": [],
+        "restrictiontypes": [
+          "create"
+        ],
+        "associatedpage": "MediaWiki talk:Vector.js",
+        "fullurl": "https://www.mediawiki.org/wiki/MediaWiki:Vector.js",
+        "editurl": "https://www.mediawiki.org/w/index.php?title=MediaWiki:Vector.js&action=edit",
+        "canonicalurl": "https://www.mediawiki.org/wiki/MediaWiki:Vector.js",
+        "displaytitle": "MediaWiki:Vector.js"
+      },
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-09-24T19:59:24Z",
+        "lastrevid": 6287429,
+        "length": 250,
+        "protection": [
+          {
+            "type": "edit",
+            "level": "sysop",
+            "expiry": "infinity"
+          },
+          {
+            "type": "move",
+            "level": "sysop",
+            "expiry": "infinity"
+          }
+        ],
+        "restrictiontypes": [
+          "edit",
+          "move"
+        ],
+        "talkid": 1139045,
+        "associatedpage": "Talk:MediaWiki",
+        "fullurl": "https://www.mediawiki.org/wiki/MediaWiki",
+        "editurl": "https://www.mediawiki.org/w/index.php?title=MediaWiki&action=edit",
+        "canonicalurl": "https://www.mediawiki.org/wiki/MediaWiki",
+        "displaytitle": "MediaWiki",
+        "linkclasses": []
+      },
+      {
+        "pageid": 1139045,
+        "ns": 1,
+        "title": "Talk:MediaWiki",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-09-25T03:06:23Z",
+        "lastrevid": 8589242,
+        "length": 34,
+        "redirect": true,
+        "protection": [
+          {
+            "type": "edit",
+            "level": "autoconfirmed",
+            "expiry": "infinity"
+          },
+          {
+            "type": "move",
+            "level": "autoconfirmed",
+            "expiry": "infinity"
+          }
+        ],
+        "restrictiontypes": [
+          "edit",
+          "move"
+        ],
+        "subjectid": 1,
+        "associatedpage": "MediaWiki",
+        "fullurl": "https://www.mediawiki.org/wiki/Talk:MediaWiki",
+        "editurl": "https://www.mediawiki.org/w/index.php?title=Talk:MediaWiki&action=edit",
+        "canonicalurl": "https://www.mediawiki.org/wiki/Talk:MediaWiki",
+        "displaytitle": "Talk:MediaWiki",
+        "linkclasses": [
+          "mw-redirect"
+        ]
+      }
+    ]
+  }
+}

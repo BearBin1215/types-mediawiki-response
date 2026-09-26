@@ -1,0 +1,33 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "allmessages": [
+      {
+        "name": "pagetitle",
+        "normalizedname": "pagetitle",
+        "content": "$1 - {{SITENAME}}"
+      },
+      {
+        "name": "mainpage",
+        "normalizedname": "mainpage",
+        "content": "Main Page"
+      },
+      {
+        "name": "recentchanges",
+        "normalizedname": "recentchanges",
+        "content": "Recent changes"
+      },
+      {
+        "name": "fixturemessage",
+        "normalizedname": "fixturemessage",
+        "content": "Database-defined fixture message.",
+        "defaultmissing": true
+      },
+      {
+        "name": "NoSuchMessage_0a1b2c3d",
+        "normalizedname": "noSuchMessage_0a1b2c3d",
+        "missing": true
+      }
+    ]
+  }
+}

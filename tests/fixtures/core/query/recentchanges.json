@@ -1,0 +1,128 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "rccontinue": "20260925174732|10979350",
+    "continue": "-||"
+  },
+  "query": {
+    "recentchanges": [
+      {
+        "type": "edit",
+        "ns": 12,
+        "title": "Help:Import/zh",
+        "pageid": 2479668,
+        "revid": 8621046,
+        "old_revid": 8621044,
+        "rcid": 10979355,
+        "user": "Pristome",
+        "userid": 18203310,
+        "bot": false,
+        "new": false,
+        "minor": false,
+        "oldlen": 8178,
+        "newlen": 8125,
+        "timestamp": "2026-09-25T17:49:57Z",
+        "comment": "Created page with \"仅当你知道你在做什么时，你才应该导入内容。\"",
+        "parsedcomment": "Created page with &quot;仅当你知道你在做什么时，你才应该导入内容。&quot;",
+        "tags": [
+          "translate-translation-pages"
+        ],
+        "sha1": "6f57ea4bd6ab1821a8a71874675841c36fa86bdf"
+      },
+      {
+        "type": "new",
+        "ns": 1198,
+        "title": "Translations:Help:Import/2/zh",
+        "pageid": 2479671,
+        "revid": 8621045,
+        "old_revid": 0,
+        "rcid": 10979354,
+        "user": "Pristome",
+        "userid": 18203310,
+        "bot": false,
+        "new": true,
+        "minor": false,
+        "oldlen": 0,
+        "newlen": 63,
+        "timestamp": "2026-09-25T17:49:56Z",
+        "comment": "Created page with \"仅当你知道你在做什么时，你才应该导入内容。\"",
+        "parsedcomment": "Created page with &quot;仅当你知道你在做什么时，你才应该导入内容。&quot;",
+        "tags": [],
+        "sha1": "cb8995b5e89206403a3961748df0a284cef9f6c2"
+      },
+      {
+        "type": "edit",
+        "ns": 12,
+        "title": "Help:Import/zh",
+        "pageid": 2479668,
+        "revid": 8621044,
+        "old_revid": 8621042,
+        "rcid": 10979353,
+        "user": "Pristome",
+        "userid": 18203310,
+        "bot": false,
+        "new": false,
+        "minor": false,
+        "oldlen": 8238,
+        "newlen": 8178,
+        "timestamp": "2026-09-25T17:49:19Z",
+        "comment": "Created page with \"导入页面可以是能够轻易对你的维基做未预料和危险的事情的强大工具。\"",
+        "parsedcomment": "Created page with &quot;导入页面可以是能够轻易对你的维基做未预料和危险的事情的强大工具。&quot;",
+        "tags": [
+          "translate-translation-pages"
+        ],
+        "sha1": "783528d6cd8824a4b00d2025cae6ea1445ffa93d"
+      },
+      {
+        "type": "new",
+        "ns": 1198,
+        "title": "Translations:Help:Import/1/zh",
+        "pageid": 2479670,
+        "revid": 8621043,
+        "old_revid": 0,
+        "rcid": 10979352,
+        "user": "Pristome",
+        "userid": 18203310,
+        "bot": false,
+        "new": true,
+        "minor": false,
+        "oldlen": 0,
+        "newlen": 96,
+        "timestamp": "2026-09-25T17:49:18Z",
+        "comment": "Created page with \"导入页面可以是能够轻易对你的维基做未预料和危险的事情的强大工具。\"",
+        "parsedcomment": "Created page with &quot;导入页面可以是能够轻易对你的维基做未预料和危险的事情的强大工具。&quot;",
+        "tags": [],
+        "sha1": "22f37b1cc68787701606f92b315d609af090c37b"
+      },
+      {
+        "type": "log",
+        "ns": 2,
+        "title": "User:Huvas f7k1",
+        "pageid": 0,
+        "revid": 0,
+        "old_revid": 0,
+        "rcid": 10979351,
+        "user": "Huvas f7k1",
+        "userid": 18520231,
+        "bot": false,
+        "new": false,
+        "minor": false,
+        "oldlen": 0,
+        "newlen": 0,
+        "timestamp": "2026-09-25T17:48:01Z",
+        "comment": "",
+        "parsedcomment": "",
+        "logid": 22822271,
+        "logtype": "newusers",
+        "logaction": "create",
+        "logparams": {
+          "userid": 18520231
+        },
+        "tags": [
+          "mobile edit",
+          "mobile web edit"
+        ]
+      }
+    ]
+  }
+}

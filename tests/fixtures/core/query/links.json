@@ -1,0 +1,37 @@
+{
+  "continue": {
+    "plcontinue": "1|4|Support_desk",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "links": [
+          {
+            "ns": 0,
+            "title": "How to report a bug"
+          },
+          {
+            "ns": 0,
+            "title": "MediaWiki Users and Developers Conference Fall 2026"
+          },
+          {
+            "ns": 0,
+            "title": "Professional development and consulting"
+          },
+          {
+            "ns": 0,
+            "title": "Wikimedia Hackathon 2026"
+          },
+          {
+            "ns": 4,
+            "title": "Project:Language policy"
+          }
+        ]
+      }
+    ]
+  }
+}

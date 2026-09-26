@@ -1,0 +1,2585 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "sbom": {
+      "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+      "bomFormat": "CycloneDX",
+      "specVersion": "1.6",
+      "serialNumber": "urn:uuid:687121c5-e8df-45f0-9c48-d682df39f31c",
+      "version": 1,
+      "metadata": {
+        "timestamp": "2026-10-01T05:23:45Z"
+      },
+      "components": [
+        {
+          "type": "platform",
+          "name": "PHP",
+          "version": "8.3.35",
+          "components": [
+            {
+              "type": "library",
+              "name": "date",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "libxml",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "openssl",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "pcre",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "sqlite3",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "zlib",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "ctype",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "curl",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "dom",
+              "version": "20031129"
+            },
+            {
+              "type": "library",
+              "name": "fileinfo",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "filter",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "hash",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "iconv",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "json",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "mbstring",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "SPL",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "session",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "PDO",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "pdo_sqlite",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "standard",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "posix",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "random",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "Reflection",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "Phar",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "SimpleXML",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "tokenizer",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "xml",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "xmlreader",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "xmlwriter",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "mysqlnd",
+              "version": "mysqlnd 8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "apache2handler",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "apcu",
+              "version": "5.1.28"
+            },
+            {
+              "type": "library",
+              "name": "calendar",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "intl",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "luasandbox",
+              "version": "4.1.2"
+            },
+            {
+              "type": "library",
+              "name": "mysqli",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "sodium",
+              "version": "8.3.35"
+            },
+            {
+              "type": "library",
+              "name": "Zend OPcache",
+              "version": "8.3.35"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "ICU",
+          "version": "76.1"
+        },
+        {
+          "type": "platform",
+          "name": "sqlite",
+          "version": "3.46.1"
+        },
+        {
+          "type": "application",
+          "name": "MediaWiki",
+          "components": [
+            {
+              "name": "bacon/bacon-qr-code",
+              "version": "3.0.4",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Ben Scholzen 'DASPRiD'",
+                  "email": "mail@dasprids.de",
+                  "homepage": "https://dasprids.de/",
+                  "role": "Developer"
+                }
+              ],
+              "description": "BaconQrCode is a QR code generator for PHP."
+            },
+            {
+              "name": "brick/math",
+              "version": "0.14.8",
+              "type": "library",
+              "licences": [],
+              "authors": [],
+              "description": "Arbitrary-precision arithmetic library"
+            },
+            {
+              "name": "christian-riesen/base32",
+              "version": "1.6.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Christian Riesen",
+                  "email": "chris.riesen@gmail.com",
+                  "homepage": "http://christianriesen.com",
+                  "role": "Developer"
+                }
+              ],
+              "description": "Base32 encoder/decoder according to RFC 4648"
+            },
+            {
+              "name": "composer/semver",
+              "version": "3.4.4",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nils Adermann",
+                  "email": "naderman@naderman.de",
+                  "homepage": "http://www.naderman.de"
+                },
+                {
+                  "name": "Jordi Boggiano",
+                  "email": "j.boggiano@seld.be",
+                  "homepage": "http://seld.be"
+                },
+                {
+                  "name": "Rob Bast",
+                  "email": "rob.bast@gmail.com",
+                  "homepage": "http://robbast.nl"
+                }
+              ],
+              "description": "Semver library that offers utilities, version constraint parsing and validation."
+            },
+            {
+              "name": "dasprid/enum",
+              "version": "1.0.7",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Ben Scholzen 'DASPRiD'",
+                  "email": "mail@dasprids.de",
+                  "homepage": "https://dasprids.de/",
+                  "role": "Developer"
+                }
+              ],
+              "description": "PHP 7.1 enum implementation"
+            },
+            {
+              "name": "endroid/qr-code",
+              "version": "6.0.9",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Jeroen van den Enden",
+                  "email": "info@endroid.nl"
+                }
+              ],
+              "description": "Endroid QR Code"
+            },
+            {
+              "name": "firebase/php-jwt",
+              "version": "7.0.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Neuman Vong",
+                  "email": "neuman+pear@twilio.com",
+                  "role": "Developer"
+                },
+                {
+                  "name": "Anant Narayanan",
+                  "email": "anant@php.net",
+                  "role": "Developer"
+                }
+              ],
+              "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec."
+            },
+            {
+              "name": "guzzlehttp/guzzle",
+              "version": "7.12.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Graham Campbell",
+                  "email": "hello@gjcampbell.co.uk",
+                  "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                  "name": "Michael Dowling",
+                  "email": "mtdowling@gmail.com",
+                  "homepage": "https://github.com/mtdowling"
+                },
+                {
+                  "name": "Jeremy Lindblom",
+                  "email": "jeremeamia@gmail.com",
+                  "homepage": "https://github.com/jeremeamia"
+                },
+                {
+                  "name": "George Mponos",
+                  "email": "gmponos@gmail.com",
+                  "homepage": "https://github.com/gmponos"
+                },
+                {
+                  "name": "Tobias Nyholm",
+                  "email": "tobias.nyholm@gmail.com",
+                  "homepage": "https://github.com/Nyholm"
+                },
+                {
+                  "name": "Márk Sági-Kazár",
+                  "email": "mark.sagikazar@gmail.com",
+                  "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                  "name": "Tobias Schultze",
+                  "email": "webmaster@tubo-world.de",
+                  "homepage": "https://github.com/Tobion"
+                }
+              ],
+              "description": "Guzzle is a PHP HTTP client library"
+            },
+            {
+              "name": "guzzlehttp/promises",
+              "version": "2.5.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Graham Campbell",
+                  "email": "hello@gjcampbell.co.uk",
+                  "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                  "name": "Michael Dowling",
+                  "email": "mtdowling@gmail.com",
+                  "homepage": "https://github.com/mtdowling"
+                },
+                {
+                  "name": "Tobias Nyholm",
+                  "email": "tobias.nyholm@gmail.com",
+                  "homepage": "https://github.com/Nyholm"
+                },
+                {
+                  "name": "Tobias Schultze",
+                  "email": "webmaster@tubo-world.de",
+                  "homepage": "https://github.com/Tobion"
+                }
+              ],
+              "description": "Guzzle promises library"
+            },
+            {
+              "name": "guzzlehttp/psr7",
+              "version": "2.12.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Graham Campbell",
+                  "email": "hello@gjcampbell.co.uk",
+                  "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                  "name": "Michael Dowling",
+                  "email": "mtdowling@gmail.com",
+                  "homepage": "https://github.com/mtdowling"
+                },
+                {
+                  "name": "George Mponos",
+                  "email": "gmponos@gmail.com",
+                  "homepage": "https://github.com/gmponos"
+                },
+                {
+                  "name": "Tobias Nyholm",
+                  "email": "tobias.nyholm@gmail.com",
+                  "homepage": "https://github.com/Nyholm"
+                },
+                {
+                  "name": "Márk Sági-Kazár",
+                  "email": "mark.sagikazar@gmail.com",
+                  "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                  "name": "Tobias Schultze",
+                  "email": "webmaster@tubo-world.de",
+                  "homepage": "https://github.com/Tobion"
+                },
+                {
+                  "name": "Márk Sági-Kazár",
+                  "email": "mark.sagikazar@gmail.com",
+                  "homepage": "https://sagikazarmark.hu"
+                }
+              ],
+              "description": "PSR-7 message implementation that also provides common utility methods"
+            },
+            {
+              "name": "jakobo/hotp-php",
+              "version": "2.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Jakob Heuser",
+                  "email": "jakob@felocity.org"
+                }
+              ],
+              "description": "HOTP simplifies One Time Password systems for PHP Authentication"
+            },
+            {
+              "name": "justinrainbow/json-schema",
+              "version": "5.3.4",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Bruno Prieto Reis",
+                  "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                  "name": "Justin Rainbow",
+                  "email": "justin.rainbow@gmail.com"
+                },
+                {
+                  "name": "Igor Wiedler",
+                  "email": "igor@wiedler.ch"
+                },
+                {
+                  "name": "Robert Schönthal",
+                  "email": "seroscho@googlemail.com"
+                }
+              ],
+              "description": "A library to validate a json schema."
+            },
+            {
+              "name": "lcobucci/jwt",
+              "version": "5.6.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Luís Cobucci",
+                  "email": "lcobucci@gmail.com",
+                  "role": "Developer"
+                }
+              ],
+              "description": "A simple library to work with JSON Web Token and JSON Web Signature"
+            },
+            {
+              "name": "liuggio/statsd-php-client",
+              "version": "1.0.18",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Giulio De Donato",
+                  "email": "liuggio@gmail.com"
+                }
+              ],
+              "description": "Statsd (Object Oriented) client library for PHP"
+            },
+            {
+              "name": "mck89/peast",
+              "version": "1.17.5",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Marco Marchiò",
+                  "email": "marco.mm89@gmail.com"
+                }
+              ],
+              "description": "Peast is PHP library that generates AST for JavaScript code"
+            },
+            {
+              "name": "monolog/monolog",
+              "version": "2.11.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Jordi Boggiano",
+                  "email": "j.boggiano@seld.be",
+                  "homepage": "https://seld.be"
+                }
+              ],
+              "description": "Sends your logs to files, sockets, inboxes, databases and various web services"
+            },
+            {
+              "name": "okvpn/clock-lts",
+              "version": "1.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Luís Cobucci",
+                  "email": "lcobucci@gmail.com"
+                },
+                {
+                  "name": "Uładzimir Tsykun",
+                  "email": "vtsykun@okvpn.org"
+                }
+              ],
+              "description": "Adding support for a wider range of PHP versions to lcobucci/clock"
+            },
+            {
+              "name": "oojs/oojs-ui",
+              "version": "0.53.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Bartosz Dziewoński",
+                  "email": "matma.rex@gmail.com"
+                },
+                {
+                  "name": "Ed Sanders",
+                  "email": "esanders@wikimedia.org"
+                },
+                {
+                  "name": "James D. Forrester",
+                  "email": "jforrester@wikimedia.org"
+                },
+                {
+                  "name": "Kirsten Menger-Anderson",
+                  "email": "kmenger@wikimedia.org"
+                },
+                {
+                  "name": "Kunal Mehta",
+                  "email": "legoktm@gmail.com"
+                },
+                {
+                  "name": "Moriel Schottlender",
+                  "email": "mschottlender@wikimedia.org"
+                },
+                {
+                  "name": "Prateek Saxena",
+                  "email": "prtksxna@gmail.com"
+                },
+                {
+                  "name": "Roan Kattouw",
+                  "email": "roan.kattouw@gmail.com"
+                },
+                {
+                  "name": "Thiemo Kreuz",
+                  "email": "thiemo.kreuz@wikimedia.de"
+                },
+                {
+                  "name": "Timo Tijhof",
+                  "email": "krinklemail@gmail.com"
+                },
+                {
+                  "name": "Trevor Parscal",
+                  "email": "trevorparscal@gmail.com"
+                },
+                {
+                  "name": "Volker E.",
+                  "email": "volker.e@wikimedia.org"
+                }
+              ],
+              "description": "Provides library of common widgets, layouts, and windows."
+            },
+            {
+              "name": "paragonie/constant_time_encoding",
+              "version": "3.1.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Paragon Initiative Enterprises",
+                  "email": "security@paragonie.com",
+                  "homepage": "https://paragonie.com",
+                  "role": "Maintainer"
+                },
+                {
+                  "name": "Steve 'Sc00bz' Thomas",
+                  "email": "steve@tobtu.com",
+                  "homepage": "https://www.tobtu.com",
+                  "role": "Original Developer"
+                }
+              ],
+              "description": "Constant-time Implementations of RFC 4648 Encoding (Base-64, Base-32, Base-16)"
+            },
+            {
+              "name": "pear/console_getopt",
+              "version": "1.4.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Andrei Zmievski",
+                  "email": "andrei@php.net",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Stig Bakken",
+                  "email": "stig@php.net",
+                  "role": "Developer"
+                },
+                {
+                  "name": "Greg Beaver",
+                  "email": "cellog@php.net",
+                  "role": "Helper"
+                }
+              ],
+              "description": "More info available on: http://pear.php.net/package/Console_Getopt"
+            },
+            {
+              "name": "pear/mail",
+              "version": "2.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Chuck Hagenbuch",
+                  "email": "chuck@horde.org",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Armin Graefe",
+                  "email": "schengawegga@gmail.com",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Richard Heyes",
+                  "email": "richard@phpguru.org",
+                  "role": "Developer"
+                },
+                {
+                  "name": "Aleksander Machniak",
+                  "email": "alec@alec.pl",
+                  "role": "Developer"
+                }
+              ],
+              "description": "Class that provides multiple interfaces for sending emails."
+            },
+            {
+              "name": "pear/mail_mime",
+              "version": "1.10.12",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Cipriano Groenendal",
+                  "email": "cipri@php.net",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Aleksander Machniak",
+                  "email": "alec@php.net",
+                  "role": "Lead"
+                }
+              ],
+              "description": "Mail_Mime provides classes to create MIME messages"
+            },
+            {
+              "name": "pear/net_smtp",
+              "version": "1.12.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Jon Parise",
+                  "email": "jon@php.net",
+                  "homepage": "https://www.indelible.org",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Chuck Hagenbuch",
+                  "email": "chuck@horde.org",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Armin Graefe",
+                  "email": "schengawegga@gmail.com",
+                  "role": "Lead"
+                }
+              ],
+              "description": "An implementation of the SMTP protocol"
+            },
+            {
+              "name": "pear/net_socket",
+              "version": "1.2.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Chuck Hagenbuch",
+                  "email": "chuck@horde.org",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Aleksander Machniak",
+                  "email": "alec@php.net",
+                  "role": "Lead"
+                },
+                {
+                  "name": "Stig Bakken",
+                  "email": "stig@php.net",
+                  "role": "Lead"
+                }
+              ],
+              "description": "More info available on: http://pear.php.net/package/Net_Socket"
+            },
+            {
+              "name": "pear/net_url2",
+              "version": "2.2.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tom Klingenberg",
+                  "email": "tkli@php.net"
+                },
+                {
+                  "name": "David Coallier",
+                  "email": "davidc@php.net"
+                },
+                {
+                  "name": "Christian Schmidt",
+                  "email": "chmidt@php.net"
+                }
+              ],
+              "description": "Class for parsing and handling URL. Provides parsing of URLs into their constituent parts (scheme, host, path etc.), URL generation, and resolving of relative URLs."
+            },
+            {
+              "name": "pear/pear-core-minimal",
+              "version": "1.10.18",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Christian Weiske",
+                  "email": "cweiske@php.net",
+                  "role": "Lead"
+                }
+              ],
+              "description": "Minimal set of PEAR core files to be used as composer dependency"
+            },
+            {
+              "name": "pear/pear_exception",
+              "version": "1.0.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Helgi Thormar",
+                  "email": "dufuz@php.net"
+                },
+                {
+                  "name": "Greg Beaver",
+                  "email": "cellog@php.net"
+                }
+              ],
+              "description": "The PEAR Exception base class."
+            },
+            {
+              "name": "psr/clock",
+              "version": "1.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "Common interface for reading the clock."
+            },
+            {
+              "name": "psr/container",
+              "version": "2.0.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "Common Container Interface (PHP FIG PSR-11)"
+            },
+            {
+              "name": "psr/event-dispatcher",
+              "version": "1.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "http://www.php-fig.org/"
+                }
+              ],
+              "description": "Standard interfaces for event handling."
+            },
+            {
+              "name": "psr/http-client",
+              "version": "1.0.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "Common interface for HTTP clients"
+            },
+            {
+              "name": "psr/http-factory",
+              "version": "1.1.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories"
+            },
+            {
+              "name": "psr/http-message",
+              "version": "2.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "Common interface for HTTP messages"
+            },
+            {
+              "name": "psr/log",
+              "version": "1.1.4",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "PHP-FIG",
+                  "homepage": "https://www.php-fig.org/"
+                }
+              ],
+              "description": "Common interface for logging libraries"
+            },
+            {
+              "name": "ralouphie/getallheaders",
+              "version": "3.0.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Ralph Khattar",
+                  "email": "ralph.khattar@gmail.com"
+                }
+              ],
+              "description": "A polyfill for getallheaders."
+            },
+            {
+              "name": "spomky-labs/cbor-php",
+              "version": "3.2.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Florent Morselli",
+                  "homepage": "https://github.com/Spomky"
+                },
+                {
+                  "name": "All contributors",
+                  "homepage": "https://github.com/Spomky-Labs/cbor-php/contributors"
+                }
+              ],
+              "description": "CBOR Encoder/Decoder for PHP"
+            },
+            {
+              "name": "spomky-labs/pki-framework",
+              "version": "1.4.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Joni Eskelinen",
+                  "email": "jonieske@gmail.com",
+                  "role": "Original developer"
+                },
+                {
+                  "name": "Florent Morselli",
+                  "email": "florent.morselli@spomky-labs.com",
+                  "role": "Spomky-Labs PKI Framework developer"
+                }
+              ],
+              "description": "A PHP framework for managing Public Key Infrastructures. It comprises X.509 public key certificates, attribute certificates, certification requests and certification path validation."
+            },
+            {
+              "name": "symfony/clock",
+              "version": "7.4.8",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Decouples applications from the system clock"
+            },
+            {
+              "name": "symfony/deprecation-contracts",
+              "version": "3.6.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "A generic function and convention to trigger deprecation notices"
+            },
+            {
+              "name": "symfony/polyfill-php84",
+              "version": "1.37.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Symfony polyfill backporting some PHP 8.4+ features to lower PHP versions"
+            },
+            {
+              "name": "symfony/polyfill-php85",
+              "version": "1.37.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Symfony polyfill backporting some PHP 8.5+ features to lower PHP versions"
+            },
+            {
+              "name": "symfony/property-access",
+              "version": "7.4.8",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Fabien Potencier",
+                  "email": "fabien@symfony.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Provides functions to read and write from/to an object or array using a simple string notation"
+            },
+            {
+              "name": "symfony/property-info",
+              "version": "7.4.8",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Kévin Dunglas",
+                  "email": "dunglas@gmail.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Extracts information about PHP class' properties using metadata of popular sources"
+            },
+            {
+              "name": "symfony/serializer",
+              "version": "7.4.10",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Fabien Potencier",
+                  "email": "fabien@symfony.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON."
+            },
+            {
+              "name": "symfony/string",
+              "version": "7.4.11",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way"
+            },
+            {
+              "name": "symfony/type-info",
+              "version": "7.4.9",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Mathias Arlaud",
+                  "email": "mathias.arlaud@gmail.com"
+                },
+                {
+                  "name": "Baptiste LEDUC",
+                  "email": "baptiste.leduc@gmail.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Extracts PHP types information."
+            },
+            {
+              "name": "symfony/uid",
+              "version": "7.4.9",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Grégoire Pineau",
+                  "email": "lyrixx@lyrixx.info"
+                },
+                {
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Provides an object-oriented API to generate and represent UIDs"
+            },
+            {
+              "name": "symfony/yaml",
+              "version": "7.4.12",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Fabien Potencier",
+                  "email": "fabien@symfony.com"
+                },
+                {
+                  "name": "Symfony Community",
+                  "homepage": "https://symfony.com/contributors"
+                }
+              ],
+              "description": "Loads and dumps YAML files"
+            },
+            {
+              "name": "web-auth/cose-lib",
+              "version": "4.5.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Florent Morselli",
+                  "homepage": "https://github.com/Spomky"
+                },
+                {
+                  "name": "All contributors",
+                  "homepage": "https://github.com/web-auth/cose/contributors"
+                }
+              ],
+              "description": "CBOR Object Signing and Encryption (COSE) For PHP"
+            },
+            {
+              "name": "web-auth/webauthn-lib",
+              "version": "5.3.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Florent Morselli",
+                  "homepage": "https://github.com/Spomky"
+                },
+                {
+                  "name": "All contributors",
+                  "homepage": "https://github.com/web-auth/webauthn-library/contributors"
+                }
+              ],
+              "description": "FIDO2/Webauthn Support For PHP"
+            },
+            {
+              "name": "wikimedia/assert",
+              "version": "0.5.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Daniel Kinzler"
+                },
+                {
+                  "name": "Thiemo Kreuz"
+                }
+              ],
+              "description": "Provides runtime assertions"
+            },
+            {
+              "name": "wikimedia/at-ease",
+              "version": "3.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling",
+                  "email": "tstarling@wikimedia.org"
+                },
+                {
+                  "name": "MediaWiki developers",
+                  "email": "wikitech-l@lists.wikimedia.org"
+                }
+              ],
+              "description": "Safe replacement to @ for suppressing warnings."
+            },
+            {
+              "name": "wikimedia/base-convert",
+              "version": "2.0.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brion Vibber",
+                  "email": "bvibber@wikimedia.org"
+                },
+                {
+                  "name": "Tyler Romeo",
+                  "email": "tylerromeo@gmail.com"
+                }
+              ],
+              "description": "Convert an arbitrarily-long string from one numeric base to another, optionally zero-padding to a minimum column width."
+            },
+            {
+              "name": "wikimedia/bcp-47-code",
+              "version": "2.0.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "C. Scott Ananian",
+                  "email": "cananian@wikimedia.org",
+                  "homepage": "https://cscott.net"
+                }
+              ],
+              "description": "Simple interface representing languages which have a BCP 47 code"
+            },
+            {
+              "name": "wikimedia/cdb",
+              "version": "3.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling",
+                  "email": "tstarling@wikimedia.org"
+                },
+                {
+                  "name": "Chad Horohoe",
+                  "email": "chad@wikimedia.org"
+                },
+                {
+                  "name": "Ori Livneh",
+                  "email": "ori@wikimedia.org"
+                },
+                {
+                  "name": "Daniel Kinzler"
+                }
+              ],
+              "description": "Constant Database (CDB) wrapper library for PHP. Provides pure-PHP fallback when dba_* functions are absent."
+            },
+            {
+              "name": "wikimedia/cldr-plural-rule-parser",
+              "version": "3.0.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling",
+                  "email": "tstarling@wikimedia.org"
+                },
+                {
+                  "name": "Niklas Laxström",
+                  "email": "niklas.laxstrom@gmail.com"
+                }
+              ],
+              "description": "Evaluates plural rules specified in the CLDR project notation."
+            },
+            {
+              "name": "wikimedia/codex",
+              "version": "0.7.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Doğu Abaris",
+                  "email": "abaris@null.net"
+                }
+              ],
+              "description": "A PHP library for building HTML and CSS UI components using Codex, the Wikimedia design system."
+            },
+            {
+              "name": "wikimedia/common-passwords",
+              "version": "0.5.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Sam Reed",
+                  "email": "reedy@wikimedia.org"
+                }
+              ],
+              "description": "List of the 100,000 most commonly used passwords"
+            },
+            {
+              "name": "wikimedia/composer-merge-plugin",
+              "version": "2.1.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Bryan Davis",
+                  "email": "bd808@wikimedia.org"
+                }
+              ],
+              "description": "Composer plugin to merge multiple composer.json files"
+            },
+            {
+              "name": "wikimedia/css-sanitizer",
+              "version": "6.2.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brad Jorsch",
+                  "email": "bjorsch@wikimedia.org"
+                }
+              ],
+              "description": "Classes to parse and sanitize CSS"
+            },
+            {
+              "name": "wikimedia/cssjanus",
+              "version": "2.3.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Roan Kattouw"
+                },
+                {
+                  "name": "Trevor Parscal"
+                },
+                {
+                  "name": "Timo Tijhof"
+                }
+              ],
+              "description": "Convert CSS stylesheets between left-to-right and right-to-left."
+            },
+            {
+              "name": "wikimedia/equivset",
+              "version": "1.7.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brooke Vibber",
+                  "email": "bvibber@wikimedia.org"
+                },
+                {
+                  "name": "David Barratt",
+                  "email": "dbarratt@wikimedia.org"
+                },
+                {
+                  "name": "Thiemo Kreuz",
+                  "email": "thiemo.kreuz@wikimedia.de"
+                },
+                {
+                  "name": "Umherirrender",
+                  "email": "umherirrender_de.wp@web.de"
+                }
+              ],
+              "description": "Visually Equivalent Set of UTF-8 Characters"
+            },
+            {
+              "name": "wikimedia/html-formatter",
+              "version": "4.1.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "MediaWiki contributors"
+                }
+              ],
+              "description": "Performs transformations of HTML by wrapping around libxml2 and working around its countless bugs."
+            },
+            {
+              "name": "wikimedia/idle-dom",
+              "version": "2.1.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "C. Scott Ananian",
+                  "email": "cananian@wikimedia.org",
+                  "homepage": "https://cscott.net"
+                }
+              ],
+              "description": "DOM interfaces automatically generated from WebIDL"
+            },
+            {
+              "name": "wikimedia/ip-utils",
+              "version": "6.0.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "MediaWiki developers",
+                  "email": "wikitech-l@lists.wikimedia.org"
+                }
+              ],
+              "description": "Parse, match, and analyze IP addresses and CIDR ranges"
+            },
+            {
+              "name": "wikimedia/json-codec",
+              "version": "4.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Petr Pchelko",
+                  "email": "ppchelko@wikimedia.org"
+                },
+                {
+                  "name": "Daniel Kinzler",
+                  "email": "dkinzler@wikimedia.org"
+                },
+                {
+                  "name": "C. Scott Ananian",
+                  "email": "cananian@wikimedia.org",
+                  "homepage": "https://cscott.net"
+                }
+              ],
+              "description": "Interfaces to serialize and deserialize PHP objects to/from JSON"
+            },
+            {
+              "name": "wikimedia/language-data",
+              "version": "1.1.13",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Amir E. Aharoni",
+                  "email": "amir.aharoni@mail.huji.ac.il"
+                },
+                {
+                  "name": "Kartik Mistry"
+                },
+                {
+                  "name": "Niklas Laxström",
+                  "email": "niklas.laxstrom@gmail.com"
+                },
+                {
+                  "name": "Santhosh Thottingal",
+                  "email": "santhosh.thottingal@gmail.com"
+                },
+                {
+                  "name": "Abijeet Patro",
+                  "email": "abijeetpatro@gmail.com"
+                }
+              ],
+              "description": "Language data and utilities."
+            },
+            {
+              "name": "wikimedia/less.php",
+              "version": "5.5.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Timo Tijhof",
+                  "homepage": "https://timotijhof.net"
+                },
+                {
+                  "name": "Josh Schmidt",
+                  "homepage": "https://github.com/oyejorge"
+                },
+                {
+                  "name": "Matt Agar",
+                  "homepage": "https://github.com/agar"
+                },
+                {
+                  "name": "Martin Jantošovič",
+                  "homepage": "https://github.com/Mordred"
+                }
+              ],
+              "description": "PHP port of the LESS processor"
+            },
+            {
+              "name": "wikimedia/minify",
+              "version": "2.10.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Paul Copperman",
+                  "email": "paul.copperman@gmail.com"
+                },
+                {
+                  "name": "Trevor Parscal",
+                  "email": "tparscal@wikimedia.org"
+                },
+                {
+                  "name": "Timo Tijhof",
+                  "email": "krinklemail@gmail.com"
+                },
+                {
+                  "name": "Roan Kattouw",
+                  "email": "roan.kattouw@gmail.com"
+                }
+              ],
+              "description": "Minification of JavaScript code and CSS stylesheets."
+            },
+            {
+              "name": "wikimedia/normalized-exception",
+              "version": "2.1.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Gergő Tisza",
+                  "email": "gtisza@wikimedia.org"
+                }
+              ],
+              "description": "A helper for making exceptions play nice with PSR-3 logging"
+            },
+            {
+              "name": "wikimedia/object-factory",
+              "version": "6.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Bryan Davis",
+                  "email": "bdavis@wikimedia.org"
+                }
+              ],
+              "description": "Construct objects from configuration instructions"
+            },
+            {
+              "name": "wikimedia/parsoid",
+              "version": "0.23.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Wikimedia Content Transform Team and the broader MediaWiki community",
+                  "homepage": "https://www.mediawiki.org/wiki/Parsoid"
+                }
+              ],
+              "description": "Parsoid, a bidirectional parser between wikitext and HTML5"
+            },
+            {
+              "name": "wikimedia/php-session-serializer",
+              "version": "3.0.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brad Jorsch",
+                  "email": "bjorsch@wikimedia.org"
+                }
+              ],
+              "description": "Provides methods like PHP's session_encode and session_decode that don't mess with $_SESSION"
+            },
+            {
+              "name": "wikimedia/purtle",
+              "version": "2.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Daniel Kinzler"
+                },
+                {
+                  "name": "Stanislav Malyshev"
+                },
+                {
+                  "name": "Thiemo Kreuz"
+                },
+                {
+                  "name": "C. Scott Ananian"
+                }
+              ],
+              "description": "Fast streaming RDF serializer"
+            },
+            {
+              "name": "wikimedia/relpath",
+              "version": "4.1.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Ori Livneh",
+                  "email": "ori@wikimedia.org"
+                }
+              ],
+              "description": "Work with file paths to join or find the relative path"
+            },
+            {
+              "name": "wikimedia/remex-html",
+              "version": "6.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling",
+                  "email": "tstarling@wikimedia.org"
+                }
+              ],
+              "description": "Fast HTML 5 parser"
+            },
+            {
+              "name": "wikimedia/request-timeout",
+              "version": "3.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling"
+                }
+              ],
+              "description": "Request timeout library for Excimer with plain PHP fallback"
+            },
+            {
+              "name": "wikimedia/running-stat",
+              "version": "2.2.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Ori Livneh",
+                  "email": "ori@wikimedia.org"
+                }
+              ],
+              "description": "PHP implementations of online statistical algorithms"
+            },
+            {
+              "name": "wikimedia/scoped-callback",
+              "version": "5.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Aaron Schulz",
+                  "email": "aschulz@wikimedia.org"
+                }
+              ],
+              "description": "Make a callback run when a dummy object leaves the scope."
+            },
+            {
+              "name": "wikimedia/services",
+              "version": "4.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Daniel Kinzler",
+                  "email": "dkinzler@wikimedia.org"
+                }
+              ],
+              "description": "Generic service to manage named services using lazy instantiation based on instantiator callback functions"
+            },
+            {
+              "name": "wikimedia/shellbox",
+              "version": "4.4.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tim Starling"
+                },
+                {
+                  "name": "Kunal Mehta"
+                },
+                {
+                  "name": "Max Semenik"
+                }
+              ],
+              "description": "Library and server for containerized shell execution"
+            },
+            {
+              "name": "wikimedia/timestamp",
+              "version": "5.1.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Tyler Romeo",
+                  "email": "tylerromeo@gmail.com"
+                }
+              ],
+              "description": "Creation, parsing, and conversion of timestamps"
+            },
+            {
+              "name": "wikimedia/utfnormal",
+              "version": "4.0.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brion Vibber",
+                  "email": "bvibber@wikimedia.org"
+                }
+              ],
+              "description": "Contains Unicode normalization routines, including both pure PHP implementations and automatic use of the 'intl' PHP extension when present"
+            },
+            {
+              "name": "wikimedia/wait-condition-loop",
+              "version": "2.0.2",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Aaron Schulz",
+                  "email": "aschulz@wikimedia.org"
+                }
+              ],
+              "description": "Wait loop that reaches a condition or times out"
+            },
+            {
+              "name": "wikimedia/wikipeg",
+              "version": "6.1.1",
+              "type": "library",
+              "licences": [],
+              "authors": [],
+              "description": "Parser generator for JavaScript and PHP"
+            },
+            {
+              "name": "wikimedia/wrappedstring",
+              "version": "4.1.0",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Timo Tijhof",
+                  "email": "krinklemail@gmail.com"
+                }
+              ],
+              "description": "Automatically compact sequentially-outputted strings that share a common prefix / suffix pair."
+            },
+            {
+              "name": "wikimedia/xmp-reader",
+              "version": "0.10.3",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Brian Wolff",
+                  "email": "bawolff+wn@gmail.com"
+                }
+              ],
+              "description": "Reader for XMP data containing properties relevant to images"
+            },
+            {
+              "name": "wikimedia/zest-css",
+              "version": "4.1.1",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Christopher Jeffrey"
+                },
+                {
+                  "name": "C. Scott Ananian",
+                  "email": "cananian@wikimedia.org",
+                  "homepage": "https://cscott.net"
+                }
+              ],
+              "description": "Fast, lightweight, extensible CSS selector engine for PHP"
+            },
+            {
+              "name": "zordius/lightncandy",
+              "version": "1.2.6",
+              "type": "library",
+              "licences": [],
+              "authors": [
+                {
+                  "name": "Zordius Chen",
+                  "email": "zordius@gmail.com"
+                }
+              ],
+              "description": "An extremely fast PHP implementation of handlebars ( http://handlebarsjs.com/ ) and mustache ( http://mustache.github.io/ )."
+            },
+            {
+              "type": "library",
+              "name": "CLDRPluralRuleParser",
+              "version": "1.6.5",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/santhoshtr/CLDRPluralRuleParser@1.6.5",
+              "authors": [
+                {
+                  "name": "Santhosh Thottingal"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/santhoshtr/CLDRPluralRuleParser",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "codex",
+              "version": "2.5.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "GPL-2.0+"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/@wikimedia/codex@2.5.1",
+              "authors": [
+                {
+                  "name": "Design System team"
+                },
+                {
+                  "name": "Wikimedia Foundation"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://doc.wikimedia.org/codex/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "codex-design-tokens",
+              "version": "2.5.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "GPL-2.0+"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/@wikimedia/codex-design-tokens@2.5.1",
+              "authors": [
+                {
+                  "name": "Design System team"
+                },
+                {
+                  "name": "Wikimedia Foundation"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://doc.wikimedia.org/codex/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "codex-icons",
+              "version": "2.5.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/@wikimedia/codex-icons@2.5.1",
+              "authors": [
+                {
+                  "name": "Design System team"
+                },
+                {
+                  "name": "Wikimedia Foundation"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://doc.wikimedia.org/codex/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "url",
+              "version": "3.111.0-0ece79ce32",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:github/mrhenry/polyfill-library@0ece79ce32",
+              "authors": [
+                {
+                  "name": "Financial Times"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/mrhenry/polyfill-library",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "fetch-polyfill",
+              "version": "3.6.2",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "authors": [
+                {
+                  "name": "GitHub"
+                },
+                {
+                  "name": "Inc."
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/github/fetch#readme",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "intersection-observer",
+              "version": "0.12.0",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "Apache-2.0"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/intersection-observer@0.12.0",
+              "authors": [
+                {
+                  "name": "Philip Walton"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/GoogleChromeLabs/intersection-observer",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "jquery",
+              "version": "3.7.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "authors": [
+                {
+                  "name": "OpenJS Foundation and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://jquery.com",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "jquery.chosen",
+              "version": "1.8.2",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:github/harvesthq/chosen@1.8.2",
+              "authors": [
+                {
+                  "name": "Patrick Filler for Harvest"
+                },
+                {
+                  "name": "Matthew Lettini"
+                },
+                {
+                  "name": "Patrick Filler"
+                },
+                {
+                  "name": "Ken Earley"
+                },
+                {
+                  "name": "Christophe Coevoet"
+                },
+                {
+                  "name": "Koen Punt"
+                },
+                {
+                  "name": "T.J. Schuck."
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://harvesthq.github.io/chosen/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "jquery.client",
+              "version": "3.0.0",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/jquery-client@3.0.0",
+              "authors": [
+                {
+                  "name": "Trevor Parscal"
+                },
+                {
+                  "name": "Timo Tijhof"
+                },
+                {
+                  "name": "Roan Kattouw"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://www.npmjs.com/package/jquery-client",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "jquery.i18n",
+              "version": "1.0.10",
+              "licenses": [
+                {
+                  "expression": "MIT OR GPL-2.0-or-later"
+                }
+              ],
+              "purl": "pkg:github/wikimedia/jquery.i18n@1.0.10",
+              "authors": [
+                {
+                  "name": "Language Engineering team"
+                },
+                {
+                  "name": "Wikimedia Foundation"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/wikimedia/jquery.i18n",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "jquery.ui",
+              "version": "1.9.2",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "authors": [
+                {
+                  "name": "OpenJS Foundation and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://jqueryui.com",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "moment",
+              "version": "2.30.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:github/moment/moment@2.30.1",
+              "authors": [
+                {
+                  "name": "JS Foundation and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://momentjs.com",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "mustache",
+              "version": "4.2.0",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/mustache@4.2.0",
+              "authors": [
+                {
+                  "name": "Michael Jackson"
+                },
+                {
+                  "name": "Jan Lehnardt"
+                },
+                {
+                  "name": "Phillip Johnsen"
+                },
+                {
+                  "name": "other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/janl/mustache.js",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "oojs",
+              "version": "7.0.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/oojs@7.0.1",
+              "authors": [
+                {
+                  "name": "OOjs Team and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://www.mediawiki.org/wiki/OOjs",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "ooui",
+              "version": "0.53.2",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/oojs-ui@0.53.2",
+              "authors": [
+                {
+                  "name": "OOUI Team and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://www.mediawiki.org/wiki/OOUI",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "pako",
+              "version": "2.1.0",
+              "licenses": [
+                {
+                  "expression": "MIT AND Zlib"
+                }
+              ],
+              "purl": "pkg:github/nodeca/pako@2.1.0",
+              "authors": [
+                {
+                  "name": "Andrei Tuputcyn"
+                },
+                {
+                  "name": "Vitaly Puzrin"
+                },
+                {
+                  "name": "Friedel Ziegelmayer"
+                },
+                {
+                  "name": "Kirill Efimov"
+                },
+                {
+                  "name": "Jean-loup Gailly"
+                },
+                {
+                  "name": "Mark Adler"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/nodeca/pako",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "pinia",
+              "version": "2.0.16",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/pinia@2.0.16",
+              "authors": [
+                {
+                  "name": "Eduardo San Martin Morote"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://pinia.vuejs.org/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "qunitjs",
+              "version": "2.24.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "authors": [
+                {
+                  "name": "OpenJS Foundation and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://qunitjs.com",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "sinonjs",
+              "version": "18.0.1",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "BSD-3-Clause"
+                  }
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Christian Johansen and other contributors"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://sinonjs.org/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "vue-demi",
+              "version": "0.14.7",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/vue-demi@0.14.7",
+              "authors": [
+                {
+                  "name": "Anthony Fu"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://github.com/vueuse/vue-demi/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "vue",
+              "version": "3.5.13",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/vue@3.5.13",
+              "authors": [
+                {
+                  "name": "Yuxi (Evan) You"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://vuejs.org/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "vue-test-utils",
+              "version": "2.4.6",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/@vue/test-utils@2.4.6",
+              "authors": [
+                {
+                  "name": "Lachlan Miller"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://test-utils.vuejs.org/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "vue-compiler-dom",
+              "version": "3.5.13",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/@vue/compiler-dom@3.5.13",
+              "authors": [
+                {
+                  "name": "Yuxi (Evan) You"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://vuejs.org/",
+                  "type": "website"
+                }
+              ]
+            },
+            {
+              "type": "library",
+              "name": "vuex",
+              "version": "4.0.2",
+              "licenses": [
+                {
+                  "license": {
+                    "id": "MIT"
+                  }
+                }
+              ],
+              "purl": "pkg:npm/vuex@4.0.2",
+              "authors": [
+                {
+                  "name": "Yuxi (Evan) You"
+                }
+              ],
+              "externalReferences": [
+                {
+                  "url": "https://vuex.vuejs.org/",
+                  "type": "website"
+                }
+              ]
+            }
+          ],
+          "version": "1.46.0"
+        },
+        {
+          "type": "application",
+          "name": "MinervaNeue",
+          "authors": [
+            {
+              "name": "[https://www.mediawiki.org/wiki/Readers/Web/Team Readers Web Team]"
+            },
+            {
+              "name": "Alex Hollender"
+            },
+            {
+              "name": "Bahodir Mansurov"
+            },
+            {
+              "name": "Florian Schmidt"
+            },
+            {
+              "name": "Jan Drewniak"
+            },
+            {
+              "name": "Joaquin Hernandez"
+            },
+            {
+              "name": "Jon Robson"
+            },
+            {
+              "name": "Juliusz Gonera"
+            },
+            {
+              "name": "Piotr Miazga"
+            },
+            {
+              "name": "Ryan Kaldari"
+            },
+            {
+              "name": "Nick Ray"
+            },
+            {
+              "name": "Sam Smith"
+            },
+            {
+              "name": "Stephen Niedzielski"
+            },
+            {
+              "name": "Volker E."
+            }
+          ],
+          "licences": [
+            "GPL-2.0-or-later"
+          ],
+          "url": "https://www.mediawiki.org/wiki/Skin:MinervaNeue",
+          "description": "A responsive mobile first skin"
+        },
+        {
+          "type": "application",
+          "name": "MonoBook",
+          "authors": [
+            {
+              "name": "Gabriel Wicke"
+            },
+            {
+              "name": "Isarra Yos"
+            },
+            {
+              "name": "..."
+            }
+          ],
+          "licences": [
+            "GPL-2.0-or-later"
+          ],
+          "url": "https://www.mediawiki.org/wiki/Skin:MonoBook",
+          "description": "The classic MediaWiki skin since 2004, named after the black-and-white photo of a book in the page background"
+        },
+        {
+          "type": "application",
+          "name": "Timeless",
+          "authors": [
+            {
+              "name": "Isarra Yos"
+            }
+          ],
+          "version": "0.9.1",
+          "licences": [
+            "GPL-2.0-or-later"
+          ],
+          "url": "https://www.mediawiki.org/wiki/Skin:Timeless",
+          "description": "A timeless skin designed after the Winter prototype by Brandon Harris, and various styles by the Wikimedia Foundation"
+        },
+        {
+          "type": "application",
+          "name": "Vector",
+          "authors": [
+            {
+              "name": "[https://www.mediawiki.org/wiki/Readers/Web/Team Readers Web Team]"
+            },
+            {
+              "name": "Trevor Parscal"
+            },
+            {
+              "name": "Roan Kattouw"
+            },
+            {
+              "name": "Alex Hollender"
+            },
+            {
+              "name": "Bernard Wang"
+            },
+            {
+              "name": "Clare Ming"
+            },
+            {
+              "name": "Jan Drewniak"
+            },
+            {
+              "name": "Jon Robson"
+            },
+            {
+              "name": "Nick Ray"
+            },
+            {
+              "name": "Sam Smith"
+            },
+            {
+              "name": "Stephen Niedzielski"
+            },
+            {
+              "name": "Volker E."
+            }
+          ],
+          "version": "1.0.0",
+          "licences": [
+            "GPL-2.0-or-later"
+          ],
+          "url": "https://www.mediawiki.org/wiki/Skin:Vector",
+          "description": "Provides 2 Vector skins:\n* 2011 - The Modern version of MonoBook with fresh look and many usability improvements.\n* 2022 - The Vector built as part of the WMF [https://www.mediawiki.org/wiki/Desktop_Improvements Desktop Improvements] project."
+        }
+      ]
+    }
+  }
+}

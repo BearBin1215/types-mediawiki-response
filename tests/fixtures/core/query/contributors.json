@@ -1,0 +1,38 @@
+{
+  "continue": {
+    "pccontinue": "1|13103",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "anoncontributors": 314,
+        "contributors": [
+          {
+            "userid": 422134,
+            "name": "MusikAnimal"
+          },
+          {
+            "userid": 790805,
+            "name": "AKlapper (WMF)"
+          },
+          {
+            "userid": 189117,
+            "name": "Kghbln"
+          },
+          {
+            "userid": 472859,
+            "name": "Shirayuki"
+          },
+          {
+            "userid": 15560,
+            "name": "Yaron Koren"
+          }
+        ]
+      }
+    ]
+  }
+}

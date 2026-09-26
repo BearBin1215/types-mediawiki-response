@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "apcontinue": "MediaInclu/Hooks/RevisionInsert",
+    "continue": "-||"
+  },
+  "query": {
+    "allpages": [
+      {
+        "pageid": 305090,
+        "ns": 0,
+        "title": "MediaInclu"
+      },
+      {
+        "pageid": 305092,
+        "ns": 0,
+        "title": "MediaInclu/Hooks"
+      },
+      {
+        "pageid": 305093,
+        "ns": 0,
+        "title": "MediaInclu/Hooks/BeforeRecentChangeSave"
+      }
+    ]
+  }
+}

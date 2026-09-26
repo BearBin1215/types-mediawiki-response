@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "mystashedfiles": [
+      {
+        "filekey": "1cyx9v655hes.p9qzkf.3.png",
+        "status": "finished",
+        "size": 70,
+        "width": 1,
+        "height": 1,
+        "bits": 8,
+        "mimetype": "image/png",
+        "mediatype": "BITMAP"
+      }
+    ]
+  }
+}

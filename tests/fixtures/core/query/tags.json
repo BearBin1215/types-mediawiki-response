@@ -1,0 +1,60 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "tgcontinue": "Emoji",
+    "continue": "-||"
+  },
+  "query": {
+    "tags": [
+      {
+        "name": "ASCII text added",
+        "displayname": "ASCII text added",
+        "description": "",
+        "hitcount": 7,
+        "defined": false,
+        "source": [],
+        "active": false
+      },
+      {
+        "name": "AWB",
+        "displayname": "<a href=\"https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser\">AutoWikiBrowser</a>",
+        "description": "Edits made with [https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser AutoWikiBrowser]",
+        "hitcount": 1346,
+        "defined": true,
+        "source": [
+          "manual"
+        ],
+        "active": true
+      },
+      {
+        "name": "Added PHP closing tag",
+        "displayname": "Added PHP closing tag",
+        "description": "",
+        "hitcount": 835,
+        "defined": false,
+        "source": [],
+        "active": false
+      },
+      {
+        "name": "Anonymous updated project status",
+        "displayname": "Anonymous updated project status",
+        "description": "",
+        "hitcount": 233,
+        "defined": false,
+        "source": [],
+        "active": false
+      },
+      {
+        "name": "Blocked user editing own talk page",
+        "displayname": "Blocked user editing own talk page",
+        "description": "Tagged by filter <span class=\"plainlinks\">[[Special:AbuseFilter/73|73]] ([[Special:AbuseFilter/history/73|hist]]&nbsp;<b>&middot;</b>&#32;[https://www.mediawiki.org/w/index.php?title=Special:AbuseLog&wpSearchFilter=73 logs])</span>",
+        "hitcount": 139,
+        "defined": true,
+        "source": [
+          "software"
+        ],
+        "active": true
+      }
+    ]
+  }
+}

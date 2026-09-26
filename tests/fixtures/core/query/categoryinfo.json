@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 6418,
+        "ns": 14,
+        "title": "Category:Manual",
+        "categoryinfo": {
+          "size": 53,
+          "pages": 33,
+          "files": 0,
+          "subcats": 20,
+          "hidden": false
+        }
+      }
+    ]
+  }
+}

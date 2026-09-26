@@ -1,0 +1,119 @@
+{
+  "continue": {
+    "rvcontinue": "20050722225238|2395",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "revisions": [
+          {
+            "revid": 1,
+            "parentid": 0,
+            "minor": false,
+            "user": "192.0.2.22",
+            "anon": true,
+            "userid": 0,
+            "timestamp": "2004-08-06T20:32:02Z",
+            "size": 1,
+            "sha1": "86f7e437faa5a7fce15d1ddcb9eaeaea377667b8",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "a"
+              }
+            },
+            "comment": "",
+            "parsedcomment": "",
+            "tags": []
+          },
+          {
+            "revid": 935,
+            "parentid": 1,
+            "minor": false,
+            "user": "192.0.2.14",
+            "anon": true,
+            "userid": 0,
+            "timestamp": "2004-08-12T16:48:46Z",
+            "size": 168,
+            "sha1": "f9348405667b39b7f9555868273fee9dd2e07e7a",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "MediaWiki is the software used by the Wikimedia foundation to run Wikipedia and its sister projects.\n\nMain page for the software is at http://wikipedia.sourceforge.net/"
+              }
+            },
+            "comment": "",
+            "parsedcomment": "",
+            "tags": []
+          },
+          {
+            "revid": 2368,
+            "parentid": 935,
+            "minor": false,
+            "user": "Kate",
+            "userid": 10,
+            "timestamp": "2005-07-21T19:35:23Z",
+            "size": 127,
+            "sha1": "8a2868c707b693e344b55ceae78f4b059a594408",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "Welcome to the MediaWiki wiki.  This wiki is intended to replace http://wikipedia.sourceforge.net/, and maybe other things too."
+              }
+            },
+            "comment": "",
+            "parsedcomment": "",
+            "tags": []
+          },
+          {
+            "revid": 2388,
+            "parentid": 2368,
+            "minor": false,
+            "user": "Angela",
+            "userid": 5,
+            "timestamp": "2005-07-22T01:52:58Z",
+            "size": 6292,
+            "sha1": "a5809199ec871c7bb4a59788cf6e3e854b975f1d",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "Welcome to the '''MediaWiki''' wiki.  This wiki is intended to replace http://wikipedia.sourceforge.net/, and maybe other things too.\n\nThe [http://wikimediafoundation.org Wikimedia Foundation, Inc.] is a non-profit foundation registered in the state of Florida which operates [[w:Wikipedia|Wikipedia]] (a free encyclopedia in over 50 languages), [[wikt:Wiktionary|Wiktionary]] (a free dictionary), [[wikisource:|Wikisource]] (a collection of public domain or FDL-licensed texts), [[b:|Wikibooks]] (free textbooks for schools and universities), and [[q:Wikiquote|Wikiquote]] (a collection of notable quotations). \n\nAll these projects are based on [[w:wiki|wiki]] technology: they are open knowledge bases which can be improved by anyone. \nFor content downloads of these projects, see [http://download.wikimedia.org/ download.wikipedia.org] which has regularly updated backup dumps of all Wikimedia content databases. This is the homepage of the underlying [[w:open source|open source]] wiki engine, MediaWiki, which is developed on [http://wikipedia.sourceforge.net/ SourceForge] via CVS, and is available under the [http://www.fsf.org/licenses/gpl.html GNU General Public License] (the contents of the Wikimedia wikis themselves are mostly licensed under the [http://www.gnu.org/copyleft/fdl.html GNU FDL]).\n\n'''Bug reports''': Please use our [http://bugzilla.wikipedia.org/ bugzilla] to report bugs, request features, and submit patches.\n\n==[[Releases]]==\n\n===Stable release series 1.4.x===\n\n<span style=\"color:red;\">1.4.7 released 2005-07-16</span>: Stable series bugfix release\n\n[http://prdownloads.sourceforge.net/wikipedia/mediawiki-1.4.7.tar.gz?download mediawiki-1.4.7.tar.gz]\n\n:MediaWiki 1.4.7 is a bug fix release. Those affected by the following problems in 1.4.6 should upgrade:\n\n:* Watchlist breakage on MySQL 3.23.x and with table prefix enabled\n:* Possible breakage in watchlist, some image resizing modes on PHP 4.1.2\n\n:<span style=\"color:red;\">1.4.6 included a fix for a cross-site scripting vulnerability, so anyone running older 1.4 releases is very strongly encouraged to upgrade as well.</span>\n\n:Note to upgraders: current versions of MediaWiki are known to produce a large number of notice-level warnings under the newly released PHP 4.4.0. These appear however to be harmless; if you encounter them add this to your LocalSettings.php to suppress the notices:\n\n::<code>error_reporting( E_ALL & ~E_NOTICE );</code>\n\n:PHP 5.1.0beta3 is known to be incompatible at this time.\n\n:'''Changes since last release''': ([http://sourceforge.net/project/shownotes.php?release_id=342530 full release notes])\n\n:* ([[MediaZilla:2755]], [[MediaZilla:2747]]) MySQL 3.23.x and table prefix compatibility fix: restore old watchlist code\n:* PHP 4.1.2 compatibility fix: define floatval() equivalent if missing\n\n<span style=\"color:red;\">1.4.6 released 2005-07-07</span>: Stable series security and bugfix release. For details of this and all earlier releases, please see [http://wikipedia.sourceforge.net/ wikipedia.sourceforge.net].\n\n===Beta preview release===\n\n<span style=\"color:red;\">1.5beta3 released 2005-07-07</span>: '''Beta of next major release'''\n\n[http://prdownloads.sourceforge.net/wikipedia/mediawiki-1.5beta3.tar.gz?download mediawiki-1.5beta3.tar.gz]\n\n:MediaWiki 1.5 beta 3 is a preview release of the new 1.5 release series, with a security update over beta 2. Third-party users should probably not use this beta release to run a public site unless paying close attention to development and ongoing releases.\n\n:A number of significant changes have been made since the alpha releases, including database changes and a reworking of the user permissions settings. See the file [http://cvs.sourceforge.net/viewcvs.py/*checkout*/wikipedia/phase3/UPGRADE?rev=1.11 UPGRADE] for details of upgrading and changing your prior configuration settings for the new system.\n\n:'''Changes since last release''': ([http://sourceforge.net/project/shownotes.php?release_id=340291 full release notes])\n\n==Learn more==\n\nMediaWiki has been developed by Magnus Manske, Brion Vibber, Lee Daniel Crocker, Tim Starling, Erik Möller, Gabriel Wicke and others. Learn more about the script and policy on Wikimedia's [[m:|Meta]] wiki:\n\n* '''About MediaWiki and Wikimedia'''\n** [[m:MediaWiki feature list|MediaWiki feature list]]\n** [[m:MediaWiki history|MediaWiki history]]\n** [[m:Development policy|Development policy]]\n** [[m:MediaWiki roadmap|MediaWiki roadmap]]\n** [[m:Wikimedia Servers|Wikimedia Servers]] (if you are interested in our setup)\n** [[m:Sites using MediaWiki|Sites using MediaWiki]] (add yours!)\n** [[m:How to become a MediaWiki hacker|How to become a MediaWiki hacker]] (work in progress)\n* '''Documentation'''\n** [[m:MediaWiki FAQ|The FAQ]] - please read this before asking questions\n** The [http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/wikipedia/phase3/README?rev=HEAD&content-type=text/vnd.viewcvs-markup README] file\n** The [http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/wikipedia/phase3/docs/ docs] directory in the source\n** [[m:Help:Contents|MediaWiki User's Guide]] and [[m:Help:MediaWiki architecture|MediaWiki architecture]] on Meta\n** [http://wikipedia.sourceforge.net/mwdoc/ MediaWiki HEAD code documentation] (work in progress)\n** [http://www.mysql.com/documentation/mysql/index.html MySQL documentation]\n** [http://www.php.net/manual/en/ PHP documentation]\n* '''Communication'''\n** [http://mail.wikimedia.org/mailman/listinfo/mediawiki-l mediawiki-l] is the mailing list to ask for support. Please check the archives first!\n** [http://mail.wikimedia.org/mailman/listinfo/wikitech-l wikitech-l] is the mailing list where script development is coordinated.\n** [http://meta.wikimedia.org/ Wikimedia's Meta wiki] is where documents are managed and proposals are discussed.\n** [irc://irc.freenode.net/mediawiki #mediawiki on irc.freenode.net] is the IRC channel for realtime communication\n\n\n==Related software projects==\n\n* [http://sourceforge.net/projects/pywikipediabot/ Python Wikipedia Robot Framework]\n* [http://sourceforge.net/projects/wikipdf/ WikiPDF] - wiki-to-PDF converter\n* [http://area23.brightbyte.de/csv2wp.php csv2wp] - converter from CSV to Wikipedia tables\n* [http://search.cpan.org/~markj/WWW-Mediawiki-Client/ CVS-like interface to pages in a MediaWiki]"
+              }
+            },
+            "comment": "from http://wikipedia.sourceforge.net/",
+            "parsedcomment": "from http://wikipedia.sourceforge.net/",
+            "tags": []
+          },
+          {
+            "revid": 2393,
+            "parentid": 2388,
+            "minor": false,
+            "user": "Ævar Arnfjörð Bjarmason",
+            "userid": 11,
+            "timestamp": "2005-07-22T02:39:59Z",
+            "size": 6193,
+            "sha1": "33de257e6c3f6656f4cd3437cd3d9b376c45cf03",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "Welcome to the '''MediaWiki''' wiki.  This wiki is intended to replace http://wikipedia.sourceforge.net/, and maybe other things too.\n\nThe [http://wikimediafoundation.org Wikimedia Foundation, Inc.] is a non-profit foundation registered in the state of Florida which operates [[w:Wikipedia|Wikipedia]] (a free encyclopedia in over 50 languages), [[wikt:Wiktionary|Wiktionary]] (a free dictionary), [[wikisource:|Wikisource]] (a collection of public domain or FDL-licensed texts), [[b:|Wikibooks]] (free textbooks for schools and universities), and [[q:Wikiquote|Wikiquote]] (a collection of notable quotations). \n\nAll these projects are based on [[w:wiki|wiki]] technology: they are open knowledge bases which can be improved by anyone. \nFor content downloads of these projects, see [http://download.wikimedia.org/ download.wikipedia.org] which has regularly updated backup dumps of all Wikimedia content databases. This is the homepage of the underlying [[w:open source|open source]] wiki engine, MediaWiki, which is developed on [http://wikipedia.sourceforge.net/ SourceForge] via CVS, and is available under the [http://www.fsf.org/licenses/gpl.html GNU General Public License] (the contents of the Wikimedia wikis themselves are mostly licensed under the [http://www.gnu.org/copyleft/fdl.html GNU FDL]).\n\n'''Bug reports''': Please use our [http://bugzilla.wikipedia.org/ bugzilla] to report bugs, request features, and submit patches.\n\n==[[Releases]]==\n\n===Stable release series 1.4.x===\n\n<span style=\"color:red;\">1.4.7 released 2005-07-16</span>: Stable series bugfix release\n\n[http://prdownloads.sourceforge.net/wikipedia/mediawiki-1.4.7.tar.gz?download mediawiki-1.4.7.tar.gz]\n\n:MediaWiki 1.4.7 is a bug fix release. Those affected by the following problems in 1.4.6 should upgrade:\n\n:* Watchlist breakage on MySQL 3.23.x and with table prefix enabled\n:* Possible breakage in watchlist, some image resizing modes on PHP 4.1.2\n\n:<span style=\"color:red;\">1.4.6 included a fix for a cross-site scripting vulnerability, so anyone running older 1.4 releases is very strongly encouraged to upgrade as well.</span>\n\n:Note to upgraders: current versions of MediaWiki are known to produce a large number of notice-level warnings under the newly released PHP 4.4.0. These appear however to be harmless; if you encounter them add this to your LocalSettings.php to suppress the notices:\n\n::<code>error_reporting( E_ALL & ~E_NOTICE );</code>\n\n:PHP 5.1.0beta3 is known to be incompatible at this time.\n\n:'''Changes since last release''': ([http://sourceforge.net/project/shownotes.php?release_id=342530 full release notes])\n\n:* ([[MediaZilla:2755]], [[MediaZilla:2747]]) MySQL 3.23.x and table prefix compatibility fix: restore old watchlist code\n:* PHP 4.1.2 compatibility fix: define floatval() equivalent if missing\n\n<span style=\"color:red;\">1.4.6 released 2005-07-07</span>: Stable series security and bugfix release. For details of this and all earlier releases, please see [http://wikipedia.sourceforge.net/ wikipedia.sourceforge.net].\n\n===Beta preview release===\n\n<span style=\"color:red;\">1.5beta3 released 2005-07-07</span>: '''Beta of next major release'''\n\n[http://prdownloads.sourceforge.net/wikipedia/mediawiki-1.5beta3.tar.gz?download mediawiki-1.5beta3.tar.gz]\n\n:MediaWiki 1.5 beta 3 is a preview release of the new 1.5 release series, with a security update over beta 2. Third-party users should probably not use this beta release to run a public site unless paying close attention to development and ongoing releases.\n\n:A number of significant changes have been made since the alpha releases, including database changes and a reworking of the user permissions settings. See the file [http://cvs.sourceforge.net/viewcvs.py/*checkout*/wikipedia/phase3/UPGRADE?rev=1.11 UPGRADE] for details of upgrading and changing your prior configuration settings for the new system.\n\n:'''Changes since last release''': ([http://sourceforge.net/project/shownotes.php?release_id=340291 full release notes])\n\n==Learn more==\n\nMediaWiki has been developed by Magnus Manske, Brion Vibber, Lee Daniel Crocker, Tim Starling, Erik Möller, Gabriel Wicke and others. Learn more about the script and policy on Wikimedia's [[m:|Meta]] wiki:\n\n* '''About MediaWiki and Wikimedia'''\n** [[m:MediaWiki feature list|MediaWiki feature list]]\n** [[m:MediaWiki history|MediaWiki history]]\n** [[m:Development policy|Development policy]]\n** [[m:MediaWiki roadmap|MediaWiki roadmap]]\n** [[m:Wikimedia Servers|Wikimedia Servers]] (if you are interested in our setup)\n** [[m:Sites using MediaWiki|Sites using MediaWiki]] (add yours!)\n** [[m:How to become a MediaWiki hacker|How to become a MediaWiki hacker]] (work in progress)\n* '''Documentation'''\n** [[m:MediaWiki FAQ|The FAQ]] - please read this before asking questions\n** The [http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/wikipedia/phase3/README?rev=HEAD&content-type=text/vnd.viewcvs-markup README] file\n** The [http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/wikipedia/phase3/docs/ docs] directory in the source\n** [[m:Help:Contents|MediaWiki User's Guide]] and [[m:Help:MediaWiki architecture|MediaWiki architecture]] on Meta\n** [http://www.mysql.com/documentation/mysql/index.html MySQL documentation]\n** [http://www.php.net/manual/en/ PHP documentation]\n* '''Communication'''\n** [http://mail.wikimedia.org/mailman/listinfo/mediawiki-l mediawiki-l] is the mailing list to ask for support. Please check the archives first!\n** [http://mail.wikimedia.org/mailman/listinfo/wikitech-l wikitech-l] is the mailing list where script development is coordinated.\n** [http://meta.wikimedia.org/ Wikimedia's Meta wiki] is where documents are managed and proposals are discussed.\n** [irc://irc.freenode.net/mediawiki #mediawiki on irc.freenode.net] is the IRC channel for realtime communication\n\n==Related software projects==\n\n* [http://sourceforge.net/projects/pywikipediabot/ Python Wikipedia Robot Framework]\n* [http://sourceforge.net/projects/wikipdf/ WikiPDF] - wiki-to-PDF converter\n* [http://area23.brightbyte.de/csv2wp.php csv2wp] - converter from CSV to Wikipedia tables\n* [http://search.cpan.org/~markj/WWW-Mediawiki-Client/ CVS-like interface to pages in a MediaWiki]"
+              }
+            },
+            "comment": "/* Learn more */ removed unupdated documentation",
+            "parsedcomment": "<span class=\"autocomment\"><a href=\"/wiki/MediaWiki#Learn_more\" title=\"MediaWiki\">→<bdi dir=\"ltr\">Learn more</bdi></a>: </span> removed unupdated documentation",
+            "tags": []
+          }
+        ]
+      }
+    ]
+  }
+}

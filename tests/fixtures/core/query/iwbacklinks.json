@@ -1,0 +1,32 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "iwblcontinue": "q|MediaWiki|25334749",
+    "continue": "-||"
+  },
+  "query": {
+    "iwbacklinks": [
+      {
+        "pageid": 101997,
+        "ns": 3,
+        "title": "User talk:Tim Starling",
+        "iwprefix": "q",
+        "iwtitle": "MediaWiki"
+      },
+      {
+        "pageid": 323710,
+        "ns": 0,
+        "title": "MediaWiki",
+        "iwprefix": "q",
+        "iwtitle": "MediaWiki"
+      },
+      {
+        "pageid": 24794378,
+        "ns": 5,
+        "title": "Wikipedia talk:WikiProject Wikipedia/Archive 1",
+        "iwprefix": "q",
+        "iwtitle": "MediaWiki"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "query-continue": {
+    "revisions": {
+      "rvcontinue": "20260930171211|8629874"
+    },
+    "recentchanges": {
+      "grccontinue": "20260930171641|10990320"
+    }
+  },
+  "query-noncontinue": {
+    "recentchanges": {
+      "grccontinue": "20260930171642|10990321"
+    }
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 2482464,
+        "ns": 100,
+        "title": "Manual:File metadata handling/it",
+        "revisions": [
+          {
+            "revid": 8629876,
+            "parentid": 8629874,
+            "minor": false,
+            "user": "GpieroMW",
+            "timestamp": "2026-09-30T17:16:42Z",
+            "comment": "Created page with \"Le date sono formattate come YYYY:MM:DD HH:MM:SS, un formato noto a MediaWiki come $1.\""
+          }
+        ]
+      }
+    ]
+  }
+}

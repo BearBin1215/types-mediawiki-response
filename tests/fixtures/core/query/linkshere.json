@@ -1,0 +1,47 @@
+{
+  "continue": {
+    "lhcontinue": "3416",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "linkshere": [
+          {
+            "pageid": 1423,
+            "ns": 0,
+            "title": "Main Page",
+            "redirect": true
+          },
+          {
+            "pageid": 1588,
+            "ns": 2,
+            "title": "User:Bdk/Translation Core",
+            "redirect": false
+          },
+          {
+            "pageid": 1748,
+            "ns": 12,
+            "title": "Help:Magic words",
+            "redirect": false
+          },
+          {
+            "pageid": 2788,
+            "ns": 2,
+            "title": "User:Daiju~mediawikiwiki",
+            "redirect": false
+          },
+          {
+            "pageid": 3131,
+            "ns": 4,
+            "title": "Project:Translation/fr",
+            "redirect": false
+          }
+        ]
+      }
+    ]
+  }
+}

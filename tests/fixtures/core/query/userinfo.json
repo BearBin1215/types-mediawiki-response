@@ -1,0 +1,50 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "userinfo": {
+      "id": 0,
+      "name": "192.0.2.143",
+      "anon": true,
+      "messages": false,
+      "groups": [
+        "*"
+      ],
+      "groupmemberships": [],
+      "implicitgroups": [
+        "*"
+      ],
+      "rights": [
+        "createaccount",
+        "autocreateaccount",
+        "read",
+        "edit",
+        "createpage",
+        "createtalk",
+        "viewmyprivateinfo",
+        "editmyprivateinfo",
+        "editmyoptions",
+        "translate",
+        "urlshortener-create-url",
+        "abusefilter-view",
+        "abusefilter-log",
+        "echo-read-notifications"
+      ],
+      "editcount": 0,
+      "acceptlang": [
+        {
+          "q": 1,
+          "code": "*"
+        }
+      ],
+      "watchlistlabels": [],
+      "centralids": {
+        "CentralAuth": 0,
+        "local": 0
+      },
+      "attachedlocal": {
+        "CentralAuth": false,
+        "local": false
+      }
+    }
+  }
+}

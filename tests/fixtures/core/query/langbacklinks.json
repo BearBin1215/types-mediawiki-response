@@ -1,0 +1,14 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "langbacklinks": [
+      {
+        "pageid": 15934,
+        "ns": 0,
+        "title": "How to become a MediaWiki hacker",
+        "lllang": "de",
+        "lltitle": "MediaWiki"
+      }
+    ]
+  }
+}

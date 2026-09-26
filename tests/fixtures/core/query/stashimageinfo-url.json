@@ -1,0 +1,66 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "stashimageinfo": [
+      {
+        "timestamp": "2026-10-01T05:14:32Z",
+        "size": 70,
+        "width": 1,
+        "height": 1,
+        "canonicaltitle": "File:20261001051432!phppVSWA5.png",
+        "thumburl": "http://localhost:8080/index.php/Special:UploadStash/file/1czbonaaf5uo.r5eqv4.3.png",
+        "thumbwidth": 1,
+        "thumbheight": 1,
+        "thumbmime": "image/png",
+        "url": "http://localhost:8080/index.php/Special:UploadStash/file/1czbonaaf5uo.r5eqv4.3.png",
+        "descriptionurl": "http://localhost:8080/index.php/Special:UploadStash/file/1czbonaaf5uo.r5eqv4.3.png",
+        "sha1": "b2bbe763c7e1828c750d53f78550709a6fea19be",
+        "metadata": [
+          {
+            "name": "frameCount",
+            "value": 0
+          },
+          {
+            "name": "loopCount",
+            "value": 1
+          },
+          {
+            "name": "duration",
+            "value": 0
+          },
+          {
+            "name": "bitDepth",
+            "value": 8
+          },
+          {
+            "name": "colorType",
+            "value": "truecolour-alpha"
+          },
+          {
+            "name": "metadata",
+            "value": [
+              {
+                "name": "_MW_PNG_VERSION",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "commonmetadata": [],
+        "extmetadata": {
+          "DateTime": {
+            "value": "2026-10-01T05:14:32Z",
+            "source": "mediawiki-metadata",
+            "hidden": ""
+          },
+          "ObjectName": {
+            "value": "20261001051432!phppVSWA5",
+            "source": "mediawiki-metadata"
+          }
+        },
+        "mime": "image/png",
+        "bitdepth": 8
+      }
+    ]
+  }
+}

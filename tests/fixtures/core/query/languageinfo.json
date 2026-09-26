@@ -1,0 +1,57 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "languageinfo": {
+      "en": {
+        "code": "en",
+        "bcp47": "en",
+        "dir": "ltr",
+        "autonym": "English",
+        "name": "English",
+        "fallbacks": [],
+        "variants": [
+          "en"
+        ],
+        "variantnames": {
+          "en": "English"
+        }
+      },
+      "zh": {
+        "code": "zh",
+        "bcp47": "zh",
+        "dir": "ltr",
+        "autonym": "中文",
+        "name": "Chinese",
+        "fallbacks": [
+          "zh-hans",
+          "zh-hant",
+          "zh-cn",
+          "zh-tw",
+          "zh-hk"
+        ],
+        "variants": [
+          "zh",
+          "zh-hans",
+          "zh-hant",
+          "zh-cn",
+          "zh-hk",
+          "zh-mo",
+          "zh-my",
+          "zh-sg",
+          "zh-tw"
+        ],
+        "variantnames": {
+          "zh": "不转换",
+          "zh-hans": "简体",
+          "zh-hant": "繁體",
+          "zh-cn": "大陆简体",
+          "zh-hk": "香港繁體",
+          "zh-mo": "澳門繁體",
+          "zh-my": "大马简体",
+          "zh-sg": "新加坡简体",
+          "zh-tw": "臺灣正體"
+        }
+      }
+    }
+  }
+}

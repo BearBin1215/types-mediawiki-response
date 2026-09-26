@@ -1,0 +1,53 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "gsroffset": 3,
+    "continue": "gsroffset||"
+  },
+  "query": {
+    "searchinfo": {
+      "totalhits": 19155
+    },
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "size": 250,
+        "wordcount": 295,
+        "snippet": "The <span class=\"searchmatch\">MediaWiki</span> software is used by tens of thousands of websites and thousands of companies and organisations. It powers Wikipedia and also this website",
+        "timestamp": "2023-12-29T18:14:25Z",
+        "titlesnippet": "<span class=\"searchmatch\">MediaWiki</span>",
+        "categorysnippet": "",
+        "isfilematch": false,
+        "index": 1
+      },
+      {
+        "pageid": 15934,
+        "ns": 0,
+        "title": "How to become a MediaWiki hacker",
+        "size": 22199,
+        "wordcount": 2505,
+        "snippet": "skills needed to contribute to development of <span class=\"searchmatch\">MediaWiki</span> core and <span class=\"searchmatch\">MediaWiki</span> extensions. Contributing to <span class=\"searchmatch\">MediaWiki</span> is often difficult, so if you would like to",
+        "timestamp": "2026-09-27T21:05:49Z",
+        "titlesnippet": "How to become a <span class=\"searchmatch\">MediaWiki</span> hacker",
+        "categorysnippet": "<span class=\"searchmatch\">MediaWiki</span> development",
+        "isfilematch": false,
+        "index": 3
+      },
+      {
+        "pageid": 116892,
+        "ns": 0,
+        "title": "MediaWiki-Vagrant",
+        "size": 72949,
+        "wordcount": 6399,
+        "snippet": "corresponds to the <span class=\"searchmatch\">MediaWiki</span>-Vagrant folder on your host machine, and its contents is shared. <span class=\"searchmatch\">Media</span><span class=\"searchmatch\">Wiki&#039;s</span> code is installed in /vagrant/<span class=\"searchmatch\">mediawiki</span>. This allows",
+        "timestamp": "2026-05-31T21:48:22Z",
+        "titlesnippet": "<span class=\"searchmatch\">MediaWiki</span>-Vagrant",
+        "categorysnippet": "<span class=\"searchmatch\">MediaWiki</span>-Vagrant",
+        "isfilematch": false,
+        "index": 2
+      }
+    ]
+  }
+}

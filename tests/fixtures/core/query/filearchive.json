@@ -1,0 +1,56 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "filearchive": [
+      {
+        "id": 1,
+        "name": "Fixture_archive_1790425120883.png",
+        "ns": 6,
+        "title": "File:Fixture archive 1790425120883.png",
+        "parseddescription": "fixture archived file",
+        "description": "fixture archived file",
+        "userid": 3,
+        "user": "Capadmin",
+        "sha1": "7c61e84ce8f8e2e32d8ff61b1bf938b16d6212ca",
+        "timestamp": "2026-09-26T12:18:54Z",
+        "size": "70",
+        "height": "1",
+        "width": "1",
+        "mediatype": "BITMAP",
+        "metadata": [
+          {
+            "name": "frameCount",
+            "value": 0
+          },
+          {
+            "name": "loopCount",
+            "value": 1
+          },
+          {
+            "name": "duration",
+            "value": 0
+          },
+          {
+            "name": "bitDepth",
+            "value": 8
+          },
+          {
+            "name": "colorType",
+            "value": "truecolour-alpha"
+          },
+          {
+            "name": "metadata",
+            "value": [
+              {
+                "name": "_MW_PNG_VERSION",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "bitdepth": "8",
+        "mime": "image/png"
+      }
+    ]
+  }
+}

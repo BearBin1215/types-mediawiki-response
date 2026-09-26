@@ -1,0 +1,56 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "cmcontinue": "page|2a2e503a4644042a483a010e01dcc0dcdcdc|14588",
+    "continue": "-||"
+  },
+  "query": {
+    "categorymembers": [
+      {
+        "pageid": 6411,
+        "ns": 100,
+        "title": "Manual:Contents",
+        "sortkey": "0403062e4644503244504e010e01c4dc0b",
+        "sortkeyprefix": " ",
+        "type": "page",
+        "timestamp": "2025-02-17T16:56:40Z"
+      },
+      {
+        "pageid": 378224,
+        "ns": 100,
+        "title": "Manual:File page warnings",
+        "sortkey": "040306343a403204482a363204562a4c443a44364e011801c4dc15",
+        "sortkeyprefix": " ",
+        "type": "page",
+        "timestamp": "2025-02-17T16:57:00Z"
+      },
+      {
+        "pageid": 5540,
+        "ns": 4,
+        "title": "Project:Manual",
+        "sortkey": "040306422a44522a40010c01c4dc09",
+        "sortkeyprefix": " ",
+        "type": "page",
+        "timestamp": "2025-02-17T16:56:40Z"
+      },
+      {
+        "pageid": 1530105,
+        "ns": 100,
+        "title": "Manual:Access keys",
+        "sortkey": "2a2e2e324e4e043e325a4e010f01dc0e",
+        "sortkeyprefix": "",
+        "type": "page",
+        "timestamp": "2025-02-17T16:57:48Z"
+      },
+      {
+        "pageid": 98443,
+        "ns": 100,
+        "title": "Manual:Account creation",
+        "sortkey": "2a2e2e46524450042e4c322a503a4644011401dc13",
+        "sortkeyprefix": "",
+        "type": "page",
+        "timestamp": "2025-02-17T16:56:47Z"
+      }
+    ]
+  }
+}

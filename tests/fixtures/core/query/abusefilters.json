@@ -1,0 +1,47 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "abfstartid": 4,
+    "continue": "-||"
+  },
+  "query": {
+    "abusefilters": [
+      {
+        "id": 1,
+        "description": "Block edits containing \"Good post/site, admin.\" (spambot attacks)",
+        "hitsredacted": true,
+        "lasteditor": "DannyS712",
+        "lastedittime": "2019-08-28T23:05:32Z",
+        "suppressed": false,
+        "private": false,
+        "protected": false,
+        "enabled": false,
+        "deleted": true
+      },
+      {
+        "id": 2,
+        "description": "Discourage new page creation from people who are on the wrong wiki",
+        "hitsredacted": true,
+        "lasteditor": "DannyS712",
+        "lastedittime": "2019-08-26T09:44:52Z",
+        "suppressed": false,
+        "private": false,
+        "protected": false,
+        "enabled": false,
+        "deleted": true
+      },
+      {
+        "id": 3,
+        "description": "Discourage people from adding ?> at the end of a code block",
+        "hitsredacted": true,
+        "lasteditor": "Pppery",
+        "lastedittime": "2025-11-03T18:01:30Z",
+        "suppressed": false,
+        "private": false,
+        "protected": false,
+        "enabled": false,
+        "deleted": true
+      }
+    ]
+  }
+}

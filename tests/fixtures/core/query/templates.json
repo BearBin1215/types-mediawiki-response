@@ -1,0 +1,29 @@
+{
+  "continue": {
+    "tlcontinue": "6411|10|Hubs",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 6411,
+        "ns": 100,
+        "title": "Manual:Contents",
+        "templates": [
+          {
+            "ns": 10,
+            "title": "Template:ContentGrid"
+          },
+          {
+            "ns": 10,
+            "title": "Template:ContentGrid/styles.css"
+          },
+          {
+            "ns": 10,
+            "title": "Template:Dir"
+          }
+        ]
+      }
+    ]
+  }
+}

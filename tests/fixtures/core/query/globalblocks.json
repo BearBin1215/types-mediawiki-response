@@ -1,0 +1,53 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "bgstart": "2026-09-25T21:04:53Z",
+    "continue": "-||"
+  },
+  "query": {
+    "globalblocks": [
+      {
+        "id": "3459118",
+        "anononly": false,
+        "account-creation-disabled": true,
+        "block-email": false,
+        "autoblocking-enabled": false,
+        "automatic": true,
+        "by": "XXBlackburnXx",
+        "bywiki": "metawiki",
+        "timestamp": "2026-09-26T03:22:32Z",
+        "expiry": "2026-09-27T03:22:32Z",
+        "reason": "Globally autoblocked because your IP address has been recently used by \"[[User:Marksmayra|Marksmayra]]\".\nThe reason given for Marksmayra's block is \"Cross-wiki vandalism\""
+      },
+      {
+        "id": "3459116",
+        "anononly": false,
+        "account-creation-disabled": true,
+        "block-email": false,
+        "autoblocking-enabled": false,
+        "automatic": true,
+        "by": "XXBlackburnXx",
+        "bywiki": "metawiki",
+        "timestamp": "2026-09-26T00:55:58Z",
+        "expiry": "2026-09-27T00:55:58Z",
+        "reason": "Globally autoblocked because your IP address has been recently used by \"[[User:Marksmayra|Marksmayra]]\".\nThe reason given for Marksmayra's block is \"Cross-wiki vandalism\""
+      },
+      {
+        "id": "3459117",
+        "target": "192.0.2.202",
+        "anononly": false,
+        "account-creation-disabled": true,
+        "block-email": false,
+        "autoblocking-enabled": false,
+        "automatic": false,
+        "by": "Mykola7",
+        "bywiki": "metawiki",
+        "timestamp": "2026-09-25T21:35:45Z",
+        "expiry": "2027-09-25T21:35:45Z",
+        "reason": "Long-term abuse",
+        "rangestart": "192.0.2.202",
+        "rangeend": "192.0.2.202"
+      }
+    ]
+  }
+}

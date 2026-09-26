@@ -1,0 +1,35 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "normalized": [
+      {
+        "fromencoded": false,
+        "from": "DoesNotExist_0a1b2c3d",
+        "to": "DoesNotExist 0a1b2c3d"
+      }
+    ],
+    "pages": [
+      {
+        "ns": 0,
+        "title": "DoesNotExist 0a1b2c3d",
+        "missing": true,
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr"
+      },
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-09-24T19:59:24Z",
+        "lastrevid": 6287429,
+        "length": 250
+      }
+    ]
+  }
+}

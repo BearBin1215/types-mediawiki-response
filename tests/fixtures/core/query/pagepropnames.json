@@ -1,0 +1,35 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "ppncontinue": "hiddencat",
+    "continue": "-||"
+  },
+  "query": {
+    "pagepropnames": [
+      {
+        "propname": "archivedtalk"
+      },
+      {
+        "propname": "defaultsort"
+      },
+      {
+        "propname": "disambiguation"
+      },
+      {
+        "propname": "displaytitle"
+      },
+      {
+        "propname": "expectedUnconnectedPage"
+      },
+      {
+        "propname": "expectunusedcategory"
+      },
+      {
+        "propname": "expectunusedtemplate"
+      },
+      {
+        "propname": "forcetoc"
+      }
+    ]
+  }
+}

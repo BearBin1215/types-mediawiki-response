@@ -1,0 +1,84 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "authmanagerinfo": {
+      "canauthenticatenow": true,
+      "cancreateaccounts": true,
+      "canlinkaccounts": false,
+      "haspreservedstate": false,
+      "hasprimarypreservedstate": false,
+      "preservedusername": "",
+      "requests": [
+        {
+          "id": "MediaWiki\\Auth\\PasswordAuthenticationRequest",
+          "metadata": {},
+          "required": "primary-required",
+          "provider": "Password-based authentication",
+          "account": "",
+          "fields": {
+            "username": {
+              "type": "string",
+              "label": "Username",
+              "help": "Username for authentication.",
+              "optional": false,
+              "sensitive": false
+            },
+            "password": {
+              "type": "password",
+              "label": "Password",
+              "help": "Password for authentication.",
+              "optional": false,
+              "sensitive": true
+            },
+            "retype": {
+              "type": "password",
+              "label": "Retype password:",
+              "help": "Password again to confirm.",
+              "optional": false,
+              "sensitive": true
+            }
+          }
+        },
+        {
+          "id": "MediaWiki\\Auth\\UsernameAuthenticationRequest",
+          "metadata": {},
+          "required": "required",
+          "provider": "MediaWiki\\Auth\\UsernameAuthenticationRequest",
+          "account": "MediaWiki\\Auth\\UsernameAuthenticationRequest",
+          "fields": {
+            "username": {
+              "type": "string",
+              "label": "Username",
+              "help": "Username for authentication.",
+              "optional": false,
+              "sensitive": false
+            }
+          }
+        },
+        {
+          "id": "MediaWiki\\Auth\\UserDataAuthenticationRequest",
+          "metadata": {},
+          "required": "required",
+          "provider": "MediaWiki\\Auth\\UserDataAuthenticationRequest",
+          "account": "MediaWiki\\Auth\\UserDataAuthenticationRequest",
+          "fields": {
+            "email": {
+              "type": "string",
+              "label": "Email",
+              "help": "Email address",
+              "optional": true,
+              "sensitive": false
+            },
+            "realname": {
+              "type": "string",
+              "label": "Real name",
+              "help": "Real name of the user",
+              "optional": true,
+              "sensitive": false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

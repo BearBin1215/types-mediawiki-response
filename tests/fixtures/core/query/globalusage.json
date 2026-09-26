@@ -1,0 +1,42 @@
+{
+  "continue": {
+    "gucontinue": "Wiki_letter_w.png|enwiki|3468928",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "ns": 6,
+        "title": "File:Wiki letter w.png",
+        "missing": true,
+        "globalusage": [
+          {
+            "title": "User_talk:Jarkko_Piiroinen",
+            "wiki": "commons.wikimedia.org",
+            "url": "https://commons.wikimedia.org/wiki/User_talk:Jarkko_Piiroinen"
+          },
+          {
+            "title": "Wikipedia:Meinungsbilder/Stubs",
+            "wiki": "de.wikipedia.org",
+            "url": "https://de.wikipedia.org/wiki/Wikipedia:Meinungsbilder/Stubs"
+          },
+          {
+            "title": "Benutzer:Abzt/Portal",
+            "wiki": "de.wikipedia.org",
+            "url": "https://de.wikipedia.org/wiki/Benutzer:Abzt/Portal"
+          },
+          {
+            "title": "Wikipedia:Historical_archive/Boilerplate_text",
+            "wiki": "en.wikipedia.org",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Historical_archive/Boilerplate_text"
+          },
+          {
+            "title": "Wikipedia:WikiProject_Usability/Images",
+            "wiki": "en.wikipedia.org",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Usability/Images"
+          }
+        ]
+      }
+    ]
+  }
+}

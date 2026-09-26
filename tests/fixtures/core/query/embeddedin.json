@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "eicontinue": "12|37872",
+    "continue": "-||"
+  },
+  "query": {
+    "embeddedin": [
+      {
+        "pageid": 1748,
+        "ns": 12,
+        "title": "Help:Magic words"
+      },
+      {
+        "pageid": 13403,
+        "ns": 12,
+        "title": "Help:Magic words/ru"
+      },
+      {
+        "pageid": 18504,
+        "ns": 12,
+        "title": "Help:Magic words/ja"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 589,
+        "ns": 6,
+        "title": "File:Gap exif.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2026-10-01T06:16:32Z",
+            "user": "Capadmin",
+            "userid": 3,
+            "size": 1274,
+            "width": 64,
+            "height": 48,
+            "canonicaltitle": "File:Gap exif.jpg",
+            "url": "http://localhost:8080/images/e/ef/Gap_exif.jpg",
+            "descriptionurl": "http://localhost:8080/index.php/File:Gap_exif.jpg",
+            "descriptionshorturl": "http://localhost:8080/index.php?curid=589",
+            "sha1": "9272d3372af0d135bc8a39eb1860588970a8df53",
+            "metadata": [
+              {
+                "name": "Make",
+                "value": "FixtureCam"
+              },
+              {
+                "name": "Model",
+                "value": "Model X-1"
+              },
+              {
+                "name": "Orientation",
+                "value": 1
+              },
+              {
+                "name": "XResolution",
+                "value": "72/1"
+              },
+              {
+                "name": "YResolution",
+                "value": "72/1"
+              },
+              {
+                "name": "ResolutionUnit",
+                "value": 2
+              },
+              {
+                "name": "Software",
+                "value": "capture-coverage-gaps 1.0"
+              },
+              {
+                "name": "DateTime",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "YCbCrPositioning",
+                "value": 1
+              },
+              {
+                "name": "MEDIAWIKI_EXIF_VERSION",
+                "value": 1
+              }
+            ],
+            "commonmetadata": [
+              {
+                "name": "Make",
+                "value": "FixtureCam"
+              },
+              {
+                "name": "Model",
+                "value": "Model X-1"
+              },
+              {
+                "name": "Orientation",
+                "value": 1
+              },
+              {
+                "name": "XResolution",
+                "value": "72/1"
+              },
+              {
+                "name": "YResolution",
+                "value": "72/1"
+              },
+              {
+                "name": "ResolutionUnit",
+                "value": 2
+              },
+              {
+                "name": "Software",
+                "value": "capture-coverage-gaps 1.0"
+              },
+              {
+                "name": "DateTime",
+                "value": "2024:01:15 12:00:00"
+              },
+              {
+                "name": "YCbCrPositioning",
+                "value": 1
+              }
+            ],
+            "extmetadata": {
+              "DateTime": {
+                "value": "2026-10-01T06:16:32Z",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Gap exif",
+                "source": "mediawiki-metadata"
+              }
+            },
+            "mime": "image/jpeg",
+            "mediatype": "BITMAP",
+            "bitdepth": 8
+          }
+        ]
+      }
+    ]
+  }
+}

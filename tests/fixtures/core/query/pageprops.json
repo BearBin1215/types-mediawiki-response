@@ -1,0 +1,30 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "pageprops": {
+          "displaytitle": "MediaWiki",
+          "notoc": "",
+          "wikibase_item": "Q5296"
+        }
+      },
+      {
+        "pageid": 1423,
+        "ns": 0,
+        "title": "Main Page"
+      },
+      {
+        "pageid": 6410,
+        "ns": 12,
+        "title": "Help:Categories",
+        "pageprops": {
+          "wikibase_item": "Q4989342"
+        }
+      }
+    ]
+  }
+}

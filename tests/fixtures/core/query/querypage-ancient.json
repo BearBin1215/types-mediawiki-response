@@ -1,0 +1,32 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "qpoffset": 3,
+    "continue": "-||"
+  },
+  "query": {
+    "querypage": {
+      "name": "Ancientpages",
+      "results": [
+        {
+          "value": "20260925183926",
+          "timestamp": "2026-09-25T18:39:26Z",
+          "ns": 0,
+          "title": "Main Page"
+        },
+        {
+          "value": "20260925184042",
+          "timestamp": "2026-09-25T18:40:42Z",
+          "ns": 0,
+          "title": "Fixture edit target"
+        },
+        {
+          "value": "20260925184225",
+          "timestamp": "2026-09-25T18:42:25Z",
+          "ns": 0,
+          "title": "Fixture edit target 1790361745"
+        }
+      ]
+    }
+  }
+}

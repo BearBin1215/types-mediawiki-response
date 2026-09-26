@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 534366,
+        "ns": 0,
+        "title": "Barack Obama",
+        "pageviews": {
+          "2026-09-25": 13676,
+          "2026-09-26": 12135,
+          "2026-09-27": null
+        }
+      }
+    ]
+  }
+}

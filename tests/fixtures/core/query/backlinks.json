@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "blcontinue": "4|3131",
+    "continue": "-||"
+  },
+  "query": {
+    "backlinks": [
+      {
+        "pageid": 1588,
+        "ns": 2,
+        "title": "User:Bdk/Translation Core"
+      },
+      {
+        "pageid": 1748,
+        "ns": 12,
+        "title": "Help:Magic words"
+      },
+      {
+        "pageid": 2788,
+        "ns": 2,
+        "title": "User:Daiju~mediawikiwiki"
+      }
+    ]
+  }
+}

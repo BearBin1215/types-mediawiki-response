@@ -1,0 +1,38 @@
+{
+  "continue": {
+    "llcontinue": "22989|als",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 22989,
+        "ns": 0,
+        "title": "Paris",
+        "langlinks": [
+          {
+            "lang": "ace",
+            "url": "https://ace.wikipedia.org/wiki/Paris",
+            "langname": "Acehnese",
+            "autonym": "Acèh",
+            "title": "Paris"
+          },
+          {
+            "lang": "ady",
+            "url": "https://ady.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%B8%D0%B6",
+            "langname": "Adyghe",
+            "autonym": "адыгабзэ",
+            "title": "Париж"
+          },
+          {
+            "lang": "af",
+            "url": "https://af.wikipedia.org/wiki/Parys",
+            "langname": "Afrikaans",
+            "autonym": "Afrikaans",
+            "title": "Parys"
+          }
+        ]
+      }
+    ]
+  }
+}

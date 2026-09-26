@@ -1,0 +1,114 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "drcontinue": "0|Deleted_revisions_target_1790419669797|20260926104757|24",
+    "continue": "-||"
+  },
+  "warnings": {
+    "main": {
+      "warnings": "Subscribe to the mediawiki-api-announce mailing list at <https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/> for notice of API deprecations and breaking changes."
+    },
+    "deletedrevs": {
+      "warnings": "\"list=deletedrevs\" has been deprecated. Please use \"prop=deletedrevisions\" or \"list=alldeletedrevisions\" instead."
+    }
+  },
+  "query": {
+    "deletedrevs": [
+      {
+        "revisions": [
+          {
+            "timestamp": "2026-09-26T11:43:25Z",
+            "revid": 645,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "minor": false,
+            "len": "19",
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422997240"
+      },
+      {
+        "revisions": [
+          {
+            "timestamp": "2026-09-26T11:41:44Z",
+            "revid": 611,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "minor": false,
+            "len": "19",
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422895781"
+      },
+      {
+        "revisions": [
+          {
+            "timestamp": "2026-09-26T11:40:17Z",
+            "revid": 577,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "minor": false,
+            "len": "19",
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790422809652"
+      },
+      {
+        "revisions": [
+          {
+            "timestamp": "2026-09-26T11:26:33Z",
+            "revid": 542,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "minor": false,
+            "len": "19",
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790421984253"
+      },
+      {
+        "revisions": [
+          {
+            "timestamp": "2026-09-26T10:48:45Z",
+            "revid": 508,
+            "parentid": 0,
+            "user": "Capadmin",
+            "userid": 3,
+            "comment": "Created page with \"first revision text\"",
+            "parsedcomment": "Created page with &quot;first revision text&quot;",
+            "minor": false,
+            "len": "19",
+            "sha1": "f3a7a31c3cc96a4082c7ac9a142026a1f679f8b4",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Deleted revisions target 1790419716433"
+      }
+    ]
+  }
+}

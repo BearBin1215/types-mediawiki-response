@@ -1,0 +1,32 @@
+{
+  "continue": {
+    "iwcontinue": "3766|m|Special:MyLanguage/Wikimedia_Commons",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 3766,
+        "ns": 100,
+        "title": "Manual:FAQ",
+        "iwlinks": [
+          {
+            "prefix": "en",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:How_to_edit_a_page",
+            "title": "Wikipedia:How_to_edit_a_page"
+          },
+          {
+            "prefix": "en",
+            "url": "https://en.wikipedia.org/wiki/gzip",
+            "title": "gzip"
+          },
+          {
+            "prefix": "m",
+            "url": "https://meta.wikimedia.org/wiki/Special:MyLanguage/Wikificator",
+            "title": "Special:MyLanguage/Wikificator"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "pvimoffset": 4,
+    "continue": "-||"
+  },
+  "query": {
+    "mostviewed": [
+      { "ns": 0, "title": "Main Page", "count": 6768204 },
+      { "ns": -1, "title": "Special:Search", "count": 899183 },
+      { "ns": 4, "title": "Wikipedia:Featured pictures", "count": 573650 },
+      { "ns": 0, "title": "Lizzie Borden", "count": 440478 }
+    ]
+  }
+}

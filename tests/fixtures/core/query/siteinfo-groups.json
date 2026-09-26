@@ -1,0 +1,2026 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "statistics": {
+      "pages": 313,
+      "articles": 0,
+      "edits": 547,
+      "images": 0,
+      "users": 5,
+      "activeusers": 4,
+      "admins": 3,
+      "jobs": 685
+    },
+    "usergroups": [
+      {
+        "name": "*",
+        "rights": [
+          "createaccount",
+          "read",
+          "edit",
+          "createpage",
+          "createtalk",
+          "viewmyprivateinfo",
+          "editmyprivateinfo",
+          "editmyoptions",
+          "abusefilter-view",
+          "abusefilter-log"
+        ]
+      },
+      {
+        "name": "user",
+        "rights": [
+          "move",
+          "move-subpages",
+          "move-rootuserpages",
+          "move-categorypages",
+          "movefile",
+          "read",
+          "edit",
+          "createpage",
+          "createtalk",
+          "upload",
+          "reupload",
+          "reupload-shared",
+          "minoredit",
+          "editmyusercss",
+          "editmyuserjson",
+          "editmyuserjs",
+          "editmyuserjsredirect",
+          "sendemail",
+          "applychangetags",
+          "changetags",
+          "editcontentmodel",
+          "viewmywatchlist",
+          "editmywatchlist"
+        ]
+      },
+      {
+        "name": "autoconfirmed",
+        "rights": [
+          "autoconfirmed",
+          "editsemiprotected"
+        ]
+      },
+      {
+        "name": "bot",
+        "rights": [
+          "bot",
+          "autoconfirmed",
+          "editsemiprotected",
+          "nominornewtalk",
+          "autopatrol",
+          "suppressredirect",
+          "apihighlimits",
+          "abusefilter-bypass-blocked-external-domains",
+          "autoreview"
+        ]
+      },
+      {
+        "name": "sysop",
+        "rights": [
+          "block",
+          "createaccount",
+          "delete",
+          "bigdelete",
+          "deletedhistory",
+          "deletedtext",
+          "undelete",
+          "editinterface",
+          "editsitejson",
+          "edituserjson",
+          "import",
+          "importupload",
+          "move",
+          "move-subpages",
+          "move-rootuserpages",
+          "move-categorypages",
+          "patrol",
+          "autopatrol",
+          "protect",
+          "editprotected",
+          "rollback",
+          "upload",
+          "reupload",
+          "reupload-shared",
+          "unwatchedpages",
+          "autoconfirmed",
+          "editsemiprotected",
+          "ipblock-exempt",
+          "blockemail",
+          "markbotedits",
+          "apihighlimits",
+          "browsearchive",
+          "noratelimit",
+          "movefile",
+          "unblockself",
+          "suppressredirect",
+          "mergehistory",
+          "managechangetags",
+          "deletechangetags",
+          "abusefilter-modify",
+          "abusefilter-modify-restricted",
+          "abusefilter-view",
+          "abusefilter-log",
+          "abusefilter-log-detail",
+          "sreview",
+          "autoreview",
+          "deleterevision",
+          "suppressionlog",
+          "suppressrevision",
+          "abusefilter-view-private",
+          "abusefilter-log-private",
+          "abusefilter-revert",
+          "abusefilter-modify-blocked-external-domains",
+          "abusefilter-access-protected-vars",
+          "abusefilter-protected-vars-log",
+          "stablesettings",
+          "movestable",
+          "review",
+          "unreviewedpages"
+        ],
+        "add": [
+          "editor",
+          "autoreview"
+        ],
+        "remove": [
+          "editor",
+          "autoreview"
+        ]
+      },
+      {
+        "name": "interface-admin",
+        "rights": [
+          "editinterface",
+          "editsitecss",
+          "editsitejson",
+          "editsitejs",
+          "editusercss",
+          "edituserjson",
+          "edituserjs"
+        ]
+      },
+      {
+        "name": "bureaucrat",
+        "rights": [
+          "userrights",
+          "noratelimit",
+          "renameuser"
+        ]
+      },
+      {
+        "name": "suppress",
+        "rights": [
+          "hideuser",
+          "suppressrevision",
+          "viewsuppressed",
+          "suppressionlog",
+          "deleterevision",
+          "deletelogentry",
+          "abusefilter-hidden-log",
+          "abusefilter-hide-log"
+        ]
+      },
+      {
+        "name": "editor",
+        "rights": [
+          "review",
+          "autoreview",
+          "autoconfirmed",
+          "editsemiprotected",
+          "unreviewedpages"
+        ]
+      },
+      {
+        "name": "reviewer",
+        "rights": [
+          "validate",
+          "review",
+          "autoreview",
+          "autoconfirmed",
+          "editsemiprotected",
+          "unreviewedpages"
+        ]
+      },
+      {
+        "name": "autoreview",
+        "rights": [
+          "autoreview"
+        ]
+      }
+    ],
+    "restrictions": {
+      "types": [
+        "create",
+        "edit",
+        "move",
+        "upload"
+      ],
+      "levels": [
+        "",
+        "autoconfirmed",
+        "sysop",
+        [
+          "sreview"
+        ]
+      ],
+      "cascadinglevels": [
+        "sysop"
+      ],
+      "semiprotectedlevels": [
+        "autoconfirmed"
+      ]
+    },
+    "rightsinfo": {
+      "url": "",
+      "text": ""
+    },
+    "namespacealiases": [
+      {
+        "id": 6,
+        "alias": "Image"
+      },
+      {
+        "id": 7,
+        "alias": "Image talk"
+      }
+    ],
+    "specialpagealiases": [
+      {
+        "realname": "BrokenRedirects",
+        "aliases": [
+          "BrokenRedirects"
+        ]
+      },
+      {
+        "realname": "Deadendpages",
+        "aliases": [
+          "DeadendPages"
+        ]
+      },
+      {
+        "realname": "DoubleRedirects",
+        "aliases": [
+          "DoubleRedirects"
+        ]
+      },
+      {
+        "realname": "Longpages",
+        "aliases": [
+          "LongPages"
+        ]
+      },
+      {
+        "realname": "Ancientpages",
+        "aliases": [
+          "AncientPages"
+        ]
+      },
+      {
+        "realname": "Lonelypages",
+        "aliases": [
+          "LonelyPages",
+          "OrphanedPages"
+        ]
+      },
+      {
+        "realname": "Fewestrevisions",
+        "aliases": [
+          "FewestRevisions"
+        ]
+      },
+      {
+        "realname": "Withoutinterwiki",
+        "aliases": [
+          "WithoutInterwiki"
+        ]
+      },
+      {
+        "realname": "Protectedpages",
+        "aliases": [
+          "ProtectedPages"
+        ]
+      },
+      {
+        "realname": "Protectedtitles",
+        "aliases": [
+          "ProtectedTitles"
+        ]
+      },
+      {
+        "realname": "Shortpages",
+        "aliases": [
+          "ShortPages"
+        ]
+      },
+      {
+        "realname": "Uncategorizedcategories",
+        "aliases": [
+          "UncategorizedCategories"
+        ]
+      },
+      {
+        "realname": "Uncategorizedimages",
+        "aliases": [
+          "UncategorizedFiles",
+          "UncategorizedImages"
+        ]
+      },
+      {
+        "realname": "Uncategorizedpages",
+        "aliases": [
+          "UncategorizedPages"
+        ]
+      },
+      {
+        "realname": "Uncategorizedtemplates",
+        "aliases": [
+          "UncategorizedTemplates"
+        ]
+      },
+      {
+        "realname": "Unusedcategories",
+        "aliases": [
+          "UnusedCategories"
+        ]
+      },
+      {
+        "realname": "Unusedimages",
+        "aliases": [
+          "UnusedFiles",
+          "UnusedImages"
+        ]
+      },
+      {
+        "realname": "Unusedtemplates",
+        "aliases": [
+          "UnusedTemplates"
+        ]
+      },
+      {
+        "realname": "Unwatchedpages",
+        "aliases": [
+          "UnwatchedPages"
+        ]
+      },
+      {
+        "realname": "Wantedcategories",
+        "aliases": [
+          "WantedCategories"
+        ]
+      },
+      {
+        "realname": "Wantedfiles",
+        "aliases": [
+          "WantedFiles"
+        ]
+      },
+      {
+        "realname": "Wantedpages",
+        "aliases": [
+          "WantedPages",
+          "BrokenLinks"
+        ]
+      },
+      {
+        "realname": "Wantedtemplates",
+        "aliases": [
+          "WantedTemplates"
+        ]
+      },
+      {
+        "realname": "Allpages",
+        "aliases": [
+          "AllPages"
+        ]
+      },
+      {
+        "realname": "Prefixindex",
+        "aliases": [
+          "PrefixIndex"
+        ]
+      },
+      {
+        "realname": "Categories",
+        "aliases": [
+          "Categories"
+        ]
+      },
+      {
+        "realname": "Listredirects",
+        "aliases": [
+          "ListRedirects"
+        ]
+      },
+      {
+        "realname": "PagesWithProp",
+        "aliases": [
+          "PagesWithProp",
+          "Pageswithprop",
+          "PagesByProp",
+          "Pagesbyprop"
+        ]
+      },
+      {
+        "realname": "TrackingCategories",
+        "aliases": [
+          "TrackingCategories"
+        ]
+      },
+      {
+        "realname": "Userlogin",
+        "aliases": [
+          "UserLogin",
+          "Login"
+        ]
+      },
+      {
+        "realname": "Userlogout",
+        "aliases": [
+          "UserLogout",
+          "Logout"
+        ]
+      },
+      {
+        "realname": "CreateAccount",
+        "aliases": [
+          "CreateAccount"
+        ]
+      },
+      {
+        "realname": "LinkAccounts",
+        "aliases": [
+          "LinkAccounts"
+        ]
+      },
+      {
+        "realname": "UnlinkAccounts",
+        "aliases": [
+          "UnlinkAccounts"
+        ]
+      },
+      {
+        "realname": "ChangeCredentials",
+        "aliases": [
+          "ChangeCredentials"
+        ]
+      },
+      {
+        "realname": "RemoveCredentials",
+        "aliases": [
+          "RemoveCredentials"
+        ]
+      },
+      {
+        "realname": "AuthenticationPopupSuccess",
+        "aliases": [
+          "AuthenticationPopupSuccess"
+        ]
+      },
+      {
+        "realname": "Activeusers",
+        "aliases": [
+          "ActiveUsers"
+        ]
+      },
+      {
+        "realname": "Block",
+        "aliases": [
+          "Block",
+          "BlockIP",
+          "BlockUser"
+        ]
+      },
+      {
+        "realname": "Unblock",
+        "aliases": [
+          "Unblock"
+        ]
+      },
+      {
+        "realname": "BlockList",
+        "aliases": [
+          "BlockList",
+          "ListBlocks",
+          "IPBlockList"
+        ]
+      },
+      {
+        "realname": "AutoblockList",
+        "aliases": [
+          "AutoblockList",
+          "ListAutoblocks"
+        ]
+      },
+      {
+        "realname": "ChangePassword",
+        "aliases": [
+          "ChangePassword",
+          "ResetPass",
+          "ResetPassword"
+        ]
+      },
+      {
+        "realname": "BotPasswords",
+        "aliases": [
+          "BotPasswords"
+        ]
+      },
+      {
+        "realname": "PasswordReset",
+        "aliases": [
+          "PasswordReset"
+        ]
+      },
+      {
+        "realname": "DeletedContributions",
+        "aliases": [
+          "DeletedContributions"
+        ]
+      },
+      {
+        "realname": "Preferences",
+        "aliases": [
+          "Preferences"
+        ]
+      },
+      {
+        "realname": "ResetTokens",
+        "aliases": [
+          "ResetTokens"
+        ]
+      },
+      {
+        "realname": "Contributions",
+        "aliases": [
+          "Contributions",
+          "Contribs"
+        ]
+      },
+      {
+        "realname": "Listgrouprights",
+        "aliases": [
+          "ListGroupRights",
+          "UserGroupRights"
+        ]
+      },
+      {
+        "realname": "Listgrants",
+        "aliases": [
+          "ListGrants"
+        ]
+      },
+      {
+        "realname": "Listusers",
+        "aliases": [
+          "ListUsers",
+          "UserList",
+          "Users"
+        ]
+      },
+      {
+        "realname": "Listadmins",
+        "aliases": [
+          "ListAdmins"
+        ]
+      },
+      {
+        "realname": "Listbots",
+        "aliases": [
+          "ListBots"
+        ]
+      },
+      {
+        "realname": "Userrights",
+        "aliases": [
+          "UserRights",
+          "MakeSysop",
+          "MakeBot"
+        ]
+      },
+      {
+        "realname": "EditWatchlist",
+        "aliases": [
+          "EditWatchlist"
+        ]
+      },
+      {
+        "realname": "PasswordPolicies",
+        "aliases": [
+          "PasswordPolicies"
+        ]
+      },
+      {
+        "realname": "Newimages",
+        "aliases": [
+          "NewFiles",
+          "NewImages"
+        ]
+      },
+      {
+        "realname": "Log",
+        "aliases": [
+          "Log",
+          "Logs"
+        ]
+      },
+      {
+        "realname": "Watchlist",
+        "aliases": [
+          "Watchlist"
+        ]
+      },
+      {
+        "realname": "Newpages",
+        "aliases": [
+          "NewPages"
+        ]
+      },
+      {
+        "realname": "Recentchanges",
+        "aliases": [
+          "RecentChanges"
+        ]
+      },
+      {
+        "realname": "Recentchangeslinked",
+        "aliases": [
+          "RecentChangesLinked",
+          "RelatedChanges"
+        ]
+      },
+      {
+        "realname": "Tags",
+        "aliases": [
+          "Tags"
+        ]
+      },
+      {
+        "realname": "Listfiles",
+        "aliases": [
+          "ListFiles",
+          "FileList",
+          "ImageList"
+        ]
+      },
+      {
+        "realname": "Filepath",
+        "aliases": [
+          "FilePath"
+        ]
+      },
+      {
+        "realname": "MediaStatistics",
+        "aliases": [
+          "MediaStatistics"
+        ]
+      },
+      {
+        "realname": "MIMEsearch",
+        "aliases": [
+          "MIMESearch"
+        ]
+      },
+      {
+        "realname": "FileDuplicateSearch",
+        "aliases": [
+          "FileDuplicateSearch"
+        ]
+      },
+      {
+        "realname": "Upload",
+        "aliases": [
+          "Upload"
+        ]
+      },
+      {
+        "realname": "UploadStash",
+        "aliases": [
+          "UploadStash"
+        ]
+      },
+      {
+        "realname": "ListDuplicatedFiles",
+        "aliases": [
+          "ListDuplicatedFiles",
+          "ListFileDuplicates"
+        ]
+      },
+      {
+        "realname": "ApiSandbox",
+        "aliases": [
+          "ApiSandbox"
+        ]
+      },
+      {
+        "realname": "Statistics",
+        "aliases": [
+          "Statistics",
+          "Stats"
+        ]
+      },
+      {
+        "realname": "Allmessages",
+        "aliases": [
+          "AllMessages"
+        ]
+      },
+      {
+        "realname": "Version",
+        "aliases": [
+          "Version"
+        ]
+      },
+      {
+        "realname": "Lockdb",
+        "aliases": [
+          "LockDB"
+        ]
+      },
+      {
+        "realname": "Unlockdb",
+        "aliases": [
+          "UnlockDB"
+        ]
+      },
+      {
+        "realname": "NamespaceInfo",
+        "aliases": [
+          "NamespaceInfo"
+        ]
+      },
+      {
+        "realname": "LinkSearch",
+        "aliases": [
+          "LinkSearch"
+        ]
+      },
+      {
+        "realname": "Randompage",
+        "aliases": [
+          "Random",
+          "RandomPage"
+        ]
+      },
+      {
+        "realname": "RandomInCategory",
+        "aliases": [
+          "RandomInCategory"
+        ]
+      },
+      {
+        "realname": "Randomredirect",
+        "aliases": [
+          "RandomRedirect"
+        ]
+      },
+      {
+        "realname": "Randomrootpage",
+        "aliases": [
+          "RandomRootpage"
+        ]
+      },
+      {
+        "realname": "GoToInterwiki",
+        "aliases": [
+          "GoToInterwiki"
+        ]
+      },
+      {
+        "realname": "Mostlinkedcategories",
+        "aliases": [
+          "MostLinkedCategories",
+          "MostUsedCategories"
+        ]
+      },
+      {
+        "realname": "Mostimages",
+        "aliases": [
+          "MostLinkedFiles",
+          "MostFiles",
+          "MostImages"
+        ]
+      },
+      {
+        "realname": "Mostinterwikis",
+        "aliases": [
+          "MostInterwikis"
+        ]
+      },
+      {
+        "realname": "Mostlinked",
+        "aliases": [
+          "MostLinkedPages",
+          "MostLinked"
+        ]
+      },
+      {
+        "realname": "Mostlinkedtemplates",
+        "aliases": [
+          "MostTranscludedPages",
+          "MostLinkedTemplates",
+          "MostUsedTemplates"
+        ]
+      },
+      {
+        "realname": "Mostcategories",
+        "aliases": [
+          "MostCategories"
+        ]
+      },
+      {
+        "realname": "Mostrevisions",
+        "aliases": [
+          "MostRevisions"
+        ]
+      },
+      {
+        "realname": "ComparePages",
+        "aliases": [
+          "ComparePages"
+        ]
+      },
+      {
+        "realname": "Export",
+        "aliases": [
+          "Export"
+        ]
+      },
+      {
+        "realname": "Import",
+        "aliases": [
+          "Import"
+        ]
+      },
+      {
+        "realname": "Undelete",
+        "aliases": [
+          "Undelete"
+        ]
+      },
+      {
+        "realname": "Whatlinkshere",
+        "aliases": [
+          "WhatLinksHere"
+        ]
+      },
+      {
+        "realname": "MergeHistory",
+        "aliases": [
+          "MergeHistory"
+        ]
+      },
+      {
+        "realname": "ExpandTemplates",
+        "aliases": [
+          "ExpandTemplates"
+        ]
+      },
+      {
+        "realname": "ChangeContentModel",
+        "aliases": [
+          "ChangeContentModel"
+        ]
+      },
+      {
+        "realname": "Booksources",
+        "aliases": [
+          "BookSources"
+        ]
+      },
+      {
+        "realname": "ApiHelp",
+        "aliases": [
+          "ApiHelp"
+        ]
+      },
+      {
+        "realname": "Blankpage",
+        "aliases": [
+          "BlankPage"
+        ]
+      },
+      {
+        "realname": "DeletePage",
+        "aliases": [
+          "DeletePage",
+          "Delete"
+        ]
+      },
+      {
+        "realname": "Diff",
+        "aliases": [
+          "Diff"
+        ]
+      },
+      {
+        "realname": "EditPage",
+        "aliases": [
+          "EditPage",
+          "Edit"
+        ]
+      },
+      {
+        "realname": "EditTags",
+        "aliases": [
+          "EditTags"
+        ]
+      },
+      {
+        "realname": "Emailuser",
+        "aliases": [
+          "EmailUser",
+          "Email"
+        ]
+      },
+      {
+        "realname": "Movepage",
+        "aliases": [
+          "MovePage"
+        ]
+      },
+      {
+        "realname": "Mycontributions",
+        "aliases": [
+          "MyContributions",
+          "MyContribs"
+        ]
+      },
+      {
+        "realname": "MyLanguage",
+        "aliases": [
+          "MyLanguage"
+        ]
+      },
+      {
+        "realname": "Mylog",
+        "aliases": [
+          "MyLog"
+        ]
+      },
+      {
+        "realname": "Mypage",
+        "aliases": [
+          "MyPage"
+        ]
+      },
+      {
+        "realname": "Mytalk",
+        "aliases": [
+          "MyTalk"
+        ]
+      },
+      {
+        "realname": "PageHistory",
+        "aliases": [
+          "PageHistory",
+          "History"
+        ]
+      },
+      {
+        "realname": "PageInfo",
+        "aliases": [
+          "PageInfo",
+          "Info"
+        ]
+      },
+      {
+        "realname": "ProtectPage",
+        "aliases": [
+          "ProtectPage",
+          "Protect"
+        ]
+      },
+      {
+        "realname": "Purge",
+        "aliases": [
+          "Purge"
+        ]
+      },
+      {
+        "realname": "Myuploads",
+        "aliases": [
+          "MyUploads",
+          "MyFiles"
+        ]
+      },
+      {
+        "realname": "AllMyUploads",
+        "aliases": [
+          "AllMyUploads",
+          "AllMyFiles"
+        ]
+      },
+      {
+        "realname": "NewSection",
+        "aliases": [
+          "NewSection",
+          "Newsection"
+        ]
+      },
+      {
+        "realname": "PermanentLink",
+        "aliases": [
+          "PermanentLink",
+          "PermaLink"
+        ]
+      },
+      {
+        "realname": "Redirect",
+        "aliases": [
+          "Redirect"
+        ]
+      },
+      {
+        "realname": "Renameuser",
+        "aliases": [
+          "RenameUser"
+        ]
+      },
+      {
+        "realname": "Revisiondelete",
+        "aliases": [
+          "RevisionDelete"
+        ]
+      },
+      {
+        "realname": "RunJobs",
+        "aliases": [
+          "RunJobs"
+        ]
+      },
+      {
+        "realname": "Specialpages",
+        "aliases": [
+          "SpecialPages"
+        ]
+      },
+      {
+        "realname": "PageData",
+        "aliases": [
+          "PageData"
+        ]
+      },
+      {
+        "realname": "Contribute",
+        "aliases": [
+          "Contribute"
+        ]
+      },
+      {
+        "realname": "TalkPage",
+        "aliases": [
+          "TalkPage"
+        ]
+      },
+      {
+        "realname": "Search",
+        "aliases": [
+          "Search"
+        ]
+      },
+      {
+        "realname": "Confirmemail",
+        "aliases": [
+          "ConfirmEmail"
+        ]
+      },
+      {
+        "realname": "Invalidateemail",
+        "aliases": [
+          "InvalidateEmail"
+        ]
+      },
+      {
+        "realname": "ChangeEmail",
+        "aliases": [
+          "ChangeEmail"
+        ]
+      },
+      {
+        "realname": "AbuseLog",
+        "aliases": [
+          "AbuseLog"
+        ]
+      },
+      {
+        "realname": "AbuseFilter",
+        "aliases": [
+          "AbuseFilter"
+        ]
+      },
+      {
+        "realname": "BlockedExternalDomains",
+        "aliases": [
+          "BlockedExternalDomains"
+        ]
+      },
+      {
+        "realname": "RevisionReview",
+        "aliases": [
+          "RevisionReview"
+        ]
+      },
+      {
+        "realname": "PendingChanges",
+        "aliases": [
+          "PendingChanges",
+          "OldReviewedPages"
+        ]
+      },
+      {
+        "realname": "ValidationStatistics",
+        "aliases": [
+          "ValidationStatistics"
+        ]
+      },
+      {
+        "realname": "ConfiguredPages",
+        "aliases": [
+          "ConfiguredPages"
+        ]
+      },
+      {
+        "realname": "UnreviewedPages",
+        "aliases": [
+          "UnreviewedPages"
+        ]
+      },
+      {
+        "realname": "Stabilization",
+        "aliases": [
+          "Stabilization",
+          "Stabilisation"
+        ]
+      }
+    ],
+    "fileextensions": [
+      {
+        "ext": "png"
+      },
+      {
+        "ext": "gif"
+      },
+      {
+        "ext": "jpg"
+      },
+      {
+        "ext": "jpeg"
+      },
+      {
+        "ext": "webp"
+      }
+    ],
+    "extensions": [
+      {
+        "type": "skin",
+        "name": "MinervaNeue",
+        "namemsg": "skinname-minerva",
+        "descriptionmsg": "minerva-skin-desc",
+        "author": "[https://www.mediawiki.org/wiki/Readers/Web/Team Readers Web Team], Alex Hollender, Bahodir Mansurov, Florian Schmidt, Jan Drewniak, Joaquin Hernandez, Jon Robson, Juliusz Gonera, Piotr Miazga, Ryan Kaldari, Nick Ray, Sam Smith, Stephen Niedzielski, Volker E.",
+        "url": "https://www.mediawiki.org/wiki/Skin:MinervaNeue",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/MinervaNeue"
+      },
+      {
+        "type": "skin",
+        "name": "MonoBook",
+        "namemsg": "skinname-monobook",
+        "descriptionmsg": "monobook-desc",
+        "author": "Gabriel Wicke, Isarra Yos, ...",
+        "url": "https://www.mediawiki.org/wiki/Skin:MonoBook",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/MonoBook"
+      },
+      {
+        "type": "skin",
+        "name": "Timeless",
+        "namemsg": "skinname-timeless",
+        "descriptionmsg": "timeless-desc",
+        "author": "Isarra Yos",
+        "url": "https://www.mediawiki.org/wiki/Skin:Timeless",
+        "version": "0.9.1",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/Timeless"
+      },
+      {
+        "type": "skin",
+        "name": "Vector",
+        "namemsg": "vector-specialversion-name",
+        "descriptionmsg": "vector-skin-desc",
+        "author": "[https://www.mediawiki.org/wiki/Readers/Web/Team Readers Web Team], Trevor Parscal, Roan Kattouw, Alex Hollender, Bernard Wang, Clare Ming, Jan Drewniak, Jon Robson, Nick Ray, Sam Smith, Stephen Niedzielski, Volker E.",
+        "url": "https://www.mediawiki.org/wiki/Skin:Vector",
+        "version": "1.0.0",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/Vector"
+      },
+      {
+        "type": "antispam",
+        "name": "Abuse Filter",
+        "descriptionmsg": "abusefilter-desc",
+        "author": "Andrew Garrett, [https://www.mediawiki.org/wiki/User:Daimona_Eaytoy Daimona Eaytoy], Marius Hoch, River Tarnell, Victor Vasiliev",
+        "url": "https://www.mediawiki.org/wiki/Extension:AbuseFilter",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/Abuse_Filter"
+      },
+      {
+        "type": "api",
+        "name": "PageImages",
+        "descriptionmsg": "pageimages-desc",
+        "author": "Max Semenik",
+        "url": "https://www.mediawiki.org/wiki/Extension:PageImages",
+        "license-name": "WTFPL",
+        "license": "/index.php/Special:Version/License/PageImages"
+      },
+      {
+        "type": "other",
+        "name": "TextExtracts",
+        "descriptionmsg": "textextracts-desc",
+        "author": "Max Semenik",
+        "url": "https://www.mediawiki.org/wiki/Extension:TextExtracts",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/TextExtracts"
+      },
+      {
+        "type": "specialpage",
+        "name": "FlaggedRevs",
+        "namemsg": "flaggedrevs",
+        "descriptionmsg": "flaggedrevs-desc",
+        "author": "Aaron Schulz, Joerg Baach",
+        "url": "https://www.mediawiki.org/wiki/Extension:FlaggedRevs",
+        "vcs-system": "git",
+        "vcs-version": "47c269f5b27554e60b68a6c89a15f421e126f7c0",
+        "vcs-url": "https://gerrit.wikimedia.org/g/mediawiki/extensions/FlaggedRevs/+/47c269f5b27554e60b68a6c89a15f421e126f7c0",
+        "vcs-date": "2026-09-22T04:36:50Z",
+        "license-name": "GPL-2.0-or-later",
+        "license": "/index.php/Special:Version/License/FlaggedRevs"
+      }
+    ],
+    "protocols": [
+      "bitcoin:",
+      "ftp://",
+      "ftps://",
+      "geo:",
+      "git://",
+      "gopher://",
+      "http://",
+      "https://",
+      "irc://",
+      "ircs://",
+      "magnet:",
+      "mailto:",
+      "matrix:",
+      "mms://",
+      "news:",
+      "nntp://",
+      "redis://",
+      "sftp://",
+      "sip:",
+      "sips:",
+      "sms:",
+      "ssh://",
+      "svn://",
+      "tel:",
+      "telnet://",
+      "urn:",
+      "worldwind://",
+      "xmpp:",
+      "//"
+    ],
+    "skins": [
+      {
+        "code": "minerva",
+        "name": "MinervaNeue"
+      },
+      {
+        "code": "monobook",
+        "name": "MonoBook"
+      },
+      {
+        "code": "timeless",
+        "name": "Timeless"
+      },
+      {
+        "code": "vector-2022",
+        "name": "Vector (2022)",
+        "default": true
+      },
+      {
+        "code": "vector",
+        "name": "Vector legacy (2010)"
+      },
+      {
+        "code": "fallback",
+        "name": "Fallback",
+        "unusable": true
+      },
+      {
+        "code": "apioutput",
+        "name": "ApiOutput",
+        "unusable": true
+      },
+      {
+        "code": "authentication-popup",
+        "name": "Authentication popup",
+        "unusable": true
+      },
+      {
+        "code": "json",
+        "name": "SkinJSON",
+        "unusable": true
+      }
+    ],
+    "extensiontags": [
+      "<pre>",
+      "<nowiki>",
+      "<gallery>",
+      "<indicator>",
+      "<langconvert>"
+    ],
+    "dbrepllag": [
+      {
+        "host": "",
+        "lag": -1
+      }
+    ],
+    "interwikimap": [
+      {
+        "prefix": "acronym",
+        "url": "https://www.acronymfinder.com/~/search/af.aspx?string=exact&Acronym=$1",
+        "protorel": false
+      },
+      {
+        "prefix": "arxiv",
+        "url": "https://www.arxiv.org/abs/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "c2",
+        "url": "https://wiki.c2.com/?$1",
+        "protorel": false
+      },
+      {
+        "prefix": "cache",
+        "url": "https://www.google.com/search?q=cache:$1",
+        "protorel": false
+      },
+      {
+        "prefix": "commons",
+        "url": "https://commons.wikimedia.org/wiki/$1",
+        "protorel": false,
+        "api": "https://commons.wikimedia.org/w/api.php"
+      },
+      {
+        "prefix": "dictionary",
+        "url": "https://www.dict.org/bin/Dict?Database=*&Form=Dict1&Strategy=*&Query=$1",
+        "protorel": false
+      },
+      {
+        "prefix": "doi",
+        "url": "https://dx.doi.org/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "elibre",
+        "url": "http://enciclopedia.us.es/index.php/$1",
+        "protorel": false,
+        "api": "http://enciclopedia.us.es/api.php"
+      },
+      {
+        "prefix": "emacswiki",
+        "url": "https://www.emacswiki.org/emacs/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "fandom",
+        "url": "https://community.fandom.com/wiki/w:c:$1",
+        "protorel": false
+      },
+      {
+        "prefix": "foldoc",
+        "url": "https://foldoc.org/?$1",
+        "protorel": false
+      },
+      {
+        "prefix": "freebsdman",
+        "url": "https://www.FreeBSD.org/cgi/man.cgi?apropos=1&query=$1",
+        "protorel": false
+      },
+      {
+        "prefix": "google",
+        "url": "https://www.google.com/search?q=$1",
+        "protorel": false
+      },
+      {
+        "prefix": "googlegroups",
+        "url": "https://groups.google.com/groups?q=$1",
+        "protorel": false
+      },
+      {
+        "prefix": "hammondwiki",
+        "url": "https://www.dairiki.org/HammondWiki/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "hrwiki",
+        "url": "http://www.hrwiki.org/wiki/$1",
+        "protorel": false,
+        "api": "http://www.hrwiki.org/w/api.php"
+      },
+      {
+        "prefix": "imdb",
+        "url": "https://www.imdb.com/find?q=$1&tt=on",
+        "protorel": false
+      },
+      {
+        "prefix": "lojban",
+        "url": "https://mw.lojban.org/papri/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "meatball",
+        "url": "http://meatballwiki.org/wiki/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "mediawikiwiki",
+        "url": "https://www.mediawiki.org/wiki/$1",
+        "protorel": false,
+        "api": "https://www.mediawiki.org/w/api.php"
+      },
+      {
+        "prefix": "memoryalpha",
+        "url": "https://memory-alpha.fandom.com/wiki/$1",
+        "protorel": false,
+        "api": "https://memory-alpha.fandom.com/api.php"
+      },
+      {
+        "prefix": "metawikimedia",
+        "url": "https://meta.wikimedia.org/wiki/$1",
+        "protorel": false,
+        "api": "https://meta.wikimedia.org/w/api.php"
+      },
+      {
+        "prefix": "mozillawiki",
+        "url": "https://wiki.mozilla.org/$1",
+        "protorel": false,
+        "api": "https://wiki.mozilla.org/api.php"
+      },
+      {
+        "prefix": "mw",
+        "url": "https://www.mediawiki.org/wiki/$1",
+        "protorel": false,
+        "api": "https://www.mediawiki.org/w/api.php"
+      },
+      {
+        "prefix": "oeis",
+        "url": "https://oeis.org/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "pmid",
+        "url": "https://www.ncbi.nlm.nih.gov/pubmed/$1?dopt=Abstract",
+        "protorel": false
+      },
+      {
+        "prefix": "pythoninfo",
+        "url": "https://wiki.python.org/moin/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "rfc",
+        "url": "https://datatracker.ietf.org/doc/html/rfc$1",
+        "protorel": false
+      },
+      {
+        "prefix": "senseislibrary",
+        "url": "https://senseis.xmp.net/?$1",
+        "protorel": false
+      },
+      {
+        "prefix": "shoutwiki",
+        "url": "https://www.shoutwiki.com/wiki/$1",
+        "protorel": false,
+        "api": "https://www.shoutwiki.com/w/api.php"
+      },
+      {
+        "prefix": "theopedia",
+        "url": "https://www.theopedia.com/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "tmbw",
+        "url": "https://www.tmbw.net/wiki/$1",
+        "protorel": false,
+        "api": "https://tmbw.net/wiki/api.php"
+      },
+      {
+        "prefix": "twiki",
+        "url": "https://twiki.org/cgi-bin/view/$1",
+        "protorel": false
+      },
+      {
+        "prefix": "uncyclopedia",
+        "url": "https://en.uncyclopedia.co/wiki/$1",
+        "protorel": false,
+        "api": "https://en.uncyclopedia.co/w/api.php"
+      },
+      {
+        "prefix": "usemod",
+        "url": "https://www.usemod.org/cgi-bin/wiki.pl?$1",
+        "protorel": false
+      },
+      {
+        "prefix": "wikia",
+        "url": "https://community.fandom.com/wiki/w:c:$1",
+        "protorel": false
+      },
+      {
+        "prefix": "wikibooks",
+        "url": "https://en.wikibooks.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikibooks.org/w/api.php"
+      },
+      {
+        "prefix": "wikidata",
+        "url": "https://www.wikidata.org/wiki/$1",
+        "protorel": false,
+        "api": "https://www.wikidata.org/w/api.php"
+      },
+      {
+        "prefix": "wikihow",
+        "url": "https://www.wikihow.com/$1",
+        "protorel": false,
+        "api": "https://www.wikihow.com/api.php"
+      },
+      {
+        "prefix": "wikimedia",
+        "url": "https://foundation.wikimedia.org/wiki/$1",
+        "protorel": false,
+        "api": "https://foundation.wikimedia.org/w/api.php"
+      },
+      {
+        "prefix": "wikinews",
+        "url": "https://en.wikinews.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikinews.org/w/api.php"
+      },
+      {
+        "prefix": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikipedia.org/w/api.php"
+      },
+      {
+        "prefix": "wikiquote",
+        "url": "https://en.wikiquote.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikiquote.org/w/api.php"
+      },
+      {
+        "prefix": "wikisource",
+        "url": "https://wikisource.org/wiki/$1",
+        "protorel": false,
+        "api": "https://wikisource.org/w/api.php"
+      },
+      {
+        "prefix": "wikispecies",
+        "url": "https://species.wikimedia.org/wiki/$1",
+        "protorel": false,
+        "api": "https://species.wikimedia.org/w/api.php"
+      },
+      {
+        "prefix": "wikiversity",
+        "url": "https://en.wikiversity.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikiversity.org/w/api.php"
+      },
+      {
+        "prefix": "wikivoyage",
+        "url": "https://en.wikivoyage.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wikivoyage.org/w/api.php"
+      },
+      {
+        "prefix": "wikiwikiweb",
+        "url": "http://wiki.c2.com/?$1",
+        "protorel": false
+      },
+      {
+        "prefix": "wikt",
+        "url": "https://en.wiktionary.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wiktionary.org/w/api.php"
+      },
+      {
+        "prefix": "wiktionary",
+        "url": "https://en.wiktionary.org/wiki/$1",
+        "protorel": false,
+        "api": "https://en.wiktionary.org/w/api.php"
+      }
+    ],
+    "libraries": [
+      {
+        "name": "bacon/bacon-qr-code",
+        "version": "3.0.1"
+      },
+      {
+        "name": "christian-riesen/base32",
+        "version": "1.6.0"
+      },
+      {
+        "name": "composer/semver",
+        "version": "3.4.3"
+      },
+      {
+        "name": "dasprid/enum",
+        "version": "1.0.5"
+      },
+      {
+        "name": "endroid/qr-code",
+        "version": "5.1.0"
+      },
+      {
+        "name": "guzzlehttp/guzzle",
+        "version": "7.12.3"
+      },
+      {
+        "name": "guzzlehttp/promises",
+        "version": "2.5.0"
+      },
+      {
+        "name": "guzzlehttp/psr7",
+        "version": "2.12.3"
+      },
+      {
+        "name": "jakobo/hotp-php",
+        "version": "2.0.0"
+      },
+      {
+        "name": "justinrainbow/json-schema",
+        "version": "5.3.1"
+      },
+      {
+        "name": "liuggio/statsd-php-client",
+        "version": "1.0.18"
+      },
+      {
+        "name": "mck89/peast",
+        "version": "1.17.4"
+      },
+      {
+        "name": "monolog/monolog",
+        "version": "2.9.3"
+      },
+      {
+        "name": "oojs/oojs-ui",
+        "version": "0.51.2"
+      },
+      {
+        "name": "pear/console_getopt",
+        "version": "1.4.3"
+      },
+      {
+        "name": "pear/mail",
+        "version": "2.0.0"
+      },
+      {
+        "name": "pear/mail_mime",
+        "version": "1.10.12"
+      },
+      {
+        "name": "pear/net_smtp",
+        "version": "1.12.1"
+      },
+      {
+        "name": "pear/net_socket",
+        "version": "1.2.2"
+      },
+      {
+        "name": "pear/net_url2",
+        "version": "2.2.3"
+      },
+      {
+        "name": "pear/pear-core-minimal",
+        "version": "1.10.17"
+      },
+      {
+        "name": "pear/pear_exception",
+        "version": "1.0.2"
+      },
+      {
+        "name": "psr/container",
+        "version": "1.1.2"
+      },
+      {
+        "name": "psr/http-client",
+        "version": "1.0.3"
+      },
+      {
+        "name": "psr/http-factory",
+        "version": "1.1.0"
+      },
+      {
+        "name": "psr/http-message",
+        "version": "1.1"
+      },
+      {
+        "name": "psr/log",
+        "version": "1.1.4"
+      },
+      {
+        "name": "ralouphie/getallheaders",
+        "version": "3.0.3"
+      },
+      {
+        "name": "symfony/deprecation-contracts",
+        "version": "2.5.3"
+      },
+      {
+        "name": "symfony/polyfill-php82",
+        "version": "1.37.0"
+      },
+      {
+        "name": "symfony/polyfill-php83",
+        "version": "1.37.0"
+      },
+      {
+        "name": "symfony/polyfill-php84",
+        "version": "1.37.0"
+      },
+      {
+        "name": "symfony/polyfill-php85",
+        "version": "1.37.0"
+      },
+      {
+        "name": "symfony/yaml",
+        "version": "5.4.52"
+      },
+      {
+        "name": "wikimedia/assert",
+        "version": "0.5.1"
+      },
+      {
+        "name": "wikimedia/at-ease",
+        "version": "3.0.0"
+      },
+      {
+        "name": "wikimedia/base-convert",
+        "version": "2.0.2"
+      },
+      {
+        "name": "wikimedia/bcp-47-code",
+        "version": "2.0.0"
+      },
+      {
+        "name": "wikimedia/cdb",
+        "version": "3.0.0"
+      },
+      {
+        "name": "wikimedia/cldr-plural-rule-parser",
+        "version": "3.0.0"
+      },
+      {
+        "name": "wikimedia/common-passwords",
+        "version": "0.5.0"
+      },
+      {
+        "name": "wikimedia/composer-merge-plugin",
+        "version": "2.1.0"
+      },
+      {
+        "name": "wikimedia/css-sanitizer",
+        "version": "6.2.1"
+      },
+      {
+        "name": "wikimedia/cssjanus",
+        "version": "2.3.0"
+      },
+      {
+        "name": "wikimedia/equivset",
+        "version": "1.7.0"
+      },
+      {
+        "name": "wikimedia/html-formatter",
+        "version": "4.1.0"
+      },
+      {
+        "name": "wikimedia/idle-dom",
+        "version": "2.1.1"
+      },
+      {
+        "name": "wikimedia/ip-utils",
+        "version": "5.0.0"
+      },
+      {
+        "name": "wikimedia/json-codec",
+        "version": "4.0.0"
+      },
+      {
+        "name": "wikimedia/less.php",
+        "version": "5.5.0"
+      },
+      {
+        "name": "wikimedia/minify",
+        "version": "2.9.0"
+      },
+      {
+        "name": "wikimedia/normalized-exception",
+        "version": "2.0.0"
+      },
+      {
+        "name": "wikimedia/object-factory",
+        "version": "5.0.1"
+      },
+      {
+        "name": "wikimedia/parsoid",
+        "version": "0.20.8"
+      },
+      {
+        "name": "wikimedia/php-session-serializer",
+        "version": "3.0.0"
+      },
+      {
+        "name": "wikimedia/purtle",
+        "version": "2.0.0"
+      },
+      {
+        "name": "wikimedia/relpath",
+        "version": "4.0.1"
+      },
+      {
+        "name": "wikimedia/remex-html",
+        "version": "4.1.2"
+      },
+      {
+        "name": "wikimedia/request-timeout",
+        "version": "2.0.0"
+      },
+      {
+        "name": "wikimedia/running-stat",
+        "version": "2.1.0"
+      },
+      {
+        "name": "wikimedia/scoped-callback",
+        "version": "5.0.0"
+      },
+      {
+        "name": "wikimedia/services",
+        "version": "4.0.0"
+      },
+      {
+        "name": "wikimedia/shellbox",
+        "version": "4.1.1"
+      },
+      {
+        "name": "wikimedia/timestamp",
+        "version": "4.1.1"
+      },
+      {
+        "name": "wikimedia/utfnormal",
+        "version": "4.0.0"
+      },
+      {
+        "name": "wikimedia/wait-condition-loop",
+        "version": "2.0.2"
+      },
+      {
+        "name": "wikimedia/wikipeg",
+        "version": "4.0.2"
+      },
+      {
+        "name": "wikimedia/wrappedstring",
+        "version": "4.0.1"
+      },
+      {
+        "name": "wikimedia/xmp-reader",
+        "version": "0.10.2"
+      },
+      {
+        "name": "wikimedia/zest-css",
+        "version": "3.0.1"
+      },
+      {
+        "name": "zordius/lightncandy",
+        "version": "1.2.6"
+      }
+    ],
+    "clientlibraries": [
+      {
+        "name": "CLDRPluralRuleParser",
+        "version": "1.3.1-0dda851"
+      },
+      {
+        "name": "codex-design-tokens",
+        "version": "1.14.0"
+      },
+      {
+        "name": "codex-icons",
+        "version": "1.14.0"
+      },
+      {
+        "name": "codex",
+        "version": "1.14.0"
+      },
+      {
+        "name": "fetch-polyfill",
+        "version": "3.6.2"
+      },
+      {
+        "name": "intersection-observer",
+        "version": "0.12.0"
+      },
+      {
+        "name": "jquery.chosen",
+        "version": "1.8.2"
+      },
+      {
+        "name": "jquery.client",
+        "version": "3.0.0"
+      },
+      {
+        "name": "jquery.i18n",
+        "version": "1.0.10"
+      },
+      {
+        "name": "jquery.ui",
+        "version": "1.9.2"
+      },
+      {
+        "name": "jquery",
+        "version": "3.7.1"
+      },
+      {
+        "name": "moment",
+        "version": "2.25.2"
+      },
+      {
+        "name": "mustache",
+        "version": "4.2.0"
+      },
+      {
+        "name": "oojs",
+        "version": "7.0.1"
+      },
+      {
+        "name": "ooui",
+        "version": "0.51.2"
+      },
+      {
+        "name": "pako",
+        "version": "2.1.0"
+      },
+      {
+        "name": "pinia",
+        "version": "2.0.16"
+      },
+      {
+        "name": "qunitjs",
+        "version": "2.20.0"
+      },
+      {
+        "name": "sinonjs",
+        "version": "1.17.7"
+      },
+      {
+        "name": "url",
+        "version": "3.111.0-0ece79ce32"
+      },
+      {
+        "name": "vue-demi",
+        "version": "0.14.7"
+      },
+      {
+        "name": "vue",
+        "version": "3.4.27"
+      },
+      {
+        "name": "vuex",
+        "version": "4.0.2"
+      }
+    ],
+    "autopromote": {
+      "autoconfirmed": {
+        "0": {
+          "condname": "APCOND_EDITCOUNT",
+          "params": [
+            0
+          ]
+        },
+        "1": {
+          "condname": "APCOND_AGE",
+          "params": [
+            0
+          ]
+        },
+        "operand": "&"
+      }
+    },
+    "autocreatetempuser": {
+      "enabled": false
+    },
+    "autopromoteonce": {
+      "onEdit": []
+    }
+  }
+}

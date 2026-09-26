@@ -1,0 +1,106 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "uccontinue": "20260113054209|8148396",
+    "continue": "-||"
+  },
+  "query": {
+    "usercontribs": [
+      {
+        "userid": 743,
+        "user": "Tim Starling",
+        "pageid": 26681,
+        "revid": 8532502,
+        "parentid": 7932599,
+        "ns": 0,
+        "title": "Wikidiff2",
+        "timestamp": "2026-07-30T03:17:40Z",
+        "new": false,
+        "minor": false,
+        "top": false,
+        "comment": "now in PIE",
+        "size": 9530,
+        "sizediff": 313,
+        "tags": [
+          "wikieditor"
+        ]
+      },
+      {
+        "userid": 743,
+        "user": "Tim Starling",
+        "pageid": 97199,
+        "revid": 8532501,
+        "parentid": 8493171,
+        "ns": 0,
+        "title": "LuaSandbox",
+        "timestamp": "2026-07-30T02:56:44Z",
+        "new": false,
+        "minor": false,
+        "top": false,
+        "comment": "update for PIE",
+        "size": 14006,
+        "sizediff": 3,
+        "tags": [
+          "wikieditor"
+        ]
+      },
+      {
+        "userid": 743,
+        "user": "Tim Starling",
+        "pageid": 830275,
+        "revid": 8532500,
+        "parentid": 8520553,
+        "ns": 0,
+        "title": "Excimer",
+        "timestamp": "2026-07-30T02:48:35Z",
+        "new": false,
+        "minor": false,
+        "top": false,
+        "comment": "update for PIE",
+        "size": 14986,
+        "sizediff": 205,
+        "tags": [
+          "wikieditor"
+        ]
+      },
+      {
+        "userid": 743,
+        "user": "Tim Starling",
+        "pageid": 29115,
+        "revid": 8444302,
+        "parentid": 8392673,
+        "ns": 0,
+        "title": "Extension default namespaces",
+        "timestamp": "2026-06-15T04:50:31Z",
+        "new": false,
+        "minor": false,
+        "top": false,
+        "comment": "/* ID 800–899 */ claim 850 for Produnto's Package namespace",
+        "size": 60003,
+        "sizediff": 290,
+        "tags": [
+          "wikieditor"
+        ]
+      },
+      {
+        "userid": 743,
+        "user": "Tim Starling",
+        "pageid": 171733,
+        "revid": 8305455,
+        "parentid": 8295980,
+        "ns": 0,
+        "title": "OAuth/For Developers",
+        "timestamp": "2026-03-24T06:07:13Z",
+        "new": false,
+        "minor": true,
+        "top": false,
+        "comment": "",
+        "size": 44867,
+        "sizediff": 2,
+        "tags": [
+          "wikieditor"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "atcontinue": "1|941967",
+    "continue": "-||"
+  },
+  "query": {
+    "alltransclusions": [
+      {
+        "fromid": 917033,
+        "ns": 10,
+        "title": "Template:Growth/Navbar/ar"
+      },
+      {
+        "fromid": 941776,
+        "ns": 10,
+        "title": "Template:Growth/Navbar/ar"
+      },
+      {
+        "fromid": 941929,
+        "ns": 10,
+        "title": "Template:Growth/Navbar/ar"
+      }
+    ]
+  }
+}

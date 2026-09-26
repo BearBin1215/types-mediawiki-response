@@ -1,0 +1,68 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "gpsoffset": 5,
+    "continue": "gpsoffset||"
+  },
+  "query": {
+    "redirects": [
+      {
+        "index": 1,
+        "from": "MediaInclu",
+        "to": "User:Leucosticte/MediaInclu"
+      },
+      {
+        "index": 5,
+        "from": "MediaInclu/Hooks",
+        "to": "User:Leucosticte/MediaInclu/Hooks"
+      },
+      {
+        "index": 3,
+        "from": "MediaInclu/Hooks/BeforeRecentChangeSave",
+        "to": "User:Leucosticte/MediaInclu/Hooks/BeforeRecentChangeSave"
+      },
+      {
+        "index": 2,
+        "from": "MediaInclu/Hooks/RevisionInsert",
+        "to": "User:Leucosticte/MediaInclu/Hooks/RevisionInsert"
+      },
+      {
+        "index": 4,
+        "from": "MediaInclu/Hooks/UpdateRevisionOn",
+        "to": "User:Leucosticte/MediaInclu/Hooks/UpdateRevisionOn"
+      }
+    ],
+    "pages": [
+      {
+        "pageid": 192191,
+        "ns": 2,
+        "title": "User:Leucosticte/MediaInclu/Hooks/RevisionInsert",
+        "index": 2
+      },
+      {
+        "pageid": 192413,
+        "ns": 2,
+        "title": "User:Leucosticte/MediaInclu/Hooks/UpdateRevisionOn",
+        "index": 4
+      },
+      {
+        "pageid": 192418,
+        "ns": 2,
+        "title": "User:Leucosticte/MediaInclu/Hooks/BeforeRecentChangeSave",
+        "index": 3
+      },
+      {
+        "pageid": 218694,
+        "ns": 2,
+        "title": "User:Leucosticte/MediaInclu",
+        "index": 1
+      },
+      {
+        "pageid": 221463,
+        "ns": 2,
+        "title": "User:Leucosticte/MediaInclu/Hooks",
+        "index": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 204,
+        "ns": 0,
+        "title": "Revdel target 1790397366194",
+        "revisions": [
+          {
+            "revid": 329,
+            "parentid": 328,
+            "minor": false,
+            "userhidden": true,
+            "user": "Capadmin",
+            "timestamp": "2026-09-26T04:36:13Z",
+            "size": 20,
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "second revision text"
+              }
+            },
+            "commenthidden": true,
+            "comment": ""
+          },
+          {
+            "revid": 328,
+            "parentid": 0,
+            "minor": false,
+            "user": "Capadmin",
+            "timestamp": "2026-09-26T04:36:12Z",
+            "size": 19,
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "content": "first revision text"
+              }
+            },
+            "comment": "Created page with \"first revision text\""
+          }
+        ]
+      }
+    ]
+  }
+}

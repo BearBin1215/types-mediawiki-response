@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "MediaWiki",
+        "description": "main page of a Wikimedia project",
+        "descriptionsource": "central"
+      },
+      {
+        "pageid": 9016,
+        "ns": 100,
+        "title": "Manual:Parameters to index.php"
+      }
+    ]
+  }
+}

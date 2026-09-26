@@ -1,0 +1,13 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 15934,
+        "ns": 0,
+        "title": "How to become a MediaWiki hacker",
+        "extract": "This article is written to help developers learn the basic skills needed to contribute to development of MediaWiki core and MediaWiki extensions.\nContributing to MediaWiki is often difficult, so if you would like to get involved with Wikimedia development instead, you should contribute to Wikimedia projects that offer mentoring.\nAn alternative without mentoring is to fix a good first bug.\nIf you are an experienced developer who is familiar with using MediaWiki already, visit the Developer hub  instead.\nFor other ways to get involved in the Wikimedia community, see How to contribute ."
+      }
+    ]
+  }
+}

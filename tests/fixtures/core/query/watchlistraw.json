@@ -1,0 +1,29 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "wrcontinue": "0|Delete_target_1790390753588",
+    "continue": "-||"
+  },
+  "watchlistraw": [
+    {
+      "ns": 0,
+      "title": "Abuse log probe"
+    },
+    {
+      "ns": 0,
+      "title": "Delete target 1790363487303"
+    },
+    {
+      "ns": 0,
+      "title": "Delete target 1790363626875"
+    },
+    {
+      "ns": 0,
+      "title": "Delete target 1790390394775"
+    },
+    {
+      "ns": 0,
+      "title": "Delete target 1790390582061"
+    }
+  ]
+}

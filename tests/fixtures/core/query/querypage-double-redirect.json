@@ -1,0 +1,79 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "qpoffset": 5,
+    "continue": "-||"
+  },
+  "query": {
+    "querypage": {
+      "name": "DoubleRedirects",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Redirect report a 1790419078032",
+          "databaseResult": {
+            "b_namespace": "0",
+            "b_title": "Redirect_report_b_1790419078032",
+            "b_fragment": "",
+            "c_namespace": "0",
+            "c_title": "Redirect_report_missing_1790419078032",
+            "c_fragment": "",
+            "c_interwiki": ""
+          }
+        },
+        {
+          "ns": 0,
+          "title": "Redirect report a 1790419290387",
+          "databaseResult": {
+            "b_namespace": "0",
+            "b_title": "Redirect_report_b_1790419290387",
+            "b_fragment": "",
+            "c_namespace": "0",
+            "c_title": "Redirect_report_missing_1790419290387",
+            "c_fragment": "",
+            "c_interwiki": ""
+          }
+        },
+        {
+          "ns": 0,
+          "title": "Redirect report a 1790419598688",
+          "databaseResult": {
+            "b_namespace": "0",
+            "b_title": "Redirect_report_b_1790419598688",
+            "b_fragment": "",
+            "c_namespace": "0",
+            "c_title": "Redirect_report_missing_1790419598688",
+            "c_fragment": "",
+            "c_interwiki": ""
+          }
+        },
+        {
+          "ns": 0,
+          "title": "Redirect report a 1790419669797",
+          "databaseResult": {
+            "b_namespace": "0",
+            "b_title": "Redirect_report_b_1790419669797",
+            "b_fragment": "",
+            "c_namespace": "0",
+            "c_title": "Redirect_report_missing_1790419669797",
+            "c_fragment": "",
+            "c_interwiki": ""
+          }
+        },
+        {
+          "ns": 0,
+          "title": "Redirect report a 1790419716433",
+          "databaseResult": {
+            "b_namespace": "0",
+            "b_title": "Redirect_report_b_1790419716433",
+            "b_fragment": "",
+            "c_namespace": "0",
+            "c_title": "Redirect_report_missing_1790419716433",
+            "c_fragment": "",
+            "c_interwiki": ""
+          }
+        }
+      ]
+    }
+  }
+}

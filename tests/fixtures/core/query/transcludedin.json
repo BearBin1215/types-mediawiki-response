@@ -1,0 +1,47 @@
+{
+  "continue": {
+    "ticontinue": "4434",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 1188583,
+        "ns": 10,
+        "title": "Template:Version",
+        "transcludedin": [
+          {
+            "pageid": 4429,
+            "ns": 10,
+            "title": "Template:MediaWikiHook",
+            "redirect": false
+          },
+          {
+            "pageid": 4430,
+            "ns": 100,
+            "title": "Manual:Hooks/UnknownAction",
+            "redirect": false
+          },
+          {
+            "pageid": 4431,
+            "ns": 100,
+            "title": "Manual:Hooks/WatchArticle",
+            "redirect": false
+          },
+          {
+            "pageid": 4432,
+            "ns": 100,
+            "title": "Manual:Hooks/WatchArticleComplete",
+            "redirect": false
+          },
+          {
+            "pageid": 4433,
+            "ns": 100,
+            "title": "Manual:Hooks/UnwatchArticle",
+            "redirect": false
+          }
+        ]
+      }
+    ]
+  }
+}

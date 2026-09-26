@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 168,
+        "ns": 0,
+        "title": "Flagged revs 1790396099305",
+        "flagged": {
+          "stable_revid": 271,
+          "level": 0,
+          "level_text": "stable"
+        }
+      }
+    ]
+  }
+}

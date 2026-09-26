@@ -1,0 +1,19 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "repos": [
+      {
+        "name": "local",
+        "displayname": "ApiAdmin",
+        "rootUrl": "/images",
+        "local": true,
+        "url": "/images",
+        "thumbUrl": "/images/thumb",
+        "initialCapital": true,
+        "scriptDirUrl": "",
+        "favicon": "http://localhost:8080/favicon.ico",
+        "canUpload": false
+      }
+    ]
+  }
+}

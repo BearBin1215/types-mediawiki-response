@@ -1,0 +1,27 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 3354,
+        "ns": 0,
+        "title": "Berlin",
+        "terms": {
+          "alias": ["Berlin, Germany", "DE-BE"],
+          "label": ["Berlin"],
+          "description": ["federated state, capital and largest city of Germany"]
+        }
+      },
+      {
+        "pageid": 17867,
+        "ns": 0,
+        "title": "London",
+        "terms": {
+          "alias": ["London, UK", "London, United Kingdom", "Big Smoke", "LDN"],
+          "label": ["London"],
+          "description": ["capital and largest city of England and the United Kingdom"]
+        }
+      }
+    ]
+  }
+}

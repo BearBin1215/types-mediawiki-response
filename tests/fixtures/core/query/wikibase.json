@@ -1,0 +1,15 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "wikibase": {
+      "repo": {
+        "url": {
+          "base": "https://www.wikidata.org",
+          "scriptpath": "/w",
+          "articlepath": "/wiki/$1"
+        }
+      },
+      "siteid": "enwiki"
+    }
+  }
+}

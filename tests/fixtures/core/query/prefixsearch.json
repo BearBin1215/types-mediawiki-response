@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "psoffset": 3,
+    "continue": "-||"
+  },
+  "query": {
+    "prefixsearch": [
+      {
+        "ns": 0,
+        "title": "MediaWiki",
+        "pageid": 1
+      },
+      {
+        "ns": 0,
+        "title": "MediaWiki-Vagrant",
+        "pageid": 116892
+      },
+      {
+        "ns": 0,
+        "title": "How to become a MediaWiki hacker",
+        "pageid": 15934
+      }
+    ]
+  }
+}

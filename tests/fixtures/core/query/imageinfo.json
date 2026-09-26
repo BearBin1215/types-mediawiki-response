@@ -1,0 +1,129 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 455229,
+        "ns": 6,
+        "title": "File:01-wikitech-phpstorm-winscp-instance-name.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2015-06-23T17:22:28Z",
+            "user": "Physikerwelt",
+            "userid": 922875,
+            "size": 20649,
+            "width": 640,
+            "height": 430,
+            "parsedcomment": "",
+            "comment": "",
+            "canonicaltitle": "File:01-wikitech-phpstorm-winscp-instance-name.png",
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/mediawiki/thumb/f/fb/01-wikitech-phpstorm-winscp-instance-name.png/500px-01-wikitech-phpstorm-winscp-instance-name.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 400,
+            "thumbheight": 269,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/mediawiki/f/fb/01-wikitech-phpstorm-winscp-instance-name.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "//thumb.wikimedia.org/wikipedia/mediawiki/thumb/f/fb/01-wikitech-phpstorm-winscp-instance-name.png/500px-01-wikitech-phpstorm-winscp-instance-name.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 400,
+              "height": 269,
+              "srcset": "//upload.wikimedia.org/wikipedia/mediawiki/f/fb/01-wikitech-phpstorm-winscp-instance-name.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/mediawiki/f/fb/01-wikitech-phpstorm-winscp-instance-name.png?utm_source=www.mediawiki.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://www.mediawiki.org/wiki/File:01-wikitech-phpstorm-winscp-instance-name.png",
+            "descriptionshorturl": "https://www.mediawiki.org/w/index.php?curid=455229",
+            "sha1": "7742be684725e3c08539aaac58725bbe0814aeda",
+            "metadata": [
+              {
+                "name": "frameCount",
+                "value": 0
+              },
+              {
+                "name": "loopCount",
+                "value": 1
+              },
+              {
+                "name": "duration",
+                "value": 0
+              },
+              {
+                "name": "bitDepth",
+                "value": 8
+              },
+              {
+                "name": "colorType",
+                "value": "truecolour-alpha"
+              },
+              {
+                "name": "width",
+                "value": 640
+              },
+              {
+                "name": "height",
+                "value": 430
+              },
+              {
+                "name": "metadata",
+                "value": [
+                  {
+                    "name": "XResolution",
+                    "value": "3780/100"
+                  },
+                  {
+                    "name": "YResolution",
+                    "value": "3780/100"
+                  },
+                  {
+                    "name": "ResolutionUnit",
+                    "value": 3
+                  },
+                  {
+                    "name": "_MW_PNG_VERSION",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "extmetadata": {
+              "DateTime": {
+                "value": "2015-06-23 17:22:28",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "01-wikitech-phpstorm-winscp-instance-name",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Files with no machine-readable author|Files with no machine-readable description|Files with no machine-readable license|Files with no machine-readable source",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              }
+            },
+            "mime": "image/png",
+            "mediatype": "BITMAP",
+            "bitdepth": 8
+          }
+        ]
+      }
+    ]
+  }
+}

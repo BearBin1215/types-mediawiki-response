@@ -1,0 +1,25 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "ns": 0,
+        "title": "Preload target 1790422997240",
+        "missing": true,
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "preloadcontent": {
+          "contentmodel": "wikitext",
+          "contentformat": "text/x-wiki",
+          "content": ""
+        },
+        "preloadisdefault": true,
+        "editintro": {
+          "newarticletext": "<div class=\"mw-newarticletext plainlinks\">\nYou have followed a link to a page that does not exist yet.\nTo create the page, start typing in the box below (see the <a class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents\">help page</a> for more info).\nIf you are here by mistake, click your browser's <strong>back</strong> button.\n</div>"
+        }
+      }
+    ]
+  }
+}

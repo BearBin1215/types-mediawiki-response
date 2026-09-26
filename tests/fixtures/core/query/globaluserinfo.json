@@ -1,0 +1,14 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "globaluserinfo": {
+      "home": "enwiki",
+      "id": 1,
+      "registration": "2008-03-13T04:16:56Z",
+      "name": "Tim Starling",
+      "groups": [],
+      "rights": [],
+      "editcount": 14467
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "lecontinue": "20260925185832|22822353",
+    "continue": "-||"
+  },
+  "query": {
+    "logevents": [
+      {
+        "logid": 22822358,
+        "ns": 2,
+        "title": "User:B209",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "userid": 18520284
+        },
+        "type": "newusers",
+        "action": "autocreate",
+        "user": "B209",
+        "userid": 18520284,
+        "timestamp": "2026-09-25T19:01:05Z",
+        "comment": "",
+        "parsedcomment": "",
+        "tags": []
+      },
+      {
+        "logid": 22822357,
+        "ns": 1198,
+        "title": "Translations:Help:Import/23/zh",
+        "pageid": 2479700,
+        "logpage": 2479700,
+        "revid": 8621116,
+        "params": {},
+        "type": "create",
+        "action": "create",
+        "user": "Pristome",
+        "userid": 18203310,
+        "timestamp": "2026-09-25T19:00:08Z",
+        "comment": "Created page with \"此编辑过程可以用于：\"",
+        "parsedcomment": "Created page with &quot;此编辑过程可以用于：&quot;",
+        "tags": []
+      },
+      {
+        "logid": 22822356,
+        "ns": 1198,
+        "title": "Translations:Help:Import/19/zh",
+        "pageid": 2479699,
+        "logpage": 2479699,
+        "revid": 8621114,
+        "params": {},
+        "type": "create",
+        "action": "create",
+        "user": "Pristome",
+        "userid": 18203310,
+        "timestamp": "2026-09-25T18:59:39Z",
+        "comment": "Created page with \"参见$1以将维基页面导出到文件。\"",
+        "parsedcomment": "Created page with &quot;参见$1以将维基页面导出到文件。&quot;",
+        "tags": []
+      },
+      {
+        "logid": 22822355,
+        "ns": 2,
+        "title": "User:AGFelizWiki",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "userid": 18520283
+        },
+        "type": "newusers",
+        "action": "autocreate",
+        "user": "AGFelizWiki",
+        "userid": 18520283,
+        "timestamp": "2026-09-25T18:58:48Z",
+        "comment": "",
+        "parsedcomment": "",
+        "tags": []
+      },
+      {
+        "logid": 22822354,
+        "ns": 1198,
+        "title": "Translations:Help:Import/18/zh",
+        "pageid": 2479698,
+        "logpage": 2479698,
+        "revid": 8621112,
+        "params": {},
+        "type": "create",
+        "action": "create",
+        "user": "Pristome",
+        "userid": 18203310,
+        "timestamp": "2026-09-25T18:58:47Z",
+        "comment": "Created page with \"这展示消息$1\"",
+        "parsedcomment": "Created page with &quot;这展示消息$1&quot;",
+        "tags": []
+      }
+    ]
+  }
+}

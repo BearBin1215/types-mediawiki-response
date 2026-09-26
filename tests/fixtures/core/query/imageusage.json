@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "iucontinue": "0|1752624",
+    "continue": "-||"
+  },
+  "query": {
+    "imageusage": [
+      {
+        "pageid": 181915,
+        "ns": 0,
+        "title": "JetBrains IDEs"
+      },
+      {
+        "pageid": 1536627,
+        "ns": 0,
+        "title": "JetBrains IDEs/en"
+      },
+      {
+        "pageid": 1566361,
+        "ns": 0,
+        "title": "JetBrains IDEs/de"
+      }
+    ]
+  }
+}

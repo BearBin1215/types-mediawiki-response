@@ -1,0 +1,84 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "arvcontinue": "20260925184042|4",
+    "continue": "-||"
+  },
+  "query": {
+    "allrevisions": [
+      {
+        "pageid": 1,
+        "revisions": [
+          {
+            "revid": 1,
+            "parentid": 0,
+            "user": "MediaWiki default",
+            "userid": 2,
+            "timestamp": "2026-09-25T18:39:26Z",
+            "size": 755,
+            "sha1": "11cef88175cf81168a86e7c0327a5b2d7a1920f5",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Main Page"
+      },
+      {
+        "pageid": 2,
+        "revisions": [
+          {
+            "revid": 2,
+            "parentid": 0,
+            "user": "127.0.0.1",
+            "anon": true,
+            "userid": 0,
+            "timestamp": "2026-09-25T18:40:42Z",
+            "size": 23,
+            "sha1": "c745ac8ff4c0172ea46a0440d6b4795e35dd7410",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "create fixture",
+            "tags": []
+          },
+          {
+            "revid": 3,
+            "parentid": 2,
+            "user": "127.0.0.1",
+            "anon": true,
+            "userid": 0,
+            "timestamp": "2026-09-25T18:40:42Z",
+            "size": 64,
+            "sha1": "a32aef3327ced0f82ec9310d89b7778f630e098f",
+            "roles": [
+              "main"
+            ],
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext"
+              }
+            },
+            "comment": "/* A new section */ new section",
+            "tags": []
+          }
+        ],
+        "ns": 0,
+        "title": "Fixture edit target"
+      }
+    ]
+  }
+}

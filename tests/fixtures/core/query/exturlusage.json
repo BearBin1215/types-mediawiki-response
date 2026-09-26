@@ -1,0 +1,29 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "eucontinue": "27872",
+    "continue": "-||"
+  },
+  "query": {
+    "exturlusage": [
+      {
+        "pageid": 34041,
+        "ns": 2,
+        "title": "User:Ahmed-Najib-Biabani-Ibrahimkhel",
+        "url": "http://ps.mediawiki.org/w/wiki.phtml?title=User_talk:Ahmed-Najib-Biabani-Ibrahimkhel&action=edit&section=new"
+      },
+      {
+        "pageid": 35618,
+        "ns": 4,
+        "title": "Project:Support desk/Archives/Miscellaneous/007",
+        "url": "http://your.mediawiki.org/images/9/9a/ImageName.jpg"
+      },
+      {
+        "pageid": 70295,
+        "ns": 0,
+        "title": "NOLA Hackathon 2011/Saturday",
+        "url": "http://integration.mediawiki.org/ci"
+      }
+    ]
+  }
+}

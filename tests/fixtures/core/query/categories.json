@@ -1,0 +1,33 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 6411,
+        "ns": 100,
+        "title": "Manual:Contents",
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:Manual",
+            "sortkey": "0403062e4644503244504e010e01c4dc0b",
+            "sortkeyprefix": " ",
+            "timestamp": "2025-02-17T16:56:40Z",
+            "hidden": false
+          },
+          {
+            "ns": 14,
+            "title": "Category:MediaWiki technical documentation",
+            "sortkey": "0403062e4644503244504e010e01c4dc0b",
+            "sortkeyprefix": " ",
+            "timestamp": "2025-02-17T16:56:40Z",
+            "hidden": false
+          }
+        ]
+      }
+    ]
+  },
+  "limits": {
+    "categories": 500
+  }
+}

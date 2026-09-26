@@ -1,0 +1,37 @@
+{
+  "continue": {
+    "imcontinue": "181915|06-wikitech-phpstorm-start.png",
+    "continue": "||"
+  },
+  "query": {
+    "pages": [
+      {
+        "pageid": 181915,
+        "ns": 0,
+        "title": "JetBrains IDEs",
+        "images": [
+          {
+            "ns": 6,
+            "title": "File:01-wikitech-phpstorm-winscp-instance-name.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:02-wikitech-phpstorm-winscp-port-fowarding.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:03-wikitech-phpstorm-putty-test.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:04-wikitech-phpstorm-putty-ppk.png"
+          },
+          {
+            "ns": 6,
+            "title": "File:05-wikitech-phpstorm-terminal.png"
+          }
+        ]
+      }
+    ]
+  }
+}

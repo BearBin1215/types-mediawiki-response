@@ -1,0 +1,66 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "ptcontinue": "20260926104757|0|Protected_title_1790419669797",
+    "continue": "-||"
+  },
+  "query": {
+    "protectedtitles": [
+      {
+        "ns": 0,
+        "title": "Protected title 1790422997240",
+        "timestamp": "2026-09-26T11:43:25Z",
+        "user": "Capadmin",
+        "userid": 3,
+        "comment": "fixture protected title",
+        "parsedcomment": "fixture protected title",
+        "expiry": "infinity",
+        "level": "sysop"
+      },
+      {
+        "ns": 0,
+        "title": "Protected title 1790422895781",
+        "timestamp": "2026-09-26T11:41:43Z",
+        "user": "Capadmin",
+        "userid": 3,
+        "comment": "fixture protected title",
+        "parsedcomment": "fixture protected title",
+        "expiry": "infinity",
+        "level": "sysop"
+      },
+      {
+        "ns": 0,
+        "title": "Protected title 1790422809652",
+        "timestamp": "2026-09-26T11:40:17Z",
+        "user": "Capadmin",
+        "userid": 3,
+        "comment": "fixture protected title",
+        "parsedcomment": "fixture protected title",
+        "expiry": "infinity",
+        "level": "sysop"
+      },
+      {
+        "ns": 0,
+        "title": "Protected title 1790421984253",
+        "timestamp": "2026-09-26T11:26:32Z",
+        "user": "Capadmin",
+        "userid": 3,
+        "comment": "fixture protected title",
+        "parsedcomment": "fixture protected title",
+        "expiry": "infinity",
+        "level": "sysop"
+      },
+      {
+        "ns": 0,
+        "title": "Protected title 1790419716433",
+        "timestamp": "2026-09-26T10:48:44Z",
+        "user": "Capadmin",
+        "userid": 3,
+        "comment": "fixture protected title",
+        "parsedcomment": "fixture protected title",
+        "expiry": "infinity",
+        "level": "sysop"
+      }
+    ]
+  }
+}

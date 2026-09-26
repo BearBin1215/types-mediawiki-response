@@ -1,0 +1,27 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "arcontinue": "MT2_1790362397088|36",
+    "continue": "-||"
+  },
+  "query": {
+    "allredirects": [
+      {
+        "fromid": 8,
+        "ns": 0,
+        "title": "MT2 1790361822",
+        "fragment": "Fixture"
+      },
+      {
+        "fromid": 14,
+        "ns": 0,
+        "title": "MT2 1790361887"
+      },
+      {
+        "fromid": 23,
+        "ns": 0,
+        "title": "MT2 1790361935"
+      }
+    ]
+  }
+}
