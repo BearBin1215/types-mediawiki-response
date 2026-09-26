@@ -1,0 +1,15 @@
+{
+  "warnings": {
+    "main": {
+      "warnings": "Subscribe to the mediawiki-api-announce mailing list at <https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/> for notice of API deprecations and breaking changes."
+    },
+    "login": {
+      "warnings": "Main-account login via \"action=login\" is deprecated and may stop working without warning. To continue login with \"action=login\", see [[Special:BotPasswords]]. To safely continue using main-account login, see \"action=clientlogin\"."
+    }
+  },
+  "login": {
+    "result": "Success",
+    "lguserid": 11,
+    "lgusername": "Capj"
+  }
+}

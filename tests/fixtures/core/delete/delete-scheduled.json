@@ -1,0 +1,12 @@
+{
+  "warnings": {
+    "delete": {
+      "warnings": "The page \"Delete scheduled target 1790797166998\" is scheduled for deletion. Please be patient."
+    }
+  },
+  "delete": {
+    "title": "Delete scheduled target 1790797166998",
+    "reason": "fixture scheduled delete",
+    "scheduled": true
+  }
+}

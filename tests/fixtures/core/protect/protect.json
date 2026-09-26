@@ -1,0 +1,16 @@
+{
+  "protect": {
+    "title": "Protect target 1790397366194",
+    "reason": "fixture protect",
+    "protections": [
+      {
+        "edit": "sysop",
+        "expiry": "2026-10-03T04:36:12Z"
+      },
+      {
+        "move": "sysop",
+        "expiry": "infinite"
+      }
+    ]
+  }
+}

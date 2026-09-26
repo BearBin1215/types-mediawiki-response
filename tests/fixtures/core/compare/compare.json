@@ -1,0 +1,24 @@
+{
+  "compare": {
+    "fromid": 1,
+    "fromrevid": 1,
+    "fromns": 0,
+    "fromtitle": "MediaWiki",
+    "fromsize": 1,
+    "fromuser": "192.0.2.22",
+    "fromuserid": 0,
+    "fromcomment": "",
+    "fromparsedcomment": "",
+    "toid": 1,
+    "torevid": 935,
+    "tons": 0,
+    "totitle": "MediaWiki",
+    "tosize": 168,
+    "touser": "192.0.2.14",
+    "touserid": 0,
+    "tocomment": "",
+    "toparsedcomment": "",
+    "diffsize": 1007,
+    "body": "<tr>\n  <td colspan=\"2\" class=\"diff-lineno\">Line 1:</td>\n  <td colspan=\"2\" class=\"diff-lineno\">Line 1:</td>\n</tr>\n<tr>\n  <td colspan=\"2\" class=\"diff-empty diff-side-deleted\"></td>\n  <td class=\"diff-marker\" data-marker=\"+\"></td>\n  <td class=\"diff-addedline diff-side-added\"><div>MediaWiki is the software used by the Wikimedia foundation to run Wikipedia and its sister projects.</div></td>\n</tr>\n<tr>\n  <td class=\"diff-marker\" data-marker=\"−\"></td>\n  <td class=\"diff-deletedline diff-side-deleted\"><div>a</div></td>\n  <td colspan=\"2\" class=\"diff-empty diff-side-added\"></td>\n</tr>\n<tr>\n  <td colspan=\"2\" class=\"diff-empty diff-side-deleted\"></td>\n  <td class=\"diff-marker\" data-marker=\"+\"></td>\n  <td class=\"diff-addedline diff-side-added\"><br /></td>\n</tr>\n<tr>\n  <td colspan=\"2\" class=\"diff-empty diff-side-deleted\"></td>\n  <td class=\"diff-marker\" data-marker=\"+\"></td>\n  <td class=\"diff-addedline diff-side-added\"><div>Main page for the software is at http://wikipedia.sourceforge.net/</div></td>\n</tr>\n"
+  }
+}

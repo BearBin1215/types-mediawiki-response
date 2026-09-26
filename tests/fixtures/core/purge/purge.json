@@ -1,0 +1,10 @@
+{
+  "batchcomplete": true,
+  "purge": [
+    {
+      "ns": 0,
+      "title": "Fixture edit target 1790363626875",
+      "purged": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "createaccount": {
+    "status": "FAIL",
+    "message": "You have not specified a valid username.",
+    "messagecode": "invaliduser",
+    "canpreservestate": false
+  }
+}

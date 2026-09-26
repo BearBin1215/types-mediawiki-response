@@ -1,0 +1,10 @@
+{
+  "rollback": {
+    "title": "Rollback target 1790363626875",
+    "pageid": 74,
+    "summary": "Reverted edit by [[Special:Contributions/Edituser|Edituser]] ([[User talk:Edituser|talk]]) to last revision by [[User:Capadmin|Capadmin]]",
+    "revid": 123,
+    "old_revid": 122,
+    "last_revid": 121
+  }
+}

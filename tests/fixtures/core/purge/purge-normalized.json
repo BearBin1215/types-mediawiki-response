@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "purge": [
+    {
+      "ns": 0,
+      "title": "Fixture edit target 1790797195523",
+      "purged": true
+    }
+  ],
+  "normalized": [
+    {
+      "fromencoded": false,
+      "from": "fixture_edit_target_1790797195523",
+      "to": "Fixture edit target 1790797195523"
+    }
+  ]
+}

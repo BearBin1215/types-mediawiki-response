@@ -1,0 +1,32 @@
+{
+  "parse": {
+    "title": "Project:Types-mediawiki-response fixture",
+    "pageid": 0,
+    "text": "<div class=\"mw-content-ltr mw-parser-output\" lang=\"en\" dir=\"ltr\"><div class=\"mw-heading mw-heading2 ext-discussiontools-init-section\"><h2 id=\"Head\" data-mw-thread-id=\"h-Head\"><span data-mw-comment-start=\"\" id=\"h-Head\"></span>Head<span data-mw-comment-end=\"h-Head\"></span></h2><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a href=\"/w/index.php?title=Project:Types-mediawiki-response_fixture&amp;veaction=edit&amp;section=1\" title=\"Edit section: Head\" class=\"mw-editsection-visualeditor\"><span>edit</span></a><span class=\"mw-editsection-divider\"> | </span><a href=\"/w/index.php?title=Project:Types-mediawiki-response_fixture&amp;action=edit&amp;section=1\" title=\"Edit section's source code: Head\"><span>edit source</span></a><span class=\"mw-editsection-bracket\">]</span></span></div>\n<p>Some <b>bold</b> with a <a href=\"/wiki/MediaWiki\" title=\"MediaWiki\">MediaWiki</a> link,  and <a rel=\"nofollow\" class=\"external text\" href=\"https://example.org\">an external link</a>.\n</p>\n<!-- \nNewPP limit report\nParsed by mw‐api‐ext.codfw.main‐6db95f5649‐rhdvx\nCached time: 20260925175021\nCache expiry: 2592000\nReduced expiry: false\nComplications: []\nCPU time usage: 0.007 seconds\nReal time usage: 0.008 seconds\nPreprocessor visited node count: 2/1000000\nRevision size: 118/2097152 bytes\nPost‐expand include size: 0/2097152 bytes\nTemplate argument size: 0/2097152 bytes\nHighest expansion depth: 2/100\nExpensive parser function count: 0/500\nUnstrip recursion depth: 0/20\nUnstrip post‐expand size: 0/5000000 bytes\nNumber of Wikibase entities loaded: 0/500\n-->\n<!--\nTransclusion expansion time report (%,ms,calls,template)\n100.00%    0.000      1 -total\n-->\n\n<!-- Render ID 93c1eca2-b909-11f1-8def-d11b58c4fbac -->\n</div>",
+    "langlinks": [],
+    "categories": [
+      {
+        "sortkey": "",
+        "category": "Fixture",
+        "missing": true
+      }
+    ],
+    "links": [
+      {
+        "ns": 0,
+        "title": "MediaWiki",
+        "exists": true
+      }
+    ],
+    "templates": [],
+    "images": [],
+    "externallinks": [
+      "https://example.org"
+    ],
+    "parsewarnings": [],
+    "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-namespace\">Project</span><span class=\"mw-page-title-separator\">:</span><span class=\"mw-page-title-main\">Types-mediawiki-response fixture</span></span>",
+    "properties": {
+      "unexpectedUnconnectedPage": -4
+    }
+  }
+}

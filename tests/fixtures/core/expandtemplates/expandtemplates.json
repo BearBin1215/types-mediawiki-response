@@ -1,0 +1,9 @@
+{
+  "expandtemplates": {
+    "properties": {
+      "defaultsort": "Sort Me"
+    },
+    "volatile": false,
+    "wikitext": " [[Category:FixtureCat]] some Types-mediawiki-response fixture text"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "move": {
+    "from": "MF3 1790362397088",
+    "to": "MT3 1790362397088",
+    "reason": "fixture move subpages",
+    "redirectcreated": true,
+    "moveoverredirect": false,
+    "subpages": {
+      "errors": [
+        {
+          "message": "namespace-nosubpages",
+          "params": [
+            ""
+          ],
+          "code": "namespace-nosubpages",
+          "type": "error"
+        }
+      ]
+    }
+  }
+}

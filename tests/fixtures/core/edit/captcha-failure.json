@@ -1,0 +1,11 @@
+{
+  "edit": {
+    "captcha": {
+      "type": "simple",
+      "mime": "text/plain",
+      "id": "4990208480881466294",
+      "question": "72+9"
+    },
+    "result": "Failure"
+  }
+}

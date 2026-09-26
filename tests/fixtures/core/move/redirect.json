@@ -1,0 +1,12 @@
+{
+  "move": {
+    "from": "MF2 1790362397088",
+    "to": "MT2 1790362397088",
+    "reason": "fixture move with redirect",
+    "redirectcreated": true,
+    "moveoverredirect": false,
+    "talkfrom": "Talk:MF2 1790362397088",
+    "talkto": "Talk:MT2 1790362397088",
+    "talkmoveoverredirect": false
+  }
+}

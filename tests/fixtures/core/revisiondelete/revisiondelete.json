@@ -1,0 +1,19 @@
+{
+  "revisiondelete": {
+    "status": "Success",
+    "target": "Revdel target 1790397366194",
+    "items": [
+      {
+        "status": "Success",
+        "id": 329,
+        "timestamp": "2026-09-26T04:36:13Z",
+        "userhidden": true,
+        "commenthidden": true,
+        "texthidden": false,
+        "userid": 3,
+        "user": "Capadmin",
+        "comment": ""
+      }
+    ]
+  }
+}

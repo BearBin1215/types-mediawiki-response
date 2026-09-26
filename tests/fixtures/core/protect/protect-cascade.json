@@ -1,0 +1,17 @@
+{
+  "protect": {
+    "title": "Protect cascade target 1790797153241",
+    "reason": "fixture protect cascade",
+    "cascade": true,
+    "protections": [
+      {
+        "edit": "sysop",
+        "expiry": "2026-10-07T19:39:13Z"
+      },
+      {
+        "move": "sysop",
+        "expiry": "infinite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "emailuser": {
+    "result": "Failure",
+    "warnings": [],
+    "errors": [
+      {
+        "message": "php-mail-error-unknown",
+        "params": [],
+        "code": "php-mail-error-unknown",
+        "type": "error"
+      }
+    ]
+  }
+}

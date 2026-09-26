@@ -1,0 +1,9 @@
+{
+  "unblock": {
+    "id": 1,
+    "user": "10.0.0.99",
+    "userid": 0,
+    "reason": "fixture unblock",
+    "watchuser": false
+  }
+}

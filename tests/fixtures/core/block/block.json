@@ -1,0 +1,19 @@
+{
+  "block": {
+    "user": "10.0.0.99",
+    "userID": 0,
+    "expiry": "2026-10-02T19:13:49Z",
+    "id": 1,
+    "reason": "fixture block",
+    "anononly": false,
+    "nocreate": true,
+    "autoblock": false,
+    "noemail": false,
+    "hidename": false,
+    "allowusertalk": false,
+    "watchuser": false,
+    "partial": false,
+    "pagerestrictions": null,
+    "namespacerestrictions": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "validatepassword": {
+    "validity": "Change",
+    "validitymessages": [
+      {
+        "message": "passwordtooshort",
+        "params": [
+          10
+        ],
+        "code": "passwordtooshort",
+        "type": "error"
+      }
+    ]
+  }
+}

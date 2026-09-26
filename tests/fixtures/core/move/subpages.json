@@ -1,0 +1,15 @@
+{
+  "move": {
+    "from": "User:Mfs 1790362397088",
+    "to": "User:Mtd 1790362397088",
+    "reason": "fixture move subpages ok",
+    "redirectcreated": true,
+    "moveoverredirect": false,
+    "subpages": [
+      {
+        "from": "User:Mfs 1790362397088/Sub",
+        "to": "User:Mtd 1790362397088/Sub"
+      }
+    ]
+  }
+}

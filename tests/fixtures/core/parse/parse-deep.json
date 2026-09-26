@@ -1,0 +1,104 @@
+{
+  "parse": {
+    "title": "ApiAdmin:Types-mediawiki-response fixture",
+    "pageid": 0,
+    "tocdata": {
+      "sections": [
+        {
+          "tocLevel": 1,
+          "hLevel": 1,
+          "line": "A",
+          "number": "1",
+          "index": "1",
+          "fromTitle": "ApiAdmin:Types-mediawiki-response_fixture",
+          "codepointOffset": 0,
+          "anchor": "A"
+        },
+        {
+          "tocLevel": 2,
+          "hLevel": 2,
+          "line": "B",
+          "number": "1.1",
+          "index": "2",
+          "fromTitle": "ApiAdmin:Types-mediawiki-response_fixture",
+          "codepointOffset": 6,
+          "anchor": "B"
+        }
+      ],
+      "extensionData": []
+    },
+    "showtoc": false,
+    "parsewarnings": [],
+    "parsewarningshtml": [],
+    "modules": [],
+    "modulescripts": [],
+    "modulestyles": [
+      "mediawiki.page.gallery.styles"
+    ],
+    "jsconfigvars": {},
+    "encodedjsconfigvars": "[]",
+    "indicators": {},
+    "properties": {},
+    "limitreportdata": [
+      {
+        "0": "0.005",
+        "name": "limitreport-cputime"
+      },
+      {
+        "0": "0.005",
+        "name": "limitreport-walltime"
+      },
+      {
+        "0": 10,
+        "1": 1000000,
+        "name": "limitreport-ppvisitednodes"
+      },
+      {
+        "0": 32,
+        "1": 2097152,
+        "name": "limitreport-postexpandincludesize"
+      },
+      {
+        "0": 0,
+        "1": 2097152,
+        "name": "limitreport-templateargumentsize"
+      },
+      {
+        "0": 2,
+        "1": 100,
+        "name": "limitreport-expansiondepth"
+      },
+      {
+        "0": 0,
+        "1": 100,
+        "name": "limitreport-expensivefunctioncount"
+      },
+      {
+        "0": 0,
+        "1": 20,
+        "name": "limitreport-unstrip-depth"
+      },
+      {
+        "0": 393,
+        "1": 5000000,
+        "name": "limitreport-unstrip-size"
+      },
+      {
+        "0": "100.00%    0.000      1 -total",
+        "name": "limitreport-timingprofile"
+      },
+      {
+        "0": "20260926112133",
+        "name": "cachereport-timestamp"
+      },
+      {
+        "0": 86400,
+        "name": "cachereport-ttl"
+      },
+      {
+        "0": false,
+        "name": "cachereport-transientcontent"
+      }
+    ]
+  }
+}
