@@ -1,0 +1,30 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "linterstats": {
+      "totals": {
+        "deletable-table-tag": 0,
+        "duplicate-ids": 1,
+        "html5-misnesting": 0,
+        "misc-tidy-replacement-issues": 0,
+        "multiline-html-table-in-list": 0,
+        "multiple-unclosed-formatting-tags": 0,
+        "pwrap-bug-workaround": 0,
+        "self-closed-tag": 1,
+        "tidy-font-bug": 0,
+        "tidy-whitespace-bug": 0,
+        "unclosed-quotes-in-heading": 0,
+        "bogus-image-options": 0,
+        "fostered": 1,
+        "misnested-tag": 0,
+        "multi-colon-escape": 0,
+        "wikilink-in-extlink": 0,
+        "missing-end-tag": 1,
+        "missing-end-tag-in-heading": 0,
+        "night-mode-unaware-background-color": 0,
+        "obsolete-tag": 0,
+        "stripped-tag": 0
+      }
+    }
+  }
+}

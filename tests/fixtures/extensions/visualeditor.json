@@ -1,0 +1,43 @@
+{
+  "visualeditor": {
+    "result": "success",
+    "notices": [],
+    "copyrightWarning": "<div id=\"editpage-copywarn\">Please note that all contributions to ApiAdmin may be edited, altered, or removed by other contributors.\nIf you do not want your writing to be edited mercilessly, then do not submit it here.<br />\nYou are also promising us that you wrote this yourself, or copied it from a public domain or similar free resource (see <a href=\"/index.php?title=ApiAdmin:Copyrights&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"ApiAdmin:Copyrights (page does not exist)\">ApiAdmin:Copyrights</a> for details).\n<strong>Do not submit copyrighted work without permission!</strong></div>",
+    "checkboxesDef": {
+      "wpMinoredit": {
+        "id": "wpMinoredit",
+        "label-message": "minoredit",
+        "tooltip": "minoredit",
+        "label-id": "mw-editpage-minoredit",
+        "legacy-name": "minor",
+        "default": false
+      },
+      "wpWatchthis": {
+        "id": "wpWatchthis",
+        "label-message": "watchthis",
+        "tooltip": "watch",
+        "label-id": "mw-editpage-watch",
+        "legacy-name": "watch",
+        "default": true
+      }
+    },
+    "checkboxesMessages": {
+      "accesskey-minoredit": "i",
+      "tooltip-minoredit": "Mark this as a minor edit",
+      "minoredit": "This is a minor edit",
+      "accesskey-watch": "w",
+      "tooltip-watch": "Add this page to your watchlist",
+      "watchthis": "Watch this page"
+    },
+    "protectedClasses": "",
+    "basetimestamp": "20261001045347",
+    "starttimestamp": "20261001053411",
+    "oldid": 909,
+    "blockinfo": null,
+    "wouldautocreate": false,
+    "canEdit": true,
+    "etag": "\"909/badd5119-bd59-11f1-82f8-7dd0da817a80/stash\"",
+    "content": "<!DOCTYPE html>\n<html prefix=\"dc: http://purl.org/dc/terms/ mw: http://mediawiki.org/rdf/\" about=\"http://localhost:8080/index.php/Special:Redirect/revision/909\"><head prefix=\"mwr: http://localhost:8080/index.php/Special:Redirect/\"><meta charset=\"utf-8\"/><meta property=\"mw:pageId\" content=\"580\"/><meta property=\"mw:pageNamespace\" content=\"0\"/><link rel=\"dc:replaces\" resource=\"mwr:revision/0\"/><meta property=\"mw:revisionSHA1\" content=\"566da9236e4a0b9e7fa5d2aa2942ab1f44149be4\"/><meta property=\"dc:modified\" content=\"2026-10-01T04:53:47.000Z\"/><meta property=\"mw:htmlVersion\" content=\"2.8.0\"/><meta property=\"mw:html:version\" content=\"2.8.0\"/><link rel=\"dc:isVersionOf\" href=\"http://localhost:8080/index.php/Gap_discuss\"/><base href=\"http://localhost:8080/index.php/\"/><title>Gap discuss</title><link rel=\"stylesheet\" href=\"/load.php?lang=en&amp;modules=mediawiki.skinning.content.parsoid%7Cmediawiki.skinning.interface%7Csite.styles&amp;only=styles&amp;skin=vector\"/><meta http-equiv=\"content-language\" content=\"en\"/><meta http-equiv=\"vary\" content=\"Accept\"/></head><body id=\"mwAA\" lang=\"en\" class=\"mw-content-ltr sitedir-ltr ltr mw-body-content parsoid-body mediawiki mw-parser-output\" dir=\"ltr\" data-mw-parsoid-version=\"0.20.8.0\" data-mw-html-version=\"2.8.0\"><section data-mw-section-id=\"0\" id=\"mwAQ\"><p id=\"mwAg\">Fixture subject page.</p></section></body></html>",
+    "preloaded": false
+  }
+}

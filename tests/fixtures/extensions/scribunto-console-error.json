@@ -1,0 +1,10 @@
+{
+  "type": "error",
+  "html": "<p>Lua error in console input at line 7: boom.</p><p>Backtrace:</p><ol class=\"scribunto-trace\"><li><strong>(tail call)</strong>:&#160;?</li><li><strong>[C]</strong>: in function \"error\"</li><li><strong>console input:7</strong>:&#160;?</li><li><strong>(tail call)</strong>:&#160;?</li><li><strong>[C]</strong>: in function \"xpcall\"</li><li><strong>MWServer.lua:99</strong>: in function \"handleCall\"</li><li><strong>MWServer.lua:313</strong>: in function \"dispatch\"</li><li><strong>MWServer.lua:52</strong>: in function \"execute\"</li><li><strong>mw_main.lua:7</strong>: in main chunk</li><li><strong>[C]</strong>:&#160;?</li></ol>",
+  "message": "Lua error in console input at line 7: boom.",
+  "messagename": "scribunto-lua-error-location",
+  "session": 591160567,
+  "sessionSize": 13,
+  "sessionMaxSize": 500000,
+  "sessionIsNew": ""
+}

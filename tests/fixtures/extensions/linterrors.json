@@ -1,0 +1,22 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "linterrors": [
+      {
+        "pageid": 576,
+        "ns": 0,
+        "title": "Gap lint page",
+        "lintId": 1,
+        "category": "self-closed-tag",
+        "location": [
+          0,
+          6
+        ],
+        "templateInfo": {},
+        "params": {
+          "name": "div"
+        }
+      }
+    ]
+  }
+}

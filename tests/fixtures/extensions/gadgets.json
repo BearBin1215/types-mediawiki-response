@@ -1,0 +1,73 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "gadgets": [
+      {
+        "id": "gaptools",
+        "metadata": {
+          "settings": {
+            "actions": [],
+            "categories": [],
+            "category": "gapsection",
+            "contentModels": [],
+            "default": true,
+            "hidden": false,
+            "legacyscripts": false,
+            "namespaces": [],
+            "package": true,
+            "requiresES6": false,
+            "rights": [
+              "edit"
+            ],
+            "shared": false,
+            "skins": [],
+            "supportsUrlLoad": false
+          },
+          "module": {
+            "datas": [],
+            "dependencies": [],
+            "messages": [],
+            "peers": [],
+            "scripts": [
+              "MediaWiki:Gadget-gaptools.js"
+            ],
+            "styles": []
+          }
+        },
+        "desc": "⧼gadget-gaptools⧽"
+      },
+      {
+        "id": "gapsecret",
+        "metadata": {
+          "settings": {
+            "actions": [],
+            "categories": [],
+            "category": "gapsection",
+            "contentModels": [],
+            "default": false,
+            "hidden": true,
+            "legacyscripts": false,
+            "namespaces": [],
+            "package": false,
+            "requiresES6": false,
+            "rights": [],
+            "shared": false,
+            "skins": [],
+            "supportsUrlLoad": false
+          },
+          "module": {
+            "datas": [],
+            "dependencies": [],
+            "messages": [],
+            "peers": [],
+            "scripts": [
+              "MediaWiki:Gadget-gapsecret.js"
+            ],
+            "styles": []
+          }
+        },
+        "desc": "⧼gadget-gapsecret⧽"
+      }
+    ]
+  }
+}

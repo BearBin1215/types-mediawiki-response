@@ -1,0 +1,12 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "gadgetcategories": [
+      {
+        "name": "gapsection",
+        "desc": "⧼gadget-section-gapsection⧽",
+        "members": 2
+      }
+    ]
+  }
+}

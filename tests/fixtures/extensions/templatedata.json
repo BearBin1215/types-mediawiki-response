@@ -1,0 +1,58 @@
+{
+  "batchcomplete": true,
+  "pages": {
+    "575": {
+      "title": "Template:Gap template",
+      "description": {
+        "en": "Fixture template for templatedata capture."
+      },
+      "format": "inline",
+      "params": {
+        "name": {
+          "label": {
+            "en": "Name"
+          },
+          "description": {
+            "en": "First name of the subject."
+          },
+          "type": "string",
+          "required": true,
+          "suggested": true,
+          "aliases": [
+            "first"
+          ],
+          "example": {
+            "en": "Ada"
+          },
+          "deprecated": false,
+          "autovalue": null,
+          "default": null,
+          "suggestedvalues": []
+        },
+        "count": {
+          "label": {
+            "en": "Count"
+          },
+          "type": "number",
+          "default": {
+            "en": "1"
+          },
+          "deprecated": true,
+          "description": null,
+          "required": false,
+          "suggested": false,
+          "aliases": [],
+          "autovalue": null,
+          "suggestedvalues": [],
+          "example": null
+        }
+      },
+      "maps": {
+        "thingy": {
+          "name": "name"
+        }
+      },
+      "sets": []
+    }
+  }
+}
