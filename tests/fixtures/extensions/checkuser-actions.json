@@ -1,0 +1,260 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "checkuser": {
+      "edits": [
+        {
+          "timestamp": "2026-09-29T14:29:22Z",
+          "ns": 0,
+          "title": "Ext_cu_ed_1790692160708",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"checkuser fixture edit\""
+        },
+        {
+          "timestamp": "2026-09-29T14:24:46Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691880616",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Added 3 pages and changed the description"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:46Z",
+          "ns": 3,
+          "title": "Oathx",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "/* Fixture love */ new WikiLove message"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:46Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691880616",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx sent a message to [[Special:PermanentLink/857]] (Fixture subject)"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:45Z",
+          "ns": 710,
+          "title": "ApxFixture1790691880616.webm.en.srt",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"1 00:00:00,000 --> 00:00:01,000 Fixture subtitle\""
+        },
+        {
+          "timestamp": "2026-09-29T14:24:45Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691880616",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "fixture list"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:45Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691880616",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx created the page [[ApiAdmin:Fixture delivery list 1790691880616]] using a non-default content model \"Mass message delivery list\" (fixture list)"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:44Z",
+          "ns": 6,
+          "title": "ApxFixture1790691880616.webm",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx uploaded [[File:ApxFixture1790691880616.webm]]"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:42Z",
+          "ns": 0,
+          "title": "Ext_cu_ed_1790691880616",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"checkuser fixture edit\""
+        },
+        {
+          "timestamp": "2026-09-29T14:22:41Z",
+          "ns": 3,
+          "title": "Oathx",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "/* Fixture love */ new WikiLove message"
+        },
+        {
+          "timestamp": "2026-09-29T14:22:40Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691754710",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "fixture list"
+        },
+        {
+          "timestamp": "2026-09-29T14:22:40Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691754710",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx created the page [[ApiAdmin:Fixture delivery list 1790691754710]] using a non-default content model \"Mass message delivery list\" (fixture list)"
+        },
+        {
+          "timestamp": "2026-09-29T14:22:40Z",
+          "ns": 4,
+          "title": "Fixture_delivery_list_1790691754710",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx sent a message to [[Special:PermanentLink/851]] (Fixture subject)"
+        },
+        {
+          "timestamp": "2026-09-29T14:22:39Z",
+          "ns": 710,
+          "title": "ApxFixture1790691754710.webm.en.srt",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"1 00:00:00,000 --> 00:00:01,000 Fixture subtitle\""
+        },
+        {
+          "timestamp": "2026-09-29T14:22:38Z",
+          "ns": 6,
+          "title": "ApxFixture1790691754710.webm",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx uploaded [[File:ApxFixture1790691754710.webm]]"
+        },
+        {
+          "timestamp": "2026-09-29T14:22:36Z",
+          "ns": 0,
+          "title": "Ext_cu_ed_1790691754710",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"checkuser fixture edit\""
+        },
+        {
+          "timestamp": "2026-09-29T14:21:53Z",
+          "ns": 4,
+          "title": "Manual_list_probe",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "probe"
+        },
+        {
+          "timestamp": "2026-09-29T14:21:53Z",
+          "ns": 4,
+          "title": "Manual_list_probe",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx created the page [[ApiAdmin:Manual list probe]] using a non-default content model \"Mass message delivery list\" (probe)"
+        },
+        {
+          "timestamp": "2026-09-29T14:13:38Z",
+          "ns": 3,
+          "title": "Oathx",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "/* Fixture love */ new WikiLove message"
+        },
+        {
+          "timestamp": "2026-09-29T14:13:36Z",
+          "ns": 710,
+          "title": "ApxFixture1790691212452.webm.en.srt",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"1 00:00:00,000 --> 00:00:01,000 Fixture subtitle\""
+        },
+        {
+          "timestamp": "2026-09-29T14:13:35Z",
+          "ns": 6,
+          "title": "ApxFixture1790691212452.webm",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx uploaded [[File:ApxFixture1790691212452.webm]]"
+        },
+        {
+          "timestamp": "2026-09-29T14:11:37Z",
+          "ns": 710,
+          "title": "ApxFixture1790691092397.webm.en.srt",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"1 00:00:00,000 --> 00:00:01,000 Fixture subtitle\""
+        },
+        {
+          "timestamp": "2026-09-29T14:11:36Z",
+          "ns": 6,
+          "title": "ApxFixture1790691092397.webm",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Capx uploaded [[File:ApxFixture1790691092397.webm]]"
+        },
+        {
+          "timestamp": "2026-09-29T13:54:29Z",
+          "ns": 3,
+          "title": "Peerx",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"fixture setup\""
+        },
+        {
+          "timestamp": "2026-09-29T13:54:28Z",
+          "ns": 710,
+          "title": "ApxFixture1790690064892.webm.en.srt",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": "curl/8.14.1",
+          "summary": "Created page with \"1 00:00:00,000 --> 00:00:01,000 Fixture subtitle\""
+        },
+        {
+          "timestamp": "2026-09-27T00:52:23Z",
+          "ns": 8,
+          "title": "Titleblacklist",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": null
+        },
+        {
+          "timestamp": "2026-09-27T00:48:07Z",
+          "ns": 8,
+          "title": "Titleblacklist",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": null,
+          "summary": "Created page with \".*GapBlocked.* <abusefilter=0> <edit-abuse description=\"Gap fixture blacklist\" />\""
+        },
+        {
+          "timestamp": "2026-09-27T00:48:05Z",
+          "ns": 0,
+          "title": "Ext_thank_cap_1790470084393",
+          "user": "Capx",
+          "ip": "127.0.0.1",
+          "agent": null,
+          "summary": "Created page with \"content by capadmin\""
+        }
+      ]
+    }
+  }
+}

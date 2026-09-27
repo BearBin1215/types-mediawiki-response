@@ -1,0 +1,51 @@
+{
+  "discussiontoolspageinfo": {
+    "threaditemshtml": [
+      {
+        "headingLevel": 2,
+        "name": "h-Cap146-20261002091000",
+        "type": "heading",
+        "level": 0,
+        "id": "h-Fixture_topic-20261002091000",
+        "replies": [
+          {
+            "timestamp": "2026-10-02T09:10:00Z",
+            "author": "Cap146",
+            "type": "comment",
+            "level": 1,
+            "id": "c-Cap146-20261002091000-Fixture_topic",
+            "replies": [],
+            "html": "First comment here. --<a rel=\"mw:WikiLink\" href=\"./User:Cap146?action=edit&amp;redlink=1\" title=\"User:Cap146\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Cap146\"]}}' id=\"mwBA\">Cap146</a> (<a rel=\"mw:WikiLink\" href=\"./User_talk:Cap146?action=edit&amp;redlink=1\" title=\"User talk:Cap146\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User talk:Cap146\"]}}' id=\"mwBQ\">talk</a>) 09:10, 2 October 2026 (UTC)"
+          },
+          {
+            "timestamp": "2026-10-02T09:10:00Z",
+            "author": "Dtpeer",
+            "type": "comment",
+            "level": 1,
+            "id": "c-Dtpeer-20261002091000-Fixture_topic",
+            "replies": [],
+            "html": "Second comment from another author. --<a rel=\"mw:WikiLink\" href=\"./User:Dtpeer?action=edit&amp;redlink=1\" title=\"User:Dtpeer\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Dtpeer\"]}}' id=\"mwBw\">Dtpeer</a> (<a rel=\"mw:WikiLink\" href=\"./User_talk:Dtpeer?action=edit&amp;redlink=1\" title=\"User talk:Dtpeer\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User talk:Dtpeer\"]}}' id=\"mwCA\">talk</a>) 09:10, 2 October 2026 (UTC)"
+          }
+        ],
+        "html": "Fixture topic",
+        "commentCount": 2,
+        "authorCount": 2,
+        "latestReplyTimestamp": "2026-10-02T09:10:00Z",
+        "latestReply": {
+          "timestamp": "2026-10-02T09:10:00Z",
+          "author": "Cap146",
+          "type": "comment",
+          "level": 1,
+          "id": "c-Cap146-20261002091000-Fixture_topic"
+        },
+        "oldestReply": {
+          "timestamp": "2026-10-02T09:10:00Z",
+          "author": "Cap146",
+          "type": "comment",
+          "level": 1,
+          "id": "c-Cap146-20261002091000-Fixture_topic"
+        }
+      }
+    ]
+  }
+}

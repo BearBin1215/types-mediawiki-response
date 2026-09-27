@@ -1,0 +1,8 @@
+{
+  "titleblacklist": {
+    "result": "blacklisted",
+    "reason": "The title \"Foo badtitle\" has been banned from creation.\nIt matches the following disallowed titles list entry: <code>.*[Bb]adtitle.* # fixture capture line</code>",
+    "message": "titleblacklist-forbidden-edit",
+    "line": ".*[Bb]adtitle.* # fixture capture line"
+  }
+}

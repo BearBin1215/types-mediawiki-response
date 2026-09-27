@@ -1,0 +1,42 @@
+{
+  "discussiontoolspageinfo": {
+    "transcludedfrom": {
+      "h-Fixture_topic-20261001053400": false,
+      "h-Capadmin-20261001053400": false,
+      "c-Capadmin-20261001053400-Fixture_topic": false,
+      "c-Capadmin-20261001053400": false,
+      "c-Capadmin-20261001053400-Capadmin-20261001053400": false
+    },
+    "threaditemshtml": [
+      {
+        "headingLevel": 2,
+        "name": "h-Capadmin-20261001053400",
+        "type": "heading",
+        "level": 0,
+        "id": "h-Fixture_topic-20261001053400",
+        "replies": [
+          {
+            "timestamp": "2026-10-01T05:34:00Z",
+            "author": "Capadmin",
+            "type": "comment",
+            "level": 1,
+            "id": "c-Capadmin-20261001053400-Fixture_topic",
+            "replies": [
+              {
+                "timestamp": "2026-10-01T05:34:00Z",
+                "author": "Capadmin",
+                "type": "comment",
+                "level": 2,
+                "id": "c-Capadmin-20261001053400-Capadmin-20261001053400",
+                "replies": [],
+                "html": "A reply. --<a rel=\"mw:WikiLink\" href=\"./User:Capadmin?action=edit&amp;redlink=1\" title=\"User:Capadmin\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Capadmin\"]}}' id=\"mwCA\">Capadmin</a> (<a rel=\"mw:WikiLink\" href=\"./User_talk:Capadmin?action=edit&amp;redlink=1\" title=\"User talk:Capadmin\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User talk:Capadmin\"]}}' id=\"mwCQ\">talk</a>) 05:34, 1 October 2026 (UTC)"
+              }
+            ],
+            "html": "A signed comment. --<a rel=\"mw:WikiLink\" href=\"./User:Capadmin?action=edit&amp;redlink=1\" title=\"User:Capadmin\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:Capadmin\"]}}' id=\"mwBA\">Capadmin</a> (<a rel=\"mw:WikiLink\" href=\"./User_talk:Capadmin?action=edit&amp;redlink=1\" title=\"User talk:Capadmin\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User talk:Capadmin\"]}}' id=\"mwBQ\">talk</a>) 05:34, 1 October 2026 (UTC)"
+          }
+        ],
+        "html": "Fixture topic"
+      }
+    ]
+  }
+}

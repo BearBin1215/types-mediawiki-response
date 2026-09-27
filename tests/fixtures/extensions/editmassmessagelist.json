@@ -1,0 +1,24 @@
+{
+  "editmassmessagelist": {
+    "result": "Done",
+    "added": [
+      {
+        "title": "User talk:Fixture missing 1790692160708",
+        "missing": ""
+      },
+      {
+        "title": "User talk:Oathx"
+      },
+      {
+        "title": "User talk:Peerx"
+      }
+    ],
+    "invalidadd": [
+      {
+        "*": "User talk:MissingUser@example.org",
+        "invalidsite": ""
+      }
+    ],
+    "description": "Fixture delivery list (edited)"
+  }
+}

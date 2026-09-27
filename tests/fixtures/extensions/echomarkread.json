@@ -1,0 +1,17 @@
+{
+  "query": {
+    "echomarkread": {
+      "result": "success",
+      "alert": {
+        "rawcount": 0,
+        "count": "0"
+      },
+      "message": {
+        "rawcount": 0,
+        "count": "0"
+      },
+      "rawcount": 0,
+      "count": "0"
+    }
+  }
+}

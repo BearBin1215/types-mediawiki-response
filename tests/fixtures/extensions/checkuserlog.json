@@ -1,0 +1,48 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "culcontinue": "20260929142442|10",
+    "continue": "-||"
+  },
+  "query": {
+    "checkuserlog": {
+      "entries": [
+        {
+          "timestamp": "2026-09-29T14:29:22Z",
+          "checkuser": "Capx",
+          "type": "ipusers",
+          "reason": "API: fixture check",
+          "target": "127.0.0.1"
+        },
+        {
+          "timestamp": "2026-09-29T14:29:22Z",
+          "checkuser": "Capx",
+          "type": "userips",
+          "reason": "API: fixture check",
+          "target": "Capx"
+        },
+        {
+          "timestamp": "2026-09-29T14:29:22Z",
+          "checkuser": "Capx",
+          "type": "useredits",
+          "reason": "API: fixture check",
+          "target": "Capx"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:42Z",
+          "checkuser": "Capx",
+          "type": "ipusers",
+          "reason": "API: fixture check",
+          "target": "127.0.0.1"
+        },
+        {
+          "timestamp": "2026-09-29T14:24:42Z",
+          "checkuser": "Capx",
+          "type": "userips",
+          "reason": "API: fixture check",
+          "target": "Capx"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "normalized": [
+      {
+        "fromencoded": false,
+        "from": "Project:Fixture delivery list 1790692160708",
+        "to": "ApiAdmin:Fixture delivery list 1790692160708"
+      }
+    ],
+    "pages": [
+      {
+        "pageid": 551,
+        "ns": 4,
+        "title": "ApiAdmin:Fixture delivery list 1790692160708",
+        "mmcontent": {
+          "description": "Fixture delivery list (edited)",
+          "targets": [
+            "User talk:Fixture missing 1790692160708",
+            "User talk:Oathx",
+            "User talk:Peerx"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "checkuser": {
+      "ipusers": [
+        {
+          "end": "2026-09-29T14:29:22Z",
+          "editcount": 28,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            "curl/8.14.1",
+            null
+          ],
+          "start": "2026-09-27T00:48:05Z",
+          "name": "Capx"
+        },
+        {
+          "end": "2026-09-29T13:53:10Z",
+          "editcount": 1,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            ""
+          ],
+          "name": "Oathx"
+        },
+        {
+          "end": "2026-09-27T17:08:44Z",
+          "editcount": 6,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            null
+          ],
+          "start": "2026-09-26T17:20:40Z",
+          "name": "Maintenance script"
+        },
+        {
+          "end": "2026-09-27T00:52:22Z",
+          "editcount": 2,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            null
+          ],
+          "start": "2026-09-27T00:48:06Z",
+          "name": "Peerx"
+        },
+        {
+          "end": "2026-09-26T17:33:14Z",
+          "editcount": 30,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            null
+          ],
+          "start": "2026-09-26T17:28:00Z",
+          "name": "Capj"
+        },
+        {
+          "end": "2026-09-26T17:13:50Z",
+          "editcount": 411,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            null
+          ],
+          "start": "2026-09-26T10:40:45Z",
+          "name": "Capadmin"
+        },
+        {
+          "end": "2026-09-26T12:52:58Z",
+          "editcount": 22,
+          "ips": [
+            "127.0.0.1"
+          ],
+          "agents": [
+            null
+          ],
+          "start": "2026-09-26T10:41:35Z",
+          "name": "Edituser"
+        }
+      ]
+    }
+  }
+}

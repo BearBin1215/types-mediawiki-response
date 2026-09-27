@@ -1,0 +1,8 @@
+{
+  "spamblacklist": {
+    "result": "blacklisted",
+    "matches": [
+      "badhost.example"
+    ]
+  }
+}
