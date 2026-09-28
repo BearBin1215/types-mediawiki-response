@@ -1,0 +1,81 @@
+---
+description: "安装本包，标注第一个响应，并了解失败与扩展包的处理方式。"
+---
+
+import { PackageManagerTabs, Steps } from "@rspress/core/theme";
+
+# 快速开始
+
+本包为 MediaWiki API 响应的类型声明，针对 `formatversion=2`、字段并集覆盖 1.39–1.47。包只含类型定义（`dist/*.d.ts`），没有任何运行时代码，不增加构建产物体积。
+
+<Steps>
+
+## 安装
+
+<PackageManagerTabs
+  command={{
+    npm: "npm install -D types-mediawiki-response",
+    yarn: "yarn add -D types-mediawiki-response",
+    pnpm: "pnpm add -D types-mediawiki-response",
+    bun: "bun add -d types-mediawiki-response",
+    deno: "deno add npm:types-mediawiki-response",
+  }}
+/>
+
+## 按 action 标注响应类型
+
+每个 `action` 对应一个 `ApiXxxResponse`。以获取页面修订版本为例：
+
+```ts
+import type { ApiQueryResponse } from "types-mediawiki-response";
+
+const res = (await api.get({
+  action: "query",
+  prop: "revisions",
+  titles,
+  formatversion: "2",
+})) as ApiQueryResponse;
+
+console.log(res.query.pages[0]?.revisions);
+```
+
+请求时请带上 `formatversion: "2"`，本库类型只覆盖 fv2。全部响应类型见 [API 参考](/api/)。
+
+</Steps>
+
+## 处理响应报错
+
+`as ApiXxxResponse` 只断根处没有 error，不等于“操作成功”。处理响应报错主要根据客户端类型决定：
+
+- 自动处理根下错误的客户端如 `mw.Api`，响应带根级 `error` / `errors` 会直接抛出异常，直接用 try-catch 包住请求即可，无需额外处理响应类型。
+- 未经处理、把错误结果原样返回的客户端（比如原生 `fetch`），需要用 [`ApiResponseWith<T>`](/api/core/ApiResponseWith) 包一层、按 `error` / `errors` 收窄。
+
+具体处理见[信封与错误处理](/guide/errors.html)。
+
+## 扩展
+
+核心类型只覆盖 MediaWiki 核心模块。扩展贡献的字段拆成了按需启用的包：在项目中任意被 tsconfig 包含的文件里写一条 type-only import，其提供的字段就会全局生效：
+
+```ts
+// 激活用户查核扩展
+import type {} from "types-mediawiki-response/ext/checkuser";
+```
+
+真实响应里有、核心类型上找不到的字段多半来自扩展，这就是去激活对应包的信号。
+
+扩展的 action（`action=thank`、`action=shortenurl` 等）不并入共享形状，而是各自导出独立的响应类型，像核心 action 一样在调用处按名导入使用：
+
+```ts
+import type { ApiThankResponse } from "types-mediawiki-response/ext/thanks";
+
+const res: ApiThankResponse = await api.post({ action: "thank", rev });
+res.result?.recipient; // 被感谢的用户
+```
+
+见[按需启用扩展包](/guide/ext-packs.html)。
+
+## 下一步
+
+- [信封与错误处理](/guide/errors.html)
+- [query 响应](/guide/query.html)
+- [按需启用扩展包](/guide/ext-packs.html)

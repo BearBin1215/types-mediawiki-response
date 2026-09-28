@@ -1,0 +1,81 @@
+---
+description: "Install the package, cast your first response, and see how failures and extension packs are handled."
+---
+
+import { PackageManagerTabs, Steps } from "@rspress/core/theme";
+
+# Getting started
+
+Type declarations for MediaWiki Action API responses, written for `formatversion=2` with a field union spanning 1.39–1.47. The package ships declarations only (`dist/*.d.ts`) — no runtime code, so importing it adds nothing to your bundle.
+
+<Steps>
+
+## Install
+
+<PackageManagerTabs
+  command={{
+    npm: "npm install -D types-mediawiki-response",
+    yarn: "yarn add -D types-mediawiki-response",
+    pnpm: "pnpm add -D types-mediawiki-response",
+    bun: "bun add -d types-mediawiki-response",
+    deno: "deno add npm:types-mediawiki-response",
+  }}
+/>
+
+## Cast the response of an action
+
+Each `action` maps to one `ApiXxxResponse`. For example, fetching page revisions:
+
+```ts
+import type { ApiQueryResponse } from "types-mediawiki-response";
+
+const res = (await api.get({
+  action: "query",
+  prop: "revisions",
+  titles,
+  formatversion: "2",
+})) as ApiQueryResponse;
+
+console.log(res.query.pages[0]?.revisions);
+```
+
+Pass `formatversion: "2"` on the request — the library's types cover fv2 only. Every response type is listed in the [API reference](/api/).
+
+</Steps>
+
+## Handling errors
+
+Casting to `ApiXxxResponse` only asserts **no root error** — which is not the same as "the operation succeeded". How to handle a failing response depends mainly on the client:
+
+- Clients that handle root errors for you, such as `mw.Api`, throw as soon as the response carries a root `error` / `errors` — just wrap the request in a `try`/`catch`, and no extra handling of the response type is needed.
+- Clients that hand the error response back as-is (native `fetch`, for example) need the type wrapped with [`ApiResponseWith<T>`](/api/core/ApiResponseWith) and a narrowing on `error` / `errors`.
+
+See [Envelope and error handling](/guide/errors.html) for the details.
+
+## Extensions
+
+Core types cover MediaWiki core modules only. Fields contributed by extensions are split into opt-in packs: a single type-only import in any file covered by your tsconfig activates the pack program-wide:
+
+```ts
+// Activate the CheckUser extension
+import type {} from "types-mediawiki-response/ext/checkuser";
+```
+
+A field that shows up in the real response but not in the core types usually means an extension provides it — that is your cue to activate its pack.
+
+An extension action (`action=thank`, `action=shortenurl`, …) instead exports a standalone response type — import it by name where you call it, like any core action response:
+
+```ts
+import type { ApiThankResponse } from "types-mediawiki-response/ext/thanks";
+
+const res: ApiThankResponse = await api.post({ action: "thank", rev });
+res.result?.recipient; // the thanked user
+```
+
+See [Opt-in extension packs](/guide/ext-packs.html).
+
+## Next steps
+
+- [Envelope and error handling](/guide/errors.html)
+- [Query responses](/guide/query.html)
+- [Opt-in extension packs](/guide/ext-packs.html)

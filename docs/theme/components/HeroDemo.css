@@ -1,0 +1,382 @@
+/* 首页 hero 演示：仿 IDE 代码块 + 悬浮卡 / 报错卡 / 终端面板。
+   卡片与终端内容由 generate-hero.ts 从真实 quickinfo / 编译诊断生成；
+   本文件只管布局与观感：代码高亮与卡片的常规配色走站点 CSS 变量（rp/shiki 两族），
+   亮暗主题随站点机制（html.rp-dark）自动联动；终端面板固定深色，
+   锚点高亮与错误图标等点缀色手动分态。 */
+
+/* 展示区：交替分栏（媒体 + 文案），内边距与 features 卡片一致 */
+.hero-showcase {
+  position: relative;
+  z-index: 1;
+  max-width: 72rem;
+  margin: 5rem auto;
+  padding: 10px;
+}
+
+.hero-showcase-item {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-showcase-item + .hero-showcase-item {
+  margin-top: 104px;
+}
+
+.hero-showcase-item--flip {
+  flex-direction: row-reverse;
+}
+
+.hero-showcase-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-showcase-media {
+  flex: 1.6;
+  min-width: 0;
+}
+
+.hero-showcase-title {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--rp-c-text-1);
+}
+
+.hero-showcase-desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--rp-c-text-2);
+  white-space: pre-line;
+}
+
+.hero-demo-editor {
+  overflow: hidden;
+  border: var(--rp-code-block-border);
+  border-radius: var(--rp-radius-small);
+  background: var(--rp-code-block-bg);
+  box-shadow: var(--rp-shadow-3);
+}
+
+.hero-demo-chrome {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px 0;
+}
+
+.hero-demo-chrome i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.hero-demo-chrome i:nth-child(1) {
+  background: #ff5f57;
+}
+
+.hero-demo-chrome i:nth-child(2) {
+  background: #febc2e;
+}
+
+.hero-demo-chrome i:nth-child(3) {
+  background: #28c840;
+}
+
+.hero-demo-file {
+  margin-left: 8px;
+  font-family: var(--rp-font-family-mono);
+  font-size: 12px;
+  color: var(--rp-c-text-3);
+}
+
+.hero-demo-code pre {
+  margin: 0;
+  padding: 16px 20px 118px;
+  font-family: var(--rp-font-family-mono);
+  font-size: var(--rp-code-font-size);
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.hero-demo-code pre > code {
+  display: block;
+  font-family: inherit;
+}
+
+/* 锚点：VS Code 中被悬浮符号的浅色高亮 */
+.hero-demo-code .hero-anchor {
+  position: relative;
+  border-radius: 3px;
+  background: #1976d21f;
+}
+
+html.rp-dark .hero-demo-code .hero-anchor {
+  background: #6fb0fa26;
+}
+
+/* 报错锚点：VS Code 的红色波浪线 */
+.hero-demo-code .hero-anchor--error {
+  background: #e4003c12;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #e4003cb3;
+  text-underline-offset: 4px;
+}
+
+html.rp-dark .hero-demo-code .hero-anchor--error {
+  background: #f14c4c1f;
+}
+
+/* 悬浮卡：仿 VS Code hover 面板，锚定在目标 token 下方 */
+.hero-hover {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: -8px;
+  z-index: 3;
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  border: 1px solid var(--rp-c-divider);
+  border-radius: 6px;
+  background: var(--rp-c-bg-soft);
+  box-shadow: var(--rp-shadow-4);
+  text-align: left;
+  animation: hero-hover-in 0.35s ease 0.3s both;
+}
+
+@keyframes hero-hover-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-hover {
+    animation: none;
+  }
+}
+
+/* 报错卡：悬停波浪线 token 才弹出，完整信息由停靠的终端承载；
+   从 token 左缘展开 */
+.hero-hover--error {
+  display: none;
+  width: 270px;
+  left: -8px;
+  right: auto;
+  animation-delay: 0s;
+}
+
+.hero-demo-code .hero-anchor--error:hover .hero-hover--error {
+  display: block;
+}
+
+/* 移动端停靠卡：generate-hero.ts 输出的 pre 兄弟副本，仅在窄屏替代浮层 */
+.hero-hover-docked {
+  display: none;
+  border: 1px solid var(--rp-c-divider);
+  border-radius: 6px;
+  background: var(--rp-c-bg-soft);
+  box-shadow: var(--rp-shadow-3);
+  text-align: left;
+}
+
+.hero-err-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 12px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--rp-c-text-1);
+  white-space: normal;
+}
+
+.hero-err-icon {
+  flex: none;
+  color: #e51400;
+}
+
+html.rp-dark .hero-err-icon {
+  color: #f14c4c;
+}
+
+.hero-err-icon svg {
+  display: block;
+}
+
+.hero-err-text {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.hero-err-suggest code {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--rp-font-family-mono);
+  font-size: inherit;
+  color: var(--rp-c-link);
+}
+
+.hero-err-src {
+  display: block;
+  padding: 0 12px 8px;
+  font-family: var(--rp-font-family-mono);
+  font-size: 11px;
+  text-align: right;
+  color: var(--rp-c-text-3);
+}
+
+.hero-hover-sig {
+  display: block;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--rp-c-divider-light);
+  font-family: var(--rp-font-family-mono);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--rp-c-text-1);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.hero-hover-sig .hs-keyword {
+  color: var(--shiki-token-keyword);
+}
+
+.hero-hover-sig .hs-property-name {
+  color: var(--shiki-token-constant);
+}
+
+.hero-hover-sig .hs-interface-name {
+  color: var(--shiki-token-function);
+}
+
+.hero-hover-sig .hs-punctuation {
+  color: var(--shiki-token-punctuation);
+}
+
+.hero-hover-doc {
+  display: block;
+  padding: 9px 14px 11px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--rp-c-text-2);
+  white-space: normal;
+}
+
+.hero-hover-doc code {
+  padding: 1px 5px;
+  border: 1px solid var(--rp-c-text-code-border);
+  border-radius: 3px;
+  background: var(--rp-c-text-code-bg);
+  font-family: var(--rp-font-family-mono);
+  font-size: 11.5px;
+  color: var(--rp-c-text-code);
+}
+
+.hero-hover-doc .hs-doc-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+
+/* 终端：作为编辑器窗口的底部面板停靠（VS Code 集成终端的形态），
+   固定深色，两个主题下都与编辑器形成视觉差异；
+   内容为 generate-hero.ts 生成的 tsc --pretty 排版 */
+.hero-demo-editor--term pre {
+  padding-bottom: 20px;
+}
+
+.hero-term-window {
+  border-top: 1px solid var(--rp-c-divider-light);
+  padding: 12px 16px;
+  background: #141414;
+}
+
+.hero-term {
+  display: block;
+  font-family: var(--rp-font-family-mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #d4d4d4;
+}
+
+.hero-term-line {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.hero-term-line.hero-term-code,
+.hero-term-line.hero-term-caret {
+  white-space: pre;
+}
+
+.hero-term-prompt {
+  color: #4ec9b0;
+}
+
+.hero-term-cmd {
+  color: #e8e8e8;
+}
+
+.hero-term-loc {
+  color: #4fc1ff;
+}
+
+.hero-term-error,
+.hero-term-caret {
+  color: #f14c4c;
+}
+
+.hero-term-summary {
+  margin-top: 6px;
+  color: #9d9d9d;
+}
+
+/* 中窄屏：交替分栏退化为上下叠放，文案在前；
+   断点取「代码不换行也能放进全宽编辑器」的最小宽度 */
+@media (max-width: 1080px) {
+  .hero-showcase-item,
+  .hero-showcase-item--flip {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .hero-showcase-item + .hero-showcase-item {
+    margin-top: 72px;
+  }
+}
+
+/* 窄屏：代码自动换行（无横向滚动），桌面浮层退场，换流内的停靠卡；
+   内边距收紧给代码让宽度，停靠卡与代码文本左缘对齐 */
+@media (max-width: 600px) {
+  .hero-demo-code pre {
+    padding: 12px 12px 8px;
+  }
+
+  /* rspress 默认给 .shiki span.line 1.25rem 水平内边距，窄屏收紧给代码让宽度 */
+  .hero-demo-code .shiki span.line {
+    padding: 0;
+  }
+
+  .hero-demo-code .hero-hover {
+    display: none;
+  }
+
+  /* 上边距收小，让停靠卡贴住代码 */
+  .hero-hover-docked {
+    display: block;
+    margin: 4px 12px 12px;
+  }
+}

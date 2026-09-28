@@ -1,0 +1,18 @@
+{
+  "heroTypesTitle": {
+    "en": "Field types and docs, one hover away",
+    "zh": "类型与文档悬浮即得"
+  },
+  "heroTypesDesc": {
+    "en": "Types are written field by field from real responses, with JSDoc marking each field's meaning and its source parameter.\nHover a response field in your IDE to see it — no doc-digging needed.",
+    "zh": "类型按真实响应逐字段编写，JSDoc 标注每个字段的语义与来源参数。\n在 IDE 里悬浮响应字段即可查看，不必翻文档。"
+  },
+  "heroErrorsTitle": {
+    "en": "Errors caught at compile time",
+    "zh": "编译期拦截错误"
+  },
+  "heroErrorsDesc": {
+    "en": "Type and spelling mistakes are caught by TS at compile time.\nYou find out earlier, and the editor suggests the correct spelling for you.",
+    "zh": "类型和拼写错误在编译期由 TS 拦截。\n更早一步发现错误，编辑器还会顺手给出正确拼写。"
+  }
+}

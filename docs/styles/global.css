@@ -1,0 +1,24 @@
+/* 内置搜索的快捷键：主题默认把背景加在外层块、两个键无间距，呈连体“CtrlK”；
+   这里把键帽样式移到每个 span，拆成两枚独立键帽（对齐 DocSearch 观感）。
+   外层选择器加 .rp-search-button 提升特异度，确保稳定压过主题的同名单类规则 */
+.rp-search-button .rp-search-button__hotkey {
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  background: none;
+}
+
+.rp-search-button .rp-search-button__hotkey span {
+  background-color: var(--rp-c-bg-soft);
+  border-radius: var(--rp-radius-small);
+  padding: 0 6px;
+}
+
+/* 侧边栏长符号名（如 ApiAbuseFilterUnblockAutopromoteResponse）没有断行点，
+   flex 子项默认 min-width:auto 会把它整块撑出容器被裁切；允许收缩并按需断词
+   （overflow-wrap: anywhere 只在放不下时才生效），保证侧边栏不横向溢出。
+   主题对这两个属性没有同名单类规则，直接单类覆盖即可 */
+.rp-sidebar-item__left {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

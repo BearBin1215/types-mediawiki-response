@@ -1,0 +1,12 @@
+[
+  {
+    "text": "指南",
+    "link": "/guide/getting-started.html",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "API 参考",
+    "link": "/api/",
+    "activeMatch": "/api/"
+  }
+]

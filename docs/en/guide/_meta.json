@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started"
+  },
+  {
+    "type": "file",
+    "name": "errors"
+  },
+  {
+    "type": "file",
+    "name": "query"
+  },
+  {
+    "type": "file",
+    "name": "ext-packs"
+  },
+  {
+    "type": "file",
+    "name": "qa"
+  }
+]
