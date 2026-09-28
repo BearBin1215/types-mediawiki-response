@@ -1,0 +1,64 @@
+{
+  "sitematrix": {
+    "0": {
+      "code": "de",
+      "name": "Deutsch",
+      "site": [
+        {
+          "url": "https://de.wikipedia.org",
+          "dbname": "dewiki",
+          "code": "wiki",
+          "sitename": "Deutsche Wikipedia",
+          "closed": true
+        }
+      ],
+      "dir": "ltr",
+      "localname": "Deutsch"
+    },
+    "1": {
+      "code": "en",
+      "name": "English",
+      "site": [
+        {
+          "url": "https://en.wikipedia.org",
+          "dbname": "enwiki",
+          "code": "wiki",
+          "sitename": "English Wikipedia"
+        }
+      ],
+      "dir": "ltr",
+      "localname": "English"
+    },
+    "2": {
+      "code": "zh",
+      "name": "中文",
+      "site": [
+        {
+          "url": "https://zh.wikipedia.org",
+          "dbname": "zhwiki",
+          "code": "wiki",
+          "sitename": "維基百科"
+        }
+      ],
+      "dir": "ltr",
+      "localname": "中文"
+    },
+    "count": 5,
+    "specials": [
+      {
+        "url": "https://commons.wikimedia.org",
+        "dbname": "commonswiki",
+        "code": "commons",
+        "lang": "en",
+        "sitename": "Commons"
+      },
+      {
+        "url": "https://meta.wikimedia.org",
+        "dbname": "metawiki",
+        "code": "meta",
+        "lang": "en",
+        "sitename": "Meta Wiki"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "oath": {
+      "enabled": true
+    }
+  }
+}

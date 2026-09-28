@@ -1,0 +1,6 @@
+{
+  "shortenurl": {
+    "shorturl": "http://localhost:8080/index.php/Special:UrlRedirector/3",
+    "shorturlalt": "http://localhost:8080/index.php/Special:UrlRedirector/_z"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 549,
+        "ns": 6,
+        "title": "File:ApxFixture1790692160708.webm",
+        "imagerepository": "local",
+        "videoinfo": [
+          {
+            "timestamp": "2026-09-29T14:29:24Z",
+            "user": "Capx",
+            "userid": 13,
+            "size": 17985,
+            "width": 160,
+            "height": 120,
+            "duration": 2,
+            "canonicaltitle": "File:ApxFixture1790692160708.webm",
+            "thumburl": "http://localhost:8080/images/thumb/0/02/ApxFixture1790692160708.webm/160px--ApxFixture1790692160708.webm.jpg",
+            "thumbwidth": 160,
+            "thumbheight": 120,
+            "url": "http://localhost:8080/images/0/02/ApxFixture1790692160708.webm",
+            "descriptionurl": "http://localhost:8080/index.php/File:ApxFixture1790692160708.webm",
+            "descriptionshorturl": "http://localhost:8080/index.php?curid=549",
+            "sha1": "25147751547ca19d3610d7ed39bbbd5151e2d6c9",
+            "mime": "video/webm",
+            "mediatype": "VIDEO",
+            "bitdepth": 0,
+            "derivatives": [
+              {
+                "src": "http://localhost:8080/images/0/02/ApxFixture1790692160708.webm",
+                "type": "video/webm; codecs=\"vp8\"",
+                "width": 160,
+                "height": 120,
+                "bandwidth": 71940
+              },
+              {
+                "src": "http://localhost:8080/images/transcoded/0/02/ApxFixture1790692160708.webm/ApxFixture1790692160708.webm.240p.vp9.webm",
+                "type": "video/webm; codecs=\"vp9, opus\"",
+                "transcodekey": "240p.vp9.webm",
+                "width": 160,
+                "height": 120,
+                "bandwidth": 22472
+              }
+            ],
+            "timedtext": [
+              {
+                "src": "http://localhost:8080/api.php?action=timedtext&title=File%3AApxFixture1790692160708.webm&lang=en&trackformat=srt&origin=%2A",
+                "kind": "subtitles",
+                "type": "text/x-srt",
+                "srclang": "en",
+                "dir": "ltr",
+                "label": "English ‪(en)‬"
+              },
+              {
+                "src": "http://localhost:8080/api.php?action=timedtext&title=File%3AApxFixture1790692160708.webm&lang=en&trackformat=vtt&origin=%2A",
+                "kind": "subtitles",
+                "type": "text/vtt",
+                "srclang": "en",
+                "dir": "ltr",
+                "label": "English ‪(en)‬"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

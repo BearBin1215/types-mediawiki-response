@@ -1,0 +1,13 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "globalpreferences": {
+      "preferences": {
+        "gender": "male"
+      },
+      "localoverrides": {
+        "gender": "female"
+      }
+    }
+  }
+}

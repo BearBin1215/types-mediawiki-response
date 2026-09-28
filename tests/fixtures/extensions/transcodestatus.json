@@ -1,0 +1,22 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 549,
+        "ns": 6,
+        "title": "File:ApxFixture1790692160708.webm",
+        "transcodestatus": {
+          "240p.vp9.webm": {
+            "error": "",
+            "time_addjob": "20260929142924",
+            "time_startwork": "20260929142924",
+            "time_success": "20260929142924",
+            "time_error": null,
+            "final_bitrate": "22472"
+          }
+        }
+      }
+    ]
+  }
+}
