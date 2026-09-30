@@ -6,6 +6,7 @@ on:
   pull_request:
 
 jobs:
+  # Full dev-toolchain gate, same as local `pnpm check`.
   check:
     runs-on: ubuntu-latest
     steps:
@@ -18,11 +19,7 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Lint
-        run: pnpm run lint
-      - name: Check formatting
-        run: pnpm run format:check
-      - name: Typecheck (includes type-level assertions in tests/)
-        run: pnpm run typecheck
+      - name: Check (format, lint, types, ext mechanism)
+        run: pnpm run check
       - name: Build
         run: pnpm run build

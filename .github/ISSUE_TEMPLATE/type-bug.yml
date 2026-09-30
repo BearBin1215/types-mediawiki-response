@@ -1,0 +1,33 @@
+name: Type bug report / 类型错误报告
+description: A field or shape in the response types doesn't match the real API / 响应类型中的字段或形状与真实 API 不符
+labels: [bug]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Affected module / 受影响模块
+      description: e.g. `action=query&prop=revisions`, `list=logevents`, `ext/echo`
+    validations:
+      required: true
+  - type: input
+    id: mediawiki-version
+    attributes:
+      label: MediaWiki version / MediaWiki 版本
+      placeholder: "1.43"
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Actual response sample (formatversion=2) / 实际响应样本（formatversion=2）
+      description: Paste the relevant JSON fragment from a real API call — this repo treats fixtures as the source of truth, a sample makes the fix immediate. / 粘贴真实 API 调用返回的相关 JSON 片段——本仓库以 fixture 为事实来源，有样本即可立即修复。
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Current type vs expected / 当前类型与期望类型
+      description: Which field is wrong, and what does the type need to look like? / 哪个字段有问题，类型应当建模成什么样？
+    validations:
+      required: true

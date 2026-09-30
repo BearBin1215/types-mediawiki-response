@@ -1,0 +1,29 @@
+name: Documentation issue / 文档问题
+description: Something in the guides, API reference, or README is wrong, unclear, or missing / 指南、API 参考或 README 中有误、不清或缺失
+labels: [documentation]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page URL or file path / 页面 URL 或文件路径
+      description: e.g. `https://bearbin1215.github.io/types-mediawiki-response/en/guide/query/` or `docs/zh/guide/errors.md`
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem / 问题类型
+      options:
+        - Wrong or inaccurate
+        - Outdated
+        - Missing
+        - Unclear or typo
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Description / 问题描述
+      description: What does it currently say, and what should it say instead? / 现在写了什么，应当改成什么？
+    validations:
+      required: true

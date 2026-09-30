@@ -1,0 +1,31 @@
+name: Module request / 模块补充请求
+description: Request support for an action, list, prop, or extension / 请求支持某个 action、list、prop 或扩展
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of request / 请求类型
+      options:
+        - Core module
+        - Extension (opt-in ext/* pack)
+    validations:
+      required: true
+  - type: input
+    id: module
+    attributes:
+      label: API path / API 路径
+      description: e.g. `action=query&list=search`, `ext=DiscussionTools`
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Response sample (formatversion=2) / 响应样本（formatversion=2）
+      description: A real JSON response, if available. / 如有真实 JSON 响应请粘贴于此。
+      render: json
+  - type: textarea
+    id: context
+    attributes:
+      label: Why do you need this? / 为什么需要？
+      description: Coverage is prioritized by real-world usage. / 覆盖优先级按实际使用需求排序。
