@@ -11,6 +11,17 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
       - ".github/workflows/docs.yml"
+  # Validate the build on pull requests too, so a docs toolchain change cannot
+  # land on main untested; only the deploy job below is main-only.
+  pull_request:
+    paths:
+      - "docs/**"
+      - "dev-docs/**"
+      - "src/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - ".github/workflows/docs.yml"
   workflow_dispatch:
 
 permissions:
@@ -19,7 +30,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -39,6 +50,7 @@ jobs:
           cache: pnpm
 
       - uses: actions/configure-pages@v6
+        if: github.event_name != 'pull_request'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -50,11 +62,13 @@ jobs:
         run: git diff --exit-code docs/theme/components/hero-demo.generated.ts
 
       - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
         with:
           path: docs/build
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
