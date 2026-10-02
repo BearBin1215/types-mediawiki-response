@@ -4,7 +4,7 @@ description: "Sharp edges that only surface once the types meet a real request c
 
 # FAQ
 
-## Paginated query loop errors with TS7022
+## Paginated query loop errors with TS7022 (self-reference)
 
 When you page through a `list=` module, you may end up carrying the continuation cursor as a single variable that both goes into the request and comes back out of the response:
 
