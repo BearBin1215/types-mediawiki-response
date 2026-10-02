@@ -9,6 +9,13 @@ updates:
         update-types:
           - minor
           - patch
+    ignore:
+      # typedoc (docs workspace) supports TypeScript up to 6.0.x only, so a
+      # TypeScript major bump breaks the documentation build. Remove this once
+      # typedoc supports a newer major.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: github-actions
     directory: /
