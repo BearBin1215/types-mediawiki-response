@@ -1,11 +1,11 @@
 /**
- * `action=block` / `action=unblock` responses — (un)blocking a user or IP
- * range, each returned under a top-level object. Requires the `block` right.
+ * `action=block` response — blocking a user or IP range, returned under a
+ * top-level `block` object. Requires the `block` right.
  *
- * fv2 note: the block result uses **`userID`** (capital `D`) while the unblock
- * result uses `userid` — a real asymmetry in the API, preserved here. Block
- * flags are real booleans (present as `false`); partial-block restrictions come
- * back as `null` when the block is sitewide.
+ * fv2 note: the block result uses **`userID`** (capital `D`), unlike the
+ * unblock result's `userid`. Block flags are real booleans (present as
+ * `false`); partial-block restrictions come back as `null` when the block is
+ * sitewide.
  *
  * @see https://www.mediawiki.org/wiki/API:Block
  */
@@ -91,35 +91,4 @@ export interface ApiBlockResult {
 export interface ApiBlockResponse extends ApiEnvelope {
   /** Result of `action=block`. */
   block: ApiBlockResult;
-}
-
-/** The `unblock` object of an `action=unblock` response. */
-export interface ApiUnblockResult {
-  /** Removed block id. */
-  id: number;
-
-  /** Unblocked user name / IP; empty string when removing an autoblock. */
-  user: string;
-
-  /** Unblocked user id (`0` for IPs and autoblocks). Note lowercase, unlike the block result. */
-  userid: number;
-
-  /** Unblock reason (echoed back). */
-  reason: string;
-
-  /** Whether the unblock added the unblocked user to the unblocker's watchlist. */
-  watchuser: boolean;
-
-  /**
-   * Expiry applied to the watched user page, present only when the request
-   * passed `watchlistexpiry` with `watchuser`; `null` when the page is not
-   * actually watched.
-   */
-  watchlistexpiry?: Timestamp | null;
-}
-
-/** Response of `action=unblock`. */
-export interface ApiUnblockResponse extends ApiEnvelope {
-  /** Result of `action=unblock`. */
-  unblock: ApiUnblockResult;
 }

@@ -118,7 +118,7 @@ cap(
   `-d "action=delete" --data-urlencode "title=Delete target $SUF" --data-urlencode "reason=fixture delete"`,
 );
 cap(
-  "core/delete/undelete.json",
+  "core/undelete/undelete.json",
   `-d "action=undelete" --data-urlencode "title=Delete target $SUF" --data-urlencode "reason=fixture undelete"`,
 );
 // Scheduled deletion: with `$wgDeleteRevisionsBatchSize` at 1, a multi-revision
@@ -141,7 +141,7 @@ cap(
   `-d "action=block" --data-urlencode "user=10.0.0.99" -d "expiry=1 week" -d "nocreate=1" --data-urlencode "reason=fixture block"`,
 );
 cap(
-  "core/block/unblock.json",
+  "core/unblock/unblock.json",
   `-d "action=unblock" --data-urlencode "user=10.0.0.99" --data-urlencode "reason=fixture unblock"`,
 );
 

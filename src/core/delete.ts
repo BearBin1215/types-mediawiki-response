@@ -1,6 +1,6 @@
 /**
- * `action=delete` / `action=undelete` responses — page deletion and its undo,
- * each returned under a top-level object. Requires the `delete` right.
+ * `action=delete` response — page deletion, returned under a top-level `delete`
+ * object. Requires the `delete` right.
  *
  * Under `formatversion=2` a successful delete carries **no `result` key**
  * (older clients branched on `result: "Success"`).
@@ -33,25 +33,4 @@ export interface ApiDeleteResult {
 export interface ApiDeleteResponse extends ApiEnvelope {
   /** Result of `action=delete`. */
   delete: ApiDeleteResult;
-}
-
-/** The `undelete` object of an `action=undelete` response. */
-export interface ApiUndeleteResult {
-  /** Restored page title. */
-  title: string;
-
-  /** Number of revisions restored. */
-  revisions: number;
-
-  /** Number of file versions restored. */
-  fileversions: number;
-
-  /** Undelete reason (echoed back). */
-  reason: string;
-}
-
-/** Response of `action=undelete`. */
-export interface ApiUndeleteResponse extends ApiEnvelope {
-  /** Result of `action=undelete`. */
-  undelete: ApiUndeleteResult;
 }
