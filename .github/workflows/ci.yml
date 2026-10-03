@@ -43,6 +43,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Pin TypeScript ${{ matrix.typescript }}
-        run: pnpm add -D typescript@${{ matrix.typescript }}
+        run: pnpm add -w -D typescript@${{ matrix.typescript }}
       - name: Typecheck + extension activation harness
         run: pnpm run typecheck && pnpm run check:ext
