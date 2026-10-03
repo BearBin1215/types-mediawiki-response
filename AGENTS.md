@@ -36,6 +36,7 @@ MediaWiki Action API 响应类型库。
 │   ├── fixtures/                # 真实响应样本（入库，事实来源；core/ envelope/ extensions/ 分组）
 │   └── typeutil.ts              # 断言辅助类型（ExtraKeys）
 ├── dev-docs/                    # 内部开发笔记（不上文档站）
+├── examples/                    # 三个消费场景最小示例（web-ts/web-js/node-bot）
 └── docs/                        # 文档站（Rspress，pnpm workspace 子包，部署 GitHub Pages）
     └── en/ | zh/                # 双语内容，en 为默认语言；api/ 由 typedoc 生成（gitignore）
 ```
@@ -50,7 +51,8 @@ pnpm test           # 类型断言（等价 typecheck：本包的“测试”就
 pnpm audit:literals # 批量审计：fixture 内联字面量 satisfies 声明类型；新 fixture 须先在脚本 REGISTRY 登记
 pnpm check:ext      # 外部消费方 harness：验证扩展按需激活机制（含 emit 擦除）
 pnpm check:pack     # 发布安全：build 后用 ATTW 校验各 moduleResolution 下的类型解析
-pnpm check          # format:check + lint + test + audit:literals + check:ext + check:pack
+pnpm check:examples # build 后对 examples/ 三个消费场景示例做 typecheck（发布形态的集成校验）
+pnpm check          # format:check + lint + test + audit:literals + check:ext + check:pack + check:examples
 pnpm build          # 产出 dist
 pnpm fetch:fixtures # 刷新 tests/fixtures/（--check 只验不写）
 pnpm docs:dev       # 文档站开发服务器（先跑 typedoc 生成 API 参考）

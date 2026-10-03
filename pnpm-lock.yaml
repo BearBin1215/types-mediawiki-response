@@ -60,6 +60,48 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  examples/node-bot:
+    devDependencies:
+      '@types/node':
+        specifier: ^26.6.3
+        version: 26.6.3
+      types-mediawiki-response:
+        specifier: workspace:*
+        version: link:../..
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
+  examples/web-js:
+    devDependencies:
+      '@types/jquery':
+        specifier: ^3.5.5
+        version: 3.5.34
+      types-mediawiki:
+        specifier: ^1.10.1
+        version: 1.10.1
+      types-mediawiki-response:
+        specifier: workspace:*
+        version: link:../..
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
+  examples/web-ts:
+    devDependencies:
+      '@types/jquery':
+        specifier: ^3.5.5
+        version: 3.5.34
+      types-mediawiki:
+        specifier: ^1.10.1
+        version: 1.10.1
+      types-mediawiki-response:
+        specifier: workspace:*
+        version: link:../..
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
 packages:
 
   '@andrewbranch/untar.js@1.0.4':
@@ -710,6 +752,9 @@ packages:
   '@types/hast@3.0.5':
     resolution: {integrity: sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==}
 
+  '@types/jquery@3.5.34':
+    resolution: {integrity: sha512-3m3939S3erqmTLJANS/uy0B6V7BorKx7RorcGZVjZ62dF5PAGbKEDZK1CuLtKombJkFA2T1jl8LAIIs7IV6gBQ==}
+
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
@@ -722,8 +767,17 @@ packages:
   '@types/node@26.6.3':
     resolution: {integrity: sha512-dsqMQQoeTLqu9wynDD00q573mNzso3IdQOAfHRJqLCcmCFPoGo9A1bDpUcv/9tnKpErQWv9uKeGfl37EIS02Yg==}
 
+  '@types/oojs-ui@0.46.4':
+    resolution: {integrity: sha512-tpQyPjxr6FhMRNaactbjNXkr4uCsKNQMOVNJiAO5AvzxoPddChNZp4gG37Pm80jAeDP11k9ww4durnEjzqqKsQ==}
+
+  '@types/oojs@7.0.7':
+    resolution: {integrity: sha512-l99Ab1s+EhCWR/38z5VI3aimTT9QZNjpd3JlJnECHXq6uJ/osLchkkhVfY7ANeOMVT978LawYO4JyOYPQO7VLQ==}
+
   '@types/react@19.3.0':
     resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
+
+  '@types/sizzle@2.3.10':
+    resolution: {integrity: sha512-TC0dmN0K8YcWEAEfiPi5gJP14eJe30TTGjkvek3iM/1NdHHsdCA/Td6GvNndMOo/iSnIsZ4HuuhrYPDAmbxzww==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -1745,6 +1799,14 @@ packages:
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x || 5.9.x || 6.0.x
 
+  types-mediawiki@1.10.1:
+    resolution: {integrity: sha512-4TLcsy/lbfpLwwIn2l6lBxCzYYMAsJuQUmwfhkcEWA9yMzBpfcSvfcQQbiTUJPOe4UVghc2BI/3GcPkwXr412Q==}
+    peerDependencies:
+      vue: 3.2.23 || 3.2.37 || 3.3.9 || 3.4.27
+    peerDependenciesMeta:
+      vue:
+        optional: true
+
   typescript@5.6.1-rc:
     resolution: {integrity: sha512-E3b2+1zEFu84jB0YQi9BORDjz9+jGbwwy1Zi3G0LUNw7a7cePUrHMRNy8aPh53nXpkFGVHSxIZo5vKTfYaFiBQ==}
     engines: {node: '>=14.17'}
@@ -2387,6 +2449,10 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/jquery@3.5.34':
+    dependencies:
+      '@types/sizzle': 2.3.10
+
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -2399,9 +2465,18 @@ snapshots:
     dependencies:
       undici-types: 8.9.0
 
+  '@types/oojs-ui@0.46.4':
+    dependencies:
+      '@types/jquery': 3.5.34
+      '@types/oojs': 7.0.7
+
+  '@types/oojs@7.0.7': {}
+
   '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
+
+  '@types/sizzle@2.3.10': {}
 
   '@types/unist@2.0.11': {}
 
@@ -3773,6 +3848,11 @@ snapshots:
       minimatch: 10.2.6
       typescript: 6.0.3
       yaml: 2.9.1
+
+  types-mediawiki@1.10.1:
+    dependencies:
+      '@types/jquery': 3.5.34
+      '@types/oojs-ui': 0.46.4
 
   typescript@5.6.1-rc: {}
 

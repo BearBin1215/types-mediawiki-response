@@ -244,6 +244,12 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - `pnpm check:pack`（`build` + ATTW）兜底各 moduleResolution；注意 **`npm pack` / `pnpm pack` 只触发 `prepack` + `prepare`，门禁里必须显式先 build**。
 - **TS 版本不是约束**（`src/` 未用新语法），要担心的是解析模式。
 
+**消费方工具链**（examples/ 建成时实证；改示例或升级依赖前先核对这些前提）
+
+- **pnpm 下 `@types/jquery` 必须显式声明**：types-mediawiki 的 `mw.Api` 声明引用全局 `JQuery` 命名空间，npm 平铺布局自动加载全部 `@types/*` 所以能过；pnpm 严格隔离不加载传递 `@types/*`，`JQuery.PromiseBase` 解析失败后 `skipLibCheck` 藏起 `.d.ts` 报错，消费方只看到丢光成员的 `AbortablePromise`（连 `.then` 都没有），极具迷惑性。
+- **TS ≥ 7（tsgo）下扩展包的模块增广只对同文件引用到的类型可见**：`{} as ApiPage` 直访合并字段正常，但从 `ApiQueryResponse.query.pages` 属性链流出的 `ApiPage`、以及 `QueryPage<"globalusage">` 的 `keyof` 约束都看不到增广；经典 tsc 全项目生效。`check:ext` harness 只覆盖直接引用路径，链式路径未测——示例（web-ts）用本地 `const pages: ApiPage[]` 注解绕开。
+- **types-mediawiki@2.1.0 的 Promise 类型是坏的**：其自带 jQuery 插件声明与现行 `@types/jquery` 泛型参数数冲突（TS2428），基类损坏连带 `AbortablePromise` 丢成员；示例钉 `^1.10.1`，上游修复后可重评升级。
+
 **探针与完备性**
 
 - **手工探针必须带模块前缀**：`prop=info` 的测试参数是 `intestactions`，写成 `testactions` 会被判 Unrecognized 并**静默返回一份没有该字段的响应**。逐模块看 paraminfo 的 `prefix`，参数名也别跨模块套（videoinfo 用 `viprop`）。

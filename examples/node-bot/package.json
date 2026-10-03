@@ -1,0 +1,15 @@
+{
+  "name": "example-node-bot",
+  "version": "0.0.0",
+  "private": true,
+  "description": "MediaWiki bot / client script running on Node.js",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "types-mediawiki-response": "workspace:*",
+    "typescript": "^7.0.2"
+  }
+}

@@ -17,6 +17,10 @@
   },
   {
     "type": "file",
+    "name": "examples"
+  },
+  {
+    "type": "file",
     "name": "qa"
   }
 ]

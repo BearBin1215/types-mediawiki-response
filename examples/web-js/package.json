@@ -1,0 +1,16 @@
+{
+  "name": "example-web-js",
+  "version": "0.0.0",
+  "private": true,
+  "description": "MediaWiki gadget/user script kept in plain JavaScript with JSDoc types",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.5",
+    "types-mediawiki": "^1.10.1",
+    "types-mediawiki-response": "workspace:*",
+    "typescript": "^7.0.2"
+  }
+}
