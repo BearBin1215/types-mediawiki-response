@@ -15,6 +15,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Enable corepack
         run: corepack enable
@@ -35,8 +37,11 @@ jobs:
       - name: Create GitHub Release
         run: |
           V=$(node -p "require('./package.json').version")
-          gh release create "v$V" \
-            --title "v$V" \
-            --generate-notes
+          # Custom notes from conventional commits; fall back to GitHub's
+          # PR-only auto notes if generation fails, so the release still ships.
+          if ! pnpm release-notes "v$V" > release-notes.md || [ ! -s release-notes.md ]; then
+            exec gh release create "v$V" --title "v$V" --generate-notes
+          fi
+          gh release create "v$V" --title "v$V" --notes-file release-notes.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

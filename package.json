@@ -55,6 +55,7 @@
     "check:examples": "pnpm run build && pnpm --filter ./examples/* run typecheck",
     "check:pack": "pnpm run build && attw --pack .",
     "release": "pnpm run check && bumpp",
+    "release-notes": "tsx scripts/generate-release-notes.ts",
     "docs:dev": "pnpm --filter types-mediawiki-response-docs dev",
     "docs:build": "pnpm --filter types-mediawiki-response-docs build",
     "docs:preview": "pnpm --filter types-mediawiki-response-docs preview"
