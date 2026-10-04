@@ -10,8 +10,6 @@ import optionsFixture from "../../fixtures/core/options/options.json";
 // fv2 success is the plain string "success" (not an object).
 export const sample = { options: "success" } satisfies ApiOptionsResponse;
 
-expectTypeOf<ApiOptionsResponse>()
-  .toHaveProperty("options")
-  .toEqualTypeOf<"success" | (string & {})>();
+expectTypeOf<ApiOptionsResponse>().toHaveProperty("options").toEqualTypeOf<"success">();
 
 expectTypeOf<ExtraKeys<typeof optionsFixture, keyof ApiOptionsResponse>>().toEqualTypeOf<never>();

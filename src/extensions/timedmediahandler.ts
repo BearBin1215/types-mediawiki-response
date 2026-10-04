@@ -66,7 +66,11 @@ export interface ApiVideoTimedTextTrack {
    */
   src?: string;
 
-  /** Track kind; `subtitles` for text tracks TMH generates. */
+  /**
+   * Track kind; `subtitles` for the text tracks TMH generates. **Open union**:
+   * a track mirrored from a foreign file repository keeps the kind that
+   * repository reports.
+   */
   kind?: "subtitles" | (string & {});
 
   /** MIME type of the track, e.g. `text/x-srt` or `text/vtt`. */
@@ -75,8 +79,8 @@ export interface ApiVideoTimedTextTrack {
   /** Track language (BCP 47). */
   srclang?: string;
 
-  /** Text direction of the track language, `ltr` or `rtl`. */
-  dir?: "ltr" | "rtl" | (string & {});
+  /** Text direction of the track language. */
+  dir?: "ltr" | "rtl";
 
   /** Human-readable track label including the language name. */
   label?: string;

@@ -10,10 +10,8 @@
  */
 import type { NamespaceIndex, Timestamp } from "../../common";
 
-/**
- * Member type (`cmtype` / `gcmtype`). Open union for forward compatibility.
- */
-export type CategoryMemberType = "page" | "subcat" | "file" | (string & {});
+/** Member type (`cmtype` / `gcmtype`). */
+export type CategoryMemberType = "page" | "subcat" | "file";
 
 /** One category member. `cmprop` controls which fields appear. */
 export interface ApiCategoryMember {

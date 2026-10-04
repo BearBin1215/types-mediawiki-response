@@ -19,7 +19,6 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:GlobalPreferences
  */
-import type { SuccessStatus } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /**
@@ -53,7 +52,7 @@ export interface ApiGlobalPreferencesResult {
  */
 export interface ApiGlobalPreferencesResponse extends ApiEnvelope {
   /** Plain status string rather than a wrapper object; `success` on success. */
-  globalpreferences: SuccessStatus;
+  globalpreferences: "success";
 }
 
 /**
@@ -62,7 +61,7 @@ export interface ApiGlobalPreferencesResponse extends ApiEnvelope {
  */
 export interface ApiGlobalPreferenceOverridesResponse extends ApiEnvelope {
   /** Plain status string rather than a wrapper object; `success` on success. */
-  globalpreferenceoverrides: SuccessStatus;
+  globalpreferenceoverrides: "success";
 }
 
 declare module "types-mediawiki-response" {

@@ -24,8 +24,13 @@ export interface ApiTag {
   /** Whether the tag has a definition page. `tgprop=defined`; a real `boolean`. */
   defined?: boolean;
 
-  /** Where the tag can come from. `tgprop=source`; open union members. */
-  source?: ("extension" | "manual" | "software" | (string & {}))[];
+  /**
+   * Where the tag can come from. `tgprop=source`: `software` for a tag defined
+   * in code, `manual` for one with a definition page, and `extension` as a
+   * backwards-compatibility entry emitted alongside `software`. Emitted as a
+   * list — a tag with no source serializes as `[]`.
+   */
+  source?: ("extension" | "manual" | "software")[];
 
   /** Whether the tag is still applicable. `tgprop=active`; a real `boolean`. */
   active?: boolean;

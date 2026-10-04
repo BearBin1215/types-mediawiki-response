@@ -31,7 +31,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:Echo
  */
-import type { NamespaceIndex, SuccessResult, SuccessStatus, Timestamp } from "../common";
+import type { NamespaceIndex, Timestamp } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** A notification count: numeric `rawcount` plus a localized `count` string. */
@@ -45,8 +45,11 @@ export interface ApiEchoNotificationCount {
 
 /** The `echomarkread` object (returned under `query` by `action=echomarkread`). */
 export interface ApiQueryEchoMarkRead {
-  /** Echo status string; `success` on completion. */
-  result: SuccessStatus;
+  /**
+   * Success sentinel; a foreign wiki that fails is reported per wiki in
+   * {@link errors} instead of changing this value.
+   */
+  result: "success";
 
   /** Per-wiki error from a failed foreign (cross-wiki) subrequest. */
   errors?: {
@@ -78,8 +81,8 @@ export interface ApiQueryEchoMarkRead {
 
 /** The `echomarkseen` object (returned under `query` by `action=echomarkseen`). */
 export interface ApiQueryEchoMarkSeen {
-  /** Echo status string; `success` on completion. */
-  result?: SuccessStatus;
+  /** Success sentinel; a rejected call comes back as a top-level error. */
+  result?: "success";
 
   /** The "all notifications seen" timestamp just recorded. */
   timestamp?: Timestamp;
@@ -331,11 +334,11 @@ export interface ApiQueryEchoUnreadPages {
 
 /**
  * Response of `action=echomute`. The module writes a plain status **string**
- * (no wrapper object): `success` after muting or unmuting.
+ * rather than a wrapper object.
  */
 export interface ApiEchoMuteResponse extends ApiEnvelope {
-  /** Plain status string rather than a wrapper object; `success` after muting or unmuting. */
-  echomute: SuccessStatus;
+  /** Success sentinel; a rejected call comes back as a top-level error. */
+  echomute: "success";
 }
 
 /**
@@ -347,8 +350,8 @@ export interface ApiEchoMuteResponse extends ApiEnvelope {
 export interface ApiEchoCreateEventResponse extends ApiEnvelope {
   /** Result of `action=echocreateevent`. */
   echocreateevent: {
-    /** `success` when the event was stored. */
-    result?: SuccessStatus;
+    /** Success sentinel; a rejected call comes back as a top-level error. */
+    result?: "success";
   };
 }
 
@@ -357,8 +360,8 @@ export interface ApiEchoCreateEventResponse extends ApiEnvelope {
  * only registered when `$wgAllowArticleReminderNotification` is on.
  */
 export interface ApiQueryEchoArticleReminder {
-  /** `success` when the reminder was scheduled. */
-  result?: SuccessStatus;
+  /** Success sentinel; a rejected call comes back as a top-level error. */
+  result?: "success";
 }
 
 /**
@@ -369,14 +372,14 @@ export interface ApiQueryEchoArticleReminder {
 export interface ApiEchoPushSubscriptionsResponse extends ApiEnvelope {
   /** `command=create` — the subscription was stored. */
   create?: {
-    /** `Success` when the subscription was stored. */
-    result?: SuccessResult;
+    /** Success sentinel; a rejected call comes back as a top-level error. */
+    result?: "Success";
   };
 
   /** `command=delete` — the subscription was removed. */
   delete?: {
-    /** `Success` when the subscription was removed. */
-    result?: SuccessResult;
+    /** Success sentinel; a rejected call comes back as a top-level error. */
+    result?: "Success";
   };
 }
 

@@ -31,7 +31,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:FlaggedRevs
  */
-import type { Expiry, SuccessResult, Timestamp } from "../common";
+import type { Expiry, Timestamp } from "../common";
 import type { ApiPageRef } from "../core/query/shared";
 import type { ApiEnvelope } from "../envelope";
 
@@ -148,7 +148,7 @@ export interface ApiReviewResponse extends ApiEnvelope {
   /** Result of `action=review`. */
   review: {
     /** `Success` when the review was recorded; failures surface as API errors. */
-    result: SuccessResult;
+    result: "Success";
   };
 }
 

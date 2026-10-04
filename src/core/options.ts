@@ -8,11 +8,10 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Options
  */
-import type { SuccessStatus } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Response of `action=options`. */
 export interface ApiOptionsResponse extends ApiEnvelope {
   /** Success sentinel (`"success"`); failures come back as a top-level error. */
-  options: SuccessStatus;
+  options: "success";
 }

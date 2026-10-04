@@ -23,13 +23,11 @@ export const overrideChangeSample = {
 } satisfies ApiGlobalPreferenceOverridesResponse;
 
 // The write modules reply with the plain string "success" at the module key
-// (inherited from core ApiOptions); open union per repo convention.
-expectTypeOf<ApiGlobalPreferencesResponse["globalpreferences"]>().toEqualTypeOf<
-  "success" | (string & {})
->();
-expectTypeOf<ApiGlobalPreferenceOverridesResponse["globalpreferenceoverrides"]>().toEqualTypeOf<
-  "success" | (string & {})
->();
+// (inherited from core ApiOptions), and nothing else.
+expectTypeOf<ApiGlobalPreferencesResponse["globalpreferences"]>().toEqualTypeOf<"success">();
+expectTypeOf<
+  ApiGlobalPreferenceOverridesResponse["globalpreferenceoverrides"]
+>().toEqualTypeOf<"success">();
 
 // Global preference values are the stored strings, returned verbatim.
 expectTypeOf<ApiGlobalPreferencesResult["preferences"]>().toEqualTypeOf<

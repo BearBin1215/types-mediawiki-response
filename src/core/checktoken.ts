@@ -6,7 +6,6 @@
  * `maxtokenage`), or `invalid`. `generated` is decoded from the submitted
  * token itself (MediaWiki tokens embed their generation time), so it appears
  * whenever the token carries a timestamp — an old token reports its own age.
- * Modeled as an open union for forward compatibility.
  *
  * @see https://www.mediawiki.org/wiki/API:Checktoken
  */
@@ -14,7 +13,7 @@ import type { Timestamp } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Result values of {@link ApiCheckTokenResponse}. */
-export type ApiCheckTokenResult = "valid" | "expired" | "invalid" | (string & {});
+export type ApiCheckTokenResult = "valid" | "expired" | "invalid";
 
 /** Response of `action=checktoken`. */
 export interface ApiCheckTokenResponse extends ApiEnvelope {

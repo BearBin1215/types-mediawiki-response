@@ -54,8 +54,8 @@ export interface ApiSiteMatrixLanguage {
   /** Localized language name (in the interface language); `smlangprop=localname`. */
   localname?: string;
 
-  /** Text direction of the language, `ltr` or `rtl`. */
-  dir?: "ltr" | "rtl" | (string & {});
+  /** Text direction of the language. */
+  dir?: "ltr" | "rtl";
 
   /** Wikis of this language in each project family. */
   site?: ApiSiteMatrixSite[];

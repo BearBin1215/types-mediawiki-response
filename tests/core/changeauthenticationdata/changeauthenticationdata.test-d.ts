@@ -15,7 +15,7 @@ export const successSample = {
 
 expectTypeOf<ApiChangeAuthenticationDataResponse["changeauthenticationdata"]>()
   .toHaveProperty("status")
-  .toEqualTypeOf<"success" | (string & {})>();
+  .toEqualTypeOf<"success">();
 
 // Widening-tolerant structural check on the real fixture.
 expectTypeOf<

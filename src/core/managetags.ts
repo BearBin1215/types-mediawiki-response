@@ -10,13 +10,8 @@
 import type { ApiSpecMessage } from "../common";
 import type { ApiEnvelope, ApiMessage } from "../envelope";
 
-/** `action=managetags` operation. Open union for forward compatibility. */
-export type ApiManageTagsOperation =
-  | "activate"
-  | "create"
-  | "deactivate"
-  | "delete"
-  | (string & {});
+/** `action=managetags` operation, echoed from the request. */
+export type ApiManageTagsOperation = "activate" | "create" | "deactivate" | "delete";
 
 /** Response of `action=managetags`. */
 export interface ApiManageTagsResponse extends ApiEnvelope {

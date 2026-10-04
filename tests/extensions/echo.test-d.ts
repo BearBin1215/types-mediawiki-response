@@ -158,7 +158,7 @@ export const createEventSample = {
 } satisfies ApiEchoCreateEventResponse;
 expectTypeOf<ApiEchoCreateEventResponse["echocreateevent"]>()
   .toHaveProperty("result")
-  .toEqualTypeOf<"success" | (string & {}) | undefined>();
+  .toEqualTypeOf<"success" | undefined>();
 
 expectTypeOf<
   ExtraKeys<typeof createEventFixture, keyof ApiEchoCreateEventResponse>

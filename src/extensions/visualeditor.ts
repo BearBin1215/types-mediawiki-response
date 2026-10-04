@@ -34,7 +34,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:VisualEditor
  */
-import type { Flag, SuccessStatus, Timestamp, WatchlistExpiry } from "../common";
+import type { Flag, Timestamp, WatchlistExpiry } from "../common";
 import type { ApiEditResult } from "../core/edit";
 import type { ApiBlockInfo } from "../core/query/users";
 import type { ApiEnvelope } from "../envelope";
@@ -103,7 +103,7 @@ export interface ApiLastModified {
 /** The page frame both `visualeditor` and `visualeditoredit` return. */
 export interface ApiVisualEditorPageFrame {
   /** Outcome of the request; `error` on the save-failure branch. */
-  result?: "success" | "error" | (string & {});
+  result?: "success" | "error";
 
   /** Rendered page body (HTML for `parse`, wikitext for `wikitext`). */
   content?: string;
@@ -243,8 +243,8 @@ export interface ApiVisualEditorTemplatesUsedResponse extends ApiEnvelope {
 export interface ApiVisualEditorParseFragmentResponse extends ApiEnvelope {
   /** Result of `action=visualeditor&paction=parsefragment`. */
   visualeditor: {
-    /** Outcome of the transform. */
-    result: SuccessStatus;
+    /** Success sentinel; a rejected call comes back as a top-level error. */
+    result: "success";
 
     /** Transformed wikitext fragment. */
     content: string;

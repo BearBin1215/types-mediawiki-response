@@ -23,7 +23,6 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:MassMessage
  */
-import type { SuccessStatus } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** The `mmcontent` object of a `prop=mmcontent` response. */
@@ -73,7 +72,7 @@ export interface ApiEditMassMessageListResult {
    * `Success` when everything applied; `Done` when any submitted target was
    * invalid (see {@link invalidadd} / {@link invalidremove}).
    */
-  result: "Success" | "Done" | (string & {});
+  result: "Success" | "Done";
 
   /** Targets actually added (deduplicated, canonicalized). */
   added?: ApiMassMessageTarget[];
@@ -103,7 +102,7 @@ export interface ApiEditMassMessageListResponse extends ApiEnvelope {
 /** The `massmessage` object of an `action=massmessage` response. */
 export interface ApiMassMessageResult {
   /** `success` (lowercase) when delivery was queued. */
-  result: SuccessStatus;
+  result: "success";
 
   /** Number of targets the message was queued for. */
   count: number;

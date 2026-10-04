@@ -24,6 +24,8 @@
 | 临时 scratch 目录 | `.mw-scratch/`（已 gitignore）                                              | —                         |
 | 本地源码镜像      | `mw-ref/` 下的 core 与扩展全量克隆、逐版本快照                              | 自定                      |
 
+**扩展源码别只查源码镜像**：`mw-refs/extensions` 只检出一部分扩展（缺 Echo、DiscussionTools、VisualEditor、Linter、MobileFrontend），而基线容器 `mw-fixture` 的 `/var/www/html/extensions/<Ext>` 全都在，`docker exec mw-fixture sh -c 'grep -rn …'` 即可读；上游 GitHub 镜像还剪掉了些老分支（Echo 与 TimedMediaHandler 只留 REL1_43 / REL1_45 / REL1_46 / master）。「扩展不在本地检出」不构得上待核的理由——先探容器再定。
+
 ### 1.2 可移植替代（缺环境时怎么取证）
 
 这套环境是**便利手段，不是入模门槛**。取证优先级：**本地可控实例实物 → 公共站实物 → 按 tag 的官方源码 + paraminfo → 手写 `satisfies` 样本**（降到哪一层就如实标证据级别，**不虚构没跑出来的响应**）。
@@ -78,7 +80,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 用「逐版本键集比对」的审计脚本换个分母即可：抽取器产出「可选字段清单」（排除合并视图与增广口），逐版本跑源码判定无条件写入，实证比对额外产出可选键的出现/缺席，取交集「**逐版本无条件写入 + 实测从不缺席 + 未被 `*prop` 门控**」。交集只是**候选**，必须逐个回读发射函数。三类假阳性固定出现：
 
 - **同一数组混入别的行生产者**：`action=purge`/`import` 的 invalid 标题行、`action=edit` 的 `result:"Failure"` 分支、`meta=sitematrix` 的 `array_intersect_key`、`action=shortenurl` 的 QR 分支。
-- **行级门控启发式过头**：一个 `if` 里连着写好几个键时会被当成「整行条件」而误判无条件（`general` 的 `favicon`/`imagewhitelistenabled`）。
+- **行级门控启发式过头**：一个 `if` 里连着写好几个键时会被当成「整行条件」而误判无条件（`general` 的 `favicon`/`imagewhitelistenabled`）；真正的判据是 §3.2 的「门控整行 vs 门控单个键」。
 - **配置直传的 map**：SBOM `authors[]`（composer 路径原样透传，不保证 `name`）、`general.uploaddialog`。**反向陷阱**：`general.galleryoptions` 看着也是配置直传，实则 `SetupDynamicConfig.php` 在装载完 LocalSettings 后用 `$wgGalleryOptions += […]` 补齐全套默认键——站点写 `$wgGalleryOptions = []` 实测仍发满七个键。这类「setup 期回填的 map」成员是真必选，判据要看 `+=` / `??=` 回填点，而不是只看发射处的 `$config->get()`。
 - **字面量自身的键集会随版本漂移**：某发射器在当前版本无条件写 N 个键，**不等于这 N 个键在 1.39–1.47 都有**——要逐版本比**发射函数的那段字面量**，而非只看「该版本有无条件写入点」。
 
@@ -103,7 +105,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - `prop=` → 往 `ApiPage` 加字段：标量直接加，集合先定义子项 interface 再加数组。
 - `meta=` / `list=` → 往 `ApiQueryResult` 加顶层键。
 - **框架级键**直接写核心：`normalized`/`pages` 在 `ApiQueryResult`，`continue`/`limits` 在 `ApiQueryResponse`，分页游标加到 `ApiQueryContinue`。
-- **同族模块复用行类型**：判据是"同一个 PHP formatter/基类"，不是名字像。行类型放同源文件，其余文件 `import type` 后只写声明合并。但**同族的 `*prop` 扩展键要逐模块核对各自枚举**（`allredirects` 分支独有 `rd_fragment`/`rd_interwiki`），按"同族同形状"复用会漏列。
+- **同族模块复用行类型**：判据是"同一个 PHP formatter/基类"，不是名字像。行类型放同源文件，其余文件 `import type` 后只写声明合并。但**同族的 `*prop` 扩展键要逐模块核对各自枚举**（`allredirects` 分支独有 `rd_fragment`/`rd_interwiki`），按"同族同形状"复用会漏列。反向的边界：同一数据的不同 prop 可能各有键名，不能共享——见 §3.7。
 - 声明合并写 `declare module './index' { interface ApiPage { … } }`，路径是从当前文件看到的 `./index`；承载增强的文件必须是**模块**（含 `import`/`export`）。若只有增强而无导入，别补 `export {}`（`no-useless-empty-export` 会报错）——导出该模块的子项 interface 即可。
 - 扩展点留可声明合并的空 interface，别用 `Record<string, unknown>` 封死。
 
@@ -130,6 +132,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **数字可能以字符串返回**（跨站 id、数据库列直传的尺寸字段、游标内的片段），反过来 `list=search` 的 `sroffset`、`list=querypage` 的 `qpoffset` 是真数字 → `ApiQueryContinue` 放宽为 `string | number | undefined`。
 - **混合键保留为带数字键的对象**（组集合是 `{"0":{…},"operand":"&"}`，`parse` 的 `limitreportdata` 每行是 `{"0":值,"1":限额,"name":…}`）→ 用带索引签名的 interface 容纳，并在 JSDoc 里说明各位含义。
 - **`Flag` 还是 `boolean`** 逐模块判、别推而广之：revisions 的 `minor` 恒为布尔、`bot`/`anon` 是 `Flag`；recentchanges 全为真布尔。
+- **空 map 的线格式取决于发射处**：`ApiResult` 对显式标为 map 的字段（`setArrayType(..., 'kvp'/'BCassoc')`、`META_TYPE => 'assoc'`）把空 PHP 数组序列化成 `{}`；未标注的直传则与空数组一样是 `[]`。把来源配置置空的实测表见 §3.9。
 
 ### 3.4 页面状态（`query.pages` 的条目形状）
 
@@ -178,6 +181,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **弃用可能在输入值层而非输出字段层**：参数被新版拒绝但字段照常返回时，改 spec 的参数、不改类型；反之 paraminfo 没标弃用的也别自己标上。
 - **别因"抓不到样本"就不建模，先想能不能铺垫**。
 - 后版本才有的字段标 `@since MediaWiki X.Y`；版本事实走标签，叙述句不重复。
+- **`@deprecated` 只表示「MediaWiki 弃用了它」**：仓库既有用法全是 `@deprecated since MediaWiki X.Y; <替代项>` 的形态。包自身的偏好（例如「别用某个跨模块共享别名」）不能借这个标签表达——typedoc 会把它渲染成服务端弃用，属误标；这类约束写进 AGENTS.md「编写规范」。
 
 ### 3.9 配置依赖与站点差异
 
@@ -186,11 +190,11 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 **四类影响、四种口径**（判据都在源码发射处，不在字段名）：
 
 1. **门控键**：配置包住单个键 → 可选。`imagewhitelistenabled`/`externalimages` 由 `$wgAllowExternalImages`/`AllowExternalImagesFrom`/`EnableImageWhitelist` 决定（`ApiQuerySiteInfo::appendGeneralInfo`）；`watchlistlabels` 由 `$wgEnableWatchlistLabels`；`actionrestrictions` 由 `$wgEnablePartialActionBlocks`（1.39–1.44，1.45 起无条件）。
-2. **配置直传对象**：值类型须放宽空值，判据是发射处有无显式 map 标注（见下）。
-3. **配置枚举**：`$wgRestrictionLevels`/`$wgContentHandlers` 等决定取值集合 → 开放联合，核心默认值只作 autocomplete。
+2. **配置直传对象**：值类型须放宽空值，判据是发射处有无显式 map 标注（§3.3）。
+3. **配置枚举**：`$wgRestrictionLevels`/`$wgContentHandlers` 等决定取值集合 → 开放联合，核心默认值只作 autocomplete（判据与已核清单见 §3.10）。
 4. **配置值**：`$wgShowHostnames` 决定 `dbrepllag[].host` 是空串还是主机名（键恒在、值变）→ 用值联合，不用可选。
 
-**空 map 的线格式取决于发射处（踩坑成因）**：`ApiResult` 对显式标为 map 的字段（`setArrayType(..., 'kvp'/'BCassoc')`、`META_TYPE => 'assoc'`）把空 PHP 数组序列化成 `{}`；未标注的直传则与空数组一样是 `[]`。实测（1.46，`formatversion=2`）：
+**空 map 置空后的实测（判据见 §3.3）**：把来源配置置空，1.46 + `formatversion=2` 实测：
 
 | 字段                     | 发射处                                           | 配置置空后          |
 | ------------------------ | ------------------------------------------------ | ------------------- |
@@ -209,6 +213,32 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 **只影响请求参数的配置别动类型**：`$wgMiserMode`、`$wgRateLimits` 之类只在 `getAllowedParams()` 里改参数可用性 / 帮助文本，响应形状不变（`$wgMiserMode` 本身只体现为 `general.misermode` 的值）。
 
+### 3.10 开放联合 vs 封闭联合
+
+字符串枚举先判它属于哪一类再动手。默认开放（`'known' | (string & {})`）会让「值集合写没写对」失去唯一的自动检查。
+
+**判据只有一条：集合能否被「核心版本升级之外」的东西改变。**
+
+| 情形                                    | 结论                              | 已核实例         |
+| --------------------------------------- | --------------------------------- | ---------------- |
+| 注册表 / 钩子 / 站点配置 / 外部规范决定 | **开放**，并在 JSDoc 里点名该机制 | 见 §6 的开放清单 |
+| 核心发射代码硬编码、无钩子可改          | **封闭**，只列真实值              | 见 §6 的封闭清单 |
+
+**开放的代价是实测的**（TS 7、`strict`）：`type Open = "Success" | (string & {})` 下，`x === "Succes"` **不报错**（封闭联合报 `TS2367`），`assertNever(x)` **报 `TS2345`**（封闭联合可穷尽）。即开放 = 放弃对枚举本身的检查；`tags.source` 的 `extension` 只能靠实测发现，正是这个原因。
+
+**封闭的四条纪律**：
+
+1. **回源码核实穷尽**：判据是发射处的字面量与分支（`$vals['x'] = …` / `addValue(…, 'x', …)` / `getAllowedParams()` 的 `PARAM_TYPE`），不是字段名。
+2. **多版本取并集**：包覆盖 1.39–1.47，封闭必须列**所有支持版本出现过的值**，且源码要取自容器而非宿主快照（§2.2）——`tags.source` 就是只读快照会误删真实值的实例（见 §6）。
+3. **连带改断言**：`toEqualTypeOf<"x" | (string & {})>` 一类断言要同步收窄，否则 `pnpm typecheck` 拦下。
+4. **会撞上 `toExtend` 断言**：收窄后针对导入 fixture 的整型 `toExtend` 必然失败，修法见 §4.1「断言四段」第 3 条的收窄注意——别为此放弃封闭。
+
+**开放的理由只能是机制**：`(string & {})` 尾巴必须说清值为什么会超出清单（注册表 / 钩子 / 站点配置 / 外部规范 / 原样透传的数据源），并把该机制登记进 §6 的开放清单。「for forward compatibility」不是机制——它什么也没说，却让开放显得有依据。
+
+**改公开类型都属破坏性变更**：`src/common/` 经根 barrel 对外公开，删别名、把 `string` 收成字面量联合都会影响消费方编译，故归入 major。版本与发布由人处理，这里只记性质、不记流程——别把改公开导出当成小改动。
+
+**共享类型本身没错，错在拿它替代逐点核对**：同一概念跨模块共用是对的（`WatchlistExpiry` 供 `block`/`unblock`/`userrights`；`action=edit` 的值域更窄，就地写 `Timestamp` 而不套用），AGENTS.md「配置依赖 · 同族字段值域集中」同样要求共用。反面教材是 `SuccessStatus` / `SuccessResult`：它们让 17 处字段的「开放」退化成别名默认，掩盖了其中多个其实是单值（`options`、`globalpreferences`、`globalpreferenceoverrides`、`changecontentmodel`、`changeauthenticationdata`、`removeauthenticationdata`、`massmessage`、`flaggedrevs` 的 `review.result`）。现已在各字段就地写联合，两个别名随之删除——它们没有消费方用例（响应类型库的消费方读响应、不定义响应形状），且「导出但禁止自用」自相矛盾。删除是破坏性变更（见上）。
+
 ---
 
 ## 4. 维护任务（How-to）
@@ -226,7 +256,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 1. `export const sample = { … } satisfies ApiXxxResponse`（导出以避未用告警）：精确一致性，保留字面量、并查多余字段。
 2. `expectTypeOf<T>().toHaveProperty('x').toEqualTypeOf<…>()`：钉住声明类型的关键字段（含必选性）。
-3. `expectTypeOf(fixture.query.xxx).toExtend<unknown[]>()`：对导入的真 fixture 做拓宽容忍的结构校验（守 fv2 形状）。
+3. `expectTypeOf(fixture.query.xxx).toExtend<unknown[]>()`：对导入的真 fixture 做拓宽容忍的结构校验（守 fv2 形状）。**目标别写成 `toExtend<ApiPage[]>`**：`resolveJsonModule` 把字面量拓宽（`"ltr"`→`string`），与封闭字面量联合天然不兼容，收窄后会必然失败；要覆盖整型就用 `Omit<ApiPage, "已封闭字段">`。这类失败会把整个目标类型标成 brand、指不到真正出问题的属性（字母序第一个属性最容易被误认）。
 4. `expectTypeOf<ExtraKeys<typeof fixture.query.x, keyof T>>().toEqualTypeOf<never>()`：防遗漏。开放形状（带索引签名）不必查。
 
 - **为何不直接 `fixture satisfies Type`**：`resolveJsonModule` 会把字面量拓宽（`true`→`boolean`、`"x"`→`string`），精确一致性只能交给手写 `satisfies` 样本。
@@ -266,6 +296,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **内联对象类型里别写 `{@link}`**：`X & { … }` 匿名类型的兄弟字段无法被 TSDoc 寻址，TypeDoc 报 "link cannot be resolved"。要么提成具名 interface 再链接，要么改成代码字体。（typedoc 0.28.20 实测：加 `validation: { invalidLink: true }` 对断链**不报警**，别指望它当门禁；断链目前只能靠人工核对产物。）
 - **`{@link}` 按全项目符号名解析，不要求本文件 import**：未导入的跨文件引用（`options.ts` 声明注释里引 `ApiErrorResponse`/`ApiPage`）、跨扩展包（discussiontools 引 thanks 的 `ApiThankResult`）、同接口裸成员（`{@link cancreate}`）与成员路径（`{@link ApiMessage.params}`）实测都出链接。断链不报警也不留痕：未解析的 `{@link}` 渲染成裸名，与普通文本无法区分，`validation: { invalidLink: true }` 同样不报警（均 typedoc 0.28.20 实测）；核对链接只能看产物里目标名是否成了 `[名](路径)`。不可寻址的只有内联对象类型/匿名交集的兄弟字段（见上条）。另注意核心 barrel 各文件的文件头注释不进产物（typedoc 只把入口文件的注释当 module comment；扩展文件是独立入口，其文件头才渲染），核心文件模块 docstring 里的跨包名用代码字体是源码与消费方 IDE 悬浮的观感选择，与 TypeDoc 无关。
 - **具名共享类型承载的语义不在字段处复述**：`WatchlistExpiry` 的 `null` 含义只写在类型上，`block`/`unblock`/`userrights` 的字段 JSDoc 不再重复；反之**内联联合**（`string[] | null`，如 `pagerestrictions`/`namespacerestrictions`）没有承载处，必须就地说明 `null` 的来历。同理别复述必选性（无 `?` 即事实）。字段 JSDoc 只留“该字段是什么”与类型表达不了的条件（`*prop`/请求参数门控）。
+- **`src/` 的 JSDoc 不写来源**：面向消费方，只写「该字段是什么」与「什么会让它不止这些值」；`file:line` 依据归 §6，别搬进类型注释。
 - 示例里的日期 / 时间戳用固定中性值（如 `2024-01-15` 一族），不用采集当周的日期。
 - **首页悬浮演示的内容不是手写的**：`docs/scripts/generate-hero.ts` 构建时对展示代码跑真实编译器 quickinfo，从 `src/` 取签名与 JSDoc 注入入库的生成文件；改 `src/` 类型后 docs 构建会重算，snippet 与类型失配时构建直接失败，CI 用 `git diff --exit-code` 校验产物未过期。
 - **push 自动部署暂缓**：仓库未公开，`docs.yml` 仅 `workflow_dispatch`。
@@ -296,7 +327,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **改完配置要 `apache2ctl -k graceful`**：APCu 缓存了扩展的类映射，只改 `LocalSettings.php` 会让请求拿到旧映射而 500（`Class ... not found`，而 CLI 下一切正常，极具迷惑性）。改 PHP 配置务必先 `php -l` 校验。
 - **配置键先在扩展源码里核实再写**（判据是 `$this->getConfig()->get('…')`），凭印象会写出不存在的键并静默无效；`$wgCaptchaClass` 之类的配置要写 FQCN。
 - **配置名有版本有效期**：写进 JSDoc 的 `$wg…` 会随上游删除而变成过期断言。`$wgEnablePartialActionBlocks` 就是 1.39–1.44 有、1.45 起没了（部分封禁转为无条件），逐版本核存在性用本地镜像只读跑：`docker run --rm --entrypoint sh mediawiki:1.45 -c 'grep -rl <Name> /var/www/html/includes | wc -l'`。
-- **本地 `mw-refs` 快照会落后于上游**：某键在本地全仓 grep 不到不等于不存在（`$wgCheckUserDisableCheckUserAPI` 本地那份就查不到，而 REL1_45/1_46/master 三支都有、`extension.json` 默认 `true`）。下"配置不存在"的结论前先拿 `raw.githubusercontent.com/…/<branch>/` 的对应文件对表。
+- **本地 `mw-refs` 快照会落后于上游**（同 §2.2 的容器规则，此处针对配置键）：某键在本地全仓 grep 不到不等于不存在（`$wgCheckUserDisableCheckUserAPI` 本地那份就查不到，而 REL1_45/1_46/master 三支都有、`extension.json` 默认 `true`）。下"配置不存在"的结论前先拿 `raw.githubusercontent.com/…/<branch>/` 的对应文件对表。
 - **改 `LocalSettings.php` 后别只 `graceful`**：官方镜像 `opcache.revalidate_freq=60`，60 秒内仍读旧编译的配置文件，症状是"配置写了却没生效"。要么 `apache2ctl -k restart`，要么**同时改一个可见值（如 `$wgSitename`）当对照**，先证明写入通路正常，再判读被检配置的行为。
 - **有的模块默认关闭**：`action=echocreateevent` 需 `$wgEchoEnableApiEvents`；`list=checkuser` 自 1.45 起默认被 `$wgCheckUserDisableCheckUserAPI` 关掉；Linter 需授 `linter` 权限 + `$wgParsoidSettings['linting'] = true`。
 - **写操作会改状态，探针顺序要讲究**：`echomarkread`/`echomarkseen`/`echomute` 必须排在读列表之后；有的探针必须匿名（titleblacklist——sysop 有 `tboverride`，一律回 `ok`）。
@@ -324,13 +355,52 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 ### 配置依赖（已实测，勿再按“可能缺失”处理）
 
 - `meta=siteinfo` 子组里 `restrictions`（四键）、`rightsinfo`（两键）、`languages[]`（三键）、`autocreatetempuser.enabled`、`showhooks[]`（两键）在 1.43 与 1.46 恒在；`meta=userinfo` 的 `id`/`name` 无条件写入——均按必选处理。
-- `general.magiclinks`、`query.uploaddialog` 是未标注 map 的直传，站点置空时回 `[]`；`general.galleryoptions` 被 `SetupDynamicConfig` 用 `+=` 回填，永不空。
-- `watchlistexpiry` 值域恒为 `Timestamp | null`（直接赋值处）或 `Timestamp`（过滤 `null` 处），不含 `infinity`。
+- `general.magiclinks`、`query.uploaddialog` 是未标注 map 的直传，站点置空时回 `[]`；`general.galleryoptions` 被 `SetupDynamicConfig` 用 `+=` 回填，永不空（实测表见 §3.9）。
+- `watchlistexpiry` 值域恒为 `Timestamp | null`（直接赋值处）或 `Timestamp`（过滤 `null` 处），不含 `infinity`（判据见 §3.9）。
 - `action=block` 的 `actionrestrictions`（1.45+ 恒出现，值 `string[] | null`）与 `additionalBlocksStatuses`（1.46+ 恒出现）在对应版本无条件写入；`watchlistexpiry` 自 **1.45** 起恒出现（值 `Timestamp | null`），1.39–1.44 仅当 `$wgWatchlistExpiry` 开且传了 `watchlistexpiry`（1.43 fixture 无此键）。成因是 `getExpiryFromParams()` 1.45+ 恒返回哨兵 `'infinity'`（恒真），此前返回 `null`。`actionrestrictions` 仅 1.39–1.44 受 `$wgEnablePartialActionBlocks` 门控。
 
 ### 扩展包 map 字段（已核，勿再按“空数组”重查）
 
 `src/extensions/` 里值类型为 `Record<...>` 的字段均已确认安全：Babel（`META_TYPE => 'assoc'`；实测无框用户 `{}`、`{{#babel:en-1|de-2}}` → `{de:"2",en:"1"}`）、TemplateData `pages`（`addValue(...,(object)[])` + `setArrayType('kvp','id')`；实测 `{}`）、Linter `totals`（`setArrayType('assoc')`；实测 21 类目齐全）、DiscussionTools `subscriptions`（`addArrayType('kvp','name')`；实测 `{}`）、VisualEditor `editcheckreferenceurl`（恒 1 键 `[$url => …]`）、Echo `seenTime`（`sections` 参数有非空默认值；实测平铺为 map、分组为每节时间戳）、Wikibase `ApiEntityUsageMap`（`setArrayType('kvp','id')` 且 `if ($entry)` 非空才 flush，空时整键缺省而非 `[]`）。**例外**：VisualEditor `checkboxesDef`/`checkboxesMessages` 无 map 标注——匿名请求实测为 `[]`、登录态为对象，故值联合已带 `unknown[]`。
+
+### 开放联合 vs 封闭联合（已核，勿再一律开放）
+
+判据、代价与纪律见 §3.10。**已核「必须开放」**（机制已核实，JSDoc 已点名）：
+
+| 字段                                  | 机制                                                                                                                                                                                                                                                                                |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ContentModel`                        | `$wgContentHandlers` + `extension.json` 的 `ContentHandlers` + `GetContentModels` 钩子                                                                                                                                                                                              |
+| `ContentFormat`                       | `IContentHandlerFactory::getAllContentFormats()`                                                                                                                                                                                                                                    |
+| `ProtectedTitleLevel`                 | `$wgRestrictionLevels`                                                                                                                                                                                                                                                              |
+| `ApiSiteExtension.type`               | 无任何校验：`extension.json` 的 `type` 原样进响应（schema 只给 `examples`、无 `enum`）、`$wgExtensionCredits` 直传、`ExtensionTypes` 钩子可再加名。核心只是给部分名字配了显示标签，其中 `editor` 本就在列（CodeEditor / WikiEditor / VisualEditor 用它），`wikifamily` 自 1.47 才有 |
+| `imagerepository`                     | `$img->getRepoName()`，是仓库名而非固定两值                                                                                                                                                                                                                                         |
+| `RecentChangeType`                    | `RecentChange::getChangeTypes()`                                                                                                                                                                                                                                                    |
+| `authmanagerinfo.requests[].required` | 扩展自定义 request                                                                                                                                                                                                                                                                  |
+| `clientlogin.status`                  | 扩展自定义 provider                                                                                                                                                                                                                                                                 |
+| `validatepassword.validity`           | `ApiValidatePassword` 钩子可改写 `$r['validity']`                                                                                                                                                                                                                                   |
+| TMH 轨道 `kind`                       | 镜像自外部文件仓库时原样透传                                                                                                                                                                                                                                                        |
+
+**已核「封闭」**（依据为发射处穷尽，跨 1.39–1.47 取并集；逐版本行情的记在对应依据里）：
+
+| 字段                                                                                                                                                                                                                   | 值                                                 | 依据                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prop=info` 的 `pagelanguagedir`、`meta=languageinfo` 的 `dir`、`meta=sitematrix` 的 `dir`、TMH 轨道 `dir`                                                                                                             | `ltr` \| `rtl`                                     | 四处均取自 `Language::getDir()`，实现是 `return $this->isRTL() ? 'rtl' : 'ltr';`，core 无任何 dir 钩子。容器实测 1.39 / 1.43 / 1.46 / wmf22 一致，SiteMatrix 与 TMH 另取 REL1_39–REL1_46 + master 分支核。TMH 的 `dir` 与 `kind` 同走远端原样透传却一个封闭一个开放：远端也是 MediaWiki，`dir` 终归 `getDir()`，而 `kind` 是自由数据                                                                                                                                   |
+| `checktoken.result`                                                                                                                                                                                                    | `valid` \| `expired` \| `invalid`                  | `ApiCheckToken` 三分支，无钩子                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `cmtype` / `gcmtype`                                                                                                                                                                                                   | `page` \| `subcat` \| `file`                       | `ApiQueryCategoryMembers` 的 `PARAM_TYPE`，源自 `categorylinks.cl_type` 枚举；写入侧 `NamespaceInfo::getCategoryLinkType()` 是闭集三元。注意 `cmsort=timestamp` 时不过滤类型、直接回显列值，Postgres/SQLite 该列无 `enum` 约束——但可写值仍由该三元决定                                                                                                                                                                                                                 |
+| `managetags.operation`                                                                                                                                                                                                 | `create` \| `delete` \| `activate` \| `deactivate` | `ApiManageTags` 的 `PARAM_TYPE`，回显请求值；分发 `switch` 带 `default => throw UnexpectedValueException`，钩子放宽参数也发不出第五值                                                                                                                                                                                                                                                                                                                                  |
+| `tags.source`                                                                                                                                                                                                          | `software` \| `extension` \| `manual`              | 逐版本发射字面量：1.39–1.41 只有 `extension` + `manual`（`software` 自 1.42 起，此前源码带 `@TODO: Can we change this to 'software'?`）、1.42–1.46 三值同发、**1.47(wmf22) 已删 `extension`**——取并集才是不变的清单。`extension` 是 `software` 的向后兼容项（`@TODO: remove backwards compatibility entry`，计划移除而非正式弃用，只读宿主快照会误删）。1.43.9 实测回 `["software","extension"]`；无来源的标签回 `[]`（发射处先置 `$tag['source'] = []`，无 map 标注） |
+| `options`、`globalpreferences`、`globalpreferenceoverrides`、`changecontentmodel.result`、`changeauthenticationdata.status`、`removeauthenticationdata.status`、`massmessage.result`、`flaggedrevs` 的 `review.result` | 单值（`success` 或 `Success`）                     | 各自发射处只有一条字面量分支，失败一律走顶层错误。`globalpreferences` / `globalpreferenceoverrides` 无自己的发射点，继承 core `ApiOptionsBase` 的 `addValue( null, getModuleName(), 'success' )`                                                                                                                                                                                                                                                                       |
+| Echo 的 `echomarkread.result`、`echomarkseen.result`、`echomute`、`echocreateevent.result`、`echoarticlereminder.result`                                                                                               | 单值 `success`                                     | 各模块一处字面量，失败一律 `dieWithError`；跨站失败落在 `errors[wiki]`，不改 `result`                                                                                                                                                                                                                                                                                                                                                                                  |
+| Echo 的 `echopushsubscriptions` `create.result` / `delete.result`                                                                                                                                                      | 单值 `Success`（首字母大写）                       | `ApiEchoPushSubscriptions` 一处字面量，经 `addValue( null, getModuleName(), … )` 平铺成根级 `create` / `delete`                                                                                                                                                                                                                                                                                                                                                        |
+| `visualeditor.result`（`paction=parsefragment`）                                                                                                                                                                       | 单值 `success`                                     | 该分支唯一发射；缺 `wikitext` 走 `dieWithError`；`paction` 本身是闭集五值，各分支各有 `$result`。1.43 / REL1_46 / master 同形，只读探针实测 `{"result":"success"}`                                                                                                                                                                                                                                                                                                     |
+| `ApiVisualEditorPageFrame.result`、`discussiontoolsedit.result`                                                                                                                                                        | `success` \| `error`                               | `ApiVisualEditorEdit` 只有这两条（docblock 提到的 `nochanges` 全仓无发射点，属过时注释）；DiscussionTools 把 `visualeditoredit` 的载荷整份拷贝后原样发射，值域继承之                                                                                                                                                                                                                                                                                                   |
+| `editmassmessagelist.result`                                                                                                                                                                                           | `Success` \| `Done`                                | `ApiEditMassMessageList` 四处赋值：一处 `Success` + 三处 `Done`，REL1_39–REL1_46 + master 同形，无变量来源                                                                                                                                                                                                                                                                                                                                                             |
+
+**证据级别 / 待办**：
+
+- **推断而非实测的下限**：Echo 只读到 REL1_43–master（上游无 REL1_39–1_42 分支），1.39–1.42 的封闭由「字面量 1.43→master 恒定」推断；TimedMediaHandler 轨道 `dir` 同样缺 1.39–1.42 与 1.44。结论沿用，被追问下限时要如实说是推断。
+- **已定档但措辞过时**：`query/recentchanges.ts:13` 仍写「for forward compatibility」，机制其实已登记（`RecentChange::getChangeTypes()`），只需改写。
+- **未分类的开放联合**（既没登记机制，也可能本可封闭）：`query/users.ts:158`、`revisiondelete.ts:19`、`tag.ts:30`、`envelope/index.ts:133`、`extensions/description.ts:16`、`spamblacklist.ts:22`、`titleblacklist.ts:22`，以及只写「Open union.」的 `common/index.ts:62`、`core/edit.ts:22`/`:90`、`query/mystashedfiles.ts:20`、`core/stashedit.ts:20`、`query/siteinfo.ts:828`。按 §3.10「开放的理由只能是机制」逐处定档：能点名机制的补进上面清单，发射处穷尽的封闭。
 
 ### 未建模 / 不打算做
 

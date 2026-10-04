@@ -8,7 +8,6 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Removeauthenticationdata
  */
-import type { SuccessStatus } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Response of `action=removeauthenticationdata`. */
@@ -16,6 +15,6 @@ export interface ApiRemoveAuthenticationDataResponse extends ApiEnvelope {
   /** Result of `action=removeauthenticationdata`. */
   removeauthenticationdata: {
     /** Flow outcome; `success` when the data was removed. */
-    status: SuccessStatus;
+    status: "success";
   };
 }

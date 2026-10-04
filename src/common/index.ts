@@ -44,18 +44,6 @@ export type PlainText = string;
 export type NamespaceIndex = number;
 
 /**
- * `success` — or the actual outcome string when an operation did not succeed.
- * **Open union**: `(string & {})` keeps other outcomes forward-compatible.
- */
-export type SuccessStatus = "success" | (string & {});
-
-/**
- * `Success` — or the actual result string when an operation did not succeed.
- * **Open union**: `(string & {})` keeps other outcomes forward-compatible.
- */
-export type SuccessResult = "Success" | (string & {});
-
-/**
  * A structured in-band message — a serialized MediaWiki `Message`/`FatalError`
  * spec (`{ message, params, code, type }`) nested inside an action result
  * (e.g. password-policy messages, file-backend errors, AuthManager failures).

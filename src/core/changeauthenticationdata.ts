@@ -8,7 +8,6 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Changeauthenticationdata
  */
-import type { SuccessStatus } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Response of `action=changeauthenticationdata`. */
@@ -16,6 +15,6 @@ export interface ApiChangeAuthenticationDataResponse extends ApiEnvelope {
   /** Result of `action=changeauthenticationdata`. */
   changeauthenticationdata: {
     /** Flow outcome; `success` when the change was applied. */
-    status: SuccessStatus;
+    status: "success";
   };
 }

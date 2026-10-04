@@ -40,11 +40,9 @@ expectTypeOf<ApiMmContent>().toHaveProperty("targets").toEqualTypeOf<string[]>()
 expectTypeOf<ApiMassMessageTarget>().toHaveProperty("missing").toEqualTypeOf<string | undefined>();
 // `action=massmessage` and `action=editmassmessagelist` both seed the result
 // object with a literal, so `result` is always present.
-expectTypeOf<ApiMassMessageResult["result"]>().toEqualTypeOf<"success" | (string & {})>();
+expectTypeOf<ApiMassMessageResult["result"]>().toEqualTypeOf<"success">();
 expectTypeOf<ApiMassMessageResult["count"]>().toEqualTypeOf<number>();
-expectTypeOf<ApiEditMassMessageListResult["result"]>().toEqualTypeOf<
-  "Success" | "Done" | (string & {})
->();
+expectTypeOf<ApiEditMassMessageListResult["result"]>().toEqualTypeOf<"Success" | "Done">();
 expectTypeOf<
   ExtraKeys<(typeof mmcontentFixture.query.pages)[number]["mmcontent"], keyof ApiMmContent>
 >().toEqualTypeOf<never>();

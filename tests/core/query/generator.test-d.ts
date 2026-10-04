@@ -30,7 +30,10 @@ export const sample = {
   },
 } satisfies ApiQueryResponse;
 
-expectTypeOf(generatorFixture.query.pages).toExtend<ApiPage[]>();
+// `pagelanguagedir` is a closed literal union, and `resolveJsonModule` widens
+// the fixture's `"ltr"` to `string`, so the fixture can never extend `ApiPage`
+// as a whole; check every other field.
+expectTypeOf(generatorFixture.query.pages).toExtend<Omit<ApiPage, "pagelanguagedir">[]>();
 expectTypeOf<ExtraKeys<typeof generatorFixture, keyof ApiQueryResponse>>().toEqualTypeOf<never>();
 expectTypeOf<
   ExtraKeys<typeof generatorFixture.query, keyof ApiQueryResult>

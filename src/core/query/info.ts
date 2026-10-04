@@ -72,8 +72,8 @@ export interface ApiPageInfo {
   /** HTML `lang` attribute value for the page language. */
   pagelanguagehtmlcode?: string;
 
-  /** Writing direction of the page language. Open union for forward compatibility. */
-  pagelanguagedir?: "ltr" | "rtl" | (string & {});
+  /** Writing direction of the page language. */
+  pagelanguagedir?: "ltr" | "rtl";
 
   /** When the page was last touched (cache/link invalidation), not last edited. Existing pages only. */
   touched?: Timestamp;

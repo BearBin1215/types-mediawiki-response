@@ -27,7 +27,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:DiscussionTools
  */
-import type { Flag, SuccessStatus, Timestamp, WatchlistExpiry } from "../common";
+import type { Flag, Timestamp, WatchlistExpiry } from "../common";
 import type { ApiEnvelope } from "../envelope";
 import type { ApiParse } from "../core/parse";
 import type { ApiThankResult } from "./thanks";
@@ -286,8 +286,11 @@ export interface ApiDiscussionToolsPreviewResponse extends ApiEnvelope {
 export interface ApiDiscussionToolsEditResponse extends ApiEnvelope {
   /** Result of `action=discussiontoolsedit`. */
   discussiontoolsedit: {
-    /** `success` when the comment was saved. */
-    result?: SuccessStatus;
+    /**
+     * Outcome of the delegated `action=visualeditoredit` call: `success` when
+     * the comment was saved, `error` when the save was rejected.
+     */
+    result?: "success" | "error";
 
     /** Rendered HTML of the saved comment area. */
     content?: string;

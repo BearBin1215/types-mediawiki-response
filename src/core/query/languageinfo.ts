@@ -14,8 +14,8 @@ export interface ApiLanguageInfo {
   /** BCP 47 language tag. `liprop=bcp47`. */
   bcp47?: string;
 
-  /** Writing direction. `liprop=dir`. Open union for forward compatibility. */
-  dir?: "ltr" | "rtl" | (string & {});
+  /** Writing direction. `liprop=dir`. */
+  dir?: "ltr" | "rtl";
 
   /** Name in the language itself. `liprop=autonym`. */
   autonym?: string;

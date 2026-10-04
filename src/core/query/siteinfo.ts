@@ -459,8 +459,26 @@ export interface ApiFileExtension {
  * {@link type} appear only when the component's `extension.json` declares them.
  */
 export interface ApiSiteExtension {
-  /** Component class, e.g. `skin`, `media`, `parserhook`, `other`. Open union. */
-  type: string;
+  /**
+   * Component class. The names MediaWiki has display labels for are
+   * `specialpage`, `editor`, `wikifamily`, `parserhook`, `variable`, `media`,
+   * `antispam`, `skin`, `api` and `other`, but the value is never validated
+   * against them: a component declares its own `type` in `extension.json`,
+   * `$wgExtensionCredits` entries pass through as written, and the
+   * `ExtensionTypes` hook can add further names — **open union**.
+   */
+  type:
+    | "specialpage"
+    | "editor"
+    | "wikifamily"
+    | "parserhook"
+    | "variable"
+    | "media"
+    | "antispam"
+    | "skin"
+    | "api"
+    | "other"
+    | (string & {});
 
   /** Display name. */
   name?: string;

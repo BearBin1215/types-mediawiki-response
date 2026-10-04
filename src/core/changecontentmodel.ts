@@ -6,7 +6,7 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Changecontentmodel
  */
-import type { ContentModel, SuccessResult } from "../common";
+import type { ContentModel } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Response of `action=changecontentmodel`. */
@@ -14,7 +14,7 @@ export interface ApiChangeContentModelResponse extends ApiEnvelope {
   /** Result of `action=changecontentmodel`. */
   changecontentmodel: {
     /** `Success` when the model was changed. */
-    result: SuccessResult;
+    result: "Success";
 
     /** Page title. */
     title: string;

@@ -92,7 +92,8 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 
 - 字段默认可选（`?`）；仅当基线源码对该形状无条件写入、且各版本实测恒定才必选。合并视图（`ApiPage`/`ApiQueryResult`）成员一律可选。
 - 扩展点留可声明合并的空 interface，别用 `Record<string, unknown>` 之类封死。
-- 字符串枚举用开放联合 `'known' | … | (string & {})`。
+- **字符串枚举先定开放还是封闭**：集合由注册表 / 钩子 / 站点配置 / 外部规范决定 → 开放联合 `'known' | … | (string & {})`，并在 JSDoc 里点名该机制；由核心发射代码硬编码、无钩子可改 → **封闭联合**（只列真实值），封闭前回源码核实穷尽、把依据记进 `dev-docs/authoring.md` §6。多版本包取**所有支持版本的并集**。
+- **共享类型要逐点核对值域**：同一概念可共用（`WatchlistExpiry` 供 `block`/`unblock`/`userrights` 用，见「配置依赖 · 同族字段值域集中」），但每个使用点须为相同值域或仅安全放宽；某点明显更窄（可穷尽）时就地写窄联合（`action=edit` 的 `watchlistexpiry` 用 `Timestamp` 而非 `WatchlistExpiry`）。宽别名不能替代逐字段判断——`(string & {})` 会把各字段的拼写检查与穷尽性一起抹掉。
 - 断言用手写 `satisfies` 样本保字面量精度；导入的 JSON fixture 已被拓宽，只做结构校验。
 - 必选性用契约断言钉住（`expectTypeOf<T>().toHaveProperty('x').toEqualTypeOf<…>()`）：`satisfies` 样本对可选字段一样通过，证明不了必选。
 - 别用 JSDoc 复述必选性（不写“always present”）：无 `?` 即事实；仅当兄弟字段被 `*prop` 门控时，在类型 docstring 里点一次。
@@ -123,5 +124,5 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 - **门控键->可选**：配置项影响字段是否出现时一律声明可选，不按默认值收紧。
 - **配置直传对象->放宽空值**：`$config->get(...)` 直接塞进响应的对象，值类型写 `Record<…> | unknown[]`（判据同「fv2 线格式」的 map 标注）。
 - **无条件写入->必选，逐层判**：只看“直接写该键的那段发射代码”，外层容器键可选不向下传播；合并视图（`ApiPage`/`ApiQueryResult`）成员一律可选只限其自身，其下挂的具体子对象/行对象仍按无条件写入判必选。仅 `*prop` 门控或数据存在性分支才降为可选。
-- **配置枚举->开放联合**：`'核心默认值' | (string & {})`，核心值只作 autocomplete；跨扩展的提成命名类型 + `XxxExtension` 增广口。
+- **配置枚举->开放联合**：`'核心默认值' | (string & {})`，核心值只作 autocomplete；跨扩展的提成命名类型 + `XxxExtension` 增广口。非配置枚举按「建模与断言」的开放 / 封闭判据定，别一律开放（判据见 `dev-docs/authoring.md` §3.10）。
 - **同族字段值域集中**：同一配置门控的字段（如 `watchlistexpiry`）共用一个共享类型，不在各模块各写一遍。
