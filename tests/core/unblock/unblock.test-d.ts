@@ -3,7 +3,7 @@
  * fixture). See `info.test-d.ts` for the recipe.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiUnblockResponse, ApiUnblockResult } from "../../../src";
+import type { ApiUnblockResponse, ApiUnblockResult, WatchlistExpiry } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import unblockFixture from "../../fixtures/core/unblock/unblock.json";
 
@@ -13,6 +13,11 @@ export const unblockSample = {
 
 // fv2 asymmetry: unblock reports `userid` (lowercase).
 expectTypeOf<ApiUnblockResult>().toHaveProperty("userid").toEqualTypeOf<number>();
+
+// `watchlistexpiry` is `null` when the page is not actually watched.
+expectTypeOf<ApiUnblockResult>()
+  .toHaveProperty("watchlistexpiry")
+  .toEqualTypeOf<WatchlistExpiry | undefined>();
 
 expectTypeOf<ExtraKeys<typeof unblockFixture, keyof ApiUnblockResponse>>().toEqualTypeOf<never>();
 expectTypeOf<

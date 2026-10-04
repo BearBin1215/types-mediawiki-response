@@ -29,6 +29,12 @@ export type Expiry = Timestamp | "infinity";
 export type BlockExpiry = Timestamp | "infinite";
 
 /**
+ * Expiry of a watch: a timestamp, or `null` when the page is not watched or
+ * the watch is permanent.
+ */
+export type WatchlistExpiry = Timestamp | null;
+
+/**
  * A block of plain text (as opposed to HTML), e.g. a TextExtracts excerpt
  * requested with `explaintext`. Kept distinct from HTML-bearing string fields.
  */
@@ -97,7 +103,7 @@ export interface ApiWatchlistLabel {
  * promote their own models by augmenting {@link ContentModelExtension}
  * (e.g. `MassMessageListContent` from the MassMessage pack); consumers may
  * augment the same interface for site-specific models registered through
- * `$wgContentModels`.
+ * `$wgContentHandlers`.
  */
 export type ContentModel =
   | "wikitext"
@@ -116,7 +122,7 @@ export type ContentModel =
  * {@link ContentModel}.
  *
  * @example
- * // A site-specific model registered through $wgContentModels:
+ * // A site-specific model registered through $wgContentHandlers:
  * declare module "types-mediawiki-response" {
  *   interface ContentModelExtension {
  *     MyModel: "my-model";

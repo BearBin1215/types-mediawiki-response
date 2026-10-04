@@ -7,7 +7,7 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Block
  */
-import type { Timestamp } from "../common";
+import type { WatchlistExpiry } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** The `unblock` object of an `action=unblock` response. */
@@ -28,11 +28,10 @@ export interface ApiUnblockResult {
   watchuser: boolean;
 
   /**
-   * Expiry applied to the watched user page, present only when the request
-   * passed `watchlistexpiry` with `watchuser`; `null` when the page is not
-   * actually watched.
+   * Expiry applied to the watched user page, present only when `watchuser=1`
+   * took effect.
    */
-  watchlistexpiry?: Timestamp | null;
+  watchlistexpiry?: WatchlistExpiry;
 }
 
 /** Response of `action=unblock`. */

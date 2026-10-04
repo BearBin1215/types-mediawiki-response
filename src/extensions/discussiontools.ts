@@ -27,7 +27,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:DiscussionTools
  */
-import type { Flag, SuccessStatus, Timestamp } from "../common";
+import type { Flag, SuccessStatus, Timestamp, WatchlistExpiry } from "../common";
 import type { ApiEnvelope } from "../envelope";
 import type { ApiParse } from "../core/parse";
 import type { ApiThankResult } from "./thanks";
@@ -340,6 +340,6 @@ export interface ApiDiscussionToolsEditResponse extends ApiEnvelope {
     watched?: boolean;
 
     /** When that watch expires; `null` for a permanent watch. */
-    watchlistexpiry?: Timestamp | null;
+    watchlistexpiry?: WatchlistExpiry;
   };
 }

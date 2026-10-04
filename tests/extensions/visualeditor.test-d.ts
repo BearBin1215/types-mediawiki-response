@@ -66,6 +66,25 @@ export const newPageSample = {
   },
 } satisfies ApiVisualEditorResponse;
 
+// An anonymous request has no applicable save-form fields, so both maps are `[]`.
+export const anonMetadataSample = {
+  batchcomplete: true,
+  visualeditor: {
+    result: "success",
+    notices: [],
+    copyrightWarning: "",
+    checkboxesDef: [],
+    checkboxesMessages: [],
+    protectedClasses: "",
+    basetimestamp: "+00:00:00:00:00:00",
+    starttimestamp: "2026-10-04T13:44:50Z",
+    oldid: 1,
+    blockinfo: null,
+    wouldautocreate: false,
+    canEdit: true,
+  },
+} satisfies ApiVisualEditorResponse;
+
 // `paction=save` returns the page frame with the saved-revision fields.
 export const saveSample = {
   batchcomplete: true,
@@ -120,6 +139,13 @@ expectTypeOf<ApiVisualEditorResponse["visualeditor"]>()
 expectTypeOf<ApiVisualEditorResponse["visualeditor"]>()
   .toHaveProperty("copyrightWarning")
   .toEqualTypeOf<string>();
+// The save-form field maps are empty PHP maps, so `[]` for an anonymous user.
+expectTypeOf<ApiVisualEditorResponse["visualeditor"]>()
+  .toHaveProperty("checkboxesDef")
+  .toEqualTypeOf<Record<string, ApiVisualEditorCheckboxDef> | unknown[]>();
+expectTypeOf<ApiVisualEditorResponse["visualeditor"]>()
+  .toHaveProperty("checkboxesMessages")
+  .toEqualTypeOf<Record<string, string> | unknown[]>();
 expectTypeOf<ApiVisualEditorResponse["visualeditor"]>()
   .toHaveProperty("starttimestamp")
   .toEqualTypeOf<string>();
@@ -167,11 +193,10 @@ expectTypeOf<
 expectTypeOf<
   ExtraKeys<typeof parseFixture.visualeditor, keyof ApiVisualEditorResponse["visualeditor"]>
 >().toEqualTypeOf<never>();
+type VisualEditorCheckboxesDef = Exclude<
+  NonNullable<ApiVisualEditorResponse["visualeditor"]>["checkboxesDef"],
+  unknown[]
+>;
 expectTypeOf<
-  ExtraKeys<
-    NonNullable<
-      NonNullable<ApiVisualEditorResponse["visualeditor"]>["checkboxesDef"]
-    >["wpMinoredit"],
-    keyof ApiVisualEditorCheckboxDef
-  >
+  ExtraKeys<VisualEditorCheckboxesDef["wpMinoredit"], keyof ApiVisualEditorCheckboxDef>
 >().toEqualTypeOf<never>();

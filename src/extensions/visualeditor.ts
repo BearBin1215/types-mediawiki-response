@@ -16,9 +16,11 @@
  * * `templatesused` → `visualeditor` is a bare HTML **string** (a
  *   `<div class="templatesUsed">` block), not the usual object.
  *
- * `notices` and `blockinfo` show the two classic PHP-to-JSON traps: `notices` is
- * a message-keyed map once populated but an empty **array** when there are none,
- * and `blockinfo` is `null` rather than absent for an unblocked user.
+ * `notices`, `checkboxesDef`/`checkboxesMessages` and `blockinfo` show the
+ * classic PHP-to-JSON traps: each map is keyed once populated but an empty
+ * **array** when there is nothing to show (an anonymous request has no
+ * applicable save-form fields), and `blockinfo` is `null` rather than absent
+ * for an unblocked user.
  *
  * `action=visualeditoredit` requires a `paction` parameter selecting the
  * operation (`save`, `diff`, `serialize`, `serializeforcache`). `save` returns
@@ -32,7 +34,7 @@
  *
  * @see https://www.mediawiki.org/wiki/Extension:VisualEditor
  */
-import type { Flag, SuccessStatus, Timestamp } from "../common";
+import type { Flag, SuccessStatus, Timestamp, WatchlistExpiry } from "../common";
 import type { ApiEditResult } from "../core/edit";
 import type { ApiBlockInfo } from "../core/query/users";
 import type { ApiEnvelope } from "../envelope";
@@ -143,7 +145,7 @@ export interface ApiVisualEditorPageFrame {
   watched?: boolean;
 
   /** When that watch expires; `null` when permanent. */
-  watchlistexpiry?: Timestamp | null;
+  watchlistexpiry?: WatchlistExpiry;
 
   /** HTML diff, from `visualeditoredit` `paction=diff`. */
   diff?: string;
@@ -183,11 +185,17 @@ export interface ApiVisualEditorResponse extends ApiEnvelope {
     /** Copyright warning HTML; `""` when none applies. */
     copyrightWarning: string;
 
-    /** Definitions of the save-form fields, keyed by element id. */
-    checkboxesDef: Record<string, ApiVisualEditorCheckboxDef>;
+    /**
+     * Definitions of the save-form fields, keyed by element id. An empty PHP
+     * map, so `[]` when no field applies to the requesting user.
+     */
+    checkboxesDef: Record<string, ApiVisualEditorCheckboxDef> | unknown[];
 
-    /** Plain text of the messages referenced by `checkboxesDef`. */
-    checkboxesMessages: Record<string, string>;
+    /**
+     * Plain text of the messages referenced by `checkboxesDef`. An empty PHP
+     * map, so `[]` when there are no messages.
+     */
+    checkboxesMessages: Record<string, string> | unknown[];
 
     /** CSS classes for protection state, joined into one string (`""` when none). */
     protectedClasses: string;

@@ -9,7 +9,7 @@
  *
  * @see https://www.mediawiki.org/wiki/API:User_group_membership
  */
-import type { Expiry } from "../common";
+import type { WatchlistExpiry } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** Response of `action=userrights`. */
@@ -37,10 +37,9 @@ export interface ApiUserrightsResponse extends ApiEnvelope {
     watchuser?: boolean;
 
     /**
-     * Expiry of the watch on the user's user page — an ISO 8601 timestamp or
-     * the `infinity` sentinel. Present only when `watchuser=1` took effect and a
-     * `watchlistexpiry` was supplied; the value is read back from the watchlist.
+     * Expiry of the watch on the user's user page, present only when
+     * `watchuser=1` took effect.
      */
-    watchlistexpiry?: Expiry;
+    watchlistexpiry?: WatchlistExpiry;
   };
 }

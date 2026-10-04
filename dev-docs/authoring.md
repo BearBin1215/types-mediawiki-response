@@ -79,7 +79,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 - **同一数组混入别的行生产者**：`action=purge`/`import` 的 invalid 标题行、`action=edit` 的 `result:"Failure"` 分支、`meta=sitematrix` 的 `array_intersect_key`、`action=shortenurl` 的 QR 分支。
 - **行级门控启发式过头**：一个 `if` 里连着写好几个键时会被当成「整行条件」而误判无条件（`general` 的 `favicon`/`imagewhitelistenabled`）。
-- **配置直传的 map**：`general.galleryoptions` 的成员、SBOM `authors[]`（composer 路径原样透传，不保证 `name`）。
+- **配置直传的 map**：SBOM `authors[]`（composer 路径原样透传，不保证 `name`）、`general.uploaddialog`。**反向陷阱**：`general.galleryoptions` 看着也是配置直传，实则 `SetupDynamicConfig.php` 在装载完 LocalSettings 后用 `$wgGalleryOptions += […]` 补齐全套默认键——站点写 `$wgGalleryOptions = []` 实测仍发满七个键。这类「setup 期回填的 map」成员是真必选，判据要看 `+=` / `??=` 回填点，而不是只看发射处的 `$config->get()`。
 - **字面量自身的键集会随版本漂移**：某发射器在当前版本无条件写 N 个键，**不等于这 N 个键在 1.39–1.47 都有**——要逐版本比**发射函数的那段字面量**，而非只看「该版本有无条件写入点」。
 
 两条必做的反验：**必选化要拿最小参数重跑 + 换一台配置不同的站点**（只靠最大化语料区分不了"core 无条件写"与"请求恰好把这些 prop 全开了"）；自写的逐版本存在性脚本要防**路径前缀不一致**（不同快照目录可能分别以 `v143/`、`v147/` 打头，拿基线路径去其余版本查同一键会造假警报）。
@@ -179,6 +179,36 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **别因"抓不到样本"就不建模，先想能不能铺垫**。
 - 后版本才有的字段标 `@since MediaWiki X.Y`；版本事实走标签，叙述句不重复。
 
+### 3.9 配置依赖与站点差异
+
+同一模块在不同 `$wg*` 下会给出不同形状，类型不能只按基线站的默认值建模。统一口径见 AGENTS「编写规范 · 配置依赖」，本节记判据、成因与实测。
+
+**四类影响、四种口径**（判据都在源码发射处，不在字段名）：
+
+1. **门控键**：配置包住单个键 → 可选。`imagewhitelistenabled`/`externalimages` 由 `$wgAllowExternalImages`/`AllowExternalImagesFrom`/`EnableImageWhitelist` 决定（`ApiQuerySiteInfo::appendGeneralInfo`）；`watchlistlabels` 由 `$wgEnableWatchlistLabels`；`actionrestrictions` 由 `$wgEnablePartialActionBlocks`（1.39–1.44，1.45 起无条件）。
+2. **配置直传对象**：值类型须放宽空值，判据是发射处有无显式 map 标注（见下）。
+3. **配置枚举**：`$wgRestrictionLevels`/`$wgContentHandlers` 等决定取值集合 → 开放联合，核心默认值只作 autocomplete。
+4. **配置值**：`$wgShowHostnames` 决定 `dbrepllag[].host` 是空串还是主机名（键恒在、值变）→ 用值联合，不用可选。
+
+**空 map 的线格式取决于发射处（踩坑成因）**：`ApiResult` 对显式标为 map 的字段（`setArrayType(..., 'kvp'/'BCassoc')`、`META_TYPE => 'assoc'`）把空 PHP 数组序列化成 `{}`；未标注的直传则与空数组一样是 `[]`。实测（1.46，`formatversion=2`）：
+
+| 字段                     | 发射处                                           | 配置置空后          |
+| ------------------------ | ------------------------------------------------ | ------------------- |
+| `general.magiclinks`     | `appendGeneralInfo` 直传，无标注                 | `[]`                |
+| `query.uploaddialog`     | `appendUploadDialog` 直传，无标注                | `[]`                |
+| `general.galleryoptions` | 直传，但 `SetupDynamicConfig` 用 `+=` 回填默认键 | 至少 7 键（永不空） |
+| `query.languagevariants` | `setArrayType(..., 'kvp', 'code')`               | `{}`                |
+| `userinfo.ratelimits`    | 标为 map                                         | `{}`                |
+
+**子对象必选性容易漏（不限 siteinfo）**：判据是“直接写该键的那段发射代码”，别因外层容器键可选（`ApiQueryResult.restrictions?`、`ApiQueryResult.userinfo?`）就把里层整片放宽。实测恒定的有 `restrictions.{types,levels,cascadinglevels,semiprotectedlevels}`、`rightsinfo.{url,text}`、`languages[].{code,bcp47,name}`、`autocreatetempuser.enabled`、`showhooks[].{name,subscribers}`（1.43 与 1.46），以及 `meta=userinfo` 的 `id`/`name`（`ApiQueryUserInfo.php:117-118` 无条件写）。
+
+**同族字段的值域与必选性要一起核**：`watchlistexpiry` 有两条产出路径，判据是写入点用哪个返回值——
+
+- `getWatchlistExpiry()` 返回 `?string`（ISO 时间戳或 `null`；无限期关注在 DB 里是 `null` 并被过滤）。直接赋值的 `action=block`（1.45+ 恒出现；1.39–1.44 仅当 `$wgWatchlistExpiry` 开且传了 `watchlistexpiry`）、`action=unblock`、`action=userrights` 值域是 `Timestamp | null`；`if` 过滤过 `null` 的 `action=edit` 是 `Timestamp`；`prop=info` 走 `WatchedItem::getExpiry(TS::ISO_8601)`，也是 `Timestamp`。
+- `getExpiryFromParams()` 在 **1.45+** 恒返回 `ApiResult::formatExpiry(...)`（对 `null`/空串返回哨兵 `'infinity'`，恒真），故 `action=block` 的 `if ($watchlistExpiry)` 守卫在 1.45+ 永远通过 → 该键恒出现（未关注时为 `null`）；**1.39–1.44 该方法在配置关或未传参时返回 `null`**，守卫不通过、整键缺省（1.43 fixture 即如此）。别按“传了参数才有”建模。`action=watch` 的 `expiry` 用 `Expiry`（实测 `1 week` → ISO 时间戳、`infinite` → `'infinity'`）。
+
+**只影响请求参数的配置别动类型**：`$wgMiserMode`、`$wgRateLimits` 之类只在 `getAllowedParams()` 里改参数可用性 / 帮助文本，响应形状不变（`$wgMiserMode` 本身只体现为 `general.misermode` 的值）。
+
 ---
 
 ## 4. 维护任务（How-to）
@@ -235,6 +265,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 - **内联对象类型里别写 `{@link}`**：`X & { … }` 匿名类型的兄弟字段无法被 TSDoc 寻址，TypeDoc 报 "link cannot be resolved"。要么提成具名 interface 再链接，要么改成代码字体。（typedoc 0.28.20 实测：加 `validation: { invalidLink: true }` 对断链**不报警**，别指望它当门禁；断链目前只能靠人工核对产物。）
 - **`{@link}` 按全项目符号名解析，不要求本文件 import**：未导入的跨文件引用（`options.ts` 声明注释里引 `ApiErrorResponse`/`ApiPage`）、跨扩展包（discussiontools 引 thanks 的 `ApiThankResult`）、同接口裸成员（`{@link cancreate}`）与成员路径（`{@link ApiMessage.params}`）实测都出链接。断链不报警也不留痕：未解析的 `{@link}` 渲染成裸名，与普通文本无法区分，`validation: { invalidLink: true }` 同样不报警（均 typedoc 0.28.20 实测）；核对链接只能看产物里目标名是否成了 `[名](路径)`。不可寻址的只有内联对象类型/匿名交集的兄弟字段（见上条）。另注意核心 barrel 各文件的文件头注释不进产物（typedoc 只把入口文件的注释当 module comment；扩展文件是独立入口，其文件头才渲染），核心文件模块 docstring 里的跨包名用代码字体是源码与消费方 IDE 悬浮的观感选择，与 TypeDoc 无关。
+- **具名共享类型承载的语义不在字段处复述**：`WatchlistExpiry` 的 `null` 含义只写在类型上，`block`/`unblock`/`userrights` 的字段 JSDoc 不再重复；反之**内联联合**（`string[] | null`，如 `pagerestrictions`/`namespacerestrictions`）没有承载处，必须就地说明 `null` 的来历。同理别复述必选性（无 `?` 即事实）。字段 JSDoc 只留“该字段是什么”与类型表达不了的条件（`*prop`/请求参数门控）。
 - 示例里的日期 / 时间戳用固定中性值（如 `2024-01-15` 一族），不用采集当周的日期。
 - **首页悬浮演示的内容不是手写的**：`docs/scripts/generate-hero.ts` 构建时对展示代码跑真实编译器 quickinfo，从 `src/` 取签名与 JSDoc 注入入库的生成文件；改 `src/` 类型后 docs 构建会重算，snippet 与类型失配时构建直接失败，CI 用 `git diff --exit-code` 校验产物未过期。
 - **push 自动部署暂缓**：仓库未公开，`docs.yml` 仅 `workflow_dispatch`。
@@ -264,6 +295,9 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 - **改完配置要 `apache2ctl -k graceful`**：APCu 缓存了扩展的类映射，只改 `LocalSettings.php` 会让请求拿到旧映射而 500（`Class ... not found`，而 CLI 下一切正常，极具迷惑性）。改 PHP 配置务必先 `php -l` 校验。
 - **配置键先在扩展源码里核实再写**（判据是 `$this->getConfig()->get('…')`），凭印象会写出不存在的键并静默无效；`$wgCaptchaClass` 之类的配置要写 FQCN。
+- **配置名有版本有效期**：写进 JSDoc 的 `$wg…` 会随上游删除而变成过期断言。`$wgEnablePartialActionBlocks` 就是 1.39–1.44 有、1.45 起没了（部分封禁转为无条件），逐版本核存在性用本地镜像只读跑：`docker run --rm --entrypoint sh mediawiki:1.45 -c 'grep -rl <Name> /var/www/html/includes | wc -l'`。
+- **本地 `mw-refs` 快照会落后于上游**：某键在本地全仓 grep 不到不等于不存在（`$wgCheckUserDisableCheckUserAPI` 本地那份就查不到，而 REL1_45/1_46/master 三支都有、`extension.json` 默认 `true`）。下"配置不存在"的结论前先拿 `raw.githubusercontent.com/…/<branch>/` 的对应文件对表。
+- **改 `LocalSettings.php` 后别只 `graceful`**：官方镜像 `opcache.revalidate_freq=60`，60 秒内仍读旧编译的配置文件，症状是"配置写了却没生效"。要么 `apache2ctl -k restart`，要么**同时改一个可见值（如 `$wgSitename`）当对照**，先证明写入通路正常，再判读被检配置的行为。
 - **有的模块默认关闭**：`action=echocreateevent` 需 `$wgEchoEnableApiEvents`；`list=checkuser` 自 1.45 起默认被 `$wgCheckUserDisableCheckUserAPI` 关掉；Linter 需授 `linter` 权限 + `$wgParsoidSettings['linting'] = true`。
 - **写操作会改状态，探针顺序要讲究**：`echomarkread`/`echomarkseen`/`echomute` 必须排在读列表之后；有的探针必须匿名（titleblacklist——sysop 有 `tboverride`，一律回 `ok`）。
 - **追加 LocalSettings 片段的工具必须带尾部换行**，否则下一个片段与上一行粘连，注释符吃掉后续语句、症状漂移到别处（表现为「扩展装了但模块未注册」）。判重靠标记注释，删除块时按「本标记 → 下一个标记」区间删。
@@ -286,6 +320,17 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - 合并视图成员、`*prop` 门控字段、以及 `action=import`/`imagerotate`/`purge`/`setnotificationtimestamp` 混入的 invalid/missing 条目——保持可选是有意为之。
 - 刻意保持宽化的两处：`globaluserinfo` 的 `unattached[].editcount` 保持 `number`（emitter 未 `intval()`，见到实物再收窄）；`parse` 的 `extensionData` 按 ParserCache 测试数据近似为 `Record<string, unknown> | unknown[]`。
 - 版本边界结论已在类型里标 `@since`，不要改回必选：`prop=tocdata` 仅 1.43+、`parse.sections[].linkAnchor` 1.40+、`action=userrights` 的 `watchuser` 1.41 起才回显、`action=visualeditor` 的 `wouldautocreate` 1.41+。
+
+### 配置依赖（已实测，勿再按“可能缺失”处理）
+
+- `meta=siteinfo` 子组里 `restrictions`（四键）、`rightsinfo`（两键）、`languages[]`（三键）、`autocreatetempuser.enabled`、`showhooks[]`（两键）在 1.43 与 1.46 恒在；`meta=userinfo` 的 `id`/`name` 无条件写入——均按必选处理。
+- `general.magiclinks`、`query.uploaddialog` 是未标注 map 的直传，站点置空时回 `[]`；`general.galleryoptions` 被 `SetupDynamicConfig` 用 `+=` 回填，永不空。
+- `watchlistexpiry` 值域恒为 `Timestamp | null`（直接赋值处）或 `Timestamp`（过滤 `null` 处），不含 `infinity`。
+- `action=block` 的 `actionrestrictions`（1.45+ 恒出现，值 `string[] | null`）与 `additionalBlocksStatuses`（1.46+ 恒出现）在对应版本无条件写入；`watchlistexpiry` 自 **1.45** 起恒出现（值 `Timestamp | null`），1.39–1.44 仅当 `$wgWatchlistExpiry` 开且传了 `watchlistexpiry`（1.43 fixture 无此键）。成因是 `getExpiryFromParams()` 1.45+ 恒返回哨兵 `'infinity'`（恒真），此前返回 `null`。`actionrestrictions` 仅 1.39–1.44 受 `$wgEnablePartialActionBlocks` 门控。
+
+### 扩展包 map 字段（已核，勿再按“空数组”重查）
+
+`src/extensions/` 里值类型为 `Record<...>` 的字段均已确认安全：Babel（`META_TYPE => 'assoc'`；实测无框用户 `{}`、`{{#babel:en-1|de-2}}` → `{de:"2",en:"1"}`）、TemplateData `pages`（`addValue(...,(object)[])` + `setArrayType('kvp','id')`；实测 `{}`）、Linter `totals`（`setArrayType('assoc')`；实测 21 类目齐全）、DiscussionTools `subscriptions`（`addArrayType('kvp','name')`；实测 `{}`）、VisualEditor `editcheckreferenceurl`（恒 1 键 `[$url => …]`）、Echo `seenTime`（`sections` 参数有非空默认值；实测平铺为 map、分组为每节时间戳）、Wikibase `ApiEntityUsageMap`（`setArrayType('kvp','id')` 且 `if ($entry)` 非空才 flush，空时整键缺省而非 `[]`）。**例外**：VisualEditor `checkboxesDef`/`checkboxesMessages` 无 map 标注——匿名请求实测为 `[]`、登录态为对象，故值联合已带 `unknown[]`。
 
 ### 未建模 / 不打算做
 

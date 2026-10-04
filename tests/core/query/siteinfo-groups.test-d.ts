@@ -8,13 +8,17 @@
  */
 import { expectTypeOf } from "expect-type";
 import type {
+  ApiAutoCreateTempUser,
   ApiAutopromoteConditions,
   ApiAutopromoteOnce,
   ApiDbReplLag,
   ApiInterwikiMapEntry,
   ApiQueryResponse,
   ApiQueryResult,
+  ApiRightsInfo,
+  ApiShowHook,
   ApiSiteExtension,
+  ApiSiteLanguage,
   ApiSiteRestrictions,
   ApiSiteSkin,
   ApiSiteStatistics,
@@ -93,9 +97,7 @@ export const sample = {
 } satisfies ApiQueryResponse;
 
 // `levels` is not a flat string list: FlaggedRevs nests a protection class.
-expectTypeOf<ApiSiteRestrictions>()
-  .toHaveProperty("levels")
-  .toEqualTypeOf<(string | string[])[] | undefined>();
+expectTypeOf<ApiSiteRestrictions>().toHaveProperty("levels").toEqualTypeOf<(string | string[])[]>();
 // Hyphenated group keys are modeled verbatim.
 expectTypeOf<"add-self" extends keyof ApiUserGroup ? true : false>().toEqualTypeOf<true>();
 // Config groups return real booleans, so `false` is representable.
@@ -133,3 +135,37 @@ expectTypeOf<ApiInterwikiMapEntry>()
 expectTypeOf<ApiInterwikiMapEntry>()
   .toHaveProperty("extralanglink")
   .toEqualTypeOf<true | undefined>();
+
+// `siprop=languages` (`code`/`bcp47`/`name`) and `siprop=showhooks`
+// (`name`/`subscribers`) have no fixture, so they get hand-written samples.
+export const languagesSample = {
+  batchcomplete: true,
+  query: { languages: [{ code: "en", bcp47: "en", name: "English" }] },
+} satisfies ApiQueryResponse;
+
+export const showHooksSample = {
+  batchcomplete: true,
+  query: {
+    showhooks: [{ name: "ParserFirstCallInit", subscribers: ["Foo::onParserFirstCallInit"] }],
+  },
+} satisfies ApiQueryResponse;
+
+expectTypeOf<ApiSiteLanguage>().toHaveProperty("code").toEqualTypeOf<string>();
+expectTypeOf<ApiSiteLanguage>().toHaveProperty("bcp47").toEqualTypeOf<string>();
+expectTypeOf<ApiSiteLanguage>().toHaveProperty("name").toEqualTypeOf<string>();
+
+expectTypeOf<ApiShowHook>().toHaveProperty("name").toEqualTypeOf<string>();
+expectTypeOf<ApiShowHook>().toHaveProperty("subscribers").toEqualTypeOf<string[]>();
+
+// The remaining groups' keys are written unconditionally, so they are required.
+expectTypeOf<ApiSiteRestrictions>().toHaveProperty("types").toEqualTypeOf<string[]>();
+expectTypeOf<ApiSiteRestrictions>().toHaveProperty("cascadinglevels").toEqualTypeOf<string[]>();
+expectTypeOf<ApiSiteRestrictions>().toHaveProperty("semiprotectedlevels").toEqualTypeOf<string[]>();
+
+expectTypeOf<ApiRightsInfo>().toHaveProperty("url").toEqualTypeOf<string>();
+expectTypeOf<ApiRightsInfo>().toHaveProperty("text").toEqualTypeOf<string>();
+
+expectTypeOf<ApiAutoCreateTempUser>().toHaveProperty("enabled").toEqualTypeOf<boolean>();
+expectTypeOf<ApiAutoCreateTempUser>()
+  .toHaveProperty("matchPatterns")
+  .toEqualTypeOf<string[] | undefined>();

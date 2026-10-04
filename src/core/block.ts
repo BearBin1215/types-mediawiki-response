@@ -9,7 +9,7 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Block
  */
-import type { BlockExpiry, Timestamp } from "../common";
+import type { BlockExpiry, Timestamp, WatchlistExpiry } from "../common";
 import type { ApiEnvelope } from "../envelope";
 
 /** The `block` object of an `action=block` response. */
@@ -54,22 +54,20 @@ export interface ApiBlockResult {
   partial: boolean;
 
   /** Page restrictions of a partial block; `null` when sitewide. */
-  pagerestrictions: unknown;
+  pagerestrictions: string[] | null;
 
   /** Namespace restrictions of a partial block; `null` when sitewide. */
-  namespacerestrictions: unknown;
+  namespacerestrictions: number[] | null;
+
+  /** Expiry applied to the watched user page. */
+  watchlistexpiry?: WatchlistExpiry;
 
   /**
-   * Expiry applied to the watched user page, present only when the request
-   * passed `watchlistexpiry`; `null` when the page is not actually watched.
+   * Restricted actions of a partial action block; `null` when the block
+   * restricts no actions. Only emitted on MediaWiki 1.39–1.44 when
+   * `$wgEnablePartialActionBlocks` is on.
    */
-  watchlistexpiry?: Timestamp | null;
-
-  /**
-   * Restricted actions of a partial action block; only emitted when
-   * `$wgEnablePartialActionBlocks` is enabled.
-   */
-  actionrestrictions?: string[];
+  actionrestrictions?: string[] | null;
 
   /**
    * When the block was applied, in ISO 8601.

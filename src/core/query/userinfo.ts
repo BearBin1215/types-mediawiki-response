@@ -34,10 +34,10 @@ export interface ApiRateLimit {
 /** The `userinfo` object of a `meta=userinfo` response. */
 export interface ApiUserInfo extends ApiUserCore {
   /** User id; `0` for anonymous users. */
-  id?: number;
+  id: number;
 
   /** User name or IP address. */
-  name?: string;
+  name: string;
 
   /** `true` for an anonymous (IP) session. A {@link Flag}. */
   anon?: Flag;

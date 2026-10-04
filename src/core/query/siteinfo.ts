@@ -246,12 +246,12 @@ export interface ApiSiteGeneral {
   favicon?: string;
 
   /**
-   * Host prefixes external images may be loaded from; present only when such an
-   * allow-list applies (`$wgAllowExternalImagesFrom`).
+   * Host prefixes external images may be loaded from; `[""]` when external
+   * images are allowed at large (`$wgAllowExternalImages`).
    */
   externalimages?: string[];
 
-  /** Gallery rendering defaults (`$wgGalleryOptions`). */
+  /** Gallery rendering defaults. */
   galleryoptions: ApiGalleryOptions;
 
   /**
@@ -281,8 +281,11 @@ export interface ApiSiteGeneral {
   /** Whether interwiki prefixes may be used as magic links. A real `boolean`. */
   interwikimagic: boolean;
 
-  /** Magic-link keywords and whether each is enabled. */
-  magiclinks: Record<string, boolean>;
+  /**
+   * Magic-link keywords and whether each is enabled; mirrors
+   * `$wgEnableMagicLinks` verbatim, so an empty set serializes as `[]`.
+   */
+  magiclinks: Record<string, boolean> | unknown[];
 
   /** Method used to look up a user's central account id. */
   centralidlookupprovider: string;
@@ -309,28 +312,31 @@ export interface ApiSiteGeneral {
   "git-hash"?: string;
 }
 
-/** `general.galleryoptions`: the site's `$wgGalleryOptions`. */
+/**
+ * `general.galleryoptions`: the site's `$wgGalleryOptions`, with core's defaults
+ * filled in for any key the site omits.
+ */
 export interface ApiGalleryOptions {
   /** Images per row; `0` lets the skin decide. */
-  imagesPerRow?: number;
+  imagesPerRow: number;
 
   /** Thumbnail width in pixels. */
-  imageWidth?: number;
+  imageWidth: number;
 
   /** Thumbnail height in pixels. */
-  imageHeight?: number;
+  imageHeight: number;
 
   /** Whether captions are length-limited. A real `boolean`. */
-  captionLength?: boolean;
+  captionLength: boolean;
 
   /** Whether file sizes are shown. A real `boolean`. */
-  showBytes?: boolean;
+  showBytes: boolean;
 
   /** Whether dimensions are shown. A real `boolean`. */
-  showDimensions?: boolean;
+  showDimensions: boolean;
 
   /** Gallery layout, e.g. `traditional`, `nolines`, `packed`, `modified-packed`. */
-  mode?: string;
+  mode: string;
 }
 
 /** One entry of `general.imagelimits`: a selectable display size. */
@@ -403,25 +409,25 @@ export interface ApiUserGroup {
  */
 export interface ApiSiteRestrictions {
   /** Restriction kinds, e.g. `create`, `edit`, `move`, `upload`. */
-  types?: string[];
+  types: string[];
 
   /** Selectable protection levels; `""` means unrestricted. */
-  levels?: (string | string[])[];
+  levels: (string | string[])[];
 
   /** Levels that may cascade. */
-  cascadinglevels?: string[];
+  cascadinglevels: string[];
 
   /** Levels treated as semi-protection. */
-  semiprotectedlevels?: string[];
+  semiprotectedlevels: string[];
 }
 
 /** `siprop=rightsinfo`: where to read the site's content-rights statement. */
 export interface ApiRightsInfo {
   /** Rights-page/account URL; empty string when unset (not absent). */
-  url?: string;
+  url: string;
 
   /** Link text override; empty string when unset. */
-  text?: string;
+  text: string;
 }
 
 /** One localized namespace alias (`siprop=namespacealiases`). */
@@ -535,10 +541,10 @@ export interface ApiMagicWord {
 /** One hook and its subscribers (`siprop=showhooks`). */
 export interface ApiShowHook {
   /** Hook name. */
-  name?: string;
+  name: string;
 
   /** `Class::method` handlers registered for it. */
-  subscribers?: string[];
+  subscribers: string[];
 }
 
 /** One database host (`siprop=dbrepllag`). */
@@ -605,13 +611,13 @@ export interface ApiInterwikiMapEntry {
 /** One language entry (`siprop=languages`). */
 export interface ApiSiteLanguage {
   /** Language code. */
-  code?: string;
+  code: string;
 
   /** BCP 47 form of {@link code}. */
-  bcp47?: string;
+  bcp47: string;
 
   /** Localized language name. */
-  name?: string;
+  name: string;
 }
 
 /** One language variant and its fallbacks (`siprop=languagevariants`). */
@@ -676,7 +682,7 @@ export interface ApiAutoCreateTempUser {
    *
    * @since MediaWiki 1.41
    */
-  enabled?: boolean;
+  enabled: boolean;
 
   /**
    * Name patterns reserved for temporary accounts; only when configured.
@@ -857,8 +863,11 @@ declare module "./index" {
     /** General site configuration (`meta=siteinfo`, `siprop=general`). */
     general?: ApiSiteGeneral;
 
-    /** Upload-dialog config (`siprop=uploaddialog`). */
-    uploaddialog?: ApiUploadDialog;
+    /**
+     * Upload-dialog config (`siprop=uploaddialog`), mirroring `$wgUploadDialog`
+     * verbatim; an empty configuration serializes as `[]`.
+     */
+    uploaddialog?: ApiUploadDialog | unknown[];
 
     /**
      * Domains allowed to send authenticated CORS requests, from

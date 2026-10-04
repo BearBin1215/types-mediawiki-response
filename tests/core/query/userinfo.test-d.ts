@@ -56,6 +56,8 @@ export const privateSample = {
 // `uiprop=blockinfo` on a blocked user: the five block markers are real
 // booleans and the expiry sentinel is the literal `infinite`.
 export const blockedSample = {
+  id: 7,
+  name: "BlockedUser",
   blockid: 123,
   blockedby: "Admin",
   blockedbyid: 5,
@@ -106,6 +108,10 @@ expectTypeOf<ApiUserInfo>()
   .toEqualTypeOf<number | string | undefined>();
 
 expectTypeOf<ApiQueryResult>().toHaveProperty("userinfo").toEqualTypeOf<ApiUserInfo | undefined>();
+
+// `id`/`name` are written unconditionally by `meta=userinfo`.
+expectTypeOf<ApiUserInfo>().toHaveProperty("id").toEqualTypeOf<number>();
+expectTypeOf<ApiUserInfo>().toHaveProperty("name").toEqualTypeOf<string>();
 
 expectTypeOf<ExtraKeys<typeof userinfoFixture, keyof ApiQueryResponse>>().toEqualTypeOf<never>();
 expectTypeOf<

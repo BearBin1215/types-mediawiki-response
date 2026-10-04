@@ -24,7 +24,7 @@ export interface ApiBlockRestrictions {
   /** Restricted namespace ids. */
   namespaces?: number[];
 
-  /** Restricted actions; only on wikis with `$wgEnablePartialActionBlocks` enabled. */
+  /** Restricted actions; only on action-type entries. Before MediaWiki 1.45 these require `$wgEnablePartialActionBlocks`. */
   actions?: string[];
 }
 

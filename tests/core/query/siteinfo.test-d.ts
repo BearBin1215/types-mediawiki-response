@@ -8,6 +8,7 @@
  */
 import { expectTypeOf } from "expect-type";
 import type {
+  ApiGalleryOptions,
   ApiImageLimit,
   ApiNamespaceInfo,
   ApiQueryResponse,
@@ -15,6 +16,7 @@ import type {
   ApiSiteGeneral,
   ApiSbom,
   ApiSbomComponent,
+  ApiUploadDialog,
   Timestamp,
 } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
@@ -150,8 +152,18 @@ expectTypeOf<ApiSiteGeneral["wikiid"]>().toEqualTypeOf<string>();
 expectTypeOf<ApiSiteGeneral["time"]>().toEqualTypeOf<Timestamp>();
 expectTypeOf<ApiSiteGeneral["readonly"]>().toEqualTypeOf<boolean>();
 expectTypeOf<ApiSiteGeneral["misermode"]>().toEqualTypeOf<boolean>();
-expectTypeOf<ApiSiteGeneral["magiclinks"]>().toEqualTypeOf<Record<string, boolean>>();
+expectTypeOf<ApiSiteGeneral["magiclinks"]>().toEqualTypeOf<Record<string, boolean> | unknown[]>();
 expectTypeOf<ApiSiteGeneral["favicon"]>().toEqualTypeOf<string | undefined>();
+
+// Core fills in any `$wgGalleryOptions` key the site omits, so all of them arrive.
+expectTypeOf<ApiSiteGeneral["galleryoptions"]>().toEqualTypeOf<ApiGalleryOptions>();
+expectTypeOf<ApiGalleryOptions["imagesPerRow"]>().toEqualTypeOf<number>();
+expectTypeOf<ApiGalleryOptions["imageWidth"]>().toEqualTypeOf<number>();
+expectTypeOf<ApiGalleryOptions["imageHeight"]>().toEqualTypeOf<number>();
+expectTypeOf<ApiGalleryOptions["captionLength"]>().toEqualTypeOf<boolean>();
+expectTypeOf<ApiGalleryOptions["showBytes"]>().toEqualTypeOf<boolean>();
+expectTypeOf<ApiGalleryOptions["showDimensions"]>().toEqualTypeOf<boolean>();
+expectTypeOf<ApiGalleryOptions["mode"]>().toEqualTypeOf<string>();
 expectTypeOf<ApiSiteGeneral["externalimages"]>().toEqualTypeOf<string[] | undefined>();
 expectTypeOf<ApiSiteGeneral["readonlyreason"]>().toEqualTypeOf<string | undefined>();
 expectTypeOf<ApiSiteGeneral["git-hash"]>().toEqualTypeOf<string | undefined>();
@@ -213,3 +225,11 @@ expectTypeOf<
     keyof ApiSbomComponent
   >
 >().toEqualTypeOf<never>();
+
+// --- config-dependent query-level group ---
+
+// `siprop=uploaddialog` is a config passthrough, so it keeps the empty-map
+// (`[]`) case.
+expectTypeOf<ApiQueryResult>()
+  .toHaveProperty("uploaddialog")
+  .toEqualTypeOf<ApiUploadDialog | unknown[] | undefined>();

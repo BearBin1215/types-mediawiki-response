@@ -3,7 +3,7 @@
  * fixture: adding a fresh account to `bot`). See `info.test-d.ts` for the recipe.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiUserrightsResponse } from "../../../src";
+import type { ApiUserrightsResponse, WatchlistExpiry } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import fixture from "../../fixtures/core/userrights/userrights.json";
 
@@ -25,6 +25,11 @@ expectTypeOf<ApiUserrightsResponse["userrights"]>()
 expectTypeOf<ApiUserrightsResponse["userrights"]>()
   .toHaveProperty("watchuser")
   .toEqualTypeOf<boolean | undefined>();
+
+// `watchlistexpiry` is `null` when the target's user page is not watched.
+expectTypeOf<ApiUserrightsResponse["userrights"]>()
+  .toHaveProperty("watchlistexpiry")
+  .toEqualTypeOf<WatchlistExpiry | undefined>();
 
 expectTypeOf<ExtraKeys<typeof fixture, keyof ApiUserrightsResponse>>().toEqualTypeOf<never>();
 expectTypeOf<
