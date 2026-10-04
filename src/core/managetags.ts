@@ -8,7 +8,7 @@
  * @see https://www.mediawiki.org/wiki/API:Managetags
  */
 import type { ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 
 /** `action=managetags` operation. Open union for forward compatibility. */
 export type ApiManageTagsOperation =
@@ -34,7 +34,7 @@ export interface ApiManageTagsResponse extends ApiEnvelope {
     /** Log entry id recorded for the operation. */
     logid?: number;
 
-    /** Non-fatal messages (e.g. a deprecation notice). */
-    warnings?: ApiSpecMessage[];
+    /** Non-fatal messages (e.g. a deprecation notice), shaped per the request's `errorformat`. */
+    warnings?: ApiSpecMessage[] | ApiMessage[];
   };
 }

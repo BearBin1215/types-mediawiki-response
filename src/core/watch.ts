@@ -7,7 +7,7 @@
  * @see https://www.mediawiki.org/wiki/API:Watch
  */
 import type { ApiWatchlistLabel, Expiry, NamespaceIndex, ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiError, ApiMessage } from "../envelope";
 
 /** One watched/unwatched page. */
 export interface ApiWatchEntry {
@@ -34,11 +34,18 @@ export interface ApiWatchEntry {
    */
   expiry?: Expiry;
 
-  /** In-band messages when the watch/unwatch operation failed (pageset mode; the legacy `title` mode dies with a top-level error instead). */
-  errors?: ApiSpecMessage[];
+  /**
+   * In-band messages when the watch/unwatch operation failed (pageset mode; the
+   * legacy `title` mode dies with a top-level error instead). Heterogeneous:
+   * messages raised by the operation itself follow the request's `errorformat`
+   * ({@link ApiSpecMessage} under `bc`, {@link ApiMessage} under a modern one),
+   * while a watchlist-label failure carries the legacy `{ code, info }` shape
+   * under `bc`, and an {@link ApiMessage} under a modern one.
+   */
+  errors?: (ApiSpecMessage | ApiMessage | ApiError)[];
 
-  /** In-band warnings for a failed operation (present when non-empty). */
-  warnings?: ApiSpecMessage[];
+  /** In-band warnings for a failed operation (present when non-empty), shaped per the request's `errorformat`. */
+  warnings?: ApiSpecMessage[] | ApiMessage[];
 
   /**
    * Watchlist labels just saved for this page, echoed back when the request

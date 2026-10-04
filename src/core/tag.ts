@@ -10,7 +10,8 @@
  * @see https://www.mediawiki.org/wiki/API:Tag
  */
 import type { Flag, ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage, ApiMessageParam } from "../envelope";
+import type { ApiBlockInfo } from "./query/users";
 
 /** One targeted entry of an `action=tag` response. */
 export interface ApiTagEntry {
@@ -24,9 +25,9 @@ export interface ApiTagEntry {
   rcid?: number;
 
   /**
-   * Per-target outcome. `ApiTag` sets `success`, `failure`, `skipped` (rate
-   * throttle) or `error` (invalid target id, or the performer is blocked from
-   * the target page). Open union for forward compat.
+   * Per-target outcome: `success`, `failure`, `skipped` (rate throttle) or
+   * `error` (invalid target id, or the performer is blocked from the target
+   * page). Open union for forward compat.
    */
   status: "success" | "failure" | "skipped" | "error" | (string & {});
 
@@ -42,17 +43,45 @@ export interface ApiTagEntry {
   /** Tags removed from this target. */
   removed?: string[];
 
-  /** In-band messages when the target could not be tagged (`failure` only). */
-  errors?: ApiSpecMessage[];
+  /** In-band messages when the target could not be tagged (`failure` only), shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 
   /**
    * On `error` entries the formatted failure message is merged into the entry:
-   * `code` is the message's API code. Rendered per the `errorformat` parameter.
+   * `code` is the message's API code, and the text-bearing keys follow the
+   * request's `errorformat` — `info` under the default (`bc`) format, `text`
+   * (`plaintext`/`wikitext`), `html`, `key`/`params` (`raw`), or none of them
+   * for `none`.
    */
   code?: string;
 
-  /** Message text accompanying `code` (default `errorformat=bc`; other formats emit `text`/`html` or `key`/`params` instead). */
+  /** Message text under the default (`bc`) `errorformat`. */
   info?: string;
+
+  /** Rendered message text (`plaintext`/`wikitext`). */
+  text?: string;
+
+  /** Parsed message HTML (`html`). */
+  html?: string;
+
+  /** i18n message key (`raw`). */
+  key?: string;
+
+  /** i18n message parameters (`raw`). */
+  params?: ApiMessageParam[];
+
+  /**
+   * Structured message data, present under a modern `errorformat` (the
+   * default `bc` format merges it into the entry instead).
+   */
+  data?: { blockinfo?: ApiBlockInfo; [key: string]: unknown };
+
+  /**
+   * Block details, when the performer is blocked from the target page. Under
+   * the default (`bc`) `errorformat` it is merged into the entry itself; a
+   * modern one nests it under {@link ApiTagEntry.data}.
+   */
+  blockinfo?: ApiBlockInfo;
 }
 
 /** Response of `action=tag`. */

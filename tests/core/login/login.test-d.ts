@@ -4,7 +4,7 @@
  * recipe in `info.test-d.ts`.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiLoginResponse } from "../../../src";
+import type { ApiLoginResponse, ApiMessage } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import fixture from "../../fixtures/core/login/login.json";
 
@@ -18,6 +18,15 @@ expectTypeOf<ApiLoginResponse["login"]>()
 expectTypeOf<ApiLoginResponse["login"]>()
   .toHaveProperty("lguserid")
   .toEqualTypeOf<number | undefined>();
+
+// A modern `errorformat` renders `reason` as an `ApiMessage`.
+export const modernFailedSample = {
+  login: { result: "Failed", reason: { code: "login-throttled", text: "…" } },
+} satisfies ApiLoginResponse;
+
+expectTypeOf<ApiLoginResponse["login"]>()
+  .toHaveProperty("reason")
+  .toEqualTypeOf<string | ApiMessage | undefined>();
 
 // The fixture carries the deprecation `warnings` (an envelope fact) + `login`.
 expectTypeOf<ExtraKeys<typeof fixture, keyof ApiLoginResponse>>().toEqualTypeOf<never>();

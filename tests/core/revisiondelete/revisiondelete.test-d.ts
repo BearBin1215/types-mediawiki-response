@@ -32,6 +32,22 @@ export const sample = {
   },
 } satisfies ApiRevisionDeleteResponse;
 
+// A modern `errorformat` renders the in-band messages as `ApiMessage`s.
+export const modernFailureSample = {
+  revisiondelete: {
+    status: "Fail",
+    target: "Revdel target",
+    items: [
+      {
+        status: "Fail",
+        id: 330,
+        errors: [{ code: "permissiondenied", text: "You do not have permission." }],
+      },
+    ],
+    warnings: [{ code: "hookaborted", text: "…" }],
+  },
+} satisfies ApiRevisionDeleteResponse;
+
 // Per-item hide flags are real booleans on the action result.
 expectTypeOf<ApiRevisionDeleteItem>()
   .toHaveProperty("userhidden")

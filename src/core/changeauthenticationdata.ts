@@ -4,7 +4,7 @@
  * token, the `editmyprivateinfo` right, and a fully-configured secondary-provider
  * session. On success `ApiChangeAuthenticationData` emits a single field:
  * `changeauthenticationdata.status` = `success`. Any refusal or incomplete flow
- * is a top-level {@link ApiErrorResponse} (dieStatus / badrequest).
+ * is a top-level `ApiErrorResponse` (dieStatus / badrequest).
  *
  * @see https://www.mediawiki.org/wiki/API:Changeauthenticationdata
  */

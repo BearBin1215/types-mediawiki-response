@@ -12,7 +12,7 @@
  * @see https://www.mediawiki.org/wiki/API:Move
  */
 import type { ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 
 /** One subpage move outcome within `subpages`/`subpages-talk`. */
 export interface ApiMoveSubpage {
@@ -22,14 +22,14 @@ export interface ApiMoveSubpage {
   /** New subpage title, when the subpage moved. */
   to?: string;
 
-  /** Why the subpage did not move, when it failed. */
-  errors?: ApiSpecMessage[];
+  /** Why the subpage did not move, when it failed, shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 }
 
 /** The object form of `subpages`, returned only when the whole move failed. */
 export interface ApiMoveSubpageErrors {
-  /** Why no subpage could be moved. */
-  errors?: ApiSpecMessage[];
+  /** Why no subpage could be moved, shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 }
 
 /** The `move` object of a successful `action=move` response. */
@@ -58,8 +58,8 @@ export interface ApiMoveResult {
   /** Whether the talk-page destination already existed (redirect or not). A real `boolean`. */
   talkmoveoverredirect?: boolean;
 
-  /** Why the talk-page move failed, instead of `talkfrom`/`talkto`. */
-  "talkmove-errors"?: ApiSpecMessage[];
+  /** Why the talk-page move failed, instead of `talkfrom`/`talkto`, shaped per the request's `errorformat`. */
+  "talkmove-errors"?: ApiSpecMessage[] | ApiMessage[];
 
   /**
    * Subpage move outcome (`movesubpages=1`). `formatversion=2` returns either

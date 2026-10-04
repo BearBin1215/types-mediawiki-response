@@ -5,7 +5,7 @@
  * `message`/`messagecode`.
  *
  * These are **in-band** AuthManager outcomes, not a top-level
- * {@link ApiErrorResponse}. `username` appears on `PASS`; `UI`/`RESTART`/
+ * `ApiErrorResponse`. `username` appears on `PASS`; `UI`/`RESTART`/
  * `REDIRECT` outcomes add the `requests` descriptors; `canpreservestate` marks
  * whether state can be kept.
  *

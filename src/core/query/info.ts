@@ -6,6 +6,7 @@
  * @see https://www.mediawiki.org/wiki/API:Info
  */
 import type { ApiWatchlistLabel, ContentFormat, ContentModel, Flag, Timestamp } from "../../common";
+import type { ApiMessageParam } from "../../envelope";
 import type { QueryPage, QueryPageExisting } from "./index";
 
 /** One entry of a page's `protection` array (`inprop=protection`). */
@@ -35,20 +36,26 @@ export interface ApiPageProtection {
 
 /**
  * One permission-check failure reported under `intestactionsdetail=full|quick`.
- * The exact keys depend on the request's `errorformat`.
+ * The text-bearing keys depend on the request's `errorformat`: `text` for
+ * `plaintext`/`wikitext`, `html` for `html`, `key`/`params` for `raw`, and none
+ * of them for `none`. A request using the default (`bc`) format is rendered as
+ * `plaintext` here.
  */
 export interface ApiActionPermission {
   /** Machine-readable code, e.g. `sitejsprotected`. */
-  code?: string;
+  code: string;
 
-  /** Rendered message text. */
+  /** Rendered message text (`plaintext`/`wikitext`). */
   text?: string;
 
-  /** i18n message key, when the server supplies the raw message instead. */
-  message?: string;
+  /** Parsed message HTML (`html`). */
+  html?: string;
 
-  /** Parameters substituted into the message. */
-  params?: unknown[];
+  /** i18n message key (`raw`). */
+  key?: string;
+
+  /** i18n message parameters (`raw`). */
+  params?: ApiMessageParam[];
 }
 
 /**
@@ -255,7 +262,7 @@ export type InfoPage = QueryPage<keyof ApiPageInfo>;
 
 /**
  * {@link InfoPage} for a page that exists: the identity fields and the
- * unconditional `prop=info` fields ({@link PropConstantKeys}) are required;
+ * unconditional `prop=info` fields (`PropConstantKeys`) are required;
  * `inprop`-gated fields stay optional.
  */
 export type InfoPageExisting = QueryPageExisting<keyof ApiPageInfo>;

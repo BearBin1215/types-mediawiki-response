@@ -23,14 +23,26 @@ export const problemSample = {
       missing: true,
       known: true,
       result: "Failure",
-      errors: [
-        { message: "apierror-filedoesnotexist", code: "apierror-filedoesnotexist", type: "error" },
-      ],
+      errors: [{ message: "apierror-filedoesnotexist", code: "filedoesnotexist", type: "error" }],
     },
     { title: "Bad|Title", invalid: true, invalidreason: "…" },
     { pageid: 12, missing: true },
     { revid: 34, missing: true },
     { title: "Interwiki:File.png", iw: "interwiki" },
+  ],
+} satisfies ApiImageRotateResponse;
+
+// A modern `errorformat` renders the in-band failures as `ApiMessage`s.
+export const modernProblemSample = {
+  batchcomplete: true,
+  imagerotate: [
+    {
+      id: 502,
+      ns: 6,
+      title: "File:Missing.png",
+      result: "Failure",
+      errors: [{ code: "filedoesnotexist", text: "The file does not exist." }],
+    },
   ],
 } satisfies ApiImageRotateResponse;
 

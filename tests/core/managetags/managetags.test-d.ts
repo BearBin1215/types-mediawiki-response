@@ -16,6 +16,16 @@ export const deleteSample = {
   managetags: { operation: "delete", tag: "gap-tag", success: true, logid: 756 },
 } satisfies ApiManageTagsResponse;
 
+// A modern `errorformat` renders the in-band warnings as `ApiMessage`s.
+export const modernWarningSample = {
+  managetags: {
+    operation: "create",
+    tag: "gap-tag",
+    success: true,
+    warnings: [{ code: "deprecated-tag", text: "…" }],
+  },
+} satisfies ApiManageTagsResponse;
+
 // `success` is a real boolean; `operation` is the echoed verb.
 expectTypeOf<ApiManageTagsResponse["managetags"]>()
   .toHaveProperty("success")

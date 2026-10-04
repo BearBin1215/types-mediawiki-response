@@ -10,7 +10,7 @@
  * challenge) returns the in-band failure branch: `result: "Failure"` plus that
  * data and no revision ids. Most hard failures (bad token, protected page,
  * `createonly` on an existing page) surface as a top-level
- * {@link ApiErrorResponse}, not `result: "Failure"`.
+ * `ApiErrorResponse`, not `result: "Failure"`.
  *
  * @see https://www.mediawiki.org/wiki/API:Edit
  */

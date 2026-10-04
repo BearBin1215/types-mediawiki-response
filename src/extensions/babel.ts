@@ -23,7 +23,7 @@
 /**
  * A `meta=babel` result: language code → Babel level string (e.g. `"N"`, `"1"`…
  * `"5"`). Site-configured, so the key set is open. An unknown user is an
- * {@link ApiErrorResponse}, not this type.
+ * `ApiErrorResponse`, not this type.
  */
 export type ApiBabelResult = Record<string, string>;
 

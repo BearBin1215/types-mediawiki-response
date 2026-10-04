@@ -97,6 +97,7 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 - 必选性用契约断言钉住（`expectTypeOf<T>().toHaveProperty('x').toEqualTypeOf<…>()`）：`satisfies` 样本对可选字段一样通过，证明不了必选。
 - 别用 JSDoc 复述必选性（不写“always present”）：无 `?` 即事实；仅当兄弟字段被 `*prop` 门控时，在类型 docstring 里点一次。
 - `ApiXxxResponse` 只建模**成功**形状；错误归 `ApiErrorResponse`，要表达“可能出错”用 `ApiResponseWith`。
+- in-band 消息字段随 `errorformat` 分两族（`bc` 的 `{message,params,code,type}` vs modern 的 `{code,text|…}`），同一字段写成 `ApiSpecMessage[] | ApiMessage[]`；`formatMessage` 系（`bc` 为 `{code,info}`）与 GlobalBlock 的 `error.globalblock` 是例外（见 `dev-docs/authoring.md` §3.5）。
 - 扩展字段写在自己的包文件里，用 `declare module` 增广进核心接口（键名与落点都收进包，别靠消费方手写）。
 - 弃用字段照常建模并标 `@deprecated`（起始版本 + 替代项），不要略过；后版本才有的字段标 `@since MediaWiki X.Y`。版本事实一律走标签，不写进叙述句。
 

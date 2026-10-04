@@ -12,7 +12,7 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Login
  */
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 
 /** Response of the deprecated `action=login`. */
 export interface ApiLoginResponse extends ApiEnvelope {
@@ -21,8 +21,12 @@ export interface ApiLoginResponse extends ApiEnvelope {
     /** Login outcome. */
     result: "Success" | "Failed" | "NeedToken" | "WrongToken" | "Aborted" | (string & {});
 
-    /** Human-readable reason, emitted when `result` is `Failed` or `Aborted`. */
-    reason?: string;
+    /**
+     * Why the login failed, emitted when `result` is `Failed` or `Aborted`:
+     * a plain string under the default (`bc`) `errorformat`, an
+     * {@link ApiMessage} under a modern one.
+     */
+    reason?: string | ApiMessage;
 
     /** Login token echoed back on a `NeedToken` round trip. */
     token?: string;

@@ -14,7 +14,7 @@
  * @see https://www.mediawiki.org/wiki/API:Revisiondelete
  */
 import type { Timestamp, ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 
 /** Per-item outcome. Open union for forward compatibility. */
 export type RevisionDeleteStatus = "Success" | "Fail" | (string & {});
@@ -81,11 +81,11 @@ export interface ApiRevisionDeleteItem {
   /** File URL, or a `Special:Revisiondelete` link when the content is deleted but viewable. File versions only. */
   url?: string;
 
-  /** In-band messages when this item failed. */
-  errors?: ApiSpecMessage[];
+  /** In-band messages when this item failed, shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 
-  /** In-band warnings for this item. */
-  warnings?: ApiSpecMessage[];
+  /** In-band warnings for this item, shaped per the request's `errorformat`. */
+  warnings?: ApiSpecMessage[] | ApiMessage[];
 }
 
 /** The `revisiondelete` object of a successful response. */
@@ -99,11 +99,11 @@ export interface ApiRevisionDeleteResult {
   /** Per-item results. */
   items: ApiRevisionDeleteItem[];
 
-  /** In-band messages when the overall operation failed. */
-  errors?: ApiSpecMessage[];
+  /** In-band messages when the overall operation failed, shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 
-  /** In-band warnings from the overall operation. */
-  warnings?: ApiSpecMessage[];
+  /** In-band warnings from the overall operation, shaped per the request's `errorformat`. */
+  warnings?: ApiSpecMessage[] | ApiMessage[];
 }
 
 /** Response of `action=revisiondelete`. */

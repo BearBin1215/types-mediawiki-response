@@ -5,6 +5,7 @@
  * @see https://www.mediawiki.org/wiki/API:Users
  */
 import type { ApiSpecMessage, BlockExpiry, Expiry, Flag, Timestamp } from "../../common";
+import type { ApiMessage } from "../../envelope";
 
 /**
  * Block details, as emitted for `usprop=blockinfo` (list=users) and
@@ -170,10 +171,10 @@ export interface ApiUser extends ApiUserCore {
   cancreate?: boolean;
 
   /**
-   * Why {@link cancreate} is `false`, as message specs (e.g. a reserved
-   * username). Emitted only when the creation check failed.
+   * Why {@link cancreate} is `false` (e.g. a reserved username), shaped per the
+   * request's `errorformat`. Emitted only when the creation check failed.
    */
-  cancreateerror?: ApiSpecMessage[];
+  cancreateerror?: ApiSpecMessage[] | ApiMessage[];
 
   /**
    * The user is hidden (suppressed via a hidden block); a {@link Flag}.

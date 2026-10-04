@@ -5,7 +5,7 @@
 **收录边界（写之前先看这里）**
 
 - 只收**跨模块可复用的判断规则**和**踩坑及成因**。字段事实归模块的 JSDoc 与 fixture，不写进本文。
-- 不写会话流水：禁止“本批”“本次”这类只有当前上下文才能理解的表述；也不维护覆盖清单（以 `src/` 与 README 为准）。发现错处直接改正原文，历史交给 git。
+- 不写会话流水：禁止"本批""本次"这类只有当前上下文才能理解的表述；也不维护覆盖清单（以 `src/` 与 README 为准）。发现错处直接改正原文，历史交给 git。
 - 一次性操作步骤（容器安装、账号铸造、某模块的状态铺垫）写进对应脚本的注释，本文只留能指导下一次决策的部分。
 
 ---
@@ -36,9 +36,9 @@
 ### 1.3 agent 操作准则
 
 - **先探测，别假设**：依赖环境的步骤前用一条命令确认就绪（`docker ps`、端点可达、`mw-ref` 拉过没、`.mw-scratch/` 可写），据此走本地或替代路径。
-- **读源码前先问“拉过没有”**：需要某版本 PHP 源码定必选性 / 枚举时，先确认本地是否已有；没有就明确问用户拉哪份、能否联网，或改用可移植源。别臆造源码内容当作已读。
+- **读源码前先问"拉过没有"**：需要某版本 PHP 源码定必选性 / 枚举时，先确认本地是否已有；没有就明确问用户拉哪份、能否联网，或改用可移植源。别臆造源码内容当作已读。
 - **改动本地状态前先确认**：起 / 删容器、`docker exec` 装扩展、写 `LocalSettings.php`、跑 `update.php` / `install.php` / `createAndPromote.php`、`pnpm fetch:fixtures` 覆盖 `tests/fixtures/`、往 `.mw-scratch/` 写——这些不可逆或环以外的操作先征得同意并说明影响面；纯只读探测（`docker ps`、读文件、打公共站 GET）可直接做。
-- **能力优先于具体命令**：把 `docker cp` / 端口 / 容器名先翻译成目标能力（“取 1.43 源码”“拿一份需 sysop 的写响应”），再选当前环境够得着的最省事手段；够不着就回退或问用户。
+- **能力优先于具体命令**：把 `docker cp` / 端口 / 容器名先翻译成目标能力（"取 1.43 源码""拿一份需 sysop 的写响应"），再选当前环境够得着的最省事手段；够不着就回退或问用户。
 
 ---
 
@@ -48,9 +48,9 @@
 
 只靠 fixture 与 `ExtraKeys` 检不出两类问题：**声明了却从不返回的键**（臆造 / 改名 / 停于旧文档）与**任何样本都没触发过的条件字段**。成批核查用三重证据：
 
-1. **paraminfo 当分母**：`action=paraminfo&modules=<模块>` 的 `parameters[].type` 给出该模块**全部**合法枚举值，`prefix` 给出参数前缀——“可能产出哪些字段”的权威清单。
+1. **paraminfo 当分母**：`action=paraminfo&modules=<模块>` 的 `parameters[].type` 给出该模块**全部**合法枚举值，`prefix` 给出参数前缀——"可能产出哪些字段"的权威清单。
 2. **最大化探针**：把每个模块所有 `*prop=` 枚举值一次打开（含被标 `deprecated` 的值），逐标题请求，得到实测全集。本地站优先——公共站版本更高，新键要回基线复核。
-3. **版本对齐的 PHP 源码**：`docker cp` 出 core `includes/Api/*.php` 与扩展 `Api*/*.php` 直接读（判据是 `$vals['x'] = …` / `addValue(..., 'x', ...)`；值类型看右侧表达式——`(bool)` → 真布尔、`= ''` → 空串、`count()`/`intval()` → 数字）。**这是唯一能裁定“声明了但样本里没有”的凭据。**
+3. **版本对齐的 PHP 源码**：`docker cp` 出 core `includes/Api/*.php` 与扩展 `Api*/*.php` 直接读（判据是 `$vals['x'] = …` / `addValue(..., 'x', ...)`；值类型看右侧表达式——`(bool)` → 真布尔、`= ''` → 空串、`count()`/`intval()` → 数字）。**这是唯一能裁定"声明了但样本里没有"的凭据。**
 
 参数前缀与合法枚举值一律以 paraminfo 为准，别按字段名或旧文档猜。
 
@@ -82,7 +82,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - **配置直传的 map**：`general.galleryoptions` 的成员、SBOM `authors[]`（composer 路径原样透传，不保证 `name`）。
 - **字面量自身的键集会随版本漂移**：某发射器在当前版本无条件写 N 个键，**不等于这 N 个键在 1.39–1.47 都有**——要逐版本比**发射函数的那段字面量**，而非只看「该版本有无条件写入点」。
 
-两条必做的反验：**必选化要拿最小参数重跑 + 换一台配置不同的站点**（只靠最大化语料区分不了“core 无条件写”与“请求恰好把这些 prop 全开了”）；自写的逐版本存在性脚本要防**路径前缀不一致**（不同快照目录可能分别以 `v143/`、`v147/` 打头，拿基线路径去其余版本查同一键会造假警报）。
+两条必做的反验：**必选化要拿最小参数重跑 + 换一台配置不同的站点**（只靠最大化语料区分不了"core 无条件写"与"请求恰好把这些 prop 全开了"）；自写的逐版本存在性脚本要防**路径前缀不一致**（不同快照目录可能分别以 `v143/`、`v147/` 打头，拿基线路径去其余版本查同一键会造假警报）。
 
 **批量定位手段**：grep `ApiQueryBase::addTitleInfo(` / `setContentValue(`（无条件写某键），命中点即候选，再逐个回读上下文判断是否在分支内。判据对 `prop=` 子项、`action=` 结果对象、扩展包行类型同样适用。
 
@@ -103,7 +103,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - `prop=` → 往 `ApiPage` 加字段：标量直接加，集合先定义子项 interface 再加数组。
 - `meta=` / `list=` → 往 `ApiQueryResult` 加顶层键。
 - **框架级键**直接写核心：`normalized`/`pages` 在 `ApiQueryResult`，`continue`/`limits` 在 `ApiQueryResponse`，分页游标加到 `ApiQueryContinue`。
-- **同族模块复用行类型**：判据是“同一个 PHP formatter/基类”，不是名字像。行类型放同源文件，其余文件 `import type` 后只写声明合并。但**同族的 `*prop` 扩展键要逐模块核对各自枚举**（`allredirects` 分支独有 `rd_fragment`/`rd_interwiki`），按“同族同形状”复用会漏列。
+- **同族模块复用行类型**：判据是"同一个 PHP formatter/基类"，不是名字像。行类型放同源文件，其余文件 `import type` 后只写声明合并。但**同族的 `*prop` 扩展键要逐模块核对各自枚举**（`allredirects` 分支独有 `rd_fragment`/`rd_interwiki`），按"同族同形状"复用会漏列。
 - 声明合并写 `declare module './index' { interface ApiPage { … } }`，路径是从当前文件看到的 `./index`；承载增强的文件必须是**模块**（含 `import`/`export`）。若只有增强而无导入，别补 `export {}`（`no-useless-empty-export` 会报错）——导出该模块的子项 interface 即可。
 - 扩展点留可声明合并的空 interface，别用 `Record<string, unknown>` 封死。
 
@@ -151,8 +151,9 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 - 根级通用字段归 `ApiEnvelope`：`batchcomplete`、`servedby`、`curtimestamp`、`requestid`、`warnings`，及错误响应的 `error`/`errors`/`docref`。`continue`/`limits` 只属于 query/generator，放 `ApiQueryResponse`。`batchcomplete` 可与 `continue` 并存（只表示当前批完成，仍可能有后续）。
 - **error/warnings 随 `errorformat` 分两族**：默认 `bc` → `error` 对象 + 模块键 `warnings` 对象；modern（plaintext/wikitext/html/raw/none）→ `errors`/`warnings` **数组** + 顶层 `docref`。`warnings` 建模为 `对象 | 数组` 联合，错误响应为 `ApiBcErrorResponse | ApiModernErrorResponse`。
-- **有些失败是 in-band 而非顶层错误**（`createaccount` 回 `{status:"FAIL"}`、`emailuser` 回 `{result:"Failure",errors:[…]}`、`clientlogin` 的 `status` 联合）：纳入 `status`/`result` 联合，这类 `{message,params,code,type}` 用共享的 `ApiSpecMessage`（区别于 errorformat 的 `ApiMessage`）。硬失败多走顶层错误。
-- `ApiXxxResponse` 只建模**成功**形状；错误归 `ApiErrorResponse`，要表达“可能出错”用 `ApiResponseWith`。
+- **有些失败是 in-band 而非顶层错误**（`createaccount` 回 `{status:"FAIL"}`、`emailuser` 回 `{result:"Failure",errors:[…]}`、`clientlogin` 的 `status` 联合）：纳入 `status`/`result` 联合。这类**消息字段随 `errorformat` 分两族，同一字段要写成 `ApiSpecMessage[] | ApiMessage[]`**：`bc` 走 `ApiErrorFormatter::arrayFromStatus` → `{message,params,code,type}`（`ApiSpecMessage`），modern 走 `formatMessageInternal` → `{code,text|html|key+params}`（`ApiMessage`）。硬失败多走顶层错误。
+- in-band 消息的**三个例外**别套用上面的联合：① `prop=info` 的 `intestactionsdetail` 在 `bc` 下被 `ApiQueryInfo` 强制切到 `plaintext`，所以 `bc` 请求也产出 `{code,text}`（单独用 `ApiActionPermission` 建模）；② 走 `formatMessage`（而非 `arrayFromStatus`）的字段在 `bc` 下是 `{code,info}`（即 `ApiError` 的形状），modern 才是 `ApiMessage`，`watch.errors` 甚至把两族混在同一数组里；③ GlobalBlocking 的 `action=globalblock` 失败**与 `errorformat` 无关**，恒写在 root `error.globalblock`（`ApiGlobalBlockLegacyError`），既非 `ApiErrorResponse` 也非上述任一形状。
+- `ApiXxxResponse` 只建模**成功**形状；错误归 `ApiErrorResponse`，要表达"可能出错"用 `ApiResponseWith`。
 
 ### 3.6 消费方视图
 
@@ -163,19 +164,19 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 ### 3.7 模块结构上的可复用判断
 
 - **不要假设 `list=` 的结果一定在 `query` 下**：`list=watchlistraw` 写在根级，只请求它时响应**根本没有 `query` 键**。做法：为该模块单列一个不含 `query` 的响应类型，同时把该键并进 `ApiQueryResponse` 供混用请求。
-- **区分“prop 值”与“伴生键”**：有的输出键不属于任何 prop 枚举而是自动产出（`prop=modules` 附带 `modulescripts`/`modulestyles`；`prop=tocdata` 附带 `showtoc`）。把它们写进 `prop=` 会报 Unrecognized value。
+- **区分"prop 值"与"伴生键"**：有的输出键不属于任何 prop 枚举而是自动产出（`prop=modules` 附带 `modulescripts`/`modulestyles`；`prop=tocdata` 附带 `showtoc`）。把它们写进 `prop=` 会报 Unrecognized value。
 - **参数互斥要写进 JSDoc**，只能从 `invalidparammix` 错误里学到：`*unique` 与 `*prop=ids`（alllinks 族）、`adrprefix` 与 `adruser`（alldeletedrevisions）、`inprop=preloadcontent|editintro` 要求查询只含单个页面 / 修订。
 - **同一数据的两个 prop 可能有两套键名**，不能共享行类型：`prop=sections` 用小写 `toclevel`/`fromtitle`，`prop=tocdata` 用驼峰 `tocLevel`/`hLevel`/`fromTitle`。
 - **`generator=` 不新增列表结果键**，只用 `prop=` 填充 `pages`；续传游标另起前缀（`generator=categorymembers` 用 `gcmcontinue`），与 list/prop 形态并排登记在 `ApiQueryContinue`。能否作 generator 的判据是源码 `extends ApiQueryGeneratorBase`（`list=allusers`、`list=logevents`、`prop=extlinks`/`iwlinks`/`langlinks` 不能，别臆造）。**generator 形态的参数默认值与注入时机不同于 list 形态**，别照搬 list 形态的静态默认值去推 generator 的输出。
 
 ### 3.8 弃用项
 
-**建模 + `@deprecated` JSDoc，而不是略过。** 尾部 `//` 注释只对源文件读者可见；`@deprecated`（带“自哪个版本 + 用什么替代”）会直接变成删除线与悬浮提示。对类型包来说“该键不存在”比“该键存在但标了弃用”错得多——客户端仍在调这些接口。
+**建模 + `@deprecated` JSDoc，而不是略过。** 尾部 `//` 注释只对源文件读者可见；`@deprecated`（带"自哪个版本 + 用什么替代"）会直接变成删除线与悬浮提示。对类型包来说"该键不存在"比"该键存在但标了弃用"错得多——客户端仍在调这些接口。
 
-弃用事实的三个来源（按优先级，别凭旧文档印象写版本号）：paraminfo 的 `deprecated` 字段 → 运行时 `warnings`（版本与替代项直接写进 JSDoc）→ 源码里的 `// Deprecated since …` 注释。“某值为弃用”不能推到整族。
+弃用事实的三个来源（按优先级，别凭旧文档印象写版本号）：paraminfo 的 `deprecated` 字段 → 运行时 `warnings`（版本与替代项直接写进 JSDoc）→ 源码里的 `// Deprecated since …` 注释。"某值为弃用"不能推到整族。
 
 - **弃用可能在输入值层而非输出字段层**：参数被新版拒绝但字段照常返回时，改 spec 的参数、不改类型；反之 paraminfo 没标弃用的也别自己标上。
-- **别因“抓不到样本”就不建模，先想能不能铺垫**。
+- **别因"抓不到样本"就不建模，先想能不能铺垫**。
 - 后版本才有的字段标 `@since MediaWiki X.Y`；版本事实走标签，叙述句不重复。
 
 ---
@@ -210,7 +211,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 - ext 文件导出字段组 / 子项类型（如 `ApiPageFlagged`），并在文件尾部**自带 `declare module 'types-mediawiki-response'` 增广**（键名与落点收进包）；不进默认 barrel，经 `exports["./ext/*"]` 子路径发布，消费方一条 type-only import 激活。
 - **两类形状**：`prop=`/`list=`/`meta=` 贡献**字段组**（并入 `ApiPage`/`ApiQueryResult`）；扩展的 **action** 返回**独立响应类型**（`ApiXxxResponse extends ApiEnvelope`），消费方直接 `import type` 使用、无需合并。
 - 测试放 `tests/extensions/`，只断言字段组 / 响应 vs fixture（`satisfies` + `ExtraKeys`）；核心合并由 `scripts/check-ext-consumer.ts` 验证。扩展的 continue 游标不进核心 `ApiQueryContinue`（其索引签名已兜底）。
-- **选型**：优先覆盖消费方真正用到的扩展。要知道“某扩展贡献了哪些 API 模块”别按名字猜：装载后 `action=paraminfo&modules=query+<名>` 的 `source` 字段是权威答案。
+- **选型**：优先覆盖消费方真正用到的扩展。要知道"某扩展贡献了哪些 API 模块"别按名字猜：装载后 `action=paraminfo&modules=query+<名>` 的 `source` 字段是权威答案。
 
 ### 4.3 版本升级（接入新的 MediaWiki 版本）
 
@@ -232,7 +233,8 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 **JSDoc 与文档站**（通用禁令见 AGENTS「编写规范」）
 
-- **内联对象类型里别写 `{@link}`**：`X & { … }` 匿名类型的兄弟字段无法被 TSDoc 寻址，TypeDoc 报 “link cannot be resolved”。要么提成具名 interface 再链接，要么改成代码字体。想让这类问题硬失败，给 `docs/scripts/generate-api.ts` 的 typedoc 选项加 `validation: { invalidLink: true }`。
+- **内联对象类型里别写 `{@link}`**：`X & { … }` 匿名类型的兄弟字段无法被 TSDoc 寻址，TypeDoc 报 "link cannot be resolved"。要么提成具名 interface 再链接，要么改成代码字体。（typedoc 0.28.20 实测：加 `validation: { invalidLink: true }` 对断链**不报警**，别指望它当门禁；断链目前只能靠人工核对产物。）
+- **`{@link}` 按全项目符号名解析，不要求本文件 import**：未导入的跨文件引用（`options.ts` 声明注释里引 `ApiErrorResponse`/`ApiPage`）、跨扩展包（discussiontools 引 thanks 的 `ApiThankResult`）、同接口裸成员（`{@link cancreate}`）与成员路径（`{@link ApiMessage.params}`）实测都出链接。断链不报警也不留痕：未解析的 `{@link}` 渲染成裸名，与普通文本无法区分，`validation: { invalidLink: true }` 同样不报警（均 typedoc 0.28.20 实测）；核对链接只能看产物里目标名是否成了 `[名](路径)`。不可寻址的只有内联对象类型/匿名交集的兄弟字段（见上条）。另注意核心 barrel 各文件的文件头注释不进产物（typedoc 只把入口文件的注释当 module comment；扩展文件是独立入口，其文件头才渲染），核心文件模块 docstring 里的跨包名用代码字体是源码与消费方 IDE 悬浮的观感选择，与 TypeDoc 无关。
 - 示例里的日期 / 时间戳用固定中性值（如 `2024-01-15` 一族），不用采集当周的日期。
 - **首页悬浮演示的内容不是手写的**：`docs/scripts/generate-hero.ts` 构建时对展示代码跑真实编译器 quickinfo，从 `src/` 取签名与 JSDoc 注入入库的生成文件；改 `src/` 类型后 docs 构建会重算，snippet 与类型失配时构建直接失败，CI 用 `git diff --exit-code` 校验产物未过期。
 - **push 自动部署暂缓**：仓库未公开，`docs.yml` 仅 `workflow_dispatch`。
@@ -253,7 +255,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 **探针与完备性**
 
 - **手工探针必须带模块前缀**：`prop=info` 的测试参数是 `intestactions`，写成 `testactions` 会被判 Unrecognized 并**静默返回一份没有该字段的响应**。逐模块看 paraminfo 的 `prefix`，参数名也别跨模块套（videoinfo 用 `viprop`）。
-- **`*show` 不能全开**：`rcshow=minor|!minor` 会同时打开肯定值与否定值直接报错；**不设才是“不过滤”**。
+- **`*show` 不能全开**：`rcshow=minor|!minor` 会同时打开肯定值与否定值直接报错；**不设才是"不过滤"**。
 - **带 `limit` 的不一定是分页量**：`ususerids`/`pageids` 这类多值参数也有 `limit`，按分页量填会 `invalidparammix`。只对名字以 `limit` 结尾的设值。
 - **多值参数的分隔符是 `|`，不是逗号**。
 - **本地探针必须显式 `formatversion=2`**：默认 fv1 会把真布尔序列化成 `""`。
@@ -270,7 +272,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 **登录与写接口**（涉及容器 IP 分桶 / `docker exec` / `/tmp` 路径的按自己环境对应调整）
 
-- **LoginThrottle 会伪装成“密码错误”**：尝试超阈值后，`action=login` 对**正确密码**也回 `Failed`。别改密码或等冷却——直接 `createAndPromote.php` 铸新 sysop（走 maintenance，不计入 API 节流）换用。它按**源 IP** 分桶：容器内反复调试失败会把容器 IP 的桶打满，绕法是从宿主机直连映射端口（不同源 IP，独立桶）。也别拿 `$wgMainCacheType = CACHE_NONE` 去关节流——它会破坏会话持久化。
+- **LoginThrottle 会伪装成"密码错误"**：尝试超阈值后，`action=login` 对**正确密码**也回 `Failed`。别改密码或等冷却——直接 `createAndPromote.php` 铸新 sysop（走 maintenance，不计入 API 节流）换用。它按**源 IP** 分桶：容器内反复调试失败会把容器 IP 的桶打满，绕法是从宿主机直连映射端口（不同源 IP，独立桶）。也别拿 `$wgMainCacheType = CACHE_NONE` 去关节流——它会破坏会话持久化。
 - **令牌类型别想当然**：`userrights` 要 `type=userrights` 令牌（用 csrf 得 `badtoken`）；AuthManager 类 action 的请求参数带模块前缀（`createtoken`/`linktoken`…），但 `createaccount` 的字段却不带前缀 + 必需的 `createreturnurl`。
 - **curl 的 `-d` 与 `-F` 不能混用**（exit 2）：multipart 上传里 `format`/`formatversion` 也要走 `-F`；csrf token 尾部带 `+\`，不能直接写进 `-F "name=value"`，要用 `-F "token=</tmp/ct.txt"` 从文件取值。
 - **`action=delete` 的参数是单数 `title`**（`action=query` 系才是复数 `titles`）；文件元数据（EXIF/尺寸）在**上传时提取一次**，重抓要先删文件再传，`ignorewarnings=1` 免撞同名警告。

@@ -246,3 +246,34 @@ expectTypeOf<ApiPageProtection>().toHaveProperty("source").toEqualTypeOf<string 
 expectTypeOf<ApiPage>()
   .toHaveProperty("actions")
   .toEqualTypeOf<Record<string, boolean | ApiActionPermission[]> | unknown[] | undefined>();
+
+// The permission messages follow the request's `errorformat`: `text`
+// (plaintext/wikitext), `html`, `key`/`params` (raw), or code-only (`none`); a
+// default (`bc`) request is rendered as `plaintext`.
+export const actionPermissionRawSample = {
+  batchcomplete: true,
+  query: {
+    pages: [
+      {
+        pageid: 1,
+        ns: 0,
+        title: "Main Page",
+        actions: {
+          delete: [
+            {
+              code: "permissiondenied",
+              key: "badaccess-groups",
+              params: [{ list: ["Administrators"], type: "comma" }, 1],
+            },
+          ],
+        },
+      },
+    ],
+  },
+} satisfies ApiQueryResponse;
+
+expectTypeOf<ApiActionPermission>().toHaveProperty("code").toEqualTypeOf<string>();
+expectTypeOf<ApiActionPermission>().toHaveProperty("text").toEqualTypeOf<string | undefined>();
+expectTypeOf<ApiActionPermission>().toHaveProperty("html").toEqualTypeOf<string | undefined>();
+expectTypeOf<ApiActionPermission>().toHaveProperty("key").toEqualTypeOf<string | undefined>();
+expectTypeOf<ApiActionPermission>().not.toHaveProperty("message");

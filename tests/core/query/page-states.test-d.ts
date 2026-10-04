@@ -11,6 +11,7 @@
  */
 import { expectTypeOf } from "expect-type";
 import type {
+  ApiMessage,
   ApiPage,
   ApiPageExisting,
   ApiPageProtection,
@@ -50,6 +51,21 @@ export const invalidTitle = {
   invalidreason: "The requested page title contains invalid characters.",
   invalid: true,
 } satisfies ApiPage;
+
+// Under a modern `errorformat` `invalidreason` is an `ApiMessage`.
+export const invalidTitleModern = {
+  title: "[]",
+  invalidreason: {
+    code: "title-invalid-characters",
+    key: "title-invalid-characters",
+    params: ["[", "&#91;&#93;"],
+  },
+  invalid: true,
+} satisfies ApiPage;
+
+expectTypeOf<ApiPage>()
+  .toHaveProperty("invalidreason")
+  .toEqualTypeOf<string | ApiMessage | undefined>();
 
 // Special page: ns/title, no pageid.
 export const specialPage = { ns: -1, title: "Special:Version", special: true } satisfies ApiPage;

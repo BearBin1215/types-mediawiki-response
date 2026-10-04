@@ -6,7 +6,7 @@
  * page shape grows as coverage expands without this file depending on them.
  */
 import type { Flag, NamespaceIndex } from "../../common";
-import type { ApiEnvelope } from "../../envelope";
+import type { ApiEnvelope, ApiMessage } from "../../envelope";
 
 /**
  * Continuation tokens returned by `action=query`. @see https://www.mediawiki.org/wiki/API:Continue
@@ -383,8 +383,11 @@ export interface ApiPageIdentity {
   /** `true` when the supplied title is not a valid title. */
   invalid?: Flag;
 
-  /** Human-readable reason a title is `invalid`. */
-  invalidreason?: string;
+  /**
+   * Why the title is `invalid`: a plain string under the default (`bc`)
+   * `errorformat`, an {@link ApiMessage} under a modern one.
+   */
+  invalidreason?: string | ApiMessage;
 
   /** `true` for pages in a special namespace. */
   special?: Flag;

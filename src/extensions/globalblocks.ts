@@ -135,10 +135,48 @@ export interface ApiGlobalBlockResult {
   expiry?: BlockExpiry;
 }
 
-/** Response of `action=globalblock`. */
+/**
+ * One entry of the legacy `error.globalblock` array that `action=globalblock`
+ * writes when a block or unblock fails. Unlike every other module, this one
+ * reports the failure **in-band** under the root `error` key
+ * (`{ error: { globalblock: [...] } }`) instead of a top-level error object, so
+ * that `error` carries no `code`/`info`. The shape is the same under every
+ * `errorformat`.
+ */
+export interface ApiGlobalBlockLegacyError {
+  /** Machine-readable code, e.g. `globalblocking-notblocked`. */
+  code: string;
+
+  /** Rendered message text. */
+  message: string;
+}
+
+/**
+ * Failure response of `action=globalblock`: the legacy `error.globalblock`
+ * array, written under the root `error` key rather than as a standard
+ * `ApiErrorResponse` — see {@link ApiGlobalBlockLegacyError}.
+ */
+export interface ApiGlobalBlockErrorResponse extends ApiEnvelope {
+  /** The failures, one entry per message. */
+  error: {
+    globalblock: ApiGlobalBlockLegacyError[];
+  };
+}
+
+/**
+ * Response of `action=globalblock`. A failed block/unblock is reported in-band
+ * under the root `error` key; with `alsolocal=1`, a failed **local** block is
+ * reported the same way while the global block still succeeds, so both keys can
+ * appear together — see {@link ApiGlobalBlockLegacyError}.
+ */
 export interface ApiGlobalBlockResponse extends ApiEnvelope {
   /** Result of `action=globalblock`. */
   globalblock: ApiGlobalBlockResult;
+
+  /** Legacy errors, when the global block succeeded but the local one failed. */
+  error?: {
+    globalblock: ApiGlobalBlockLegacyError[];
+  };
 }
 
 declare module "types-mediawiki-response" {

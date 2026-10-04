@@ -13,6 +13,15 @@
  */
 
 /**
+ * A single i18n message parameter under `errorformat=raw`: a scalar, a bare
+ * nested message ({@link ApiRawMessage}, produced when a message sits inside a
+ * list), or an object spec ({@link ApiMessageParamSpec}). Plain-text parameters
+ * are inlined as scalars, and a numeric parameter may arrive as a bare number
+ * or a `{ num }` spec.
+ */
+export type ApiMessageParam = string | number | ApiRawMessage | ApiMessageParamSpec;
+
+/**
  * A single message under a modern `errorformat` (an entry of the `errors` or
  * `warnings` array). Which text-bearing field is present depends on the
  * format: `text` for `plaintext`/`wikitext`, `html` for `html`, `key`/`params`
@@ -20,7 +29,7 @@
  */
 export interface ApiMessage {
   /** Machine-readable code, e.g. `badvalue`, `unrecognizedparams`. */
-  code?: string;
+  code: string;
 
   /** Rendered message (`errorformat=plaintext`/`wikitext`). */
   text?: string;
@@ -31,12 +40,8 @@ export interface ApiMessage {
   /** i18n message key (`errorformat=raw`). */
   key?: string;
 
-  /**
-   * i18n message parameters (`errorformat=raw`). A parameter is a scalar or an
-   * object spec ({@link ApiMessageParamSpec}); numeric params occur too, and a
-   * parameter may itself be a message.
-   */
-  params?: (string | number | ApiMessageParamSpec)[];
+  /** i18n message parameters (`errorformat=raw`). */
+  params?: ApiMessageParam[];
 
   /** Module the message originated from, e.g. `main`, `query+info`. */
   module?: string;
@@ -53,20 +58,23 @@ export interface ApiMessage {
  */
 export interface ApiRawMessage {
   /** i18n message key of the nested message. */
-  key?: string;
+  key: string;
 
   /**
    * Parameters of the nested message, which may themselves be messages,
    * serialized the same way as {@link ApiMessage.params}.
    */
-  params?: (string | number | ApiMessageParamSpec)[];
+  params: ApiMessageParam[];
 }
 
 /**
  * Object form of a raw-format message parameter. Exactly one spec kind is
- * present at runtime: `message` (a nested message), `plaintext`
- * (pre-escaped text), `num` (a number), or `list` + `type` (a list whose items
- * are parameter specs again).
+ * present at runtime: a nested message
+ * (`message`), pre-escaped text (`plaintext`), raw text (`raw`), a number
+ * (`num`), a duration in seconds (`duration`/`period`), an expiry (`expiry`),
+ * a date/time (`datetime`/`date`/`time`), a user group (`group`), a byte size
+ * (`size`), a bit rate (`bitrate`), the deprecated object form (`object`), or a
+ * list (`list` + `type`).
  */
 export interface ApiMessageParamSpec {
   /** The parameter, when it is itself a message. */
@@ -75,23 +83,64 @@ export interface ApiMessageParamSpec {
   /** Pre-escaped parameter text. */
   plaintext?: string;
 
+  /** Raw parameter text, inserted after formatting. */
+  raw?: string;
+
   /** Numeric parameter. */
   num?: number;
 
-  /** Parameter items, when the parameter is a list. */
-  list?: ApiMessageParamSpec[];
+  /** Duration in seconds, rendered in full. */
+  duration?: number;
 
-  /** Rendering type of the {@link ApiMessageParamSpec.list} items, e.g. `text`. */
-  type?: string;
+  /** Duration in seconds, rendered abbreviated. */
+  period?: number;
+
+  /** Expiry timestamp, or `infinity`. */
+  expiry?: string;
+
+  /** Date and time. */
+  datetime?: string;
+
+  /** Date. */
+  date?: string;
+
+  /** Time. */
+  time?: string;
+
+  /** User group name. */
+  group?: string;
+
+  /** Size in bytes. */
+  size?: number;
+
+  /** Bit rate in bit/s. */
+  bitrate?: number;
+
+  /**
+   * Object parameter, serialized as the object's string value.
+   *
+   * @deprecated since MediaWiki 1.43; removed in 1.44.
+   */
+  object?: string;
+
+  /**
+   * Parameter items, when the parameter is a list. Serialized as an array
+   * from MediaWiki 1.43 on; earlier versions keep the input array's keys, so
+   * a non-contiguous list comes back as an object.
+   */
+  list?: ApiMessageParam[] | Record<string, ApiMessageParam>;
+
+  /** Rendering type of the {@link ApiMessageParamSpec.list} items. Open union for forward compatibility. */
+  type?: "comma" | "semicolon" | "pipe" | "text" | (string & {});
 }
 
 /** The `error` object under the default (`bc`) `errorformat`. */
 export interface ApiError {
   /** Machine-readable error code, e.g. `badtoken`. */
-  code?: string;
+  code: string;
 
   /** Human-readable description provided by the server. */
-  info?: string;
+  info: string;
 
   /** Docs link plus deprecation notices; nested in `error` under the `bc` format. */
   docref?: string;
@@ -100,7 +149,7 @@ export interface ApiError {
   trace?: string;
 
   /**
-   * Structured `apiData` attached to the message by the emitting code, merged
+   * Structured data attached to the message by the emitting code, merged
    * into this object as top-level keys.
    */
   [key: string]: unknown;
@@ -109,7 +158,7 @@ export interface ApiError {
 /** One `bc`-format warning entry (the value of a module key in `warnings`). */
 export interface ApiWarningDetail {
   /** Warning text (`bc` errorformat). */
-  warnings?: string;
+  warnings: string;
 }
 
 /**

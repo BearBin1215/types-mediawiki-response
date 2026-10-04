@@ -4,7 +4,7 @@
  * address); needs a session token and the corresponding rights. On success
  * `ApiRemoveAuthenticationData` emits a single field:
  * `removeauthenticationdata.status` = `success`. An unusable removal request is
- * a top-level {@link ApiErrorResponse} (badrequest).
+ * a top-level `ApiErrorResponse` (badrequest).
  *
  * @see https://www.mediawiki.org/wiki/API:Removeauthenticationdata
  */

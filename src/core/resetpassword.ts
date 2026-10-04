@@ -2,7 +2,7 @@
  * `action=resetpassword` response — password reset via `PasswordResetter`. On a
  * completed (or queued) reset `ApiResetPassword` emits a single field:
  * `resetpassword.status` = `success`; every other outcome is a top-level
- * {@link ApiErrorResponse} (dieStatus).
+ * `ApiErrorResponse` (dieStatus).
  *
  * @see https://www.mediawiki.org/wiki/API:Resetpassword
  */

@@ -3,7 +3,7 @@
  * fixtures: an acceptable password and a too-short one). See `info.test-d.ts`.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiSpecMessage, ApiValidatePasswordResponse } from "../../../src";
+import type { ApiMessage, ApiSpecMessage, ApiValidatePasswordResponse } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import goodFixture from "../../fixtures/core/validatepassword/good.json";
 import weakFixture from "../../fixtures/core/validatepassword/weak.json";
@@ -21,9 +21,20 @@ export const weakSample = {
   },
 } satisfies ApiValidatePasswordResponse;
 
+// Under a modern `errorformat` the policy messages are full `ApiMessage`s.
+export const modernWeakSample = {
+  validatepassword: {
+    validity: "Change",
+    validitymessages: [
+      { code: "passwordtooshort", text: "Password must be at least 8 characters." },
+    ],
+  },
+} satisfies ApiValidatePasswordResponse;
+
+// The messages follow the request's `errorformat`: `bc` specs or `ApiMessage`s.
 expectTypeOf<ApiValidatePasswordResponse["validatepassword"]>()
   .toHaveProperty("validitymessages")
-  .toEqualTypeOf<ApiSpecMessage[] | undefined>();
+  .toEqualTypeOf<ApiSpecMessage[] | ApiMessage[] | undefined>();
 
 expectTypeOf<
   ExtraKeys<typeof goodFixture, keyof ApiValidatePasswordResponse>

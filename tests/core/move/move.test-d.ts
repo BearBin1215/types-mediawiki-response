@@ -84,6 +84,18 @@ export const subpagesErrorSample = {
   },
 } satisfies ApiMoveResponse;
 
+// A modern `errorformat` renders the in-band subpage errors as `ApiMessage`s.
+export const subpagesErrorModernSample = {
+  move: {
+    from: "MF3",
+    to: "MT3",
+    reason: "",
+    redirectcreated: true,
+    moveoverredirect: false,
+    subpages: { errors: [{ code: "namespace-nosubpages", text: "…" }] },
+  },
+} satisfies ApiMoveResponse;
+
 // `redirectcreated` / `moveoverredirect` are real booleans (present as `false`).
 expectTypeOf<ApiMoveResult>().toHaveProperty("redirectcreated").toEqualTypeOf<boolean>();
 expectTypeOf<ApiMoveResult>().toHaveProperty("moveoverredirect").toEqualTypeOf<boolean>();

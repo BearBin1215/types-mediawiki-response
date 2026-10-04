@@ -4,7 +4,7 @@
  * CSRF token.
  *
  * On success `options` is the plain string `"success"`. Errors surface as a
- * top-level {@link ApiErrorResponse}.
+ * top-level `ApiErrorResponse`.
  *
  * @see https://www.mediawiki.org/wiki/API:Options
  */

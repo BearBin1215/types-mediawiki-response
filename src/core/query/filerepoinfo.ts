@@ -4,7 +4,7 @@
  * shapes that `prop=imageinfo` and `list=allimages` return.
  *
  * Config values, so the switches are real booleans (`false` is returned), not
- * {@link Flag}s. Repos report only the optional settings they configure, so
+ * `Flag`s. Repos report only the optional settings they configure, so
  * the key set varies by site; `apiurl` exists only for `ForeignAPIRepo`
  * backends.
  *

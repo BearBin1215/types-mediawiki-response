@@ -19,6 +19,27 @@ export const legacyTitleSample = {
   watch: { title: "Fixture edit target", ns: 0, watched: true },
 } satisfies ApiWatchResponse;
 
+// A modern `errorformat` renders the in-band messages as `ApiMessage`s.
+export const watchErrorModernSample = {
+  batchcomplete: true,
+  watch: [{ title: "Fixture edit target", ns: 0, errors: [{ code: "hookaborted", text: "…" }] }],
+} satisfies ApiWatchResponse;
+
+// A watchlist-label failure is a `formatMessage` result appended to the same
+// `errors` array: `{ code, info }` under `bc` (verified on 1.46), an
+// `ApiMessage` otherwise.
+export const watchLabelErrorSample = {
+  batchcomplete: true,
+  watch: [
+    {
+      title: "Main Page",
+      ns: 0,
+      watched: true,
+      errors: [{ code: "labels-disabled", info: "Watchlist labels are not enabled on this wiki." }],
+    },
+  ],
+} satisfies ApiWatchResponse;
+
 // Pageset mode yields a per-title array; the legacy `title` parameter a single object.
 expectTypeOf<ApiWatchResponse>()
   .toHaveProperty("watch")

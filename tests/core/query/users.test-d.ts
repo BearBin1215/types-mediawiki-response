@@ -3,7 +3,13 @@
  * Compiled by `pnpm typecheck`. See `info.test-d.ts` for the assertion recipe.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiQueryResponse, ApiQueryResult, ApiUser } from "../../../src";
+import type {
+  ApiMessage,
+  ApiQueryResponse,
+  ApiQueryResult,
+  ApiSpecMessage,
+  ApiUser,
+} from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import usersFixture from "../../fixtures/core/query/users.json";
 
@@ -57,6 +63,32 @@ expectTypeOf<ApiUser>().toHaveProperty("blockedtimestamp").toEqualTypeOf<string 
 expectTypeOf<ApiUser>()
   .toHaveProperty("blockexpiry")
   .toEqualTypeOf<string | "infinite" | undefined>();
+
+// `usprop=cancreate` on a name that cannot be created: the in-band error
+// follows the request's `errorformat` (`bc` specs vs `ApiMessage`s).
+export const canCreateErrorSample = {
+  batchcomplete: true,
+  query: {
+    users: [
+      {
+        name: "SomeReservedName",
+        missing: true,
+        cancreate: false,
+        cancreateerror: [{ message: "noname", params: [], code: "invaliduser", type: "error" }],
+      },
+      {
+        name: "AnotherReservedName",
+        missing: true,
+        cancreate: false,
+        cancreateerror: [{ code: "username-invalid", text: "…" }],
+      },
+    ],
+  },
+} satisfies ApiQueryResponse;
+
+expectTypeOf<ApiUser>()
+  .toHaveProperty("cancreateerror")
+  .toEqualTypeOf<ApiSpecMessage[] | ApiMessage[] | undefined>();
 
 expectTypeOf(usersFixture.query.users).toExtend<unknown[]>();
 expectTypeOf<ExtraKeys<typeof usersFixture, keyof ApiQueryResponse>>().toEqualTypeOf<never>();

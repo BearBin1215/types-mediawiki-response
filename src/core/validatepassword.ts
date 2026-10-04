@@ -14,7 +14,7 @@
  * @see https://www.mediawiki.org/wiki/API:Validatepassword
  */
 import type { ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 
 /** Password-policy verdict mapped from `checkPasswordValidity`'s Status. Open union. */
 export type ApiPasswordValidity = "Good" | "Change" | "Invalid" | (string & {});
@@ -26,7 +26,7 @@ export interface ApiValidatePasswordResponse extends ApiEnvelope {
     /** Password-policy verdict for the submitted password. */
     validity: ApiPasswordValidity;
 
-    /** Policy messages explaining a non-`Good` verdict. */
-    validitymessages?: ApiSpecMessage[];
+    /** Policy messages explaining a non-`Good` verdict, shaped per the request's `errorformat`. */
+    validitymessages?: ApiSpecMessage[] | ApiMessage[];
   };
 }

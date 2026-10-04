@@ -11,6 +11,14 @@ export const sample = {
   filerevert: { result: "Success" },
 } satisfies ApiFileRevertResponse;
 
+// A modern `errorformat` renders the in-band failure as `ApiMessage`s.
+export const modernFailureSample = {
+  filerevert: {
+    result: "Failure",
+    errors: [{ code: "filedoesnotexist", text: "The file does not exist." }],
+  },
+} satisfies ApiFileRevertResponse;
+
 expectTypeOf<ApiFileRevertResponse["filerevert"]>()
   .toHaveProperty("result")
   .toMatchTypeOf<string | undefined>();

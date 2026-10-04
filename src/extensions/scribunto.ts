@@ -11,7 +11,7 @@
  * fv2 notes: `ApiScribuntoConsole` writes its result keys at the **root** of the
  * response (`addValue( null, $key, $value )`), not under a `scribunto-console`
  * wrapper. A Lua failure is reported **in band** — `type: "error"` with `html` /
- * `message` / `messagename` — rather than as an {@link ApiErrorResponse}; only
+ * `message` / `messagename` — rather than as an `ApiErrorResponse`; only
  * transport-level problems (missing `token`, oversized session …) surface as a
  * real error. `type: "normal"` carries `print` (captured `print()` output) and
  * `return` (the stringified returned value); a question with no `return` yields an

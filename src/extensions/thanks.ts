@@ -10,7 +10,7 @@
  *
  * A successful response is a top-level `result` object (not a `thank` key);
  * every failure (invalid revision, self-thanks, rate limit …) is a top-level
- * {@link ApiErrorResponse}. `success` is the number `1`.
+ * `ApiErrorResponse`. `success` is the number `1`.
  *
  * @see https://www.mediawiki.org/wiki/Extension:Thanks
  */

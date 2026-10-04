@@ -15,7 +15,7 @@
  * @see https://www.mediawiki.org/wiki/API:Imagerotate
  */
 import type { ApiSpecMessage } from "../common";
-import type { ApiEnvelope } from "../envelope";
+import type { ApiEnvelope, ApiMessage } from "../envelope";
 import type { ApiPageIdentity } from "./query";
 
 /** One file entry of an `action=imagerotate` response. */
@@ -32,8 +32,8 @@ export interface ApiImageRotateEntry extends ApiPageIdentity {
   /** Per-file outcome. */
   result?: "Success" | "Failure" | (string & {});
 
-  /** In-band messages when the rotation failed. */
-  errors?: ApiSpecMessage[];
+  /** In-band messages when the rotation failed, shaped per the request's `errorformat`. */
+  errors?: ApiSpecMessage[] | ApiMessage[];
 }
 
 /** Response of `action=imagerotate`. */

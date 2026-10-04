@@ -14,7 +14,7 @@
  * revision through a deferred update; when Flow or Liquid Threads owns the talk
  * page the module posts through that extension and applies no tag. Failures
  * (unknown target, blocked talk page, …) are top-level
- * {@link ApiErrorResponse}s.
+ * `ApiErrorResponse`s.
  *
  * fv2 notes: the reply is a single `redirect` object at the root — not a
  * `result` wrapper; `pageName` is the DB key form (underscores).
