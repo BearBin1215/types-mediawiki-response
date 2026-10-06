@@ -1,0 +1,31 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "lecontinue": "20260108031103|22378501",
+    "continue": "-||"
+  },
+  "query": {
+    "logevents": [
+      {
+        "logid": 22767864,
+        "ns": 6,
+        "title": "File:Ai-assistant-demo.webm",
+        "pageid": 2460183,
+        "logpage": 2460183,
+        "revid": 8563052,
+        "params": {
+          "img_sha1": "79zri6pp4w3d5yoichem9culfhopubn",
+          "img_timestamp": "2026-08-15T21:14:20Z"
+        },
+        "type": "upload",
+        "action": "upload",
+        "user": "Jeroen De Dauw",
+        "userid": 183404,
+        "timestamp": "2026-08-15T21:14:20Z",
+        "comment": "{{Information\n|Description=Screen recording demonstrating the [https://professional.wiki/en/mediawiki-ai-assistant AI Assistant] extension for MediaWiki: asking questions and receiving answers with numbered source citations.\n|Source=Screen recording of the AI Assistant extension by [https://professional.wiki/ Professional Wiki]\n|Date=2026-07-21\n|Author=[[User:Jeroen De Dauw|Jeroen De Dauw]] (Professional Wiki)\n|Permission={{Cc-by-sa-4.0}}\n|other_versions=\n}}",
+        "parsedcomment": "{{Information |Description=Screen recording demonstrating the [https://professional.wiki/en/mediawiki-ai-assistant AI Assistant] extension for MediaWiki: asking questions and receiving answers with numbered source citations. |Source=Screen recording of the AI Assistant extension by [https://professional.wiki/ Professional Wiki] |Date=2026-07-21 |Author=<a href=\"/wiki/User:Jeroen_De_Dauw\" title=\"User:Jeroen De Dauw\">Jeroen De Dauw</a> (Professional Wiki) |Permission={{Cc-by-sa-4.0}} |other_versions= }}",
+        "tags": []
+      }
+    ]
+  }
+}

@@ -9,6 +9,7 @@
  */
 import type { Flag, NamespaceIndex, Timestamp } from "../../common";
 import type { ApiHiddenFlags } from "./shared";
+import type { ApiLogEventParams } from "./logparams";
 
 /** Change type (`rctype`). Open union for forward compatibility. */
 export type RecentChangeType = "edit" | "new" | "log" | "categorize" | "external" | (string & {});
@@ -115,8 +116,11 @@ export interface ApiRecentChange extends ApiHiddenFlags {
   /** Log action, e.g. `create`. `rcprop=loginfo`. */
   logaction?: string;
 
-  /** Structured log parameters. `rcprop=loginfo`. */
-  logparams?: Record<string, unknown>;
+  /**
+   * Structured log details — see {@link ApiLogEventParams}. `rcprop=loginfo`
+   * (only for `type=log`).
+   */
+  logparams?: ApiLogEventParams;
 }
 
 declare module "./index" {

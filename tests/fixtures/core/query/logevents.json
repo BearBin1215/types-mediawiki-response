@@ -1,96 +1,141 @@
 {
   "batchcomplete": true,
   "continue": {
-    "lecontinue": "20260925185832|22822353",
+    "lecontinue": "20261006034331|101",
     "continue": "-||"
   },
   "query": {
     "logevents": [
       {
-        "logid": 22822358,
+        "logid": 106,
+        "ns": 0,
+        "title": "Merge dst 1791258098",
+        "pageid": 23,
+        "logpage": 23,
+        "params": {
+          "type": "revision",
+          "ids": [
+            33
+          ],
+          "old": {
+            "bitmask": 0,
+            "content": false,
+            "comment": false,
+            "user": false,
+            "restricted": false
+          },
+          "new": {
+            "bitmask": 2,
+            "content": false,
+            "comment": true,
+            "user": false,
+            "restricted": false
+          }
+        },
+        "type": "delete",
+        "action": "revision",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:51Z",
+        "comment": "log probe revdel",
+        "parsedcomment": "log probe revdel",
+        "tags": []
+      },
+      {
+        "logid": 105,
         "ns": 2,
-        "title": "User:B209",
+        "title": "User:Logprobe user 1791258290",
         "pageid": 0,
         "logpage": 0,
         "params": {
-          "userid": 18520284
+          "userid": 10
         },
         "type": "newusers",
-        "action": "autocreate",
-        "user": "B209",
-        "userid": 18520284,
-        "timestamp": "2026-09-25T19:01:05Z",
+        "action": "create2",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:51Z",
+        "comment": "log probe",
+        "parsedcomment": "log probe",
+        "tags": []
+      },
+      {
+        "logid": 104,
+        "ns": 2,
+        "title": "User:Logpeer1791258211",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "oldgroups": [],
+          "newgroups": [
+            "bot"
+          ],
+          "oldmetadata": [],
+          "newmetadata": [
+            {
+              "group": "bot",
+              "expiry": "infinity"
+            }
+          ]
+        },
+        "type": "rights",
+        "action": "rights",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:51Z",
+        "comment": "log probe rights",
+        "parsedcomment": "log probe rights",
+        "tags": []
+      },
+      {
+        "logid": 103,
+        "ns": 0,
+        "title": "Patrol probe 1791258211",
+        "pageid": 28,
+        "logpage": 28,
+        "params": {
+          "curid": 42,
+          "previd": 0,
+          "auto": false
+        },
+        "type": "patrol",
+        "action": "patrol",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:51Z",
         "comment": "",
         "parsedcomment": "",
         "tags": []
       },
       {
-        "logid": 22822357,
-        "ns": 1198,
-        "title": "Translations:Help:Import/23/zh",
-        "pageid": 2479700,
-        "logpage": 2479700,
-        "revid": 8621116,
-        "params": {},
-        "type": "create",
-        "action": "create",
-        "user": "Pristome",
-        "userid": 18203310,
-        "timestamp": "2026-09-25T19:00:08Z",
-        "comment": "Created page with \"此编辑过程可以用于：\"",
-        "parsedcomment": "Created page with &quot;此编辑过程可以用于：&quot;",
-        "tags": []
-      },
-      {
-        "logid": 22822356,
-        "ns": 1198,
-        "title": "Translations:Help:Import/19/zh",
-        "pageid": 2479699,
-        "logpage": 2479699,
-        "revid": 8621114,
-        "params": {},
-        "type": "create",
-        "action": "create",
-        "user": "Pristome",
-        "userid": 18203310,
-        "timestamp": "2026-09-25T18:59:39Z",
-        "comment": "Created page with \"参见$1以将维基页面导出到文件。\"",
-        "parsedcomment": "Created page with &quot;参见$1以将维基页面导出到文件。&quot;",
-        "tags": []
-      },
-      {
-        "logid": 22822355,
+        "logid": 102,
         "ns": 2,
-        "title": "User:AGFelizWiki",
+        "title": "User:203.0.113.88",
         "pageid": 0,
         "logpage": 0,
         "params": {
-          "userid": 18520283
+          "duration": "1 week",
+          "flags": [
+            "noemail"
+          ],
+          "restrictions": {
+            "pages": [
+              {
+                "page_ns": 0,
+                "page_title": "CM probe 1791258182"
+              }
+            ]
+          },
+          "sitewide": false,
+          "expiry": "2026-10-13T03:44:28Z"
         },
-        "type": "newusers",
-        "action": "autocreate",
-        "user": "AGFelizWiki",
-        "userid": 18520283,
-        "timestamp": "2026-09-25T18:58:48Z",
-        "comment": "",
-        "parsedcomment": "",
-        "tags": []
-      },
-      {
-        "logid": 22822354,
-        "ns": 1198,
-        "title": "Translations:Help:Import/18/zh",
-        "pageid": 2479698,
-        "logpage": 2479698,
-        "revid": 8621112,
-        "params": {},
-        "type": "create",
-        "action": "create",
-        "user": "Pristome",
-        "userid": 18203310,
-        "timestamp": "2026-09-25T18:58:47Z",
-        "comment": "Created page with \"这展示消息$1\"",
-        "parsedcomment": "Created page with &quot;这展示消息$1&quot;",
+        "type": "block",
+        "action": "block",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:28Z",
+        "comment": "log probe partial block",
+        "parsedcomment": "log probe partial block",
         "tags": []
       }
     ]

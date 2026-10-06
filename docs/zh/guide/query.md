@@ -1,5 +1,5 @@
 ---
-description: "action=query 响应的类型组织：prop= 模块并入 ApiPage，list= 与 meta= 的结果挂在 query 根下，continue 令牌负责翻页，QueryPage 把页面投影回本次实际请求的 prop。"
+description: "action=query 响应的类型组织：prop= 模块并入 ApiPage，list= 与 meta= 的结果挂在 query 根下，continue 令牌负责翻页，日志明细共用一个按 action 变化的形状，QueryPage 把页面投影回本次实际请求的 prop。"
 ---
 
 # query 响应
@@ -37,6 +37,58 @@ do {
 ```
 
 两个落点都参与续传：list 结果与 generator 驱动的页面查询各有各的键。
+
+## 日志明细
+
+三个模块会带出日志行的结构化明细，服务端把它们归一成同一个形状：
+
+- `list=logevents`：每条日志的 `params`（`leprop=details`）
+- `list=recentchanges`：`type=log` 日志行的 `logparams`（`rcprop=loginfo`）
+- `list=watchlist`：`type=log` 日志行的 `logparams`（`wlprop=loginfo`）
+
+类型都是 [`ApiLogEventParams`](/api/core/ApiLogEventParams)，覆盖 MediaWiki 核心写出的全部 log action。
+
+一条日志行实际有哪些键，取决于它的 `type`/`action`（`block/block` 条目带 `duration`/`flags`/`sitewide`，`move/move` 条目带 `target_ns`/`target_title`，每个键的文档都点名了携带它的 action）。并非每个 log action 都带明细键：`delete/delete`、`create/create` 这类日志行的 `params` 就是空对象 `{}`，没有内容。
+
+与 `ApiPage` 一样，并集比任何单个条目都宽，编译器也无法把 `params` 关联到该条目的 `action`，读 action 专属键前先在运行时判断 `type`/`action`：
+
+```ts
+import type { ApiQueryResponse } from "types-mediawiki-response";
+
+const res = (await api.get({
+  action: "query",
+  list: "logevents",
+  leprop: "title|type|details",
+  formatversion: "2",
+})) as ApiQueryResponse;
+
+for (const event of res.query.logevents ?? []) {
+  // params 在每个条目上都是完整并集——判断只对你有意义，类型层面始终可读
+  if (event.type === "block") {
+    event.params?.duration; // string | undefined
+  }
+  event.params?.tag; // string | undefined——已声明的键随处可读
+
+  event.params?.whatever; // unknown——未声明，见下
+}
+```
+
+声明之外的键落进索引签名，读出来是 `unknown` 而不是报错。如果要把实际会收到的键（比如站点自定义的 log action）提成已知形状，可以往接口里增广：
+
+```ts
+// mw-response.d.ts —— 放进 tsconfig include
+declare module "types-mediawiki-response" {
+  interface ApiLogEventParams {
+    foo?: string;
+  }
+}
+```
+
+增广后 `event.params?.foo` 读出 `string | undefined` 而非 `unknown`。注意增广的键与内建键同权：它加进的是所有日志行共享的形状，任何 action 的条目上都能通过编译。
+
+字段属于哪个 action，约定写在 docstring 里（内建键亦然：`duration` 只有 block 系列行会带），运行时判断仍以 `type`/`action` 为准。若想编译期就把读键限定在某个 action，可以不增广，改在调用处把 `params` 收窄成局部形状（`ApiLogEventParams & { foo?: string }`）再读。
+
+query 字段的同一接缝见[按需启用的扩展包](/guide/ext-packs.html)。
 
 ## 用 QueryPage 收窄页面
 

@@ -1,0 +1,27 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "logevents": [
+      {
+        "logid": 103,
+        "ns": 0,
+        "title": "Patrol probe 1791258211",
+        "pageid": 28,
+        "logpage": 28,
+        "params": {
+          "curid": 42,
+          "previd": 0,
+          "auto": false
+        },
+        "type": "patrol",
+        "action": "patrol",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:51Z",
+        "comment": "",
+        "parsedcomment": "",
+        "tags": []
+      }
+    ]
+  }
+}

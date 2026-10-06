@@ -1,5 +1,5 @@
 ---
-description: "How an action=query response is typed: prop= modules merge into ApiPage, list= and meta= results hang off the query root, continue tokens page through results, and QueryPage projects the props you actually requested."
+description: "How an action=query response is typed: prop= modules merge into ApiPage, list= and meta= results hang off the query root, continue tokens page through results, log event details share one per-action shape, and QueryPage projects the props you actually requested."
 ---
 
 # Query responses
@@ -37,6 +37,59 @@ do {
 ```
 
 Both landing spots take part in continuation: list results and generator-driven page queries each contribute their own keys.
+
+## Log event details
+
+Three modules surface the structured details of log entries, and the server normalizes them all into one shape:
+
+- `list=logevents`: each log entry's `params` (`leprop=details`)
+- `list=recentchanges`: `logparams` on `type=log` entries (`rcprop=loginfo`)
+- `list=watchlist`: `logparams` on `type=log` entries (`wlprop=loginfo`)
+
+All three are typed as [`ApiLogEventParams`](/api/core/ApiLogEventParams), covering every log action MediaWiki core writes.
+
+Which keys an entry actually carries depends on its `type`/`action` (a `block/block` entry carries `duration`/`flags`/`sitewide`, a `move/move` entry carries `target_ns`/`target_title`; each key's doc names the actions that carry it). Not every log action has detail keys: on `delete/delete` and `create/create` entries, `params` is an empty object `{}` — present, just empty.
+
+As with `ApiPage`, the union is wider than any single entry, and the compiler cannot correlate `params` with the entry's `action`, so check `type`/`action` at runtime before reading action-specific keys:
+
+```ts
+import type { ApiQueryResponse } from "types-mediawiki-response";
+
+const res = (await api.get({
+  action: "query",
+  list: "logevents",
+  leprop: "title|type|details",
+  formatversion: "2",
+})) as ApiQueryResponse;
+
+for (const event of res.query.logevents ?? []) {
+  // params reads as the full union on every entry — the check is for you, not the compiler
+  if (event.type === "block") {
+    event.params?.duration; // string | undefined
+  }
+  event.params?.tag; // string | undefined — declared keys read anywhere
+
+  event.params?.whatever; // unknown — not declared, see below
+}
+```
+
+Keys outside the declared set fall through to the index signature and read as `unknown` instead of erroring. To promote keys you actually receive — say, from a site-custom log action — merge them into the interface:
+
+```ts
+// mw-response.d.ts — inside your tsconfig include
+declare module "types-mediawiki-response" {
+  interface ApiLogEventParams {
+    /** Subject page of the site-custom `foo/foo` log action. */
+    foo?: string;
+  }
+}
+```
+
+Merged, `event.params?.foo` reads as `string | undefined` instead of `unknown`. An augmented key has the same standing as a built-in one: it joins the shape shared by all log entries, so reading it compiles on entries of any action.
+
+Which action a field belongs to is a docstring convention (built-in keys work the same way: `duration` only ever appears on block-family rows); at runtime, go by `type`/`action`. If you want compile-time restriction of a read to one action, skip the augmentation and narrow `params` to a local shape (`ApiLogEventParams & { foo?: string }`) at the call site.
+
+The same seam for query fields is described in [Opt-in extension packs](/guide/ext-packs.html).
 
 ## Narrowing pages with QueryPage
 

@@ -6,7 +6,7 @@ description: "API 参考总览：本包的覆盖范围、Core 与扩展包参考
 
 字段级页面由类型声明生成，与发布内容始终一致；每个字段的语义、弃用情况与参数约束都在 JSDoc 里，此处可查，IDE 悬停同样可见。
 
-响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、激活扩展包这些概念见[指南](/guide/getting-started.html)；本树是字段级参考。
+响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、读日志明细、激活扩展包这些概念见[指南](/guide/getting-started.html)；本树是字段级参考。
 
 :::info
 API 参考由 [typedoc](https://typedoc.org/) 从类型声明自动生成，暂无中文翻译。
@@ -14,7 +14,7 @@ API 参考由 [typedoc](https://typedoc.org/) 从类型声明自动生成，暂�
 
 ## Core
 
-MediaWiki **核心**能返回的一切：响应信封（[ApiEnvelope](core/ApiEnvelope.md)、[ApiResponseWith](core/ApiResponseWith.md)）、共享原子类型（[Flag](core/Flag.md)、[Timestamp](core/Timestamp.md) 等）、每个 `action=` 一个响应类型（[ApiQueryResponse](core/ApiQueryResponse.md)、[ApiEditResponse](core/ApiEditResponse.md) 等），以及 `action=query` 框架——[ApiPage](core/ApiPage.md)、[ApiQueryResult](core/ApiQueryResult.md)、[QueryPage](core/QueryPage.md) 投影与各模块的续传令牌（[ApiQueryContinue](core/ApiQueryContinue.md)）。
+MediaWiki **核心**能返回的一切：响应信封（[ApiEnvelope](core/ApiEnvelope.md)、[ApiResponseWith](core/ApiResponseWith.md)）、共享原子类型（[Flag](core/Flag.md)、[Timestamp](core/Timestamp.md) 等）、每个 `action=` 一个响应类型（[ApiQueryResponse](core/ApiQueryResponse.md)、[ApiEditResponse](core/ApiEditResponse.md) 等），以及 `action=query` 框架——[ApiPage](core/ApiPage.md)、[ApiQueryResult](core/ApiQueryResult.md)、[QueryPage](core/QueryPage.md) 投影、各模块的续传令牌（[ApiQueryContinue](core/ApiQueryContinue.md)），以及按 log action 建模的日志明细 [ApiLogEventParams](core/ApiLogEventParams.md)。
 
 单模块 `action=` 各对应一个响应类型：
 

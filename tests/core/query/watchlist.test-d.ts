@@ -3,7 +3,12 @@
  * `info.test-d.ts` for the recipe.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiQueryResponse, ApiQueryResult, ApiWatchlistEntry } from "../../../src";
+import type {
+  ApiLogEventParams,
+  ApiQueryResponse,
+  ApiQueryResult,
+  ApiWatchlistEntry,
+} from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import watchlistFixture from "../../fixtures/core/query/watchlist.json";
 
@@ -100,6 +105,10 @@ export const logSample = {
 } satisfies ApiWatchlistEntry;
 
 expectTypeOf<ApiWatchlistEntry>().toHaveProperty("logdisplay").toEqualTypeOf<string | undefined>();
+// `logparams` shares the log-details shape of `list=logevents` (`params`).
+expectTypeOf<ApiWatchlistEntry>()
+  .toHaveProperty("logparams")
+  .toEqualTypeOf<ApiLogEventParams | undefined>();
 
 // Hidden/suppressed markers appear only when true (`Flag`); `actionhidden`
 // marks log-deleted actions and `suppressed` oversighted ones.

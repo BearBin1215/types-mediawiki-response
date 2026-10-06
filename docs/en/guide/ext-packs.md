@@ -16,13 +16,13 @@ There are two consumption scenarios, and they work differently:
 Each pack ships its own `declare module` augmentation — the keys and landing spots live in the package, so your project never freezes a snippet that drifts when the pack gains fields. Activating a pack is a single type-only import of anything from it:
 
 ```ts
-// mw-extensions.d.ts — declared once per repository, in any file covered by your tsconfig
+// mw-response.d.ts — declared once per repository, in any file covered by your tsconfig
 import type {} from "types-mediawiki-response/ext/flaggedrevs";
 import type {} from "types-mediawiki-response/ext/globalusage";
 // ApiPage.flagged / ApiPage.globalusage now exist in EVERY file of the project
 ```
 
-A dedicated type file (e.g. `mw-extensions.d.ts`, kept inside your tsconfig `include`) is the recommended home: list every extension your wiki actually runs there. The augmentation applies to the whole project the tsconfig covers, so business code never repeats a declaration and can use `page.flagged` / `query.notifications` directly. Alternatively, simply importing the field-group type you need (e.g. [`ApiPageFlagged`](/api/extensions/flaggedrevs/ApiPageFlagged)) anywhere also activates the pack.
+A dedicated type file (e.g. `mw-response.d.ts`, kept inside your tsconfig `include`) is the recommended home: list every extension your wiki actually runs there. The augmentation applies to the whole project the tsconfig covers, so business code never repeats a declaration and can use `page.flagged` / `query.notifications` directly. Alternatively, simply importing the field-group type you need (e.g. [`ApiPageFlagged`](/api/extensions/flaggedrevs/ApiPageFlagged)) anywhere also activates the pack.
 
 ## Scenario 2: calling an extension action
 
@@ -41,7 +41,7 @@ res.result?.recipient;
 Two things come with that one import:
 
 - The pack's query fields (if the extension also has query modules — e.g. `discussiontools` contributes both `action=discussiontools…` responses and `prop=threaditemshtml`) are activated at the same time.
-- You do not need the pack in `mw-extensions.d.ts` just to call its action; add it there only if you also consume its query fields.
+- You do not need the pack in `mw-response.d.ts` just to call its action; add it there only if you also consume its query fields.
 
 ## Packs that augment query types
 
@@ -96,10 +96,14 @@ Packs appearing in both tables (e.g. `abusefilters`, `discussiontools`, `flagged
 
 ## Adding types for uncovered extensions
 
-The same seam is general: for an extension this package does not cover, declare the field group yourself and merge it into the query surface with a hand-written module augmentation. (`ApiPage` / `ApiQueryResult` are the only merge points; action responses are standalone envelopes with nothing to merge into, so a new action from an uncovered extension is just a plain interface you define and import.)
+The same seam is general: for an extension this package does not cover, declare the field group yourself and merge it into the query surface with a hand-written module augmentation.
+
+- Query fields merge into `ApiPage` / `ApiQueryResult`.
+- Log details merge into [ApiLogEventParams](/api/core/ApiLogEventParams) — site-custom log actions, and legacy key forms still in old rows, both land here.
+- Action responses are standalone envelopes with nothing to merge into; a new action from an uncovered extension is just a plain interface you define and import.
 
 ```ts
-// types/mywiki-extensions.d.ts — for the (uncovered) Foo extension's `prop=foo`
+// types/mw-response.d.ts — for the (uncovered) Foo extension's `prop=foo`
 import type { Flag } from "types-mediawiki-response";
 
 /** Field group contributed by `prop=foo`. */

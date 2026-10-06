@@ -598,6 +598,7 @@ export interface ApiQueryResponse extends ApiEnvelope {
 }
 
 export * from "./shared";
+export * from "./logparams";
 export * from "./info";
 export * from "./categories";
 export * from "./revisions";

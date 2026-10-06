@@ -1,0 +1,65 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "lecontinue": "20261004090937|66",
+    "continue": "-||"
+  },
+  "query": {
+    "logevents": [
+      {
+        "logid": 102,
+        "ns": 2,
+        "title": "User:203.0.113.88",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "duration": "1 week",
+          "flags": [
+            "noemail"
+          ],
+          "restrictions": {
+            "pages": [
+              {
+                "page_ns": 0,
+                "page_title": "CM probe 1791258182"
+              }
+            ]
+          },
+          "sitewide": false,
+          "expiry": "2026-10-13T03:44:28Z"
+        },
+        "type": "block",
+        "action": "block",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:44:28Z",
+        "comment": "log probe partial block",
+        "parsedcomment": "log probe partial block",
+        "tags": []
+      },
+      {
+        "logid": 83,
+        "ns": 2,
+        "title": "User:203.0.113.77",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "duration": "infinity",
+          "flags": [
+            "nocreate",
+            "nousertalk"
+          ],
+          "sitewide": true
+        },
+        "type": "block",
+        "action": "block",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:41:38Z",
+        "comment": "log probe block",
+        "parsedcomment": "log probe block",
+        "tags": []
+      }
+    ]
+  }
+}

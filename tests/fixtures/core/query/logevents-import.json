@@ -1,0 +1,32 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "lecontinue": "20260702003908|22696026",
+    "continue": "-||"
+  },
+  "query": {
+    "logevents": [
+      {
+        "logid": 22696028,
+        "ns": 828,
+        "title": "Module:Params/doc/examples/watchlist/page",
+        "pageid": 2436570,
+        "logpage": 2436570,
+        "revid": 8480329,
+        "params": {
+          "count": 4,
+          "interwiki_ns": 0,
+          "interwiki_title": "w:en:Module:Params/doc/examples/watchlist/page"
+        },
+        "type": "import",
+        "action": "interwiki",
+        "user": "Grufo",
+        "userid": 1331086,
+        "timestamp": "2026-07-02T00:42:30Z",
+        "comment": "Import the documentation from enwiki",
+        "parsedcomment": "Import the documentation from enwiki",
+        "tags": []
+      }
+    ]
+  }
+}

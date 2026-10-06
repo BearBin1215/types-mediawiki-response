@@ -328,6 +328,171 @@ const SPECS: FixtureSpec[] = [
       lelimit: "5",
     },
   },
+  // Per-action logevents fixtures pinning the `params` wire format of every
+  // core log action (type ApiLogEventParams). The local baseline covers the
+  // actions the fixture wiki can exercise; the ORG specs cover the rest —
+  // `block/reblock` for the 1.44+ keys (blockId/duration-l10n, @since-tagged
+  // in the type), `upload` (uploads disabled locally), `pagelang` and
+  // `import/interwiki` (no local sources). Suppress/* shares the
+  // delete/revision emitter and DeleteLogFormatter, verified in source.
+  {
+    // Partial + sitewide block rows: restrictions/pages, flags, expiry.
+    path: "core/query/logevents-block.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "block/block",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "2",
+    },
+  },
+  {
+    // Reblock on mediawiki.org (1.47-wmf): carries the 1.44+ keys.
+    path: "core/query/logevents-reblock.json",
+    api: ORG_API,
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "block/reblock",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // protect/protect + protect/move_prot (oldtitle_ns/oldtitle_title pair).
+    path: "core/query/logevents-protect.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      letype: "protect",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "2",
+    },
+  },
+  {
+    // move/move: target_ns/target_title pair, suppressredirect.
+    path: "core/query/logevents-move.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "move/move",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // delete/revision (type/ids/old/new), delete/restore (count), delete/delete ({}).
+    path: "core/query/logevents-delete.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      letype: "delete",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "3",
+    },
+  },
+  {
+    // merge/merge: dest_ns/dest_title, ISO mergepoint, raw mergerevid.
+    path: "core/query/logevents-merge.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "merge/merge",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // patrol/patrol: number/curid, previd (0 on creation), boolean auto.
+    path: "core/query/logevents-patrol.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "patrol/patrol",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // tag/update: raw revid/logid forms, counts, initialTags.
+    path: "core/query/logevents-tag.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "tag/update",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // managetags/create: tag only (count absent on create rows).
+    path: "core/query/logevents-managetags.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      letype: "managetags",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "2",
+    },
+  },
+  {
+    // contentmodel/change: oldmodel/newmodel.
+    path: "core/query/logevents-contentmodel.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "contentmodel/change",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // rights/rights: groups + parallel metadata with formatted expiries.
+    path: "core/query/logevents-rights.json",
+    params: {
+      action: "query",
+      list: "logevents",
+      letype: "rights",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // upload on mediawiki.org: uploads are disabled on the local baseline.
+    path: "core/query/logevents-upload.json",
+    api: ORG_API,
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "upload/upload",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // pagelang/pagelang: [def]-suffixed language codes.
+    path: "core/query/logevents-pagelang.json",
+    api: ORG_API,
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "pagelang/pagelang",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
+  {
+    // import/interwiki: count + interwiki_ns/interwiki_title pair.
+    path: "core/query/logevents-import.json",
+    api: ORG_API,
+    params: {
+      action: "query",
+      list: "logevents",
+      leaction: "import/interwiki",
+      leprop: "ids|type|timestamp|user|userid|comment|parsedcomment|title|details|tags",
+      lelimit: "1",
+    },
+  },
   {
     path: "core/query/allusers.json",
     params: {

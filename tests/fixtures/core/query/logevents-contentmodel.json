@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "logevents": [
+      {
+        "logid": 99,
+        "ns": 0,
+        "title": "CM probe 1791258182",
+        "pageid": 27,
+        "logpage": 27,
+        "params": {
+          "oldmodel": "wikitext",
+          "newmodel": "json"
+        },
+        "type": "contentmodel",
+        "action": "change",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:43:03Z",
+        "comment": "",
+        "parsedcomment": "",
+        "tags": []
+      }
+    ]
+  }
+}

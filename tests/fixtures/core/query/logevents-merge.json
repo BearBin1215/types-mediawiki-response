@@ -1,0 +1,28 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "logevents": [
+      {
+        "logid": 87,
+        "ns": 0,
+        "title": "Merge src 1791258098",
+        "pageid": 22,
+        "logpage": 22,
+        "params": {
+          "mergerevid": "32",
+          "dest_ns": 0,
+          "dest_title": "Merge dst 1791258098",
+          "mergepoint": "2026-10-06T03:41:40Z"
+        },
+        "type": "merge",
+        "action": "merge",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:41:41Z",
+        "comment": "log probe merge",
+        "parsedcomment": "log probe merge",
+        "tags": []
+      }
+    ]
+  }
+}

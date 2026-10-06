@@ -6,11 +6,11 @@ description: "API reference overview: what the package covers, how the Core and 
 
 The field-level pages are generated from the declarations, so they always match what ships; each field's semantics, deprecations and parameter constraints live in its JSDoc, both here and on hover in your IDE.
 
-Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, activating extension packs — are covered in the [guide](/guide/getting-started.html). This tree is the field-level reference.
+Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, reading log event details, activating extension packs — are covered in the [guide](/guide/getting-started.html). This tree is the field-level reference.
 
 ## Core
 
-Everything MediaWiki **core** can return: the response envelope ([ApiEnvelope](core/ApiEnvelope.md), [ApiResponseWith](core/ApiResponseWith.md)), shared atoms ([Flag](core/Flag.md), [Timestamp](core/Timestamp.md) …), one response type per `action=` ([ApiQueryResponse](core/ApiQueryResponse.md), [ApiEditResponse](core/ApiEditResponse.md) …), and the `action=query` framework — [ApiPage](core/ApiPage.md), [ApiQueryResult](core/ApiQueryResult.md), the [QueryPage](core/QueryPage.md) projection and per-module continue tokens ([ApiQueryContinue](core/ApiQueryContinue.md)).
+Everything MediaWiki **core** can return: the response envelope ([ApiEnvelope](core/ApiEnvelope.md), [ApiResponseWith](core/ApiResponseWith.md)), shared atoms ([Flag](core/Flag.md), [Timestamp](core/Timestamp.md) …), one response type per `action=` ([ApiQueryResponse](core/ApiQueryResponse.md), [ApiEditResponse](core/ApiEditResponse.md) …), and the `action=query` framework — [ApiPage](core/ApiPage.md), [ApiQueryResult](core/ApiQueryResult.md), the [QueryPage](core/QueryPage.md) projection, per-module continue tokens ([ApiQueryContinue](core/ApiQueryContinue.md)) and the per-action structured log details of [ApiLogEventParams](core/ApiLogEventParams.md).
 
 Each single-module `action=` maps to one response type:
 

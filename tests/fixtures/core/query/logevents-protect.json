@@ -1,0 +1,54 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "logevents": [
+      {
+        "logid": 97,
+        "ns": 0,
+        "title": "Protect probe moved 1791258182",
+        "pageid": 25,
+        "logpage": 25,
+        "params": {
+          "oldtitle_ns": 0,
+          "oldtitle_title": "Protect probe 1791258182"
+        },
+        "type": "protect",
+        "action": "move_prot",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:43:03Z",
+        "comment": "[[Protect probe 1791258182]] moved to [[Protect probe moved 1791258182]]: log probe move",
+        "parsedcomment": "<a href=\"/index.php/Protect_probe_1791258182\" class=\"mw-redirect\" title=\"Protect probe 1791258182\">Protect probe 1791258182</a> moved to <a href=\"/index.php/Protect_probe_moved_1791258182\" title=\"Protect probe moved 1791258182\">Protect probe moved 1791258182</a>: log probe move",
+        "tags": []
+      },
+      {
+        "logid": 95,
+        "ns": 0,
+        "title": "Protect probe 1791258182",
+        "pageid": 26,
+        "logpage": 25,
+        "revid": 37,
+        "params": {
+          "description": "‎[edit=autoconfirmed] (indefinite)",
+          "cascade": false,
+          "details": [
+            {
+              "type": "edit",
+              "level": "autoconfirmed",
+              "expiry": "infinite",
+              "cascade": false
+            }
+          ]
+        },
+        "type": "protect",
+        "action": "protect",
+        "user": "Capadmin",
+        "userid": 7,
+        "timestamp": "2026-10-06T03:43:03Z",
+        "comment": "log probe protect",
+        "parsedcomment": "log probe protect",
+        "tags": []
+      }
+    ]
+  }
+}

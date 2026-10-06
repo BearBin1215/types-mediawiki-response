@@ -16,13 +16,13 @@ description: "按站点实际安装的扩展，用按需启用的包加一条 ty
 每个包自带 `declare module` 增广——键名与落点收在包内，消费方项目里不会冻结一段日后会漂移的片段。激活一个包只需从它 type-only 导入任意内容：
 
 ```ts
-// mw-extensions.d.ts —— 每个仓库声明一次，放在任意被 tsconfig include 的文件里
+// mw-response.d.ts —— 每个仓库声明一次，放在任意被 tsconfig include 的文件里
 import type {} from "types-mediawiki-response/ext/flaggedrevs";
 import type {} from "types-mediawiki-response/ext/globalusage";
 // ApiPage.flagged / ApiPage.globalusage 在项目的每个文件里都出现
 ```
 
-推荐放一个专门的类型文件（例如 `mw-extensions.d.ts`，保持在 tsconfig 的 `include` 字段内），在文件内列全当前项目对应 wiki 实际安装的扩展。增广对整个 tsconfig 所覆盖的项目生效，业务文件不用重复声明，可以直接用 `page.flagged` / `query.notifications`。或者只要在任意地方导入过要用的字段组类型（如 [`ApiPageFlagged`](/api/extensions/flaggedrevs/ApiPageFlagged)），包的增广同样随之生效。
+推荐放一个专门的类型文件（例如 `mw-response.d.ts`，保持在 tsconfig 的 `include` 字段内），在文件内列全当前项目对应 wiki 实际安装的扩展。增广对整个 tsconfig 所覆盖的项目生效，业务文件不用重复声明，可以直接用 `page.flagged` / `query.notifications`。或者只要在任意地方导入过要用的字段组类型（如 [`ApiPageFlagged`](/api/extensions/flaggedrevs/ApiPageFlagged)），包的增广同样随之生效。
 
 ## 场景二：调用扩展的 action
 
@@ -41,7 +41,7 @@ res.result?.recipient;
 这一条 import 附带两件事：
 
 - 该扩展如果还有 query 模块（比如 `discussiontools` 既有 `action=discussiontoolspageinfo` 响应、又有 `prop=threaditemshtml`），其 query 字段也随之激活。
-- 仅为调用 action 时不需要把包写进 `mw-extensions.d.ts`；只有同时消费它的 query 字段才需要。
+- 仅为调用 action 时不需要把包写进 `mw-response.d.ts`；只有同时消费它的 query 字段才需要。
 
 ## 增广 query 类型的包
 
@@ -96,10 +96,14 @@ wiki 装了对应扩展就激活（场景一），所列模块的字段会出现
 
 ## 给未覆盖的扩展补充类型
 
-同样的接缝是通用的。若站点装了本包未覆盖的扩展，可自己声明字段组，再用模块增广并入 query 面（`ApiPage` / `ApiQueryResult` 是仅有的并入点，action 响应是独立信封，没有可并入的共享形状，未覆盖扩展的新 action 只需自己定义普通接口并按名导入）：
+同样的接缝是通用的。若站点装了本包未覆盖的扩展，可自己声明字段组，再用模块增广并入 query 面。
+
+- query 字段的并入点是 `ApiPage` / `ApiQueryResult`。
+- 日志明细的并入点是 [ApiLogEventParams](/api/core/ApiLogEventParams)，自定义的 log action、以及仍留在老行里的遗留键形都从这里并入。
+- action 响应是独立信封，没有可并入的共享形状，未覆盖扩展的新 action 只需自己定义普通接口并按名导入。
 
 ```ts
-// types/mywiki-extensions.d.ts —— 以未覆盖的 Foo 扩展的 `prop=foo` 为例
+// types/mw-response.d.ts —— 以未覆盖的 Foo 扩展的 `prop=foo` 为例
 import type { Flag } from "types-mediawiki-response";
 
 /** `prop=foo` 贡献的字段组。 */

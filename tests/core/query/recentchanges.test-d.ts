@@ -3,7 +3,12 @@
  * Compiled by `pnpm typecheck`. See `info.test-d.ts` for the assertion recipe.
  */
 import { expectTypeOf } from "expect-type";
-import type { ApiQueryResponse, ApiQueryResult, ApiRecentChange } from "../../../src";
+import type {
+  ApiLogEventParams,
+  ApiQueryResponse,
+  ApiQueryResult,
+  ApiRecentChange,
+} from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import recentchangesFixture from "../../fixtures/core/query/recentchanges.json";
 
@@ -39,6 +44,10 @@ export const sample = {
 
 // `type` is an open union; log-only fields are optional on the shared entry shape.
 expectTypeOf<ApiRecentChange>().toHaveProperty("type");
+// `logparams` shares the log-details shape of `list=logevents` (`params`).
+expectTypeOf<ApiRecentChange>()
+  .toHaveProperty("logparams")
+  .toEqualTypeOf<ApiLogEventParams | undefined>();
 expectTypeOf<ApiQueryResult>()
   .toHaveProperty("recentchanges")
   .toEqualTypeOf<ApiRecentChange[] | undefined>();

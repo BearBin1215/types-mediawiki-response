@@ -13,6 +13,7 @@
 import type { ApiWatchlistLabel, Flag, NamespaceIndex, Timestamp } from "../../common";
 import type { ApiHiddenFlags } from "./shared";
 import type { RecentChangeType } from "./recentchanges";
+import type { ApiLogEventParams } from "./logparams";
 
 /** One watchlist entry. `wlprop` controls which fields appear. */
 export interface ApiWatchlistEntry extends ApiHiddenFlags {
@@ -43,8 +44,11 @@ export interface ApiWatchlistEntry extends ApiHiddenFlags {
   /** Log action. `wlprop=loginfo` (only for `type=log`). */
   logaction?: string;
 
-  /** Structured log parameters. `wlprop=loginfo` (only for `type=log`). */
-  logparams?: Record<string, unknown>;
+  /**
+   * Structured log details — see {@link ApiLogEventParams}. `wlprop=loginfo`
+   * (only for `type=log`).
+   */
+  logparams?: ApiLogEventParams;
 
   /**
    * Localized log action text, e.g. `changed protection settings`.

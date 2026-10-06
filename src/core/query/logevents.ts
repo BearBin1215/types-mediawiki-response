@@ -9,6 +9,7 @@
  */
 import type { Flag, NamespaceIndex, Timestamp } from "../../common";
 import type { ApiHiddenFlags } from "./shared";
+import type { ApiLogEventParams } from "./logparams";
 
 /** One log event. `leprop` controls which fields appear. */
 export interface ApiLogEvent extends ApiHiddenFlags {
@@ -40,8 +41,11 @@ export interface ApiLogEvent extends ApiHiddenFlags {
   /** Log action, e.g. `create`, `delete`. `leprop=type`. */
   action?: string;
 
-  /** Structured log details; shape varies by `type`/`action`. `leprop=details`. */
-  params?: Record<string, unknown>;
+  /**
+   * Structured log details; shape varies by `type`/`action` — see
+   * {@link ApiLogEventParams}. `leprop=details`.
+   */
+  params?: ApiLogEventParams;
 
   /** Performing user name (or IP). `leprop=user`. */
   user?: string;

@@ -1,0 +1,37 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "lecontinue": "20260930040718|22828204",
+    "continue": "-||"
+  },
+  "query": {
+    "logevents": [
+      {
+        "logid": 22831618,
+        "ns": 2,
+        "title": "User:Luntz1949",
+        "pageid": 0,
+        "logpage": 0,
+        "params": {
+          "duration": "infinity",
+          "flags": [
+            "nocreate",
+            "noemail",
+            "nousertalk"
+          ],
+          "blockId": 177008,
+          "sitewide": true,
+          "duration-l10n": "infinite"
+        },
+        "type": "block",
+        "action": "reblock",
+        "user": "Clump",
+        "userid": 81610,
+        "timestamp": "2026-10-01T20:47:18Z",
+        "comment": "Vandalism-only account: Vandalism ([[m:GS|global sysop]] action)",
+        "parsedcomment": "Vandalism-only account: Vandalism (<a href=\"https://meta.wikimedia.org/wiki/GS\" class=\"extiw\" title=\"m:GS\">global sysop</a> action)",
+        "tags": []
+      }
+    ]
+  }
+}
