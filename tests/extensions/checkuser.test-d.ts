@@ -1,6 +1,7 @@
 /**
  * Type-level assertions for the CheckUser ext pack (`list=checkuser`,
- * `list=checkuserlog`), checked against real local 1.43 fv2 fixtures.
+ * `list=checkuserlog`, `meta=checkuserformattedblockinfo`), checked against
+ * real local 1.43/1.46 fv2 fixtures.
  */
 import { expectTypeOf } from "expect-type";
 import type {
@@ -94,3 +95,29 @@ expectTypeOf<
 
 // Each `curequest` mode fills exactly one key of the `checkuser` object.
 expectTypeOf<keyof ApiQueryCheckUserResult>().toEqualTypeOf<"userips" | "edits" | "ipusers">();
+
+// --- meta=checkuserformattedblockinfo (1.46 capture) ---------------------------
+
+import type { ApiQueryCheckUserFormattedBlockInfoResult } from "../../src/extensions/checkuser";
+import blockInfoFixture from "../fixtures/extensions/checkuserformattedblockinfo.json";
+import blockInfoBlockedFixture from "../fixtures/extensions/checkuserformattedblockinfo-blocked.json";
+
+// `details` is written unconditionally: an explicit `null` when the requesting
+// user is not sitewide-blocked, the rendered block-message HTML otherwise.
+export const blockInfoSample = {
+  details: null,
+} satisfies ApiQueryCheckUserFormattedBlockInfoResult;
+
+export const blockInfoBlockedSample = {
+  details: "<p><strong>Your username or IP address has been blocked.</strong>…",
+} satisfies ApiQueryCheckUserFormattedBlockInfoResult;
+
+expectTypeOf<ApiQueryCheckUserFormattedBlockInfoResult>()
+  .toHaveProperty("details")
+  .toEqualTypeOf<string | null>();
+expectTypeOf<
+  (typeof blockInfoFixture)["query"]["checkuserformattedblockinfo"]["details"]
+>().toBeNull();
+expectTypeOf<
+  (typeof blockInfoBlockedFixture)["query"]["checkuserformattedblockinfo"]["details"]
+>().toExtend<string>();

@@ -10,40 +10,76 @@
       "reason": "The module \"query\" does not have a submodule \"trackingcategories\"."
     },
     {
-      "module": "languagesearch",
-      "reason": "The module \"main\" does not have a submodule \"languagesearch\".\nThe module \"query\" does not have a submodule \"description\"."
+      "module": "centralauthtoken",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "createlocalaccount",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "deleteglobalaccount",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "setglobalaccountstatus",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "globaluserrights",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "globalallusers",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "globalgroups",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "globalusers",
+      "reason": "The module \"main\" does not have a submodule \"centralauthtoken\".\nThe module \"main\" does not have a submodule \"createlocalaccount\".\nThe module \"main\" does not have a submodule \"deleteglobalaccount\".\nThe module \"main\" does not have a submodule \"setglobalaccountstatus\".\nThe module \"main\" does not have a submodule \"globaluserrights\".\nThe module \"query\" does not have a submodule \"globalallusers\".\nThe module \"query\" does not have a submodule \"globalgroups\".\nThe module \"query\" does not have a submodule \"globalusers\"."
+    },
+    {
+      "module": "wikisets",
+      "reason": "The module \"query\" does not have a submodule \"wikisets\".\nThe module \"query\" does not have a submodule \"checkuserformattedblockinfo\".\nThe module \"query\" does not have a submodule \"description\".\nThe module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\"."
+    },
+    {
+      "module": "checkuserformattedblockinfo",
+      "reason": "The module \"query\" does not have a submodule \"wikisets\".\nThe module \"query\" does not have a submodule \"checkuserformattedblockinfo\".\nThe module \"query\" does not have a submodule \"description\".\nThe module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\"."
     },
     {
       "module": "description",
-      "reason": "The module \"main\" does not have a submodule \"languagesearch\".\nThe module \"query\" does not have a submodule \"description\"."
+      "reason": "The module \"query\" does not have a submodule \"wikisets\".\nThe module \"query\" does not have a submodule \"checkuserformattedblockinfo\".\nThe module \"query\" does not have a submodule \"description\".\nThe module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\"."
     },
     {
       "module": "globalusage",
-      "reason": "The module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\".\nThe module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\"."
+      "reason": "The module \"query\" does not have a submodule \"wikisets\".\nThe module \"query\" does not have a submodule \"checkuserformattedblockinfo\".\nThe module \"query\" does not have a submodule \"description\".\nThe module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\"."
     },
     {
       "module": "globaluserinfo",
-      "reason": "The module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\".\nThe module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\"."
+      "reason": "The module \"query\" does not have a submodule \"wikisets\".\nThe module \"query\" does not have a submodule \"checkuserformattedblockinfo\".\nThe module \"query\" does not have a submodule \"description\".\nThe module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\"."
     },
     {
       "module": "sitematrix",
-      "reason": "The module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\".\nThe module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\"."
+      "reason": "The module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\".\nThe module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
     },
     {
       "module": "wikibase",
-      "reason": "The module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\".\nThe module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\"."
+      "reason": "The module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\".\nThe module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
     },
     {
       "module": "pageterms",
-      "reason": "The module \"query\" does not have a submodule \"globalusage\".\nThe module \"query\" does not have a submodule \"globaluserinfo\".\nThe module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\"."
+      "reason": "The module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\".\nThe module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
     },
     {
       "module": "wbentityusage",
-      "reason": "The module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
+      "reason": "The module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\".\nThe module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
     },
     {
       "module": "wblistentityusage",
-      "reason": "The module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
+      "reason": "The module \"query\" does not have a submodule \"sitematrix\".\nThe module \"query\" does not have a submodule \"wikibase\".\nThe module \"query\" does not have a submodule \"pageterms\".\nThe module \"query\" does not have a submodule \"wbentityusage\".\nThe module \"query\" does not have a submodule \"wblistentityusage\"."
     }
   ],
   "modules": [
@@ -1622,6 +1658,7 @@
             "oathauth-view-log",
             "override-export-depth",
             "pagelang",
+            "pagetranslation",
             "patrol",
             "patrolmarks",
             "protect",
@@ -1652,8 +1689,15 @@
             "titleblacklistlog",
             "transcode-reset",
             "transcode-status",
+            "translate",
+            "translate-groupreview",
+            "translate-import",
+            "translate-manage",
+            "translate-messagereview",
+            "translate-sandboxmanage",
             "unblockself",
             "undelete",
+            "unfuzzy",
             "unreviewedpages",
             "unwatchedpages",
             "upload",
@@ -2408,6 +2452,7 @@
             "oathauth-view-log",
             "override-export-depth",
             "pagelang",
+            "pagetranslation",
             "patrol",
             "patrolmarks",
             "protect",
@@ -2432,8 +2477,15 @@
             "titleblacklistlog",
             "transcode-reset",
             "transcode-status",
+            "translate",
+            "translate-groupreview",
+            "translate-import",
+            "translate-manage",
+            "translate-messagereview",
+            "translate-sandboxmanage",
             "unblockself",
             "undelete",
+            "unfuzzy",
             "unreviewedpages",
             "unwatchedpages",
             "upload",
@@ -2554,6 +2606,7 @@
             "oathauth-view-log",
             "override-export-depth",
             "pagelang",
+            "pagetranslation",
             "patrol",
             "patrolmarks",
             "protect",
@@ -2578,8 +2631,15 @@
             "titleblacklistlog",
             "transcode-reset",
             "transcode-status",
+            "translate",
+            "translate-groupreview",
+            "translate-import",
+            "translate-manage",
+            "translate-messagereview",
+            "translate-sandboxmanage",
             "unblockself",
             "undelete",
+            "unfuzzy",
             "unreviewedpages",
             "unwatchedpages",
             "upload",
@@ -4538,10 +4598,12 @@
             "managetags",
             "massmessage",
             "merge",
+            "messagebundle",
             "move",
             "newusers",
             "oath",
             "pagelang",
+            "pagetranslation",
             "patrol",
             "protect",
             "renameuser",
@@ -4554,6 +4616,8 @@
             "thanks",
             "timedmediahandler",
             "titleblacklist",
+            "translationreview",
+            "translatorsandbox",
             "upload",
             "urlshortener"
           ],
@@ -4587,6 +4651,7 @@
             "gblblock/*",
             "gblblock/gunblock",
             "import/interwiki",
+            "import/translatable-bundle",
             "import/upload",
             "interwiki/*",
             "managetags/activate",
@@ -4600,6 +4665,10 @@
             "massmessage/skipnouser",
             "massmessage/skipoptout",
             "merge/merge",
+            "messagebundle/deletefnok",
+            "messagebundle/deletefok",
+            "messagebundle/movenok",
+            "messagebundle/moveok",
             "move/move",
             "move/move_redir",
             "newusers/autocreate",
@@ -4607,8 +4676,22 @@
             "newusers/create",
             "newusers/create2",
             "newusers/newusers",
+            "newusers/tsbpromoted",
             "oath/*",
             "pagelang/pagelang",
+            "pagetranslation/associate",
+            "pagetranslation/deletefnok",
+            "pagetranslation/deletefok",
+            "pagetranslation/deletelnok",
+            "pagetranslation/deletelok",
+            "pagetranslation/discourage",
+            "pagetranslation/dissociate",
+            "pagetranslation/encourage",
+            "pagetranslation/mark",
+            "pagetranslation/movenok",
+            "pagetranslation/moveok",
+            "pagetranslation/prioritylanguages",
+            "pagetranslation/unmark",
             "patrol/autopatrol",
             "patrol/patrol",
             "protect/modify",
@@ -4638,6 +4721,11 @@
             "thanks/*",
             "timedmediahandler/resettranscode",
             "titleblacklist/*",
+            "translationreview/group",
+            "translationreview/message",
+            "translationreview/unfuzzy",
+            "translatorsandbox/promoted",
+            "translatorsandbox/rejected",
             "upload/overwrite",
             "upload/revert",
             "upload/upload",
@@ -7013,6 +7101,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "wikitext"
           ],
           "required": true,
@@ -7254,6 +7343,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -7352,6 +7442,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -7465,6 +7556,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -7526,6 +7618,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -7930,6 +8023,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -8266,6 +8360,7 @@
             "langbacklinks",
             "links",
             "linkshere",
+            "messagecollection",
             "mostviewed",
             "oldreviewedpages",
             "pageswithprop",
@@ -8310,6 +8405,7 @@
             "langbacklinks": "query+langbacklinks",
             "links": "query+links",
             "linkshere": "query+linkshere",
+            "messagecollection": "query+messagecollection",
             "mostviewed": "query+mostviewed",
             "oldreviewedpages": "query+oldreviewedpages",
             "pageswithprop": "query+pageswithprop",
@@ -8458,6 +8554,37 @@
           "sensitive": true,
           "multi": false,
           "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "languagesearch",
+      "classname": "UniversalLanguageSelector\\Api\\ApiLanguageSearch",
+      "path": "languagesearch",
+      "group": "action",
+      "prefix": "",
+      "source": "UniversalLanguageSelector",
+      "sourcename": "Universal­Language­Selector",
+      "licensetag": "GPL-2.0-or-later OR MIT",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/UniversalLanguageSelector",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Languagesearch"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "search",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "typos",
+          "type": "integer",
+          "required": false,
+          "default": 1,
+          "multi": false
         }
       ],
       "templatedparameters": []
@@ -9136,6 +9263,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -9394,6 +9522,7 @@
             "langbacklinks",
             "links",
             "linkshere",
+            "messagecollection",
             "mostviewed",
             "oldreviewedpages",
             "pageswithprop",
@@ -9438,6 +9567,7 @@
             "langbacklinks": "query+langbacklinks",
             "links": "query+links",
             "linkshere": "query+linkshere",
+            "messagecollection": "query+messagecollection",
             "mostviewed": "query+mostviewed",
             "oldreviewedpages": "query+oldreviewedpages",
             "pageswithprop": "query+pageswithprop",
@@ -9842,6 +9972,7 @@
             "langbacklinks",
             "links",
             "linkshere",
+            "messagecollection",
             "mostviewed",
             "oldreviewedpages",
             "pageswithprop",
@@ -9886,6 +10017,7 @@
             "langbacklinks": "query+langbacklinks",
             "links": "query+links",
             "linkshere": "query+linkshere",
+            "messagecollection": "query+messagecollection",
             "mostviewed": "query+mostviewed",
             "oldreviewedpages": "query+oldreviewedpages",
             "pageswithprop": "query+pageswithprop",
@@ -10594,6 +10726,7 @@
             "javascript",
             "json",
             "text",
+            "translate-messagebundle",
             "unknown",
             "wikitext"
           ],
@@ -10719,6 +10852,168 @@
           "lowlimit": 50,
           "highlimit": 500,
           "limit": 50
+        },
+        {
+          "index": 8,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "unblock",
+      "classname": "MediaWiki\\Api\\ApiUnblock",
+      "path": "unblock",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Block"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "id",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "user",
+          "type": "user",
+          "required": false,
+          "multi": false,
+          "subtypes": ["name", "ip", "temp", "cidr", "id"]
+        },
+        {
+          "index": 3,
+          "name": "userid",
+          "type": "integer",
+          "required": false,
+          "deprecated": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "tags",
+          "type": ["audit-ZPET8LA"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "watchuser",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "undelete",
+      "classname": "MediaWiki\\Api\\ApiUndelete",
+      "path": "undelete",
+      "group": "action",
+      "prefix": "",
+      "source": "MediaWiki",
+      "sourcename": "MediaWiki",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/MediaWiki",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/API:Undelete"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "reason",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "tags",
+          "type": ["audit-ZPET8LA"],
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "timestamps",
+          "type": "timestamp",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "fileids",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "undeletetalk",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "watchlist",
+          "type": ["nochange", "preferences", "unwatch", "watch"],
+          "required": false,
+          "default": "preferences",
+          "multi": false
         },
         {
           "index": 8,
@@ -11156,6 +11451,7 @@
             "langbacklinks",
             "links",
             "linkshere",
+            "messagecollection",
             "mostviewed",
             "oldreviewedpages",
             "pageswithprop",
@@ -11200,6 +11496,7 @@
             "langbacklinks": "query+langbacklinks",
             "links": "query+links",
             "linkshere": "query+linkshere",
+            "messagecollection": "query+messagecollection",
             "mostviewed": "query+mostviewed",
             "oldreviewedpages": "query+oldreviewedpages",
             "pageswithprop": "query+pageswithprop",
@@ -11415,6 +11712,29 @@
           "sensitive": true,
           "multi": false,
           "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "betafeatures",
+      "classname": "MediaWiki\\Extension\\BetaFeatures\\ApiQueryBetaFeatures",
+      "path": "query+betafeatures",
+      "group": "list",
+      "prefix": "bf",
+      "source": "BetaFeatures",
+      "sourcename": "BetaFeatures",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/BetaFeatures",
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BetaFeatures"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "counts",
+          "type": "string",
+          "required": false,
+          "multi": false
         }
       ],
       "templatedparameters": []
@@ -13664,6 +13984,7 @@
             "langbacklinks",
             "links",
             "linkshere",
+            "messagecollection",
             "mostviewed",
             "oldreviewedpages",
             "pageswithprop",
@@ -13708,6 +14029,7 @@
             "langbacklinks": "query+langbacklinks",
             "links": "query+links",
             "linkshere": "query+linkshere",
+            "messagecollection": "query+messagecollection",
             "mostviewed": "query+mostviewed",
             "oldreviewedpages": "query+oldreviewedpages",
             "pageswithprop": "query+pageswithprop",
@@ -13914,6 +14236,1100 @@
           "type": "boolean",
           "required": false,
           "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "aggregategroups",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageGroupProcessing\\AggregateGroupsActionApi",
+      "path": "aggregategroups",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "do",
+          "type": ["add", "associate", "dissociate", "remove", "update"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "aggregategroup",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "group",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "groupname",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "groupdescription",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "groupsourcelanguagecode",
+          "type": "string",
+          "required": false,
+          "default": "-",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "groupreview",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageGroupProcessing\\GroupReviewActionApi",
+      "path": "groupreview",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "group",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "default": "en",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "state",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "markfortranslation",
+      "classname": "MediaWiki\\Extension\\Translate\\PageTranslation\\MarkForTranslationActionApi",
+      "path": "markfortranslation",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "pageid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "revid",
+          "type": "integer",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "translatetitle",
+          "type": ["no", "yes"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "prioritylanguages",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 1000,
+          "highlimit": 1000,
+          "limit": 1000
+        },
+        {
+          "index": 6,
+          "name": "forcepriority",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "priorityreason",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "nofuzzyunits",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 1000,
+          "highlimit": 1000,
+          "limit": 1000
+        },
+        {
+          "index": 9,
+          "name": "fuzzyunits",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 1000,
+          "highlimit": 1000,
+          "limit": 1000
+        },
+        {
+          "index": 10,
+          "name": "forcelatestsyntaxversion",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 11,
+          "name": "transclusion",
+          "type": ["no", "yes"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 12,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "messagegroupsubscription",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageGroupProcessing\\MessageGroupSubscriptionActionApi",
+      "path": "messagegroupsubscription",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "internal": true,
+      "readrights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "groupId",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "operation",
+          "type": ["subscribe", "unsubscribe"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "searchtranslations",
+      "classname": "MediaWiki\\Extension\\Translate\\TtmServer\\SearchTranslationsActionApi",
+      "path": "searchtranslations",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "service",
+          "type": ["fixture-search"],
+          "required": false,
+          "default": "fixture-search",
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "sourcelanguage",
+          "type": "string",
+          "required": false,
+          "default": "en",
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "group",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "filter",
+          "type": ["", "fuzzy", "translated", "untranslated"],
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "match",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 8,
+          "name": "case",
+          "type": "string",
+          "required": false,
+          "default": "0",
+          "multi": false
+        },
+        {
+          "index": 9,
+          "name": "offset",
+          "type": "integer",
+          "required": false,
+          "default": 0,
+          "multi": false
+        },
+        {
+          "index": 10,
+          "name": "limit",
+          "type": "limit",
+          "required": false,
+          "default": 25,
+          "multi": false,
+          "min": 1,
+          "max": 50,
+          "highmax": 500
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translationaids",
+      "classname": "MediaWiki\\Extension\\Translate\\TranslatorInterface\\Aid\\TranslationAidsActionApi",
+      "path": "translationaids",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "group",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "prop",
+          "type": [
+            "definition",
+            "definitiondiff",
+            "documentation",
+            "editsummaries",
+            "gettext",
+            "groups",
+            "inotherlanguages",
+            "insertables",
+            "mt",
+            "support",
+            "translation",
+            "ttmserver"
+          ],
+          "required": false,
+          "default": "groups|definition|translation|inotherlanguages|documentation|mt|definitiondiff|ttmserver|support|gettext|insertables|editsummaries",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translationentitysearch",
+      "classname": "MediaWiki\\Extension\\Translate\\TranslatorInterface\\TranslationEntitySearchActionApi",
+      "path": "translationentitysearch",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "internal": true,
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "entitytype",
+          "type": ["groups", "messages"],
+          "required": false,
+          "default": "groups|messages",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "query",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "limit",
+          "type": "limit",
+          "required": false,
+          "default": 10,
+          "multi": false,
+          "min": 0,
+          "max": 50
+        },
+        {
+          "index": 4,
+          "name": "grouptypes",
+          "type": ["aggregate-groups", "message-bundles", "translatable-pages"],
+          "required": false,
+          "default": [],
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translationreview",
+      "classname": "MediaWiki\\Extension\\Translate\\TranslatorInterface\\ReviewTranslationActionApi",
+      "path": "translationreview",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "revision",
+          "type": "integer",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translationstash",
+      "classname": "MediaWiki\\Extension\\Translate\\TranslatorSandbox\\TranslationStashActionApi",
+      "path": "translationstash",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "subaction",
+          "type": ["add", "query"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "translation",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "metadata",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        },
+        {
+          "index": 6,
+          "name": "username",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translatesandbox",
+      "classname": "MediaWiki\\Extension\\Translate\\TranslatorSandbox\\TranslatorSandboxActionApi",
+      "path": "translatesandbox",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "do",
+          "type": ["create", "delete", "promote", "remind"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "userid",
+          "type": "integer",
+          "required": false,
+          "default": 0,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 3,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        },
+        {
+          "index": 4,
+          "name": "username",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "password",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "email",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "translationstats",
+      "classname": "MediaWiki\\Extension\\Translate\\Statistics\\QueryTranslationStatsActionApi",
+      "path": "translationstats",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "count",
+          "type": ["edits", "registrations", "reviewers", "reviews", "users"],
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "days",
+          "type": "integer",
+          "required": true,
+          "default": 30,
+          "multi": false,
+          "min": 1,
+          "max": 10000
+        },
+        {
+          "index": 3,
+          "name": "group",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 4,
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 5,
+          "name": "scale",
+          "type": ["days", "hours", "months", "weeks", "years"],
+          "required": false,
+          "default": "days",
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "start",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "ttmserver",
+      "classname": "MediaWiki\\Extension\\Translate\\TtmServer\\TtmServerActionApi",
+      "path": "ttmserver",
+      "group": "action",
+      "prefix": "",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "service",
+          "type": ["fixture-search", "ttmserver"],
+          "required": false,
+          "default": "fixture-search",
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "sourcelanguage",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "targetlanguage",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "text",
+          "type": "string",
+          "required": true,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "languagestats",
+      "classname": "MediaWiki\\Extension\\Translate\\Statistics\\QueryLanguageStatsActionApi",
+      "path": "query+languagestats",
+      "group": "meta",
+      "prefix": "ls",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "offset",
+          "type": "string",
+          "required": false,
+          "default": "0",
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "language",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "group",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "messagecollection",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageLoading\\QueryMessageCollectionActionApi",
+      "path": "query+messagecollection",
+      "group": "list",
+      "prefix": "mc",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "generator": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "group",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "language",
+          "type": "string",
+          "required": false,
+          "default": "en",
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "limit",
+          "type": "limit",
+          "required": false,
+          "default": 500,
+          "multi": false,
+          "min": 1,
+          "max": 5000
+        },
+        {
+          "index": 4,
+          "name": "offset",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "filter",
+          "type": "string",
+          "required": false,
+          "default": "!optional|!ignored",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "prop",
+          "type": ["definition", "properties", "tags", "translation", "revision"],
+          "required": false,
+          "default": "definition|translation",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50,
+          "deprecatedvalues": ["revision"]
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "messagegroups",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageGroupProcessing\\QueryMessageGroupsActionApi",
+      "path": "query+messagegroups",
+      "group": "meta",
+      "prefix": "mg",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "depth",
+          "type": "integer",
+          "required": false,
+          "default": 100,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "filter",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 3,
+          "name": "format",
+          "type": ["flat", "tree"],
+          "required": false,
+          "default": "flat",
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "iconsize",
+          "type": "integer",
+          "required": false,
+          "default": 64,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "prop",
+          "type": [
+            "class",
+            "description",
+            "exists",
+            "icon",
+            "id",
+            "label",
+            "namespace",
+            "priority",
+            "priorityforce",
+            "prioritylangs",
+            "sourcelanguage",
+            "subscription",
+            "workflowstates"
+          ],
+          "required": false,
+          "default": "id|label|description|class|exists",
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 6,
+          "name": "root",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "languageFilter",
+          "type": "string",
+          "required": false,
+          "default": "",
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "messagegroupstats",
+      "classname": "MediaWiki\\Extension\\Translate\\Statistics\\QueryMessageGroupStatsActionApi",
+      "path": "query+messagegroupstats",
+      "group": "meta",
+      "prefix": "mgs",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "offset",
+          "type": "string",
+          "required": false,
+          "default": "0",
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "group",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "suppresscomplete",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "suppressempty",
+          "type": "boolean",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "messagetranslations",
+      "classname": "MediaWiki\\Extension\\Translate\\MessageLoading\\QueryMessageTranslationsActionApi",
+      "path": "query+messagetranslations",
+      "group": "meta",
+      "prefix": "mt",
+      "source": "Translate",
+      "sourcename": "Translate",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/Translate",
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "offset",
+          "type": "integer",
+          "required": false,
+          "default": 0,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "ulslocalization",
+      "classname": "UniversalLanguageSelector\\Api\\ApiULSLocalization",
+      "path": "ulslocalization",
+      "group": "action",
+      "prefix": "",
+      "source": "UniversalLanguageSelector",
+      "sourcename": "Universal­Language­Selector",
+      "licensetag": "GPL-2.0-or-later OR MIT",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/UniversalLanguageSelector",
+      "internal": true,
+      "readrights": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "language",
+          "type": "string",
+          "required": true,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "ulssetlang",
+      "classname": "UniversalLanguageSelector\\Api\\ApiULSSetLanguage",
+      "path": "ulssetlang",
+      "group": "action",
+      "prefix": "",
+      "source": "UniversalLanguageSelector",
+      "sourcename": "Universal­Language­Selector",
+      "licensetag": "GPL-2.0-or-later OR MIT",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/UniversalLanguageSelector",
+      "internal": true,
+      "readrights": true,
+      "mustbeposted": true,
+      "helpurls": [],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "languagecode",
+          "type": "string",
+          "required": true,
+          "multi": false
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
         }
       ],
       "templatedparameters": []

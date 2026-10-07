@@ -88,3 +88,33 @@ pnpm exec tsx scripts/capture-ext-gaps.ts [group...]
 - `mw-gap.php` — 覆盖缺口组的 LocalSettings 片段（见上）。
 - `mw-lint-gap.php` — 触发 Parsoid lint 的 maintenance 脚本。核心解析器的编辑不 lint，Linter 的 `list=linterrors` 需要重渲染当前修订才能产出记录；由 `capture-coverage-gaps.ts` 的 `ext` 组 `docker cp` 进容器后调用。
 - `gap-template.jpg` — 带 EXIF 的样张，`exif-gps` 组用它产出 GPS/Exif 元数据（手工构造的 APP1 段过不了 php-ext-exif 的校验）。
+
+## 扩展包抓取容器（capture-ext-packs.ts）
+
+`capture-ext-packs.ts` 的 CentralAuth / ttmserver 组跑在 MySQL 双站容器 `mw143g`（端口 8243，中央库 `mariadb-gb` 的 `wiki143`）：
+
+- 已装载：CentralAuth、GlobalBlocking、AntiSpoof、Translate、UniversalLanguageSelector、BetaFeatures（BetaFeatures 仅 mw-fixture）。
+- 抓取账号：`Capg` / `CapGPass2026`（sysop + bureaucrat，已迁为全局账号，具 centralauth-lock/unmerge/suppress、globalgroup*、translate、pagetranslation 权限）。
+- 全局账号：`Gblink`（本地绑定，供 lock/unlock 与 globaluserrights 往返）、`Gdel2`（供 `deleteglobalaccount` 消耗，用后需重迁）、`Gfresh3` / `Gfresh`（无本地行的全局账号，供 `createlocalaccount`，用一次换一个名字）。
+- 种子内容：可翻译页 `Fixture translatable page` 与 `Fixture second page`（含 de/fr/es 翻译），TM 全文表已手工补齐至可命中（MyISAM 50% 阈值，见 dev-docs §5）。
+- 已配 `$wgMainCacheType = CACHE_DB`（APCu 子进程隔离会吞掉缓存失效，见 dev-docs §5）与本地数据库 TM 服务。
+
+```bash
+MW_CONTAINER=mw-fixture CA_CONTAINER=mw143g pnpm exec tsx scripts/capture-ext-packs.ts [group...]
+```
+
+### translate-write / translate-write2 组的额外开关（mw-fixture）
+
+```php
+$wgTranslateWorkflowStates = [ "new" => [...], "needs_proofreading" => [...], "ready" => [...] ];
+$wgTranslateUseSandbox = true;
+$wgTranslateEnableMessageGroupSubscription = true;
+$wgGroupPermissions["user"]["translate"] = true;    // Translations 命名空间保护
+$wgGroupPermissions["user"]["skipcaptcha"] = true;  // ConfirmEdit 会拦 peerx 的翻译编辑
+```
+
+- `searchtranslations` 的 fixture 来自容器内手工放入的
+  `extensions/Translate/src/TtmServer/FixtureSearchTtmServer.php`（stub 实现
+  `SearchableTtmServer`，注册为公共服务 `fixture-search` 并设为默认）；重装容器后按
+  git 历史恢复该文件。stub 不是 `ReadableTtmServer`，故 `action=ttmserver` 的
+  默认服务改指向它——`ttmserver` 组的抓取固定走 mw143g。

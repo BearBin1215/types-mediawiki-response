@@ -1,0 +1,11 @@
+{
+  "ttmserver": [
+    {
+      "source": "Welcome to the fixture page.",
+      "target": "Willkommen auf der Fixture-Seite.",
+      "context": "Translations:Fixture translatable page/1",
+      "location": "http://index.php/Translations:Fixture_translatable_page/1/de",
+      "quality": 0.9666666666666667
+    }
+  ]
+}

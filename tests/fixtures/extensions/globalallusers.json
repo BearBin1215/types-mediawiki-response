@@ -1,0 +1,32 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "globalallusers": [
+      {
+        "id": 2,
+        "name": "Capg",
+        "groups": [],
+        "existslocally": ""
+      },
+      {
+        "id": 1,
+        "name": "Gblink",
+        "groups": [
+          "global-fixture"
+        ],
+        "existslocally": ""
+      },
+      {
+        "id": 5,
+        "name": "Gfresh",
+        "groups": [],
+        "existslocally": ""
+      },
+      {
+        "id": 4,
+        "name": "Gnolocal",
+        "groups": []
+      }
+    ]
+  }
+}

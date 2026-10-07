@@ -1,0 +1,4359 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "messagegroupstats": [
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aa",
+        "language": "aa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aae",
+        "language": "aae"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ab",
+        "language": "ab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "abs",
+        "language": "abs"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ace",
+        "language": "ace"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "acf",
+        "language": "acf"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "acm",
+        "language": "acm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ady",
+        "language": "ady"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ady-cyrl",
+        "language": "ady-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aeb",
+        "language": "aeb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aeb-arab",
+        "language": "aeb-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aeb-latn",
+        "language": "aeb-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "af",
+        "language": "af"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "aln",
+        "language": "aln"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "alt",
+        "language": "alt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "am",
+        "language": "am"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ami",
+        "language": "ami"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "an",
+        "language": "an"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ang",
+        "language": "ang"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ann",
+        "language": "ann"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "anp",
+        "language": "anp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "apc",
+        "language": "apc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ar",
+        "language": "ar"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "arc",
+        "language": "arc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "arn",
+        "language": "arn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "arq",
+        "language": "arq"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ary",
+        "language": "ary"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "arz",
+        "language": "arz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "as",
+        "language": "as"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ase",
+        "language": "ase"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ast",
+        "language": "ast"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "atj",
+        "language": "atj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "av",
+        "language": "av"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "avk",
+        "language": "avk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "awa",
+        "language": "awa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ay",
+        "language": "ay"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "az",
+        "language": "az"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "azb",
+        "language": "azb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ba",
+        "language": "ba"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ban",
+        "language": "ban"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ban-bali",
+        "language": "ban-bali"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bar",
+        "language": "bar"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bbc",
+        "language": "bbc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bbc-latn",
+        "language": "bbc-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bcc",
+        "language": "bcc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bci",
+        "language": "bci"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bcl",
+        "language": "bcl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bdr",
+        "language": "bdr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "be",
+        "language": "be"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "be-tarask",
+        "language": "be-tarask"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bew",
+        "language": "bew"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bg",
+        "language": "bg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bgc",
+        "language": "bgc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bgn",
+        "language": "bgn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bh",
+        "language": "bh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bho",
+        "language": "bho"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bi",
+        "language": "bi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bjn",
+        "language": "bjn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "blk",
+        "language": "blk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bm",
+        "language": "bm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bn",
+        "language": "bn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bo",
+        "language": "bo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bpy",
+        "language": "bpy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bqi",
+        "language": "bqi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "br",
+        "language": "br"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "brh",
+        "language": "brh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bs",
+        "language": "bs"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "btm",
+        "language": "btm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bto",
+        "language": "bto"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bug",
+        "language": "bug"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "bxr",
+        "language": "bxr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ca",
+        "language": "ca"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cbk-zam",
+        "language": "cbk-zam"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ccp",
+        "language": "ccp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cdo",
+        "language": "cdo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ce",
+        "language": "ce"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ceb",
+        "language": "ceb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ch",
+        "language": "ch"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "chn",
+        "language": "chn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cho",
+        "language": "cho"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "chr",
+        "language": "chr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "chy",
+        "language": "chy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ckb",
+        "language": "ckb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "co",
+        "language": "co"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cps",
+        "language": "cps"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cpx",
+        "language": "cpx"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cpx-hans",
+        "language": "cpx-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cpx-hant",
+        "language": "cpx-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cpx-latn",
+        "language": "cpx-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cr",
+        "language": "cr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "crh",
+        "language": "crh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "crh-cyrl",
+        "language": "crh-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "crh-latn",
+        "language": "crh-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "crh-ro",
+        "language": "crh-ro"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cs",
+        "language": "cs"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "csb",
+        "language": "csb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cu",
+        "language": "cu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cv",
+        "language": "cv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "cy",
+        "language": "cy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "da",
+        "language": "da"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dag",
+        "language": "dag"
+      },
+      {
+        "total": 3,
+        "translated": 2,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "de",
+        "language": "de"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "de-at",
+        "language": "de-at"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "de-ch",
+        "language": "de-ch"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "de-formal",
+        "language": "de-formal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dga",
+        "language": "dga"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "din",
+        "language": "din"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "diq",
+        "language": "diq"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dsb",
+        "language": "dsb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dtp",
+        "language": "dtp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dty",
+        "language": "dty"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dua",
+        "language": "dua"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dv",
+        "language": "dv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "dz",
+        "language": "dz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ee",
+        "language": "ee"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "efi",
+        "language": "efi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "egl",
+        "language": "egl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "el",
+        "language": "el"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "eml",
+        "language": "eml"
+      },
+      {
+        "total": 3,
+        "translated": 3,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "en",
+        "language": "en"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "en-ca",
+        "language": "en-ca"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "en-gb",
+        "language": "en-gb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "eo",
+        "language": "eo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 1,
+        "proofread": 0,
+        "code": "es",
+        "language": "es"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "es-419",
+        "language": "es-419"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "es-formal",
+        "language": "es-formal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "et",
+        "language": "et"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "eu",
+        "language": "eu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ext",
+        "language": "ext"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fa",
+        "language": "fa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fat",
+        "language": "fat"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ff",
+        "language": "ff"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fi",
+        "language": "fi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fit",
+        "language": "fit"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fj",
+        "language": "fj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fo",
+        "language": "fo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fon",
+        "language": "fon"
+      },
+      {
+        "total": 3,
+        "translated": 1,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fr",
+        "language": "fr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "frc",
+        "language": "frc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "frp",
+        "language": "frp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "frr",
+        "language": "frr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fur",
+        "language": "fur"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "fy",
+        "language": "fy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ga",
+        "language": "ga"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gaa",
+        "language": "gaa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gag",
+        "language": "gag"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gan",
+        "language": "gan"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gan-hans",
+        "language": "gan-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gan-hant",
+        "language": "gan-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gcf",
+        "language": "gcf"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gcr",
+        "language": "gcr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gd",
+        "language": "gd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gl",
+        "language": "gl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gld",
+        "language": "gld"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "glk",
+        "language": "glk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gn",
+        "language": "gn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gom",
+        "language": "gom"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gom-deva",
+        "language": "gom-deva"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gom-latn",
+        "language": "gom-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gor",
+        "language": "gor"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "got",
+        "language": "got"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gpe",
+        "language": "gpe"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "grc",
+        "language": "grc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gsw",
+        "language": "gsw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gu",
+        "language": "gu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "guc",
+        "language": "guc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gur",
+        "language": "gur"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "guw",
+        "language": "guw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "gv",
+        "language": "gv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ha",
+        "language": "ha"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hak",
+        "language": "hak"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hak-hans",
+        "language": "hak-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hak-hant",
+        "language": "hak-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hak-latn",
+        "language": "hak-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "haw",
+        "language": "haw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "he",
+        "language": "he"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hi",
+        "language": "hi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hif",
+        "language": "hif"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hif-latn",
+        "language": "hif-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hil",
+        "language": "hil"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hno",
+        "language": "hno"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ho",
+        "language": "ho"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hr",
+        "language": "hr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hrx",
+        "language": "hrx"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hsb",
+        "language": "hsb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hsn",
+        "language": "hsn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ht",
+        "language": "ht"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hu",
+        "language": "hu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hu-formal",
+        "language": "hu-formal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hy",
+        "language": "hy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hyw",
+        "language": "hyw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "hz",
+        "language": "hz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ia",
+        "language": "ia"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "iba",
+        "language": "iba"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ibb",
+        "language": "ibb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "id",
+        "language": "id"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ie",
+        "language": "ie"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ig",
+        "language": "ig"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "igl",
+        "language": "igl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ii",
+        "language": "ii"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ik",
+        "language": "ik"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ike-cans",
+        "language": "ike-cans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ike-latn",
+        "language": "ike-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ilo",
+        "language": "ilo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "inh",
+        "language": "inh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "io",
+        "language": "io"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "is",
+        "language": "is"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "isv-cyrl",
+        "language": "isv-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "isv-latn",
+        "language": "isv-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "it",
+        "language": "it"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "iu",
+        "language": "iu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ja",
+        "language": "ja"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "jam",
+        "language": "jam"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "jbo",
+        "language": "jbo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "jut",
+        "language": "jut"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "jv",
+        "language": "jv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ka",
+        "language": "ka"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kaa",
+        "language": "kaa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kab",
+        "language": "kab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kai",
+        "language": "kai"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kbd",
+        "language": "kbd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kbd-cyrl",
+        "language": "kbd-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kbp",
+        "language": "kbp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kcg",
+        "language": "kcg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kea",
+        "language": "kea"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kg",
+        "language": "kg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kge",
+        "language": "kge"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "khw",
+        "language": "khw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ki",
+        "language": "ki"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kiu",
+        "language": "kiu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kj",
+        "language": "kj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kjh",
+        "language": "kjh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kjp",
+        "language": "kjp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk",
+        "language": "kk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-arab",
+        "language": "kk-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-cn",
+        "language": "kk-cn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-cyrl",
+        "language": "kk-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-kz",
+        "language": "kk-kz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-latn",
+        "language": "kk-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kk-tr",
+        "language": "kk-tr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kl",
+        "language": "kl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "km",
+        "language": "km"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kn",
+        "language": "kn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "knc",
+        "language": "knc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ko",
+        "language": "ko"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ko-kp",
+        "language": "ko-kp"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "koi",
+        "language": "koi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kr",
+        "language": "kr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "krc",
+        "language": "krc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kri",
+        "language": "kri"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "krj",
+        "language": "krj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "krl",
+        "language": "krl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ks",
+        "language": "ks"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ks-arab",
+        "language": "ks-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ks-deva",
+        "language": "ks-deva"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ksh",
+        "language": "ksh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ksw",
+        "language": "ksw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ku",
+        "language": "ku"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ku-arab",
+        "language": "ku-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ku-latn",
+        "language": "ku-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kum",
+        "language": "kum"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kus",
+        "language": "kus"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kv",
+        "language": "kv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "kw",
+        "language": "kw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ky",
+        "language": "ky"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "la",
+        "language": "la"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lad",
+        "language": "lad"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lb",
+        "language": "lb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lbe",
+        "language": "lbe"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lez",
+        "language": "lez"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lfn",
+        "language": "lfn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lg",
+        "language": "lg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "li",
+        "language": "li"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lij",
+        "language": "lij"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "liv",
+        "language": "liv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lki",
+        "language": "lki"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lld",
+        "language": "lld"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lmo",
+        "language": "lmo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ln",
+        "language": "ln"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lo",
+        "language": "lo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "loz",
+        "language": "loz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lrc",
+        "language": "lrc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lt",
+        "language": "lt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ltg",
+        "language": "ltg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lua",
+        "language": "lua"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lus",
+        "language": "lus"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "luz",
+        "language": "luz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lv",
+        "language": "lv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lzh",
+        "language": "lzh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "lzz",
+        "language": "lzz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mad",
+        "language": "mad"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mag",
+        "language": "mag"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mai",
+        "language": "mai"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "map-bms",
+        "language": "map-bms"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mdf",
+        "language": "mdf"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mg",
+        "language": "mg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mh",
+        "language": "mh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mhr",
+        "language": "mhr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mi",
+        "language": "mi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "min",
+        "language": "min"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mk",
+        "language": "mk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ml",
+        "language": "ml"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mn",
+        "language": "mn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mnc",
+        "language": "mnc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mnc-latn",
+        "language": "mnc-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mnc-mong",
+        "language": "mnc-mong"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mni",
+        "language": "mni"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mnw",
+        "language": "mnw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mo",
+        "language": "mo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mos",
+        "language": "mos"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mr",
+        "language": "mr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mrh",
+        "language": "mrh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mrj",
+        "language": "mrj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ms",
+        "language": "ms"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ms-arab",
+        "language": "ms-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mt",
+        "language": "mt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mui",
+        "language": "mui"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mus",
+        "language": "mus"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mwl",
+        "language": "mwl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "my",
+        "language": "my"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "myv",
+        "language": "myv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "mzn",
+        "language": "mzn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "na",
+        "language": "na"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nah",
+        "language": "nah"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nan",
+        "language": "nan"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nan-hant",
+        "language": "nan-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nan-latn-pehoeji",
+        "language": "nan-latn-pehoeji"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nan-latn-tailo",
+        "language": "nan-latn-tailo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nap",
+        "language": "nap"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nb",
+        "language": "nb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nds",
+        "language": "nds"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nds-nl",
+        "language": "nds-nl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ne",
+        "language": "ne"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "new",
+        "language": "new"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ng",
+        "language": "ng"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nia",
+        "language": "nia"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nit",
+        "language": "nit"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "niu",
+        "language": "niu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nl",
+        "language": "nl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nl-informal",
+        "language": "nl-informal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nmz",
+        "language": "nmz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nn",
+        "language": "nn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "no",
+        "language": "no"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nod",
+        "language": "nod"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nog",
+        "language": "nog"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nov",
+        "language": "nov"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nqo",
+        "language": "nqo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nr",
+        "language": "nr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nrm",
+        "language": "nrm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nso",
+        "language": "nso"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nup",
+        "language": "nup"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nv",
+        "language": "nv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ny",
+        "language": "ny"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nyn",
+        "language": "nyn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nyo",
+        "language": "nyo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "nys",
+        "language": "nys"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "oc",
+        "language": "oc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ojb",
+        "language": "ojb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "olo",
+        "language": "olo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "om",
+        "language": "om"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "or",
+        "language": "or"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "os",
+        "language": "os"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pa",
+        "language": "pa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pag",
+        "language": "pag"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pam",
+        "language": "pam"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pap",
+        "language": "pap"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pcd",
+        "language": "pcd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pcm",
+        "language": "pcm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pdc",
+        "language": "pdc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pdt",
+        "language": "pdt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pfl",
+        "language": "pfl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pi",
+        "language": "pi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pih",
+        "language": "pih"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pl",
+        "language": "pl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pms",
+        "language": "pms"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pnb",
+        "language": "pnb"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pnt",
+        "language": "pnt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "prg",
+        "language": "prg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ps",
+        "language": "ps"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pt",
+        "language": "pt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pt-br",
+        "language": "pt-br"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "pwn",
+        "language": "pwn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "qu",
+        "language": "qu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "qug",
+        "language": "qug"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rgn",
+        "language": "rgn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rif",
+        "language": "rif"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rki",
+        "language": "rki"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rm",
+        "language": "rm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rmc",
+        "language": "rmc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rmy",
+        "language": "rmy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rn",
+        "language": "rn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ro",
+        "language": "ro"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "roa-tara",
+        "language": "roa-tara"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rsk",
+        "language": "rsk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ru",
+        "language": "ru"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rue",
+        "language": "rue"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rup",
+        "language": "rup"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ruq",
+        "language": "ruq"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ruq-cyrl",
+        "language": "ruq-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ruq-latn",
+        "language": "ruq-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rut",
+        "language": "rut"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "rw",
+        "language": "rw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ryu",
+        "language": "ryu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sa",
+        "language": "sa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sah",
+        "language": "sah"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sat",
+        "language": "sat"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sc",
+        "language": "sc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "scn",
+        "language": "scn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sco",
+        "language": "sco"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sd",
+        "language": "sd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sdc",
+        "language": "sdc"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sdh",
+        "language": "sdh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "se",
+        "language": "se"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "se-fi",
+        "language": "se-fi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "se-no",
+        "language": "se-no"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "se-se",
+        "language": "se-se"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sei",
+        "language": "sei"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ses",
+        "language": "ses"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sg",
+        "language": "sg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sgs",
+        "language": "sgs"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sh",
+        "language": "sh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sh-cyrl",
+        "language": "sh-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sh-latn",
+        "language": "sh-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shi",
+        "language": "shi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shi-latn",
+        "language": "shi-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shi-tfng",
+        "language": "shi-tfng"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shn",
+        "language": "shn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shy",
+        "language": "shy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "shy-latn",
+        "language": "shy-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "si",
+        "language": "si"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "simple",
+        "language": "simple"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sjd",
+        "language": "sjd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sje",
+        "language": "sje"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sk",
+        "language": "sk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "skr",
+        "language": "skr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "skr-arab",
+        "language": "skr-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sl",
+        "language": "sl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sli",
+        "language": "sli"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sm",
+        "language": "sm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sma",
+        "language": "sma"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "smn",
+        "language": "smn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sms",
+        "language": "sms"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sn",
+        "language": "sn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "so",
+        "language": "so"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sq",
+        "language": "sq"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sr",
+        "language": "sr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sr-ec",
+        "language": "sr-ec"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sr-el",
+        "language": "sr-el"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "srn",
+        "language": "srn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sro",
+        "language": "sro"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ss",
+        "language": "ss"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "st",
+        "language": "st"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "stq",
+        "language": "stq"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sty",
+        "language": "sty"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "su",
+        "language": "su"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sv",
+        "language": "sv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "sw",
+        "language": "sw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "syl",
+        "language": "syl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "szl",
+        "language": "szl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "szy",
+        "language": "szy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ta",
+        "language": "ta"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tay",
+        "language": "tay"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tcy",
+        "language": "tcy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tdd",
+        "language": "tdd"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "te",
+        "language": "te"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tet",
+        "language": "tet"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tg",
+        "language": "tg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tg-cyrl",
+        "language": "tg-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tg-latn",
+        "language": "tg-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "th",
+        "language": "th"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ti",
+        "language": "ti"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tig",
+        "language": "tig"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tk",
+        "language": "tk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tl",
+        "language": "tl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tly",
+        "language": "tly"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tly-cyrl",
+        "language": "tly-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tn",
+        "language": "tn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "to",
+        "language": "to"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tok",
+        "language": "tok"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tpi",
+        "language": "tpi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tr",
+        "language": "tr"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tru",
+        "language": "tru"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "trv",
+        "language": "trv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ts",
+        "language": "ts"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tt",
+        "language": "tt"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tt-cyrl",
+        "language": "tt-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tt-latn",
+        "language": "tt-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ttj",
+        "language": "ttj"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tum",
+        "language": "tum"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tw",
+        "language": "tw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ty",
+        "language": "ty"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tyv",
+        "language": "tyv"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "tzm",
+        "language": "tzm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "udm",
+        "language": "udm"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ug",
+        "language": "ug"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ug-arab",
+        "language": "ug-arab"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ug-latn",
+        "language": "ug-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "uk",
+        "language": "uk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ur",
+        "language": "ur"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "uz",
+        "language": "uz"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "uz-cyrl",
+        "language": "uz-cyrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "uz-latn",
+        "language": "uz-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "ve",
+        "language": "ve"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vec",
+        "language": "vec"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vep",
+        "language": "vep"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vi",
+        "language": "vi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vls",
+        "language": "vls"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vmf",
+        "language": "vmf"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vmw",
+        "language": "vmw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vo",
+        "language": "vo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vot",
+        "language": "vot"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "vro",
+        "language": "vro"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wa",
+        "language": "wa"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wal",
+        "language": "wal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "war",
+        "language": "war"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wls",
+        "language": "wls"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wo",
+        "language": "wo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wuu",
+        "language": "wuu"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wuu-hans",
+        "language": "wuu-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "wuu-hant",
+        "language": "wuu-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "xal",
+        "language": "xal"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "xh",
+        "language": "xh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "xmf",
+        "language": "xmf"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "xsy",
+        "language": "xsy"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yi",
+        "language": "yi"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yo",
+        "language": "yo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yrl",
+        "language": "yrl"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yue",
+        "language": "yue"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yue-hans",
+        "language": "yue-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "yue-hant",
+        "language": "yue-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "za",
+        "language": "za"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zea",
+        "language": "zea"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zgh",
+        "language": "zgh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zgh-latn",
+        "language": "zgh-latn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh",
+        "language": "zh"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-cn",
+        "language": "zh-cn"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-hans",
+        "language": "zh-hans"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-hant",
+        "language": "zh-hant"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-hk",
+        "language": "zh-hk"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-mo",
+        "language": "zh-mo"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-my",
+        "language": "zh-my"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-sg",
+        "language": "zh-sg"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zh-tw",
+        "language": "zh-tw"
+      },
+      {
+        "total": 3,
+        "translated": 0,
+        "fuzzy": 0,
+        "proofread": 0,
+        "code": "zu",
+        "language": "zu"
+      }
+    ]
+  }
+}

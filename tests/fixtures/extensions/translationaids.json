@@ -1,0 +1,24 @@
+{
+  "helpers": {
+    "definition": {
+      "value": "Welcome to the fixture page.",
+      "language": "en"
+    },
+    "translation": {
+      "language": "de",
+      "fuzzy": false,
+      "value": "Willkommen auf der Fixture-Seite."
+    },
+    "documentation": {
+      "error": "Message documentation is disabled"
+    },
+    "inotherlanguages": []
+  },
+  "times": {
+    "query_aggregator": 0.003,
+    "definition": 0,
+    "translation": 0.001,
+    "documentation": 0,
+    "inotherlanguages": 0.001
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "error": [
+    [
+      {
+        "message": "centralauth-createlocal-no-global-account",
+        "params": [],
+        "code": "centralauth-createlocal-no-global-account",
+        "type": "error"
+      }
+    ]
+  ]
+}

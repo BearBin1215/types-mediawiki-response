@@ -1,0 +1,56 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "metadata": {
+      "state": null,
+      "resultsize": 3,
+      "remaining": 0
+    },
+    "messagecollection": [
+      {
+        "key": "Fixture_translatable_page/Page_display_title",
+        "definition": "Fixture translatable page",
+        "translation": null,
+        "tags": [],
+        "properties": {
+          "status": "untranslated",
+          "last-translator-text": null,
+          "last-translator-id": null
+        },
+        "title": "Translations:Fixture translatable page/Page display title/de",
+        "targetLanguage": "de",
+        "primaryGroup": "page-Fixture translatable page"
+      },
+      {
+        "key": "Fixture_translatable_page/1",
+        "definition": "Welcome to the fixture page.",
+        "translation": "Willkommen auf der Fixture-Seite.",
+        "tags": [],
+        "properties": {
+          "revision": "949",
+          "status": "translated",
+          "last-translator-text": "Capadmin",
+          "last-translator-id": "3"
+        },
+        "title": "Translations:Fixture translatable page/1/de",
+        "targetLanguage": "de",
+        "primaryGroup": "page-Fixture translatable page"
+      },
+      {
+        "key": "Fixture_translatable_page/2",
+        "definition": "This is the second unit.",
+        "translation": "Dies ist die zweite Einheit.",
+        "tags": [],
+        "properties": {
+          "revision": "950",
+          "status": "translated",
+          "last-translator-text": "Capadmin",
+          "last-translator-id": "3"
+        },
+        "title": "Translations:Fixture translatable page/2/de",
+        "targetLanguage": "de",
+        "primaryGroup": "page-Fixture translatable page"
+      }
+    ]
+  }
+}

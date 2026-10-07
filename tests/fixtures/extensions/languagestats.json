@@ -1,0 +1,14 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "languagestats": [
+      {
+        "total": 3,
+        "translated": 2,
+        "fuzzy": 0,
+        "proofread": 0,
+        "group": "page-Fixture translatable page"
+      }
+    ]
+  }
+}

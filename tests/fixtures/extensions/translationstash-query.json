@@ -1,0 +1,14 @@
+{
+  "translationstash": {
+    "translations": [
+      {
+        "title": "Translations:Fixture translatable page/2/nl",
+        "definition": "This is the second unit.",
+        "translation": "Dit is de tweede eenheid.",
+        "comparison": null,
+        "metadata": []
+      }
+    ],
+    "result": "ok"
+  }
+}

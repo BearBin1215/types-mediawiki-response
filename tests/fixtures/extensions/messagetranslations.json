@@ -1,0 +1,26 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "messagetranslations": [
+      {
+        "title": "Translations:Fixture translatable page/1/de",
+        "language": "de",
+        "lasttranslator": "Capadmin",
+        "translation": "Willkommen auf der Fixture-Seite."
+      },
+      {
+        "title": "Translations:Fixture translatable page/1/es",
+        "language": "es",
+        "lasttranslator": "Capadmin",
+        "fuzzy": "fuzzy",
+        "translation": "Bienvenido a la página fixture."
+      },
+      {
+        "title": "Translations:Fixture translatable page/1/fr",
+        "language": "fr",
+        "lasttranslator": "Capadmin",
+        "translation": "Bienvenue sur la page fixture."
+      }
+    ]
+  }
+}

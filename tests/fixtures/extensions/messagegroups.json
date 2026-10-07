@@ -1,0 +1,46 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "messagegroups": [
+      {
+        "id": "!recent",
+        "label": "Recent translations",
+        "description": "This message group shows all recent translations into this language.\nMost useful for the review tasks.",
+        "class": "RecentMessageGroup",
+        "namespace": false,
+        "exists": true,
+        "priority": "default",
+        "prioritylangs": false,
+        "priorityforce": false,
+        "workflowstates": false,
+        "sourcelanguage": "en"
+      },
+      {
+        "id": "!additions",
+        "label": "Recent additions",
+        "description": "This message group shows new and changed messages.",
+        "class": "RecentAdditionsMessageGroup",
+        "namespace": false,
+        "exists": true,
+        "priority": "default",
+        "prioritylangs": false,
+        "priorityforce": false,
+        "workflowstates": false,
+        "sourcelanguage": "en"
+      },
+      {
+        "id": "page-Fixture translatable page",
+        "label": "Fixture translatable page",
+        "description": "Translation of the wiki page [[:Fixture translatable page|Fixture translatable page]] from English (en).",
+        "class": "WikiPageMessageGroup",
+        "namespace": 1198,
+        "exists": true,
+        "priority": "default",
+        "prioritylangs": false,
+        "priorityforce": false,
+        "workflowstates": false,
+        "sourcelanguage": "en"
+      }
+    ]
+  }
+}

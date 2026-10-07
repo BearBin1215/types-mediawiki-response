@@ -1,0 +1,16 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "wikisets": [
+      {
+        "id": "1",
+        "name": "fixture-wikiset",
+        "type": "optin",
+        "wikisincluded": [
+          "wiki143"
+        ],
+        "wikisnotincluded": []
+      }
+    ]
+  }
+}

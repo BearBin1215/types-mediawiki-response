@@ -1,0 +1,19 @@
+{
+  "search": {
+    "metadata": {
+      "total": 1
+    },
+    "translations": [
+      {
+        "wiki": "mwfixture",
+        "uri": "http://localhost:8080/index.php/Translations:Fixture_translatable_page/1/de",
+        "localid": "Fixture translatable page",
+        "language": "de",
+        "group": [
+          "page-Fixture translatable page"
+        ],
+        "content": "Willkommen auf der Fixture-Seite."
+      }
+    ]
+  }
+}

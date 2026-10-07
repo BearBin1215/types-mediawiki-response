@@ -1,5 +1,6 @@
 /**
- * Opt-in extension pack: **CheckUser** (`list=checkuser`, `list=checkuserlog`).
+ * Opt-in extension pack: **CheckUser** (`list=checkuser`, `list=checkuserlog`,
+ * `meta=checkuserformattedblockinfo`).
  *
  * Not in the default export: importing anything from this file — even just the
  * field-group type you are about to use — activates the augmentation shipped at
@@ -168,6 +169,22 @@ export interface ApiQueryCheckUserLogResult {
   entries?: ApiCheckUserLogEntry[];
 }
 
+/**
+ * The `checkuserformattedblockinfo` object: the sitewide-block status of the
+ * requesting user, for clients that need to explain API failures caused by
+ * their own block.
+ *
+ * @since MediaWiki 1.44
+ */
+export interface ApiQueryCheckUserFormattedBlockInfoResult {
+  /**
+   * Rendered (HTML) block message explaining the sitewide block; `null` when
+   * the requesting user is not sitewide-blocked. Partial blocks and blocks on
+   * other users do not appear here.
+   */
+  details: string | null;
+}
+
 declare module "types-mediawiki-response" {
   interface ApiQueryResult {
     /** Result of the requested `curequest` mode (`list=checkuser`). */
@@ -175,5 +192,8 @@ declare module "types-mediawiki-response" {
 
     /** Entries from the CheckUser log (`list=checkuserlog`). */
     checkuserlog?: ApiQueryCheckUserLogResult;
+
+    /** Block status of the requesting user (`meta=checkuserformattedblockinfo`). */
+    checkuserformattedblockinfo?: ApiQueryCheckUserFormattedBlockInfoResult;
   }
 }

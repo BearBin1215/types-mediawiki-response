@@ -110,7 +110,7 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 
 ### fv2 线格式
 
-- 布尔标记出现即 `true`、否则整键缺省 → `Flag`；会明确回 `false` 的配置类真布尔 → `boolean`。判据看源码右侧表达式：`= ''`/`= true` → `Flag`，`(bool)`/比较 → `boolean`。
+- 布尔标记出现即 `true`、否则整键缺省 → `Flag`；会明确回 `false` 的配置类真布尔 → `boolean`。判据看源码右侧表达式 + `META_BC_BOOLS` 登记：`= true` → `Flag`；`= ''` 要看发射处是否把该键登记进 `META_BC_BOOLS`（core 标记键多数登记，登记才在 fv2 转 `true`），未登记的裸 `''`（部分扩展直接 `addValue(…, '')`）fv2 下保持 `""`，写成 `""` 而非 `Flag`。`(bool)`/比较 → `boolean`。
 - 无值可能返回空串而非省略整键 → 建模为 `T | ''`，不是单纯可选。
 - 数字偶尔以字符串返回、列表默认是数组 → 一律以 fixture 为准，不臆测。
 - 连字符键名逐字建模，不要改写成驼峰。

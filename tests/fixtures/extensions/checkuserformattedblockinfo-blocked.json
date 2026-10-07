@@ -1,0 +1,8 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "checkuserformattedblockinfo": {
+      "details": "<p><strong>Your username or IP address has been blocked.</strong>\n</p><p>The block was made by <a href=\"/index.php?title=User:Cap146&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Cap146 (page does not exist)\">‪Cap146‬</a>.\nThe reason given is: <em>fixture block</em>\n</p>\n<ul><li>Start of block: 16:01, 7 October 2026</li>\n<li>Expiration of block: infinite</li>\n<li>Intended blockee: ‪Cap146‬</li></ul>\n<p>You can contact <a href=\"/index.php?title=User:Cap146&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Cap146 (page does not exist)\">‪Cap146‬</a> or another <a href=\"/index.php?title=AuditWiki:Administrators&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"AuditWiki:Administrators (page does not exist)\">administrator</a> to discuss the block.\nYou can use the \"Email this user\" feature if a valid email address is specified in your <a href=\"/index.php/Special:Preferences\" title=\"Special:Preferences\">preferences</a> and you have not been blocked from using it.\nYour current IP address is 127.0.0.1. Block ID #3.\nPlease include all above details in any queries you make.\n</p>"
+    }
+  }
+}

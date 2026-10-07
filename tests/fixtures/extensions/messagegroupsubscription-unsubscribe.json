@@ -1,0 +1,9 @@
+{
+  "messagegroupsubscription": {
+    "success": 1,
+    "group": {
+      "id": "page-Fixture translatable page",
+      "label": "Fixture translatable page"
+    }
+  }
+}

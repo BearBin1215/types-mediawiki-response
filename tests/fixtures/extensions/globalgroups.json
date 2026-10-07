@@ -1,0 +1,14 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "globalgroups": [
+      {
+        "name": "global-fixture",
+        "rights": [
+          "apihighlimits",
+          "global-fixture-right"
+        ]
+      }
+    ]
+  }
+}

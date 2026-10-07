@@ -1,0 +1,16 @@
+{
+  "translationentitysearch": {
+    "groups": [
+      {
+        "label": "Fixture translatable page",
+        "group": "page-Fixture translatable page"
+      }
+    ],
+    "messages": [
+      {
+        "pattern": "Translations:Fixture*",
+        "count": 3
+      }
+    ]
+  }
+}

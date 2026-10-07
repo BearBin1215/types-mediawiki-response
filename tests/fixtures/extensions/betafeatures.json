@@ -1,0 +1,11 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "betafeatures": {
+      "fixture-beta-feature": {
+        "name": "fixture-beta-feature",
+        "count": 0
+      }
+    }
+  }
+}

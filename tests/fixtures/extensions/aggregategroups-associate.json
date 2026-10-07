@@ -1,0 +1,6 @@
+{
+  "aggregategroups": {
+    "groupUrl": "http://localhost:8080/index.php/Fixture_translatable_page",
+    "result": "ok"
+  }
+}

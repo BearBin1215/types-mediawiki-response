@@ -1,0 +1,9 @@
+{
+  "aggregategroups": {
+    "groups": {
+      "page-Fixture translatable page": "Fixture translatable page"
+    },
+    "aggregategroupId": "agg-Fixture_aggregate_group",
+    "result": "ok"
+  }
+}

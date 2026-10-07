@@ -29,8 +29,20 @@ const EXT_MODULES: Record<string, string[]> = {
     "abusefiltercheckmatch",
     "abuselogprivatedetails",
   ],
+  betafeatures: ["query+betafeatures"],
   categorytree: ["categorytree"],
-  checkuser: ["query+checkuser", "query+checkuserlog"],
+  centralauth: [
+    "centralauthtoken",
+    "createlocalaccount",
+    "deleteglobalaccount",
+    "setglobalaccountstatus",
+    "globaluserrights",
+    "query+globalallusers",
+    "query+globalgroups",
+    "query+globalusers",
+    "query+wikisets",
+  ],
+  checkuser: ["query+checkuser", "query+checkuserlog", "query+checkuserformattedblockinfo"],
   description: ["query+description"],
   discussiontools: [
     "discussiontoolscompare",
@@ -69,6 +81,26 @@ const EXT_MODULES: Record<string, string[]> = {
   thanks: ["thank"],
   timedmediahandler: ["timedtext", "transcodereset"],
   titleblacklist: ["titleblacklist"],
+  translate: [
+    "aggregategroups",
+    "groupreview",
+    "markfortranslation",
+    "messagegroupsubscription",
+    "searchtranslations",
+    "translationaids",
+    "translationentitysearch",
+    "translationreview",
+    "translationstash",
+    "translatesandbox",
+    "translationstats",
+    "ttmserver",
+    "query+languagestats",
+    "query+messagecollection",
+    "query+messagegroups",
+    "query+messagegroupstats",
+    "query+messagetranslations",
+  ],
+  uls: ["ulslocalization", "ulssetlang"],
   urlshortener: ["shortenurl"],
   visualeditor: ["visualeditor", "visualeditoredit", "editcheckreferenceurl"],
   wikibase: ["query+wikibase", "query+pageterms", "query+wbentityusage", "query+wblistentityusage"],
@@ -85,7 +117,8 @@ async function main(): Promise<void> {
   const queryDir = join(ROOT, "src", "core", "query");
   const coreDir = join(ROOT, "src", "core");
   const modules: string[] = [];
-  for (const stem of stems(queryDir, new Set(["index.ts", "shared.ts"]))) {
+  // `logparams.ts` carries the shared log-event param types, not a module.
+  for (const stem of stems(queryDir, new Set(["index.ts", "shared.ts", "logparams.ts"]))) {
     modules.push(`query+${stem}`);
   }
   for (const stem of stems(coreDir, new Set(["index.ts"]))) {
