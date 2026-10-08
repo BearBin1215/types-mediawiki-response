@@ -62,28 +62,28 @@ The `pages[0]` object of a live response (values verbatim from `www.mediawiki.or
   "imageinfo": [
     {
       "metadata": [
-        { "name": "frameCount", "value": 0 },                 // numeric value
+        { "name": "frameCount", "value": 0 }, // numeric value
         { "name": "colorType", "value": "truecolour-alpha" }, // string value
         // ...
         {
           "name": "metadata",
           // array value; entries may nest further
           "value": [
-            { "name": "XResolution", "value": "2835/100" },   // a "num/den" string
+            { "name": "XResolution", "value": "2835/100" }, // a "num/den" string
             { "name": "ResolutionUnit", "value": 3 },
             // ...
             {
               "name": "PNGFileComment",
               "value": [
                 { "name": "x-default", "value": "Created with GIMP" },
-                { "name": "_type", "value": "lang" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                { "name": "_type", "value": "lang" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 }
 ```
 

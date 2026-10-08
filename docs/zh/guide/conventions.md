@@ -62,28 +62,28 @@ fv2 下 pages 容器是页面对象的普通数组，不是 fv1 那种按 pageid
   "imageinfo": [
     {
       "metadata": [
-        { "name": "frameCount", "value": 0 },                 // value 是数字
+        { "name": "frameCount", "value": 0 }, // value 是数字
         { "name": "colorType", "value": "truecolour-alpha" }, // value 是字符串
         // ...
         {
           "name": "metadata",
           // value 是数组，条目可能再嵌套
           "value": [
-            { "name": "XResolution", "value": "2835/100" },   // "num/den" 形式的字符串
+            { "name": "XResolution", "value": "2835/100" }, // "num/den" 形式的字符串
             { "name": "ResolutionUnit", "value": 3 },
             // ...
             {
               "name": "PNGFileComment",
               "value": [
                 { "name": "x-default", "value": "Created with GIMP" },
-                { "name": "_type", "value": "lang" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                { "name": "_type", "value": "lang" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 }
 ```
 
