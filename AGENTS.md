@@ -49,10 +49,11 @@ pnpm lint           # oxlint
 pnpm format         # oxfmt（--check 仅校验）
 pnpm test           # 类型断言（等价 typecheck：本包的“测试”就是 tests/ 下的 .test-d.ts）
 pnpm audit:literals # 批量审计：fixture 内联字面量 satisfies 声明类型；新 fixture 须先在脚本 REGISTRY 登记
+pnpm audit:paraminfo # 审计：固定枚举 *prop 的每个合法值在 src 均有声明键（兜 fixture 没碰到的枚举字段）
 pnpm check:ext      # 外部消费方 harness：验证扩展按需激活机制（含 emit 擦除）
 pnpm check:pack     # 发布安全：build 后用 ATTW 校验各 moduleResolution 下的类型解析
 pnpm check:examples # build 后对 examples/ 三个消费场景示例做 typecheck（发布形态的集成校验）
-pnpm check          # format:check + lint + test + audit:literals + check:ext + check:pack + check:examples
+pnpm check          # format:check + lint + test + audit:* + check:ext + check:pack + check:examples
 pnpm build          # 产出 dist
 pnpm fetch:fixtures # 刷新 tests/fixtures/（--check 只验不写）
 pnpm docs:dev       # 文档站开发服务器（先跑 typedoc 生成 API 参考）
@@ -72,6 +73,12 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 1. `pnpm fetch:fixtures <路径片段>` 取该模块的真实响应（只抽改动的几条，避免抖全量 diff）。
 2. 以 fixture 为准在 `src/core/` 手写类型，单模块 action 一文件，如 query 此类内容较多的设目录，`prop=`/`list=` 字段用声明合并并入共享的 `ApiPage` / `ApiQueryResult`。
 3. 在 `tests/` 写类型断言，`pnpm typecheck` 验证。
+
+提交前检查（对齐 CI 闸门，按改动范围取）：
+
+- 任何改动：`pnpm format:check`——oxfmt 也覆盖 `docs/` 下的 md。
+- 改 `src/` / `tests/` / `scripts/`：另跑 `pnpm check`（= CI 的 Check 步）。
+- 改 `docs/`：另跑 `pnpm docs:build`（先 typedoc 生成 API 参考，再构建并查死链）。
 
 ## 文档分工
 
