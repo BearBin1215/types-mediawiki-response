@@ -99,13 +99,15 @@ These export standalone response types (scenario 2) — import the one for the a
 
 Packs appearing in both tables (e.g. `abusefilters`, `discussiontools`, `flaggedrevs`) serve both scenarios — activate them once and import their action types by name as needed.
 
-## Adding types for uncovered extensions
+## Adding types the package does not cover
 
-The same seam is general: for an extension this package does not cover, declare the field group yourself and merge it into the query surface with a hand-written module augmentation.
+The same seam is general: fields reach a response from sources this package does not cover — an extension it has no pack for, or a site fork that adds fields to core module results. Declare the shape yourself and merge it at the matching landing spot with a hand-written module augmentation; like the built-in packs, the merge applies to the whole project.
 
-- Query fields merge into `ApiPage` / `ApiQueryResult`.
+- Page-level `prop=` fields merge into `ApiPage`; other query results merge into `ApiQueryResult`.
+- Row interfaces — the per-entry objects inside a list result (`ApiUser` for `list=users`, `ApiRecentChange` for `list=recentchanges`, …) — are augmented directly when the site adds per-entry fields.
 - Log details merge into [ApiLogEventParams](/api/core/ApiLogEventParams) — site-custom log actions, and legacy key forms still in old rows, both land here.
-- Action responses are standalone envelopes with nothing to merge into; a new action from an uncovered extension is just a plain interface you define and import.
+- Known values of an open union (a site-registered content model, for example) are promoted through the union's augmentation interface, such as `ContentModelExtension` — see [Field conventions](/guide/conventions.html) for the open/closed distinction and a worked example.
+- Action responses are standalone envelopes with nothing to merge into; a new action from an uncovered source is just a plain interface you define and import.
 
 ```ts
 // types/mw-response.d.ts — for the (uncovered) Foo extension's `prop=foo`
@@ -128,6 +130,20 @@ declare module "types-mediawiki-response" {
 ```
 
 Keep the file inside your tsconfig `include`; like the built-in packs, the merge applies to the whole project.
+
+Site-custom fields on a list entry go to the row interface itself:
+
+```ts
+// types/mw-response.d.ts — a site fork adds per-user fields to `list=users`
+import type {} from "types-mediawiki-response"; // anchors the module for augmentation
+
+declare module "types-mediawiki-response" {
+  interface ApiUser {
+    /** Site-custom display name; `null` when unset. */
+    displayname?: string | null;
+  }
+}
+```
 
 A new action needs no augmentation: declare a `Response extends ApiEnvelope` interface in your own code and import it where you call the action:
 

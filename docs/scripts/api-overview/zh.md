@@ -6,7 +6,7 @@ description: "API 参考总览：本包的覆盖范围、Core 与扩展包参考
 
 字段级页面由类型声明生成，与发布内容始终一致；每个字段的语义、弃用情况与参数约束都在 JSDoc 里，此处可查，IDE 悬停同样可见。
 
-响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、读日志明细、激活扩展包这些概念见[指南](/guide/getting-started.html)；本树是字段级参考。
+响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、读日志明细、字段类型与线格式的对应关系、激活扩展包这些概念见[指南](/guide/getting-started.html)；本树是字段级参考。
 
 :::info
 API 参考由 [typedoc](https://typedoc.org/) 从类型声明自动生成，暂无中文翻译。

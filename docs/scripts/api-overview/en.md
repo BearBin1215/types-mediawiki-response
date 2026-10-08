@@ -6,7 +6,7 @@ description: "API reference overview: what the package covers, how the Core and 
 
 The field-level pages are generated from the declarations, so they always match what ships; each field's semantics, deprecations and parameter constraints live in its JSDoc, both here and on hover in your IDE.
 
-Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, reading log event details, activating extension packs — are covered in the [guide](/guide/getting-started.html). This tree is the field-level reference.
+Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, reading log event details, how field types map to the wire format, activating extension packs — are covered in the [guide](/guide/getting-started.html). This tree is the field-level reference.
 
 ## Core
 

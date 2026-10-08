@@ -99,13 +99,15 @@ wiki 装了对应扩展就激活（场景一），所列模块的字段会出现
 
 同时出现在两张表里的包（如 `abusefilters`、`discussiontools`、`flaggedrevs`）两种场景都服务——激活一次，action 类型按需按名导入。
 
-## 给未覆盖的扩展补充类型
+## 给包未覆盖的字段补充类型
 
-同样的接缝是通用的。若站点装了本包未覆盖的扩展，可自己声明字段组，再用模块增广并入 query 面。
+同样的接缝是通用的。字段可能来自本包未建包的扩展，也可能来自站点 fork 给核心模块结果加的字段。自己声明形状，在对应的落点用模块增广并入；与内置包一样，增广对整个项目生效。
 
-- query 字段的并入点是 `ApiPage` / `ApiQueryResult`。
+- 页面级 `prop=` 字段并入 `ApiPage`；其余 query 结果并入 `ApiQueryResult`。
+- 行接口——列表结果里的逐条目对象（`list=users` 的 `ApiUser`、`list=recentchanges` 的 `ApiRecentChange` 等）——站点在条目上加字段时，直接增广行接口本身。
 - 日志明细的并入点是 [ApiLogEventParams](/api/core/ApiLogEventParams)，自定义的 log action、以及仍留在老行里的遗留键形都从这里并入。
-- action 响应是独立信封，没有可并入的共享形状，未覆盖扩展的新 action 只需自己定义普通接口并按名导入。
+- 开放联合的已知值（如站点注册的内容模型）通过联合的提成接口并入，如 `ContentModelExtension`——开放与封闭的区分和增广示例见[字段约定](/guide/conventions.html)。
+- action 响应是独立信封，没有可并入的共享形状，未覆盖来源的新 action 只需自己定义普通接口并按名导入。
 
 ```ts
 // types/mw-response.d.ts —— 以未覆盖的 Foo 扩展的 `prop=foo` 为例
@@ -128,6 +130,20 @@ declare module "types-mediawiki-response" {
 ```
 
 把文件放在 tsconfig `include` 内即可，与内置包一样，增广对整个项目生效。
+
+列表条目上的站点自定义字段，增广到行接口本身：
+
+```ts
+// types/mw-response.d.ts —— 站点 fork 给 `list=users` 的条目加了字段
+import type {} from "types-mediawiki-response"; // 锚定模块以供增广
+
+declare module "types-mediawiki-response" {
+  interface ApiUser {
+    /** 站点自定义显示昵称，未设置时为 null。 */
+    displayname?: string | null;
+  }
+}
+```
 
 新的 action 则不需要增广，自己声明一个 `extends ApiEnvelope` 的响应接口，在调用该 action 的地方导入使用：
 

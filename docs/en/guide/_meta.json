@@ -13,6 +13,10 @@
   },
   {
     "type": "file",
+    "name": "conventions"
+  },
+  {
+    "type": "file",
     "name": "ext-packs"
   },
   {
