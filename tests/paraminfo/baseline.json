@@ -8376,7 +8376,8 @@
             "transcludedin",
             "unreviewedpages",
             "watchlist",
-            "watchlistraw"
+            "watchlistraw",
+            "readinglistentries"
           ],
           "required": false,
           "multi": false,
@@ -8421,9 +8422,11 @@
             "transcludedin": "query+transcludedin",
             "unreviewedpages": "query+unreviewedpages",
             "watchlist": "query+watchlist",
-            "watchlistraw": "query+watchlistraw"
+            "watchlistraw": "query+watchlistraw",
+            "readinglistentries": "query+readinglistentries"
           },
-          "submoduleparamprefix": "g"
+          "submoduleparamprefix": "g",
+          "internalvalues": ["readinglistentries"]
         },
         {
           "index": 8,
@@ -9538,7 +9541,8 @@
             "transcludedin",
             "unreviewedpages",
             "watchlist",
-            "watchlistraw"
+            "watchlistraw",
+            "readinglistentries"
           ],
           "required": false,
           "multi": false,
@@ -9583,9 +9587,11 @@
             "transcludedin": "query+transcludedin",
             "unreviewedpages": "query+unreviewedpages",
             "watchlist": "query+watchlist",
-            "watchlistraw": "query+watchlistraw"
+            "watchlistraw": "query+watchlistraw",
+            "readinglistentries": "query+readinglistentries"
           },
-          "submoduleparamprefix": "g"
+          "submoduleparamprefix": "g",
+          "internalvalues": ["readinglistentries"]
         },
         {
           "index": 8,
@@ -9988,7 +9994,8 @@
             "transcludedin",
             "unreviewedpages",
             "watchlist",
-            "watchlistraw"
+            "watchlistraw",
+            "readinglistentries"
           ],
           "required": false,
           "multi": false,
@@ -10033,9 +10040,11 @@
             "transcludedin": "query+transcludedin",
             "unreviewedpages": "query+unreviewedpages",
             "watchlist": "query+watchlist",
-            "watchlistraw": "query+watchlistraw"
+            "watchlistraw": "query+watchlistraw",
+            "readinglistentries": "query+readinglistentries"
           },
-          "submoduleparamprefix": "g"
+          "submoduleparamprefix": "g",
+          "internalvalues": ["readinglistentries"]
         },
         {
           "index": 10,
@@ -11467,7 +11476,8 @@
             "transcludedin",
             "unreviewedpages",
             "watchlist",
-            "watchlistraw"
+            "watchlistraw",
+            "readinglistentries"
           ],
           "required": false,
           "multi": false,
@@ -11512,9 +11522,11 @@
             "transcludedin": "query+transcludedin",
             "unreviewedpages": "query+unreviewedpages",
             "watchlist": "query+watchlist",
-            "watchlistraw": "query+watchlistraw"
+            "watchlistraw": "query+watchlistraw",
+            "readinglistentries": "query+readinglistentries"
           },
-          "submoduleparamprefix": "g"
+          "submoduleparamprefix": "g",
+          "internalvalues": ["readinglistentries"]
         },
         {
           "index": 8,
@@ -13804,6 +13816,204 @@
       "templatedparameters": []
     },
     {
+      "name": "readinglists",
+      "classname": "MediaWiki\\Extension\\ReadingLists\\Api\\ApiReadingLists",
+      "path": "readinglists",
+      "group": "action",
+      "prefix": "",
+      "source": "ReadingLists",
+      "sourcename": "ReadingLists",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/ReadingLists",
+      "internal": true,
+      "readrights": true,
+      "writerights": true,
+      "mustbeposted": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ReadingLists#API"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "command",
+          "type": ["create", "createentry", "delete", "deleteentry", "setup", "teardown", "update"],
+          "required": true,
+          "multi": false,
+          "submodules": {
+            "create": "readinglists+create",
+            "createentry": "readinglists+createentry",
+            "delete": "readinglists+delete",
+            "deleteentry": "readinglists+deleteentry",
+            "setup": "readinglists+setup",
+            "teardown": "readinglists+teardown",
+            "update": "readinglists+update"
+          },
+          "internalvalues": [
+            "create",
+            "createentry",
+            "delete",
+            "deleteentry",
+            "setup",
+            "teardown",
+            "update"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "token",
+          "type": "string",
+          "required": true,
+          "sensitive": true,
+          "multi": false,
+          "tokentype": "csrf"
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "readinglists",
+      "classname": "MediaWiki\\Extension\\ReadingLists\\Api\\ApiQueryReadingLists",
+      "path": "query+readinglists",
+      "group": "meta",
+      "prefix": "rl",
+      "source": "ReadingLists",
+      "sourcename": "ReadingLists",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/ReadingLists",
+      "internal": true,
+      "readrights": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ReadingLists#API"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "list",
+          "type": "integer",
+          "required": false,
+          "multi": false,
+          "min": 1
+        },
+        {
+          "index": 2,
+          "name": "project",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "changedsince",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "sort",
+          "type": ["name", "updated"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 6,
+          "name": "dir",
+          "type": ["ascending", "descending"],
+          "required": false,
+          "default": "ascending",
+          "multi": false
+        },
+        {
+          "index": 7,
+          "name": "limit",
+          "type": "limit",
+          "required": false,
+          "default": 10,
+          "multi": false,
+          "min": 1,
+          "max": 10
+        },
+        {
+          "index": 8,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
+      "name": "readinglistentries",
+      "classname": "MediaWiki\\Extension\\ReadingLists\\Api\\ApiQueryReadingListEntries",
+      "path": "query+readinglistentries",
+      "group": "list",
+      "prefix": "rle",
+      "source": "ReadingLists",
+      "sourcename": "ReadingLists",
+      "licensetag": "GPL-2.0-or-later",
+      "licenselink": "http://localhost:8080/index.php/Special:Version/License/ReadingLists",
+      "internal": true,
+      "readrights": true,
+      "generator": true,
+      "helpurls": ["https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ReadingLists#API"],
+      "parameters": [
+        {
+          "index": 1,
+          "name": "lists",
+          "type": "integer",
+          "required": false,
+          "multi": true,
+          "lowlimit": 50,
+          "highlimit": 500,
+          "limit": 50
+        },
+        {
+          "index": 2,
+          "name": "changedsince",
+          "type": "timestamp",
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 3,
+          "name": "sort",
+          "type": ["name", "updated"],
+          "required": false,
+          "multi": false
+        },
+        {
+          "index": 4,
+          "name": "dir",
+          "type": ["ascending", "descending"],
+          "required": false,
+          "default": "ascending",
+          "multi": false
+        },
+        {
+          "index": 5,
+          "name": "limit",
+          "type": "limit",
+          "required": false,
+          "default": 10,
+          "multi": false,
+          "min": 1,
+          "max": 100
+        },
+        {
+          "index": 6,
+          "name": "continue",
+          "type": "string",
+          "required": false,
+          "multi": false
+        }
+      ],
+      "templatedparameters": []
+    },
+    {
       "name": "scribunto-console",
       "classname": "MediaWiki\\Extension\\Scribunto\\ApiScribuntoConsole",
       "path": "scribunto-console",
@@ -14000,7 +14210,8 @@
             "transcludedin",
             "unreviewedpages",
             "watchlist",
-            "watchlistraw"
+            "watchlistraw",
+            "readinglistentries"
           ],
           "required": false,
           "multi": false,
@@ -14045,9 +14256,11 @@
             "transcludedin": "query+transcludedin",
             "unreviewedpages": "query+unreviewedpages",
             "watchlist": "query+watchlist",
-            "watchlistraw": "query+watchlistraw"
+            "watchlistraw": "query+watchlistraw",
+            "readinglistentries": "query+readinglistentries"
           },
-          "submoduleparamprefix": "g"
+          "submoduleparamprefix": "g",
+          "internalvalues": ["readinglistentries"]
         },
         {
           "index": 8,

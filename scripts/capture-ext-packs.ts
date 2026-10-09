@@ -468,5 +468,50 @@ if (want("translate-write2")) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// readinglists group (baseline container, logged in as capadmin). Requires
+// ReadingLists loaded and a registered local reading_list_project row (the
+// SQLite baseline seeds `http://localhost` via the repository's
+// initializeProjectIfNeeded). `teardown` success is intentionally NOT captured:
+// teardownForUser renames lists via an UPDATE whose SQL-side CONCAT/MD5 SQLite
+// lacks, so the shape is modeled from source.
+// ---------------------------------------------------------------------------
+
+if (want("readinglists")) {
+  login(CAP);
+  const T = token(CAP, "csrf");
+  const wr = (name: string, command: string, data: string): Record<string, any> => {
+    const body = call(
+      CAP,
+      `--data-urlencode "token=$T" -d "action=readinglists" -d "command=$C" ${data}`,
+      { T, C: command },
+    ) as Record<string, any>;
+    dump(name, body);
+    return body;
+  };
+  const rd = (name: string, data: string): void => dump(name, call(CAP, data));
+
+  wr("readinglists-setup", "setup", "");
+  const created = wr(
+    "readinglists-create",
+    "create",
+    `--data-urlencode "name=Reading list $SUF" --data-urlencode "description=desc one"`,
+  );
+  const lid = String(created.create?.id ?? "1");
+  wr(
+    "readinglists-createentry",
+    "createentry",
+    `-d "list=${lid}" -d "project=@local" --data-urlencode "title=Main Page"`,
+  );
+  wr(
+    "readinglists-update",
+    "update",
+    `-d "list=${lid}" --data-urlencode "name=Reading list edited"`,
+  );
+  rd("readinglists-meta", `-d "action=query" -d "meta=readinglists" -d "rllimit=10"`);
+  rd("readinglistentries", `-d "action=query" -d "list=readinglistentries" -d "rlelists=${lid}"`);
+  wr("readinglists-delete", "delete", `-d "list=${lid}"`);
+}
+
 void sh;
 void API;

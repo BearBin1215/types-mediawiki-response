@@ -74,6 +74,7 @@ const EXT_MODULES: Record<string, string[]> = {
   oathauth: ["oathvalidate"],
   pageimages: ["query+pageimages"],
   pageviews: ["query+pageviews", "query+siteviews", "query+mostviewed"],
+  readinglists: ["readinglists", "query+readinglists", "query+readinglistentries"],
   scribunto: ["scribunto-console"],
   sitematrix: ["query+sitematrix"],
   spamblacklist: ["spamblacklist"],

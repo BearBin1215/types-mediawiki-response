@@ -1,0 +1,13 @@
+{
+  "setup": {
+    "list": {
+      "id": 1,
+      "name": "default",
+      "default": true,
+      "description": "",
+      "created": "2026-10-09T14:38:51Z",
+      "updated": "2026-10-09T14:38:51Z"
+    },
+    "result": "Success"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "update": {
+    "id": "5",
+    "list": {
+      "id": 5,
+      "name": "Reading list edited",
+      "default": false,
+      "description": "desc one",
+      "created": "2026-10-09T14:45:23Z",
+      "updated": "2026-10-09T14:45:24Z"
+    },
+    "result": "Success"
+  }
+}

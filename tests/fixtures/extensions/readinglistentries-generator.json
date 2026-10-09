@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "readinglistentries": [],
+    "pages": [
+      {
+        "ns": 4,
+        "title": "ApiAdmin:Types-mediawiki-response fixture",
+        "missing": true,
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr"
+      }
+    ]
+  }
+}

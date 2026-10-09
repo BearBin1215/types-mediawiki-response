@@ -1,0 +1,32 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "readinglists": [
+      {
+        "id": 5,
+        "name": "Reading list one",
+        "default": false,
+        "description": "desc one",
+        "created": "2026-10-09T14:45:23Z",
+        "updated": "2026-10-09T14:45:24Z"
+      },
+      {
+        "id": 3,
+        "name": "Reading list two",
+        "default": false,
+        "description": "",
+        "created": "2026-10-09T14:38:51Z",
+        "updated": "2026-10-09T14:45:24Z"
+      },
+      {
+        "id": 1,
+        "name": "default",
+        "default": true,
+        "description": "",
+        "created": "2026-10-09T14:38:51Z",
+        "updated": "2026-10-09T14:38:51Z"
+      }
+    ],
+    "readinglists-synctimestamp": "2026-10-09T14:45:24Z"
+  }
+}

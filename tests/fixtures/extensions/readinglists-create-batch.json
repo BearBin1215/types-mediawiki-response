@@ -1,0 +1,26 @@
+{
+  "create": {
+    "ids": ["3", "4"],
+    "lists": [
+      {
+        "id": 3,
+        "name": "Reading list three",
+        "default": false,
+        "description": "",
+        "created": "2026-10-09T14:38:51Z",
+        "updated": "2026-10-09T14:38:51Z",
+        "duplicate": true
+      },
+      {
+        "id": 4,
+        "name": "Reading list four",
+        "default": false,
+        "description": "b",
+        "created": "2026-10-09T14:38:51Z",
+        "updated": "2026-10-09T14:38:51Z",
+        "duplicate": true
+      }
+    ],
+    "result": "Success"
+  }
+}

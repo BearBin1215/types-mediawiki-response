@@ -1,0 +1,23 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "readinglistentries": [
+      {
+        "id": 1,
+        "listId": 5,
+        "project": "http://localhost",
+        "title": "Main Page",
+        "created": "2026-10-09T14:45:23Z",
+        "updated": "2026-10-09T14:45:23Z"
+      },
+      {
+        "id": 2,
+        "listId": 5,
+        "project": "http://localhost",
+        "title": "Project:Types-mediawiki-response fixture",
+        "created": "2026-10-09T14:45:24Z",
+        "updated": "2026-10-09T14:45:24Z"
+      }
+    ]
+  }
+}

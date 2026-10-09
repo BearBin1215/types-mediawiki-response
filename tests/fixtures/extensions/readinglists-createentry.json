@@ -1,0 +1,15 @@
+{
+  "createentry": {
+    "id": "1",
+    "entry": {
+      "id": 1,
+      "listId": 5,
+      "project": "http://localhost",
+      "title": "Main Page",
+      "created": "2026-10-09T14:45:23Z",
+      "updated": "2026-10-09T14:45:23Z",
+      "duplicate": false
+    },
+    "result": "Success"
+  }
+}

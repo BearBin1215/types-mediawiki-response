@@ -1,0 +1,15 @@
+{
+  "create": {
+    "id": "5",
+    "list": {
+      "id": 5,
+      "name": "Reading list one",
+      "default": false,
+      "description": "desc one",
+      "created": "2026-10-09T14:45:23Z",
+      "updated": "2026-10-09T14:45:23Z",
+      "duplicate": false
+    },
+    "result": "Success"
+  }
+}
