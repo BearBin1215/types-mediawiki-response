@@ -78,8 +78,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       types-mediawiki:
-        specifier: ^1.10.1
-        version: 1.10.1
+        specifier: ^2.1.0
+        version: 2.1.0
       types-mediawiki-response:
         specifier: workspace:*
         version: link:../..
@@ -93,8 +93,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       types-mediawiki:
-        specifier: ^1.10.1
-        version: 1.10.1
+        specifier: ^2.1.0
+        version: 2.1.0
       types-mediawiki-response:
         specifier: workspace:*
         version: link:../..
@@ -1834,10 +1834,13 @@ packages:
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x || 5.9.x || 6.0.x
 
-  types-mediawiki@1.10.1:
-    resolution: {integrity: sha512-4TLcsy/lbfpLwwIn2l6lBxCzYYMAsJuQUmwfhkcEWA9yMzBpfcSvfcQQbiTUJPOe4UVghc2BI/3GcPkwXr412Q==}
+  types-mediawiki-api@2.1.0:
+    resolution: {integrity: sha512-8atBno7W5oeSZlvTjZcYQ48YSDjwpwOkQtXezel1+hIpH0hbEIPSECkKiU3NsHjPhK0Do3DdY+sDhsZM2WFoFQ==}
+
+  types-mediawiki@2.1.0:
+    resolution: {integrity: sha512-7t+mHi6RYxzhXVyL9vbOSrrCqrHywb+2Qdiv26AxFya6H3vLv0RM3XC0yVzUFuX4iVkkzzYW+sCsswZhVAlfAA==}
     peerDependencies:
-      vue: 3.2.23 || 3.2.37 || 3.3.9 || 3.4.27
+      vue: 3.2.23 || 3.2.37 || 3.3.9 || 3.4.27 || 3.5.13
     peerDependenciesMeta:
       vue:
         optional: true
@@ -3935,10 +3938,13 @@ snapshots:
       typescript: 6.0.3
       yaml: 2.9.1
 
-  types-mediawiki@1.10.1:
+  types-mediawiki-api@2.1.0: {}
+
+  types-mediawiki@2.1.0:
     dependencies:
       '@types/jquery': 3.5.34
       '@types/oojs-ui': 0.46.4
+      types-mediawiki-api: 2.1.0
 
   typescript@5.6.1-rc: {}
 
