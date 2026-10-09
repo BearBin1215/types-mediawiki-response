@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^4.0.1",
-    "types-mediawiki": "^1.10.1",
+    "types-mediawiki": "^2.1.0",
     "types-mediawiki-response": "workspace:*",
     "typescript": "^7.0.2"
   }
