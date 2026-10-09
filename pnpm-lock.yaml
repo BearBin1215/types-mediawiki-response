@@ -75,8 +75,8 @@ importers:
   examples/web-js:
     devDependencies:
       '@types/jquery':
-        specifier: ^3.5.5
-        version: 3.5.34
+        specifier: ^4.0.1
+        version: 4.0.1
       types-mediawiki:
         specifier: ^1.10.1
         version: 1.10.1
@@ -90,8 +90,8 @@ importers:
   examples/web-ts:
     devDependencies:
       '@types/jquery':
-        specifier: ^3.5.5
-        version: 3.5.34
+        specifier: ^4.0.1
+        version: 4.0.1
       types-mediawiki:
         specifier: ^1.10.1
         version: 1.10.1
@@ -754,6 +754,9 @@ packages:
 
   '@types/jquery@3.5.34':
     resolution: {integrity: sha512-3m3939S3erqmTLJANS/uy0B6V7BorKx7RorcGZVjZ62dF5PAGbKEDZK1CuLtKombJkFA2T1jl8LAIIs7IV6gBQ==}
+
+  '@types/jquery@4.0.1':
+    resolution: {integrity: sha512-9a59A/tycXgYuPABcp6/3spSShn0NT2UOM4EfHvMumjYi4lJWTsK5SZWjhx3yRm9IHGCeWXdV2YfNsrWrft/CA==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -2453,6 +2456,8 @@ snapshots:
     dependencies:
       '@types/sizzle': 2.3.10
 
+  '@types/jquery@4.0.1': {}
+
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -2467,7 +2472,7 @@ snapshots:
 
   '@types/oojs-ui@0.46.4':
     dependencies:
-      '@types/jquery': 3.5.34
+      '@types/jquery': 4.0.1
       '@types/oojs': 7.0.7
 
   '@types/oojs@7.0.7': {}
