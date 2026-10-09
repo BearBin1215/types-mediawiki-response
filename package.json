@@ -1,6 +1,6 @@
 {
   "name": "types-mediawiki-response",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "TypeScript type definitions for MediaWiki Action API responses",
   "keywords": [
     "action-api",
