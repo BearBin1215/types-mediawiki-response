@@ -271,11 +271,62 @@ function postProcessApi(apiDir: string): void {
     }
   };
   walk(apiDir);
-  // 入口模块的展示名是机械的 index，顺手换成人话：模块页 H1
+  polishOverviews(apiDir);
+}
+
+/** Core 落地页描述：核心没有单一入口文件可提取，这里单独给一句
+ * （措辞对齐手写总览页 scripts/api-overview/en.md 的 Core 小节） */
+const CORE_OVERVIEW_DESCRIPTION =
+  "Everything MediaWiki core can return: the response envelope, shared atoms, one response type per `action=`, and the `action=query` framework.";
+
+/** 模块落地页（overview.md）补齐 H1 与 frontmatter description。typedoc 给的 H1
+ * 是机械的 index / extensions/<pack>，frontmatter 无 description，而 llms.txt 的
+ * 条目标题取页面 H1、描述取 frontmatter description（无则退化为正文摘录）——
+ * 扩展包条目因此缺标题语义、缺描述。事实来源：核心为上方常量；扩展包取各自
+ * 模块 JSDoc（src/extensions/<pack>.ts）的首段（显示名与描述同源，一处维护）。 */
+function polishOverviews(apiDir: string): void {
+  const apply = (file: string, display: string, description: string): void => {
+    const md = readFileSync(file, "utf8");
+    const rewritten = md.replace(/^# .*$/m, `# ${display}`);
+    writeFileSync(file, `---\ndescription: ${JSON.stringify(description)}\n---\n\n${rewritten}`);
+  };
   const coreLanding = path.join(apiDir, "core", "overview.md");
-  if (existsSync(coreLanding)) {
-    writeFileSync(coreLanding, readFileSync(coreLanding, "utf8").replace(/^# index$/m, "# Core"));
+  if (existsSync(coreLanding)) apply(coreLanding, "Core", CORE_OVERVIEW_DESCRIPTION);
+  const extRoot = path.join(repoRoot, "src", "extensions");
+  for (const entry of readdirSync(path.join(apiDir, "extensions"), { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const landing = path.join(apiDir, "extensions", entry.name, "overview.md");
+    if (!existsSync(landing)) continue;
+    const { display, description } = packDoc(path.join(extRoot, `${entry.name}.ts`));
+    if (!display || !description) {
+      throw new Error(
+        `[api-docs] extensions/${entry.name}.ts: module doc lacks a bold display name or a first sentence`,
+      );
+    }
+    apply(landing, display, description);
   }
+}
+
+/** 读模块 JSDoc 首段：显示名取首个 **加粗** 片段，描述取首句（遮蔽行内代码后
+ * 找句号，避免 `x.y` 之类误断） */
+function packDoc(file: string): { display: string; description: string } {
+  const doc = readFileSync(file, "utf8").match(/^\/\*\*([\s\S]*?)\*\//)?.[1] ?? "";
+  const lines: string[] = [];
+  for (const raw of doc.split("\n")) {
+    const line = raw.replace(/^\s*\*\s?/, "").trim();
+    if (line === "") {
+      if (lines.length > 0) break;
+      continue;
+    }
+    lines.push(line);
+  }
+  const text = lines.join(" ");
+  const masked = text.replace(/`[^`]*`/g, (m) => " ".repeat(m.length));
+  const end = masked.search(/[.!?](\s|$)/);
+  return {
+    display: text.match(/\*\*([^*]+)\*\*/)?.[1] ?? "",
+    description: end === -1 ? text : text.slice(0, end + 1),
+  };
 }
 
 /** rspress 侧边栏按 _meta.json 生成：逐目录补一份，只收含 .md 的子目录。

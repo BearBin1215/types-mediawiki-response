@@ -9,6 +9,7 @@ export default defineConfig({
   root,
   outDir: path.join(root, "build"),
   base,
+  siteOrigin: "https://bearbin1215.github.io",
   title: "types-mediawiki-response",
   description: "TypeScript types for MediaWiki Action API responses",
   locales: [
