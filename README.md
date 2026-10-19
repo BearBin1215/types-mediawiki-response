@@ -1,6 +1,6 @@
 # types-mediawiki-response
 
-English | [简体中文](https://github.com/BearBin1215/types-mediawiki-response/blob/main/README.zh.md) | [Document](https://bearbin1215.github.io/types-mediawiki-response/)
+English | [简体中文](https://github.com/BearBin1215/types-mediawiki-response/blob/main/README.zh.md) | [Document](https://types-mediawiki-response.pages.dev/)
 
 Reusable typings for MediaWiki Action API responses.
 
@@ -30,9 +30,9 @@ const res = (await api.get({
 })) as ApiQueryResponse;
 ```
 
-Wrap with `ApiResponseWith<T>` to get the full error response type — see the [envelope and error handling guide](https://bearbin1215.github.io/types-mediawiki-response/guide/errors.html).
+Wrap with `ApiResponseWith<T>` to get the full error response type — see the [envelope and error handling guide](https://types-mediawiki-response.pages.dev/guide/errors.html).
 
-When using `ApiQueryResponse`, `query.pages[]` in the response is the union of every covered `prop=` field; project it with `QueryPage<K>` to scope a page to the props you requested — see the [query responses guide](https://bearbin1215.github.io/types-mediawiki-response/guide/query.html).
+When using `ApiQueryResponse`, `query.pages[]` in the response is the union of every covered `prop=` field; project it with `QueryPage<K>` to scope a page to the props you requested — see the [query responses guide](https://types-mediawiki-response.pages.dev/guide/query.html).
 
 ## Extensions
 
@@ -54,4 +54,4 @@ import type { ApiThankResponse } from "types-mediawiki-response/ext/thanks";
 const res = (await api.post({ action: "thank", rev })) as ApiThankResponse;
 ```
 
-Bundled packs are listed in the [extension packs guide](https://bearbin1215.github.io/types-mediawiki-response/guide/ext-packs.html). Extensions this package does not cover can be augmented the same way with a hand-written `declare module 'types-mediawiki-response' { … }`.
+Bundled packs are listed in the [extension packs guide](https://types-mediawiki-response.pages.dev/guide/ext-packs.html). Extensions this package does not cover can be augmented the same way with a hand-written `declare module 'types-mediawiki-response' { … }`.

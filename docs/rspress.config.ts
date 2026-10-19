@@ -3,13 +3,17 @@ import { defineConfig } from "@rspress/core";
 
 const root = import.meta.dirname;
 
-const base = "/types-mediawiki-response/";
+// 同一份配置供两个部署目标使用：GitHub Pages 把站点挂在仓库子路径下（保留作备份），
+// Cloudflare Pages 以根域提供服务（正式站）。GitHub 侧取默认值，Cloudflare 项目侧
+// 设 DOCS_BASE=/ 与 DOCS_SITE_ORIGIN=https://types-mediawiki-response.pages.dev。
+const base = process.env.DOCS_BASE ?? "/types-mediawiki-response/";
+const siteOrigin = process.env.DOCS_SITE_ORIGIN ?? "https://bearbin1215.github.io";
 
 export default defineConfig({
   root,
   outDir: path.join(root, "build"),
   base,
-  siteOrigin: "https://bearbin1215.github.io",
+  siteOrigin,
   title: "types-mediawiki-response",
   description: "TypeScript types for MediaWiki Action API responses",
   locales: [
