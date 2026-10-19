@@ -6,7 +6,7 @@ description: "API 参考总览：本包的覆盖范围、Core 与扩展包参考
 
 字段级页面由类型声明生成，与发布内容始终一致；每个字段的语义、弃用情况与参数约束都在 JSDoc 里，此处可查，IDE 悬停同样可见。
 
-响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、读日志明细、字段类型与线格式的对应关系、激活扩展包这些概念见[指南](/guide/getting-started.html)；本树是字段级参考。
+响应信封与错误处理、query 结果翻页、用 `QueryPage` 收窄 `query.pages`、读日志明细、字段类型与线格式的对应关系、激活扩展包这些概念见[指南](/guide/getting-started)；本树是字段级参考。
 
 :::info
 API 参考由 [typedoc](https://typedoc.org/) 从类型声明自动生成，暂无中文翻译。
@@ -67,7 +67,7 @@ MediaWiki **核心**能返回的一切：响应信封（[ApiEnvelope](core/ApiEn
 
 ## 扩展包
 
-扩展响应按需启用：每个包位于子路径 `types-mediawiki-response/ext/<name>`，一条 type-only import 即可激活——见[按需启用扩展包](/guide/ext-packs.html)。query 子模块的包把字段并入共享的 `ApiPage` / `ApiQueryResult`；扩展 action 的包导出独立响应类型，`import type` 直接使用。
+扩展响应按需启用：每个包位于子路径 `types-mediawiki-response/ext/<name>`，一条 type-only import 即可激活——见[按需启用扩展包](/guide/ext-packs)。query 子模块的包把字段并入共享的 `ApiPage` / `ApiQueryResult`；扩展 action 的包导出独立响应类型，`import type` 直接使用。
 
 | 包                                                        | 扩展                 | 覆盖                                                                             |
 | --------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |

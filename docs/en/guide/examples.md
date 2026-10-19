@@ -17,7 +17,7 @@ The repository ships three minimal consumer projects under [`examples/`](https:/
 The gadget workflow: `mw` globals from `types-mediawiki`, response types declared with this package, bundled before deployment. `src/index.ts` demonstrates three shapes:
 
 - Parsed wikitext (`action=parse`).
-- Global usages of a file (`prop=globalusage`, activated by a type-only import of the GlobalUsage pack, see [Opt-in extension packs](/guide/ext-packs.html)).
+- Global usages of a file (`prop=globalusage`, activated by a type-only import of the GlobalUsage pack, see [Opt-in extension packs](/guide/ext-packs)).
 - A token-guarded edit (`postWithToken`).
 
 Every result is typed with an `as` assertion; the imports are type-only and get erased by the bundler.

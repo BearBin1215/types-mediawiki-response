@@ -17,7 +17,7 @@ description: "三个最小、随 CI 类型检查的示例工程覆盖常见消�
 小工具工作流：`mw` 全局来自 `types-mediawiki`，用本包声明响应类型，构建后部署。`src/index.ts` 演示三种形状：
 
 - wikitext 解析结果（`action=parse`）。
-- 文件全域使用查询（`prop=globalusage`，由 GlobalUsage 包的 type-only 导入激活，见[按需启用扩展包](/guide/ext-packs.html)）。
+- 文件全域使用查询（`prop=globalusage`，由 GlobalUsage 包的 type-only 导入激活，见[按需启用扩展包](/guide/ext-packs)）。
 - 带 token 编辑（`postWithToken`）。
 
 每个结果都用 `as` 断言标注，导入全是 type-only，打包时被擦除。

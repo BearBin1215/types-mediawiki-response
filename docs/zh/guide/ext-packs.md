@@ -108,7 +108,7 @@ wiki 装了对应扩展就激活（场景一），所列模块的字段会出现
 - 页面级 `prop=` 字段并入 `ApiPage`；其余 query 结果并入 `ApiQueryResult`。
 - 行接口——列表结果里的逐条目对象（`list=users` 的 `ApiUser`、`list=recentchanges` 的 `ApiRecentChange` 等）——站点在条目上加字段时，直接增广行接口本身。
 - 日志明细的并入点是 [ApiLogEventParams](/api/core/ApiLogEventParams)，自定义的 log action、以及仍留在老行里的遗留键形都从这里并入。
-- 开放联合的已知值（如站点注册的内容模型）通过联合的提成接口并入，如 `ContentModelExtension`——开放与封闭的区分和增广示例见[字段约定](/guide/conventions.html)。
+- 开放联合的已知值（如站点注册的内容模型）通过联合的提成接口并入，如 `ContentModelExtension`——开放与封闭的区分和增广示例见[字段约定](/guide/conventions)。
 - action 响应是独立信封，没有可并入的共享形状，未覆盖来源的新 action 只需自己定义普通接口并按名导入。
 
 ```ts

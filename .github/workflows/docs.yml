@@ -56,6 +56,10 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build docs
+        env:
+          # GitHub Pages 是备份镜像：canonical 一律指向正式站（Cloudflare Pages），
+          # 页面注入 noindex 退索引，避免两个域各占一份重复内容。
+          DOCS_MIRROR: "1"
         run: pnpm --filter types-mediawiki-response-docs build
 
       - name: Check hero demo is up to date

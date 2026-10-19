@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/generate-api.ts && node scripts/generate-hero.ts && rspress dev",
-    "build": "node scripts/generate-api.ts && node scripts/generate-hero.ts && rspress build",
+    "build": "node scripts/generate-api.ts && node scripts/generate-hero.ts && rspress build && node scripts/generate-sitemap.ts",
     "preview": "rspress preview"
   },
   "devDependencies": {

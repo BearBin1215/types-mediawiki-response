@@ -6,7 +6,7 @@ description: "API reference overview: what the package covers, how the Core and 
 
 The field-level pages are generated from the declarations, so they always match what ships; each field's semantics, deprecations and parameter constraints live in its JSDoc, both here and on hover in your IDE.
 
-Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, reading log event details, how field types map to the wire format, activating extension packs — are covered in the [guide](/guide/getting-started.html). This tree is the field-level reference.
+Concepts — the response envelope and error handling, paging through `query` results, narrowing `query.pages` with `QueryPage`, reading log event details, how field types map to the wire format, activating extension packs — are covered in the [guide](/guide/getting-started). This tree is the field-level reference.
 
 ## Core
 
@@ -63,7 +63,7 @@ Browse the [full Core reference](core/overview.md).
 
 ## Extension packs
 
-Extension responses are opt-in: each pack lives at the subpath `types-mediawiki-response/ext/<name>` and is activated by a single type-only import — see [Opt-in extension packs](/guide/ext-packs.html). Packs for query sub-modules merge their fields into the shared `ApiPage` / `ApiQueryResult`; packs for extension actions export standalone response types to `import type` directly.
+Extension responses are opt-in: each pack lives at the subpath `types-mediawiki-response/ext/<name>` and is activated by a single type-only import — see [Opt-in extension packs](/guide/ext-packs). Packs for query sub-modules merge their fields into the shared `ApiPage` / `ApiQueryResult`; packs for extension actions export standalone response types to `import type` directly.
 
 | Pack                                                      | Extension            | Covers                                                                                 |
 | --------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |

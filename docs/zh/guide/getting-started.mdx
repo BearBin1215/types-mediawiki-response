@@ -50,7 +50,7 @@ console.log(res.query.pages[0]?.revisions);
 - 自动处理根下错误的客户端如 `mw.Api`，响应带根级 `error` / `errors` 会直接抛出异常，直接用 try-catch 包住请求即可，无需额外处理响应类型。
 - 未经处理、把错误结果原样返回的客户端（比如原生 `fetch`），需要用 [`ApiResponseWith<T>`](/api/core/ApiResponseWith) 包一层、按 `error` / `errors` 收窄。
 
-具体处理见[信封与错误处理](/guide/errors.html)。
+具体处理见[信封与错误处理](/guide/errors)。
 
 ## 扩展
 
@@ -72,7 +72,7 @@ const res: ApiThankResponse = await api.post({ action: "thank", rev });
 res.result?.recipient; // 被感谢的用户
 ```
 
-见[按需启用扩展包](/guide/ext-packs.html)。
+见[按需启用扩展包](/guide/ext-packs)。
 
 ## 与 AI 协作
 
@@ -91,8 +91,8 @@ res.result?.recipient; // 被感谢的用户
 
 ## 下一步
 
-- [信封与错误处理](/guide/errors.html)
-- [query 响应](/guide/query.html)
-- [字段约定](/guide/conventions.html)
-- [按需启用扩展包](/guide/ext-packs.html)
-- [示例](/guide/examples.html)
+- [信封与错误处理](/guide/errors)
+- [query 响应](/guide/query)
+- [字段约定](/guide/conventions)
+- [按需启用扩展包](/guide/ext-packs)
+- [示例](/guide/examples)

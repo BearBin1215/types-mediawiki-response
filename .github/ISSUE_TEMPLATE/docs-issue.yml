@@ -6,7 +6,7 @@ body:
     id: location
     attributes:
       label: Page URL or file path / 页面 URL 或文件路径
-      description: e.g. `https://types-mediawiki-response.pages.dev/guide/query.html` or `docs/zh/guide/errors.md`
+      description: e.g. `https://types-mediawiki-response.pages.dev/guide/query` or `docs/zh/guide/errors.md`
     validations:
       required: true
   - type: dropdown

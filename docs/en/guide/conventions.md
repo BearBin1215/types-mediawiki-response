@@ -47,7 +47,7 @@ Under `formatversion=2` the pages container is a plain array of page objects —
 
 ## Empty maps and empty lists
 
-A field the server emits as a map serializes as `{}` when empty; a list serializes as `[]`. The everyday example is the log details: on `delete/delete` rows, `params` is present but `{}` — see [Query responses](/guide/query.html). Where the empty shape can occur, it is part of the field's union.
+A field the server emits as a map serializes as `{}` when empty; a list serializes as `[]`. The everyday example is the log details: on `delete/delete` rows, `params` is present but `{}` — see [Query responses](/guide/query). Where the empty shape can occur, it is part of the field's union.
 
 ## Numbers occasionally arrive as strings
 

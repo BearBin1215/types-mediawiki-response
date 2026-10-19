@@ -89,7 +89,7 @@ Merged, `event.params?.foo` reads as `string | undefined` instead of `unknown`. 
 
 Which action a field belongs to is a docstring convention (built-in keys work the same way: `duration` only ever appears on block-family rows); at runtime, go by `type`/`action`. If you want compile-time restriction of a read to one action, skip the augmentation and narrow `params` to a local shape (`ApiLogEventParams & { foo?: string }`) at the call site.
 
-The same seam for query fields is described in [Opt-in extension packs](/guide/ext-packs.html).
+The same seam for query fields is described in [Opt-in extension packs](/guide/ext-packs).
 
 ## Narrowing pages with QueryPage
 

@@ -8,7 +8,8 @@
     "types": ["node"],
     "strict": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["rspress.config.ts", "scripts", "theme"],
   "exclude": ["build", "node_modules", "zh/api", "en/api"]

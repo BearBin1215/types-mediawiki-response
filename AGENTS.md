@@ -37,7 +37,7 @@ MediaWiki Action API 响应类型库。
 │   └── typeutil.ts              # 断言辅助类型（ExtraKeys）
 ├── dev-docs/                    # 内部开发笔记（不上文档站）
 ├── examples/                    # 三个消费场景最小示例（web-ts/web-js/node-bot）
-└── docs/                        # 文档站（Rspress，pnpm workspace 子包，部署 GitHub Pages）
+└── docs/                        # 文档站（Rspress，pnpm workspace 子包；正式站 Cloudflare Pages，GitHub Pages 为 noindex 镜像）
     └── en/ | zh/                # 双语内容，en 为默认语言；api/ 由 typedoc 生成（gitignore）
 ```
 
@@ -57,7 +57,7 @@ pnpm check          # format:check + lint + test + audit:* + check:ext + check:p
 pnpm build          # 产出 dist
 pnpm fetch:fixtures # 刷新 tests/fixtures/（--check 只验不写）
 pnpm docs:dev       # 文档站开发服务器（先跑 typedoc 生成 API 参考）
-pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pages）
+pnpm docs:build     # 文档站构建（产物 docs/build/；正式站与镜像共用）
 ```
 
 发布前 `pnpm pack --dry-run` 确认产物仅含 `dist/*.d.ts` 与 README。
@@ -78,7 +78,7 @@ pnpm docs:build     # 文档站构建（产物 docs/build/，CI 部署 GitHub Pa
 
 - 任何改动：`pnpm format:check`——oxfmt 也覆盖 `docs/` 下的 md。
 - 改 `src/` / `tests/` / `scripts/`：另跑 `pnpm check`（= CI 的 Check 步）。
-- 改 `docs/`：另跑 `pnpm docs:build`（先 typedoc 生成 API 参考，再构建并查死链）。
+- 改 `docs/`：另跑 `pnpm docs:build`（先 typedoc 生成 API 参考，再构建并查死链，最后生成 sitemap/robots）。
 
 ## 文档分工
 

@@ -50,7 +50,7 @@ Casting to `ApiXxxResponse` only asserts **no root error** — which is not the 
 - Clients that handle root errors for you, such as `mw.Api`, throw as soon as the response carries a root `error` / `errors` — just wrap the request in a `try`/`catch`, and no extra handling of the response type is needed.
 - Clients that hand the error response back as-is (native `fetch`, for example) need the type wrapped with [`ApiResponseWith<T>`](/api/core/ApiResponseWith) and a narrowing on `error` / `errors`.
 
-See [Envelope and error handling](/guide/errors.html) for the details.
+See [Envelope and error handling](/guide/errors) for the details.
 
 ## Extensions
 
@@ -72,7 +72,7 @@ const res: ApiThankResponse = await api.post({ action: "thank", rev });
 res.result?.recipient; // the thanked user
 ```
 
-See [Opt-in extension packs](/guide/ext-packs.html).
+See [Opt-in extension packs](/guide/ext-packs).
 
 ## Working with AI
 
@@ -91,8 +91,8 @@ Copy whichever link fits your use case and hand it to your agent.
 
 ## Next steps
 
-- [Envelope and error handling](/guide/errors.html)
-- [Query responses](/guide/query.html)
-- [Field conventions](/guide/conventions.html)
-- [Opt-in extension packs](/guide/ext-packs.html)
-- [Examples](/guide/examples.html)
+- [Envelope and error handling](/guide/errors)
+- [Query responses](/guide/query)
+- [Field conventions](/guide/conventions)
+- [Opt-in extension packs](/guide/ext-packs)
+- [Examples](/guide/examples)

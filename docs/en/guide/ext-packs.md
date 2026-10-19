@@ -108,7 +108,7 @@ The same seam is general: fields reach a response from sources this package does
 - Page-level `prop=` fields merge into `ApiPage`; other query results merge into `ApiQueryResult`.
 - Row interfaces — the per-entry objects inside a list result (`ApiUser` for `list=users`, `ApiRecentChange` for `list=recentchanges`, …) — are augmented directly when the site adds per-entry fields.
 - Log details merge into [ApiLogEventParams](/api/core/ApiLogEventParams) — site-custom log actions, and legacy key forms still in old rows, both land here.
-- Known values of an open union (a site-registered content model, for example) are promoted through the union's augmentation interface, such as `ContentModelExtension` — see [Field conventions](/guide/conventions.html) for the open/closed distinction and a worked example.
+- Known values of an open union (a site-registered content model, for example) are promoted through the union's augmentation interface, such as `ContentModelExtension` — see [Field conventions](/guide/conventions) for the open/closed distinction and a worked example.
 - Action responses are standalone envelopes with nothing to merge into; a new action from an uncovered source is just a plain interface you define and import.
 
 ```ts

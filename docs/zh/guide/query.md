@@ -88,7 +88,7 @@ declare module "types-mediawiki-response" {
 
 字段属于哪个 action，约定写在 docstring 里（内建键亦然：`duration` 只有 block 系列行会带），运行时判断仍以 `type`/`action` 为准。若想编译期就把读键限定在某个 action，可以不增广，改在调用处把 `params` 收窄成局部形状（`ApiLogEventParams & { foo?: string }`）再读。
 
-query 字段的同一接缝见[按需启用的扩展包](/guide/ext-packs.html)。
+query 字段的同一接缝见[按需启用的扩展包](/guide/ext-packs)。
 
 ## 用 QueryPage 收窄页面
 
