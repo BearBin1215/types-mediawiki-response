@@ -43,7 +43,7 @@ general["git-hash"]; // meta=siteinfo
 
 ## `query.pages` 是数组
 
-fv2 下 pages 容器是页面对象的普通数组，不是 fv1 那种按 pageid 键控的 map，直接遍历即可。`Object.values(res.query.pages ?? [])` 能通过编译，但那是 fv1 习惯的残留。某些会自定义排序的 generator 请求会把序号写进每页的 `index` 字段。
+fv2 下 pages 容器是页面对象的普通数组，不是 fv1 那种按 pageid 键控的 map，直接遍历即可。`Object.values(res.query?.pages ?? [])` 能通过编译，但那是 fv1 习惯的残留。某些会自定义排序的 generator 请求会把序号写进每页的 `index` 字段。
 
 ## 空容器：`{}` 与 `[]`
 

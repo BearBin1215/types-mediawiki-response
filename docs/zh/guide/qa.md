@@ -9,14 +9,14 @@ description: "只有把类型接进真实的请求代码时才会冒出来的毛
 给 `list=` 模块翻页时，可能会把续传游标写成同一个变量——它既进请求体、又从响应里被赋值回来：
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const titles: string[] = [];
 let cmcontinue: string | false = false;
 
 do {
   // ❌ TS7022: 'res' implicitly has type 'any' …
-  const res = await api.get<ApiQueryResponse>({
+  const res = await api.get<ApiQueryResponseWithResult>({
     action: "query",
     list: "categorymembers",
     cmtitle: "Category:游戏",
@@ -28,7 +28,7 @@ do {
 } while (cmcontinue);
 ```
 
-这只在你的客户端返回类型由调用方的 `Promise<T>`（泛型 `get<T>` / `post<T>`）指定时才会触发。用断言写法的客户端如 `(await api.get({ … })) as ApiQueryResponse` 不会碰到。
+这只在你的客户端返回类型由调用方的 `Promise<T>`（泛型 `get<T>` / `post<T>`）指定时才会触发。用断言写法的客户端如 `(await api.get({ … })) as ApiQueryResponseWithResult` 不会碰到。
 
 **原因**：`res` 的类型由调用推断，而调用的实参就是前面的对象字面量。字面量里嵌了简写属性 `cmcontinue`（1），于是要给实参定类型就得先知道 `cmcontinue` 的类型，而 `cmcontinue` 又是在（2）处从 `res` 赋值来的。依赖就这样绕回了正在声明的那个绑定：
 
@@ -43,7 +43,7 @@ TypeScript 解不开这个环，在 `noImplicitAny` 下只好放弃，把 `res` 
 1. 给响应加显式标注，让它的类型不必再经由实参推断：
 
    ```ts
-   const res: ApiQueryResponse = await api.get<ApiQueryResponse>({
+   const res: ApiQueryResponseWithResult = await api.get<ApiQueryResponseWithResult>({
      /* … */
      cmcontinue,
    });
@@ -53,10 +53,10 @@ TypeScript 解不开这个环，在 `noImplicitAny` 下只好放弃，把 `res` 
 
    ```ts
    const titles: string[] = [];
-   let cont: ApiQueryResponse["continue"];
+   let cont: ApiQueryResponseWithResult["continue"];
 
    do {
-     const res = await api.get<ApiQueryResponse>({
+     const res = await api.get<ApiQueryResponseWithResult>({
        action: "query",
        list: "categorymembers",
        cmtitle: "Category:游戏",
@@ -71,5 +71,5 @@ TypeScript 解不开这个环，在 `noImplicitAny` 下只好放弃，把 `res` 
 3. 对 await 结果用断言，而不是传类型实参：
 
    ```ts
-   const res = (await api.get({ /* … */ cmcontinue })) as ApiQueryResponse;
+   const res = (await api.get({ /* … */ cmcontinue })) as ApiQueryResponseWithResult;
    ```

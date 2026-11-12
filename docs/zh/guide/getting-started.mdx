@@ -27,14 +27,14 @@ import { PackageManagerTabs, Steps } from "@rspress/core/theme";
 每个 `action` 对应一个 `ApiXxxResponse`。以获取页面修订版本为例：
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const res = (await api.get({
   action: "query",
   prop: "revisions",
   titles,
   formatversion: "2",
-})) as ApiQueryResponse;
+})) as ApiQueryResponseWithResult;
 
 console.log(res.query.pages[0]?.revisions);
 ```

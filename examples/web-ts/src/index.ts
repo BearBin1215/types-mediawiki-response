@@ -11,7 +11,7 @@ import type { ApiGlobalUsage } from "types-mediawiki-response/ext/globalusage";
 import type {
   ApiEditResponse,
   ApiParseResponse,
-  ApiQueryResponse,
+  ApiQueryResponseWithResult,
   ApiPage,
 } from "types-mediawiki-response";
 
@@ -33,7 +33,7 @@ export async function findGlobalUsages(file: string): Promise<string[]> {
     prop: "globalusage",
     titles: file,
     formatversion: "2",
-  })) as ApiQueryResponse;
+  })) as ApiQueryResponseWithResult;
   const pages: ApiPage[] = res.query.pages ?? [];
   return (pages[0]?.globalusage ?? []).map(
     (usage: ApiGlobalUsage) => `${usage.wiki}:${usage.title}`,

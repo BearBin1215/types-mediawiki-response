@@ -43,7 +43,7 @@ Legacy XML-style content keys are modeled the same way, as `"*"`: Echo's rendere
 
 ## `query.pages` is an array
 
-Under `formatversion=2` the pages container is a plain array of page objects — not the pageid-keyed map of fv1. Iterate it directly; `Object.values(res.query.pages ?? [])` compiles but is a leftover fv1 habit. Generator requests that impose their own order record it in each page's `index` field.
+Under `formatversion=2` the pages container is a plain array of page objects — not the pageid-keyed map of fv1. Iterate it directly; `Object.values(res.query?.pages ?? [])` compiles but is a leftover fv1 habit. Generator requests that impose their own order record it in each page's `index` field.
 
 ## Empty maps and empty lists
 

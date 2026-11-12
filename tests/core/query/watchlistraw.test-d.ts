@@ -17,6 +17,8 @@ import fixture from "../../fixtures/core/query/watchlistraw.json";
 
 export const sample = {
   batchcomplete: true,
+  // A parsed `wrlimit=max` adds a root-level `limits` entry, accepted here too.
+  limits: { watchlistraw: 5000 },
   continue: { wrcontinue: "0|Delete_target_1790390753588", continue: "-||" },
   watchlistraw: [{ ns: 0, title: "Abuse log probe" }],
 } satisfies ApiWatchlistRawResponse;

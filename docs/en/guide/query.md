@@ -11,12 +11,20 @@ description: "How an action=query response is typed: prop= modules merge into Ap
 - `query.pages[]`: the union of the page-level `prop=` modules. Each entry is an [`ApiPage`](/api/core/ApiPage) that merges the fields of every covered `prop=` module. Which fields a page actually carries depends on the `prop=` you passed; the type is their union for convenience, yet wider than any single request, so fields you never asked for look available.
 - The `query` root: `list=` / `meta=` results, plus the occasional `prop=` whose result is not page-scoped (e.g. `prop=stashimageinfo` lands at `query.stashimageinfo`). They merge directly into [`ApiQueryResult`](/api/core/ApiQueryResult): `query.recentchanges` for `list=recentchanges`, `query.general` for `meta=siteinfo`, and so on. They do not go through the pages projection below.
 
+## When `query` is absent
+
+`query` exists only because a module — or the page framework — wrote into it. A `generator=` that matched nothing, a continuation that marks the generator finished (`continue: "-||"`), a query asking only for a module that writes at the root (`list=watchlistraw`), and a bare `action=query` all come back with `batchcomplete` alone, so [`ApiQueryResponse`](/api/core/ApiQueryResponse) types `query` as optional. Requests that are known to produce a result can be cast to [`ApiQueryResponseWithResult`](/api/core/ApiQueryResponseWithResult), which requires it:
+
+- a `titles=`-based `prop=` query always writes `query.pages` — a missing title still gets an entry;
+- a `list=` / `meta=` module writes its own key, an empty list included (`query.backlinks: []`);
+- a `generator=` query only skips `query` when it generated no page at all.
+
 ## Continuation
 
 Modules that can return more results than one request carries add their tokens to a top-level `continue` object, typed as [`ApiQueryContinue`](/api/core/ApiQueryContinue) — another declaration-merged interface, where each module contributes a key named after its parameter prefix (e.g. `cmcontinue` for `list=categorymembers`), next to the generic opaque `continue` token. While the object is present, pass its keys back on the next request; spreading the whole object into the request is the usual way. Once it is absent, you have everything:
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponse, ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const titles: string[] = [];
 let cont: ApiQueryResponse["continue"];
@@ -29,7 +37,7 @@ do {
     cmlimit: "max",
     ...cont,
     formatversion: "2",
-  })) as ApiQueryResponse;
+  })) as ApiQueryResponseWithResult;
 
   titles.push(...(res.query.categorymembers ?? []).map(({ title }) => title));
   cont = res.continue;
@@ -53,14 +61,14 @@ Which keys an entry actually carries depends on its `type`/`action` (a `block/bl
 As with `ApiPage`, the union is wider than any single entry, and the compiler cannot correlate `params` with the entry's `action`, so check `type`/`action` at runtime before reading action-specific keys:
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const res = (await api.get({
   action: "query",
   list: "logevents",
   leprop: "title|type|details",
   formatversion: "2",
-})) as ApiQueryResponse;
+})) as ApiQueryResponseWithResult;
 
 for (const event of res.query.logevents ?? []) {
   // params reads as the full union on every entry — the check is for you, not the compiler
@@ -96,14 +104,14 @@ The same seam for query fields is described in [Opt-in extension packs](/guide/e
 `ApiPage` is a union, and the compiler does not know which `prop=` you requested, so a field you never asked for still typechecks. [`QueryPage<K>`](/api/core/QueryPage) puts that information back, narrowing the page to the props you actually requested:
 
 ```ts
-import type { ApiQueryResponse, QueryPage } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult, QueryPage } from "types-mediawiki-response";
 
 const res = (await api.get({
   action: "query",
   prop: "revisions",
   titles,
   formatversion: "2",
-})) as ApiQueryResponse;
+})) as ApiQueryResponseWithResult;
 
 // Not narrowed: ApiPage is the union, so unrequested fields look available
 const wide = res.query.pages ?? [];

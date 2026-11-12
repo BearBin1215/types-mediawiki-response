@@ -39,14 +39,14 @@ const DEMOS: Demo[] = [
   {
     id: "hover",
     snippet: [
-      'import type { ApiQueryResponse } from "types-mediawiki-response";',
+      'import type { ApiQueryResponseWithResult } from "types-mediawiki-response";',
       "",
       "const res = (await api.get({",
       '  action: "query",',
       '  meta: "siteinfo",',
       '  siprop: "general",',
       '  formatversion: "2",',
-      "})) as ApiQueryResponse;",
+      "})) as ApiQueryResponseWithResult;",
       "",
       "const general = res.query.general;",
       'if (!general) throw new Error("missing query.general");',
@@ -59,14 +59,14 @@ const DEMOS: Demo[] = [
   {
     id: "error",
     snippet: [
-      'import type { ApiQueryResponse } from "types-mediawiki-response";',
+      'import type { ApiQueryResponseWithResult } from "types-mediawiki-response";',
       "",
       "const res = (await api.get({",
       '  action: "query",',
       '  list: "search",',
       '  srsearch: "insource:formatversion",',
       '  formatversion: "2",',
-      "})) as ApiQueryResponse;",
+      "})) as ApiQueryResponseWithResult;",
       "",
       "const [hit] = res.query.search ?? [];",
       "",

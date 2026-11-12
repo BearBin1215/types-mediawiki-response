@@ -575,8 +575,15 @@ export interface ApiQueryResponse extends ApiEnvelope {
    */
   continue?: ApiQueryContinue;
 
-  /** Output of the requested `prop=`/`list=`/`meta=` modules. */
-  query: ApiQueryResult;
+  /**
+   * Output of the requested `prop=`/`list=`/`meta=` modules. Absent when no
+   * module contributed to it: a generator that matched nothing, a continuation
+   * that marks the generator finished, a request asking only for modules that
+   * write at the root (`list=watchlistraw`), or a bare `action=query`. Use
+   * {@link ApiQueryResponseWithResult} where the request is known to produce
+   * one.
+   */
+  query?: ApiQueryResult;
 
   /** Effective limits per module, keyed by module name (e.g. `{ categories: 500 }`). */
   limits?: Record<string, number>;
@@ -595,6 +602,16 @@ export interface ApiQueryResponse extends ApiEnvelope {
    * Array values are joined with `|` before serialization.
    */
   "query-noncontinue"?: Record<string, Record<string, string | number>>;
+}
+
+/**
+ * An {@link ApiQueryResponse} whose result object is known to be present:
+ * the request asked for at least one module that writes into `query`, and its
+ * generator (if any) produced pages.
+ */
+export interface ApiQueryResponseWithResult extends ApiQueryResponse {
+  /** The result object, guaranteed present. */
+  query: ApiQueryResult;
 }
 
 export * from "./shared";

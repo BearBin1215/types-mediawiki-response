@@ -59,10 +59,11 @@ interface FixtureSpec {
    */
   expectVersion?: string;
   /**
-   * For the negative fixtures only: the response is *supposed* to carry an error
-   * or warnings. Everything else must come back clean, or the run fails.
+   * For fixtures that are meant to look unusual: the response is *supposed* to
+   * carry an error, warnings, or no payload at all. Everything else must come
+   * back clean, or the run fails.
    */
-  expect?: "error" | "warnings";
+  expect?: "error" | "warnings" | "empty";
 }
 
 const SPECS: FixtureSpec[] = [
@@ -610,6 +611,21 @@ const SPECS: FixtureSpec[] = [
       gpssearch: "MediaInclu",
       gpslimit: "5",
       redirects: "1",
+    },
+  },
+  {
+    // generator=search that matches nothing: nothing writes under `query`, so
+    // the whole object is dropped and only `batchcomplete` survives. The branch
+    // that drops it is the same in 1.43 (source and this capture) and 1.47
+    // (mediawiki.org probe), so the baseline capture covers the range.
+    path: "core/query/generator-empty.json",
+    expect: "empty",
+    params: {
+      action: "query",
+      generator: "search",
+      gsrsearch: "zzqqxxnonexistentqwerty",
+      gsrnamespace: "0",
+      prop: "info",
     },
   },
   {
@@ -1179,7 +1195,14 @@ function assertUsable(spec: FixtureSpec, body: Record<string, unknown>): void {
     throw new Error(`${spec.path}: unexpected warnings ${JSON.stringify(body.warnings)}`);
   }
   const payload = Object.entries(body).filter(([key]) => !ENVELOPE_KEYS.has(key));
-  if (!payload.some(([key, value]) => hasData(value, key))) {
+  const populated = payload.filter(([key, value]) => hasData(value, key));
+  if (spec.expect === "empty") {
+    if (populated.length) {
+      throw new Error(`${spec.path}: expected no payload, got ${populated.map(([key]) => key)}`);
+    }
+    return;
+  }
+  if (!populated.length) {
     throw new Error(`${spec.path}: returned no data (the endpoint lacks this content)`);
   }
 }

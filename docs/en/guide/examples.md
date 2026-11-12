@@ -33,7 +33,7 @@ The tsconfig enables `checkJs`, so CI validates the JSDoc too.
 
 ## node-bot: bot client on Node
 
-There is no `mw.Api` global class like a MediaWiki page provides: a hand-rolled `Bot` class wraps `fetch` and takes the response type as a generic argument — `request<ApiQueryResponse>({ action: "query", … })`.
+There is no `mw.Api` global class like a MediaWiki page provides: a hand-rolled `Bot` class wraps `fetch` and takes the response type as a generic argument — `request<ApiQueryResponseWithResult>({ action: "query", … })`.
 
 It covers the pieces a bot actually needs: a descriptive `User-Agent`, `meta=tokens` for the CSRF token, `QueryPage<"revisions">` to scope `query.pages` to the requested props, and an `edit.result` check.
 

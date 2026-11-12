@@ -1,4 +1,8 @@
-import type { ApiEditResponse, ApiQueryResponse, QueryPage } from "types-mediawiki-response";
+import type {
+  ApiEditResponse,
+  ApiQueryResponseWithResult,
+  QueryPage,
+} from "types-mediawiki-response";
 
 /**
  * Minimal typed MediaWiki bot client. Pass a response type as the generic
@@ -27,7 +31,7 @@ export class Bot {
   }
 
   async getCsrfToken(): Promise<string> {
-    const res = await this.request<ApiQueryResponse>({
+    const res = await this.request<ApiQueryResponseWithResult>({
       action: "query",
       meta: "tokens",
       type: "csrf",
@@ -40,7 +44,7 @@ export class Bot {
   }
 
   async getWikitext(title: string): Promise<string | undefined> {
-    const res = await this.request<ApiQueryResponse>({
+    const res = await this.request<ApiQueryResponseWithResult>({
       action: "query",
       prop: "revisions",
       titles: title,

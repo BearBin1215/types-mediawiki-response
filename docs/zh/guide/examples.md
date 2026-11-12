@@ -33,7 +33,7 @@ tsconfig 开启了 `checkJs`，CI 同样校验 JSDoc。
 
 ## node-bot：Node 上的机器人客户端
 
-没有 MediaWiki 网页提供的 `mw.Api` 全局类，手写的 `Bot` 类封装 `fetch`，把响应类型作为泛型参数传入：`request<ApiQueryResponse>({ action: "query", … })`。
+没有 MediaWiki 网页提供的 `mw.Api` 全局类，手写的 `Bot` 类封装 `fetch`，把响应类型作为泛型参数传入：`request<ApiQueryResponseWithResult>({ action: "query", … })`。
 
 覆盖机器人实际需要的几块东西：规范的 `User-Agent`、取 CSRF token 的 `meta=tokens`、把 `query.pages` 限定到实际请求 prop 的 `QueryPage<"revisions">`，以及 `edit.result` 检查。
 

@@ -11,8 +11,7 @@
  * @see https://www.mediawiki.org/wiki/API:Watchlistraw
  */
 import type { NamespaceIndex, Timestamp } from "../../common";
-import type { ApiEnvelope } from "../../envelope";
-import type { ApiQueryContinue } from "./index";
+import type { ApiQueryResponse } from "./index";
 
 /** One watched title. */
 export interface ApiWatchlistRawEntry {
@@ -37,13 +36,8 @@ declare module "./index" {
 }
 
 /**
- * Response of a query whose only module is `list=watchlistraw`: because the
- * module writes outside `query`, the envelope comes back without a `query` member.
+ * Response of a query whose only module is `list=watchlistraw`: the same
+ * envelope as {@link ApiQueryResponse}, named for the module-only case that
+ * leaves out `query`.
  */
-export interface ApiWatchlistRawResponse extends ApiEnvelope {
-  /** Cursors to pass back on the next request to fetch the following titles. */
-  continue?: ApiQueryContinue;
-
-  /** Raw watchlist titles (`list=watchlistraw`). */
-  watchlistraw?: ApiWatchlistRawEntry[];
-}
+export interface ApiWatchlistRawResponse extends ApiQueryResponse {}

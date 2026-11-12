@@ -168,7 +168,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 ### 3.7 模块结构上的可复用判断
 
-- **不要假设 `list=` 的结果一定在 `query` 下**：`list=watchlistraw` 写在根级，只请求它时响应**根本没有 `query` 键**。做法：为该模块单列一个不含 `query` 的响应类型，同时把该键并进 `ApiQueryResponse` 供混用请求。
+- **不要假设 `list=` 的结果一定在 `query` 下**：`list=watchlistraw` 写在根级，只请求它时响应**根本没有 `query` 键**。该键仍并进 `ApiQueryResponse` 供混用请求，`ApiWatchlistRawResponse` 保留为该场景的具名类型（形状与 `ApiQueryResponse` 相同）；`ApiQueryResponse.query` 本身按 §6 保持可选。
 - **区分"prop 值"与"伴生键"**：有的输出键不属于任何 prop 枚举而是自动产出（`prop=modules` 附带 `modulescripts`/`modulestyles`；`prop=tocdata` 附带 `showtoc`）。把它们写进 `prop=` 会报 Unrecognized value。
 - **参数互斥要写进 JSDoc**，只能从 `invalidparammix` 错误里学到：`*unique` 与 `*prop=ids`（alllinks 族）、`adrprefix` 与 `adruser`（alldeletedrevisions）、`inprop=preloadcontent|editintro` 要求查询只含单个页面 / 修订。
 - **同一数据的两个 prop 可能有两套键名**，不能共享行类型：`prop=sections` 用小写 `toclevel`/`fromtitle`，`prop=tocdata` 用驼峰 `tocLevel`/`hLevel`/`fromTitle`。
@@ -360,6 +360,7 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 ### 勿再当缺陷重查（均为多版本实测 / 源码核对过的结论）
 
 - 合并视图成员、`*prop` 门控字段、以及 `action=import`/`imagerotate`/`purge`/`setnotificationtimestamp` 混入的 invalid/missing 条目——保持可选是有意为之。
+- `ApiQueryResponse.query` 保持**可选**：`query` 由写入方按需创建，`generator=` 零产出、`continue: "-||"`（generator 已完成，`ApiQuery::execute()` 走 `executeDryRun()`，`outputGeneralPageInfo()` 不执行）、只请求 `list=watchlistraw`、以及不带模块的 `action=query` 都只返回 `batchcomplete`（1.43.11 本地实例实测 + 1.47-wmf 复核；源码里 `outputGeneralPageInfo()` 的每个 `query.*` 写入都在非空分支内）。确定有结果的场景用 `ApiQueryResponseWithResult`；`list=`/`meta=` 模块空结果也会写自己的键（`query.backlinks: []`），不要据此认为 `query` 必选。
 - 刻意保持宽化的两处：`globaluserinfo` 的 `unattached[].editcount` 保持 `number`（emitter 未 `intval()`，见到实物再收窄）；`parse` 的 `extensionData` 按 ParserCache 测试数据近似为 `Record<string, unknown> | unknown[]`。
 - 版本边界结论已在类型里标 `@since`，不要改回必选：`prop=tocdata` 仅 1.43+、`parse.sections[].linkAnchor` 1.40+、`action=userrights` 的 `watchuser` 1.41 起才回显、`action=visualeditor` 的 `wouldautocreate` 1.41+。
 - 扩展包版本边界（回 REL 分支 / git 核实，勿再挂错版本）：`list=globalusers` = **1.47**（仅 master，REL1_45/46 无 `ApiQueryGlobalUsers.php`；CentralAuth master 的 extension.json 要求 MW>=1.47，即 1.47 开发线）；`meta=checkuserformattedblockinfo` = **1.44**（REL1_43 无 / REL1_44 有 `ApiQueryFormattedBlockInfo.php`）；`action=createlocalaccount` = **1.36**（REL1_35 无 / REL1_36 有）。类型跨版本漂移：`list=wikisets` 的 `id` **≤1.45 为字符串、1.46 起为数字**（`WikiSet::newFromRow` 从 REL1_46 起把 `ws_id` 走 `intval()`，此前直传 DB 字符串列；master 同样 `intval`）——单版本 fixture 检不出，取并集 `string | number`。弃用项：`list=messagecollection` 的 `mcprop=revision` BC 字段于 **1.44 移除**（commit `7fc263bff`，正文 “Deprecated back in 2013: I1a12ddc…”，进 REL1_44+），旧 JSDoc 误标 “@deprecated since 1.41” 已改；`meta=messagegroupstats` 的 `code` 是 2012 年随 `language` 引入的 `// For BC` 键、至今仍发射（非 1.41 弃用，已去掉 1.41）。

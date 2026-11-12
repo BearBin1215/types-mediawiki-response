@@ -10,7 +10,7 @@ Concepts — the response envelope and error handling, paging through `query` re
 
 ## Core
 
-Everything MediaWiki **core** can return: the response envelope ([ApiEnvelope](core/ApiEnvelope.md), [ApiResponseWith](core/ApiResponseWith.md)), shared atoms ([Flag](core/Flag.md), [Timestamp](core/Timestamp.md) …), one response type per `action=` ([ApiQueryResponse](core/ApiQueryResponse.md), [ApiEditResponse](core/ApiEditResponse.md) …), and the `action=query` framework — [ApiPage](core/ApiPage.md), [ApiQueryResult](core/ApiQueryResult.md), the [QueryPage](core/QueryPage.md) projection, per-module continue tokens ([ApiQueryContinue](core/ApiQueryContinue.md)) and the per-action structured log details of [ApiLogEventParams](core/ApiLogEventParams.md).
+Everything MediaWiki **core** can return: the response envelope ([ApiEnvelope](core/ApiEnvelope.md), [ApiResponseWith](core/ApiResponseWith.md)), shared atoms ([Flag](core/Flag.md), [Timestamp](core/Timestamp.md) …), one response type per `action=` ([ApiQueryResponse](core/ApiQueryResponse.md), [ApiEditResponse](core/ApiEditResponse.md) …), and the `action=query` framework — [ApiPage](core/ApiPage.md), [ApiQueryResult](core/ApiQueryResult.md), the [ApiQueryResponseWithResult](core/ApiQueryResponseWithResult.md) view for queries that produce a result, the [QueryPage](core/QueryPage.md) projection, per-module continue tokens ([ApiQueryContinue](core/ApiQueryContinue.md)) and the per-action structured log details of [ApiLogEventParams](core/ApiLogEventParams.md).
 
 Each single-module `action=` maps to one response type:
 

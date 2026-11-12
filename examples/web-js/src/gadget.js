@@ -6,7 +6,7 @@
 
 /**
  * @typedef {import("types-mediawiki-response").ApiParseResponse} ApiParseResponse
- * @typedef {import("types-mediawiki-response").ApiQueryResponse} ApiQueryResponse
+ * @typedef {import("types-mediawiki-response").ApiQueryResponseWithResult} ApiQueryResponseWithResult
  */
 
 /**
@@ -37,7 +37,7 @@ export async function getWikitext(title) {
  */
 export async function whatLinksHere(from) {
   const api = new mw.Api();
-  const res = /** @type {ApiQueryResponse} */ (
+  const res = /** @type {ApiQueryResponseWithResult} */ (
     await api.get({
       action: "query",
       list: "backlinks",

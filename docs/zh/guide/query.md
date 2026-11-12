@@ -9,14 +9,22 @@ description: "action=query 响应的类型组织：prop= 模块并入 ApiPage，
 ## 两个落点
 
 - `query.pages[]`：页面级 `prop=` 模块的并集。每个元素是一个 [`ApiPage`](/api/core/ApiPage)，并入了所有已覆盖 `prop=` 模块的字段。页面上实际有哪些字段取决于请求传的 `prop=`，而类型取并集以便使用，但比任何单次请求都“宽”，没请求的字段看起来也可用。
-- `query` 根下：`list=` / `meta=` 的结果，以及个别不按页面组织的 `prop=`（如 `prop=stashimageinfo` 落在 `query.stashimageinfo`）。它们直接并入 [`ApiQueryResult`](/api/core/ApiQueryResult)：`list=recentchanges` 对应 `query.recentchanges`，`meta=siteinfo` 对应 `query.general`，以此类推。这些结果不走下文的页面投影。
+- `query` 根下：`list=` / `meta=` 的结果，以及个别不按页面组织的 `prop=`（如 `prop=stashimageinfo` 出现在 `query.stashimageinfo`）。它们直接并入 [`ApiQueryResult`](/api/core/ApiQueryResult)：`list=recentchanges` 对应 `query.recentchanges`，`meta=siteinfo` 对应 `query.general`，以此类推。这些结果不走下文的页面投影。
+
+## `query` 何时缺席
+
+`query` 只在有模块（或页面框架）向其中写入数据时出现。`generator=` 零命中、续传游标标记 generator 已完成（`continue: "-||"`）、只请求写在根级的模块（`list=watchlistraw`）、以及不带任何模块的 `action=query`，都只返回 `batchcomplete`，因此 [`ApiQueryResponse`](/api/core/ApiQueryResponse) 把 `query` 声明为可选。能确定会产生结果的请求可以断言成 [`ApiQueryResponseWithResult`](/api/core/ApiQueryResponseWithResult)，它把 `query` 声明为必选：
+
+- 带 `titles=` 的 `prop=` 查询总会写 `query.pages`，不存在的标题也会留一个条目；
+- `list=` / `meta=` 模块会写自己的键，空列表同样会写（`query.backlinks: []`）；
+- `generator=` 查询只在没有任何页面产出时才缺 `query`。
 
 ## 翻页与续传
 
 单个请求拿不完结果的模块，会把续传令牌放进响应顶层的 `continue` 对象（类型 [`ApiQueryContinue`](/api/core/ApiQueryContinue)），同样是声明合并：每个模块按自己的参数前缀贡献一个键，如 `list=categorymembers` 的 `cmcontinue`，另有通用的不透明 `continue` 令牌。对象还在，就把它的键原样带回下一次请求，最省事的做法是把整个对象展开进请求参数。直到它整键缺省，就说明全部获取完毕：
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponse, ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const titles: string[] = [];
 let cont: ApiQueryResponse["continue"];
@@ -29,7 +37,7 @@ do {
     cmlimit: "max",
     ...cont,
     formatversion: "2",
-  })) as ApiQueryResponse;
+  })) as ApiQueryResponseWithResult;
 
   titles.push(...(res.query.categorymembers ?? []).map(({ title }) => title));
   cont = res.continue;
@@ -53,14 +61,14 @@ do {
 与 `ApiPage` 一样，并集比任何单个条目都宽，编译器也无法把 `params` 关联到该条目的 `action`，读 action 专属键前先在运行时判断 `type`/`action`：
 
 ```ts
-import type { ApiQueryResponse } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult } from "types-mediawiki-response";
 
 const res = (await api.get({
   action: "query",
   list: "logevents",
   leprop: "title|type|details",
   formatversion: "2",
-})) as ApiQueryResponse;
+})) as ApiQueryResponseWithResult;
 
 for (const event of res.query.logevents ?? []) {
   // params 在每个条目上都是完整并集——判断只对你有意义，类型层面始终可读
@@ -95,14 +103,14 @@ query 字段的同一接缝见[按需启用的扩展包](/guide/ext-packs)。
 `ApiPage` 是并集，编译器并不知道你这次请求了哪些 `prop=`，所以没请求的字段也能通过检查。[`QueryPage<K>`](/api/core/QueryPage) 把这层信息补回去，把页面收窄到你实际请求的那几个 prop：
 
 ```ts
-import type { ApiQueryResponse, QueryPage } from "types-mediawiki-response";
+import type { ApiQueryResponseWithResult, QueryPage } from "types-mediawiki-response";
 
 const res = (await api.get({
   action: "query",
   prop: "revisions",
   titles,
   formatversion: "2",
-})) as ApiQueryResponse;
+})) as ApiQueryResponseWithResult;
 
 // 不收窄：ApiPage 是并集，没请求的字段也“可用”
 const wide = res.query.pages ?? [];

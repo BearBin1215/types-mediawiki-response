@@ -14,7 +14,7 @@ API 参考由 [typedoc](https://typedoc.org/) 从类型声明自动生成，暂�
 
 ## Core
 
-MediaWiki **核心**能返回的一切：响应信封（[ApiEnvelope](core/ApiEnvelope.md)、[ApiResponseWith](core/ApiResponseWith.md)）、共享原子类型（[Flag](core/Flag.md)、[Timestamp](core/Timestamp.md) 等）、每个 `action=` 一个响应类型（[ApiQueryResponse](core/ApiQueryResponse.md)、[ApiEditResponse](core/ApiEditResponse.md) 等），以及 `action=query` 框架——[ApiPage](core/ApiPage.md)、[ApiQueryResult](core/ApiQueryResult.md)、[QueryPage](core/QueryPage.md) 投影、各模块的续传令牌（[ApiQueryContinue](core/ApiQueryContinue.md)），以及按 log action 建模的日志明细 [ApiLogEventParams](core/ApiLogEventParams.md)。
+MediaWiki **核心**能返回的一切：响应信封（[ApiEnvelope](core/ApiEnvelope.md)、[ApiResponseWith](core/ApiResponseWith.md)）、共享原子类型（[Flag](core/Flag.md)、[Timestamp](core/Timestamp.md) 等）、每个 `action=` 一个响应类型（[ApiQueryResponse](core/ApiQueryResponse.md)、[ApiEditResponse](core/ApiEditResponse.md) 等），以及 `action=query` 框架——[ApiPage](core/ApiPage.md)、[ApiQueryResult](core/ApiQueryResult.md)、确定有结果时使用的 [ApiQueryResponseWithResult](core/ApiQueryResponseWithResult.md)、[QueryPage](core/QueryPage.md) 投影、各模块的续传令牌（[ApiQueryContinue](core/ApiQueryContinue.md)），以及按 log action 建模的日志明细 [ApiLogEventParams](core/ApiLogEventParams.md)。
 
 单模块 `action=` 各对应一个响应类型：
 
