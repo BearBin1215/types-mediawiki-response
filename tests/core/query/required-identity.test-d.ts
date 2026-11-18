@@ -11,7 +11,10 @@
  * core source writes the key outside any conditional, and 1.39–1.46 responses
  * agree. Rows whose identity is gated by a `*prop` value (alllinks family,
  * categorymembers, pageswithprop, exturlusage, logevents, blocks, users,
- * watchlist, search) are deliberately excluded and stay optional.
+ * watchlist, search) are deliberately excluded and stay optional, as are the
+ * action rows that mix in page-set problem entries (`watch`,
+ * `setnotificationtimestamp`): such an entry carries only the unresolved id or
+ * title.
  */
 import { expectTypeOf } from "expect-type";
 import type {
@@ -68,7 +71,6 @@ import type {
   ApiRemoveAuthenticationDataResponse,
   ApiResetPasswordResponse,
   ApiRollbackResult,
-  ApiSetNotificationTimestampEntry,
   ApiSetPageLanguageResponse,
   ApiStashEditResponse,
   ApiTag,
@@ -82,7 +84,6 @@ import type {
   ApiUserContrib,
   ApiUserrightsResponse,
   ApiValidatePasswordResponse,
-  ApiWatchEntry,
   ApiWatchlistRawEntry,
   ContentModel,
   RecentChangeType,
@@ -305,8 +306,6 @@ expectTypeOf<ApiBlockResult>().toHaveProperty("hidename").toEqualTypeOf<boolean>
 expectTypeOf<ApiUnblockResult>().toHaveProperty("reason").toEqualTypeOf<string>();
 
 // Row/sub-object types written per iteration.
-expectTypeOf<ApiWatchEntry>().toHaveProperty("title").toEqualTypeOf<string>();
 expectTypeOf<ApiTagEntry>().toHaveProperty("status").toMatchTypeOf<string>();
-expectTypeOf<ApiSetNotificationTimestampEntry>().toHaveProperty("ns").toEqualTypeOf<number>();
 expectTypeOf<ApiExpandTemplatesCategory>().toHaveProperty("sortkey").toEqualTypeOf<string>();
 expectTypeOf<ApiUploadResponse["upload"]>().toHaveProperty("result").toMatchTypeOf<string>();

@@ -215,6 +215,35 @@ dump(
     { CT, T: `Gap spl ${SUF}` },
   ),
 );
+// Page-set problem entries: unresolved ids and invalid titles have no ns/title.
+dump(
+  "setnotificationtimestamp-missing-pageid",
+  call(
+    CAP,
+    `--data-urlencode "token=$CT" -d "action=setnotificationtimestamp" -d "pageids=999999"`,
+    {
+      CT,
+    },
+  ),
+);
+dump(
+  "setnotificationtimestamp-missing-revid",
+  call(
+    CAP,
+    `--data-urlencode "token=$CT" -d "action=setnotificationtimestamp" -d "revids=999998"`,
+    {
+      CT,
+    },
+  ),
+);
+dump(
+  "setnotificationtimestamp-invalid-title",
+  call(
+    CAP,
+    `--data-urlencode "token=$CT" -d "action=setnotificationtimestamp" --data-urlencode "titles=Bad[Title"`,
+    { CT },
+  ),
+);
 
 // ============================================================================
 // emailuser — edituser has a confirmed email (set via resetUserEmail.php)

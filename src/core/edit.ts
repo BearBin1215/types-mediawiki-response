@@ -16,6 +16,7 @@
  */
 import type { ContentModel, Flag, Timestamp } from "../common";
 import type { ApiEnvelope } from "../envelope";
+import type { ApiQueryTitlePair } from "./query";
 
 /** The `edit` object of an `action=edit` response. */
 export interface ApiEditResult {
@@ -104,4 +105,10 @@ export interface ApiEditCaptcha {
 export interface ApiEditResponse extends ApiEnvelope {
   /** Result of `action=edit`. */
   edit: ApiEditResult;
+
+  /**
+   * The redirect the edit followed (`redirect=1` on a redirect page). A single
+   * `{ from, to }` pair, since the request targets one title.
+   */
+  redirects?: ApiQueryTitlePair;
 }

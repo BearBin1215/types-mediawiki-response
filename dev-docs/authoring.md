@@ -359,7 +359,8 @@ paraminfo 与基线源码只能回答「1.43 有没有」；裁定「从哪个�
 
 ### 勿再当缺陷重查（均为多版本实测 / 源码核对过的结论）
 
-- 合并视图成员、`*prop` 门控字段、以及 `action=import`/`imagerotate`/`purge`/`setnotificationtimestamp` 混入的 invalid/missing 条目——保持可选是有意为之。
+- 合并视图成员、`*prop` 门控字段、以及 `action=import`/`imagerotate`/`purge`/`setnotificationtimestamp`/`watch` 混入的 invalid/missing 条目——保持可选是有意为之（`getInvalidTitlesAndRevisions()` 与 setnotificationtimestamp 直接取出的页面集条目都没有 `ns`/`title` 身份三件套：`{pageid,missing}`、`{revid,missing}`、`{title,invalidreason}`；watch 的 page set 未包含 `missingTitles`，故其条目没有 `known`）。
+- `action=discussiontoolsfindcomment` 的根键在无匹配时**整键缺席**（`addValue` 只在遍历命中的循环里），类型按可选建模；不要因 fixture 有键改回必选。
 - `ApiQueryResponse.query` 保持**可选**：`query` 由写入方按需创建，`generator=` 零产出、`continue: "-||"`（generator 已完成，`ApiQuery::execute()` 走 `executeDryRun()`，`outputGeneralPageInfo()` 不执行）、只请求 `list=watchlistraw`、以及不带模块的 `action=query` 都只返回 `batchcomplete`（1.43.11 本地实例实测 + 1.47-wmf 复核；源码里 `outputGeneralPageInfo()` 的每个 `query.*` 写入都在非空分支内）。确定有结果的场景用 `ApiQueryResponseWithResult`；`list=`/`meta=` 模块空结果也会写自己的键（`query.backlinks: []`），不要据此认为 `query` 必选。
 - 刻意保持宽化的两处：`globaluserinfo` 的 `unattached[].editcount` 保持 `number`（emitter 未 `intval()`，见到实物再收窄）；`parse` 的 `extensionData` 按 ParserCache 测试数据近似为 `Record<string, unknown> | unknown[]`。
 - 版本边界结论已在类型里标 `@since`，不要改回必选：`prop=tocdata` 仅 1.43+、`parse.sections[].linkAnchor` 1.40+、`action=userrights` 的 `watchuser` 1.41 起才回显、`action=visualeditor` 的 `wouldautocreate` 1.41+。

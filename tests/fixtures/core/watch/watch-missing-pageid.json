@@ -1,0 +1,9 @@
+{
+  "batchcomplete": true,
+  "watch": [
+    {
+      "pageid": 999999,
+      "missing": true
+    }
+  ]
+}

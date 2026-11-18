@@ -9,6 +9,7 @@ import captchaFixture from "../../fixtures/core/edit/captcha-failure.json";
 import createFixture from "../../fixtures/core/edit/create.json";
 import nochangeFixture from "../../fixtures/core/edit/nochange.json";
 import newsectionFixture from "../../fixtures/core/edit/newsection.json";
+import redirectFixture from "../../fixtures/core/edit/redirect.json";
 
 // create / nochange / changed outcomes all satisfy the declared type.
 export const createSample = {
@@ -40,6 +41,13 @@ export const nochangeSample = {
 expectTypeOf<ApiEditResult>().toHaveProperty("new").toEqualTypeOf<true | undefined>();
 expectTypeOf<ApiEditResult>().toHaveProperty("result");
 
+// `redirect=1` on a redirect page reports the followed pair as a single object
+// at the root (1.43.11 local capture).
+export const redirectSample = {
+  edit: { result: "Success", pageid: 19, title: "Fixture edit target" },
+  redirects: { from: "Fixture redirect", to: "Fixture edit target" },
+} satisfies ApiEditResponse;
+
 expectTypeOf(createFixture.edit).toExtend<Record<string, unknown>>();
 expectTypeOf<ExtraKeys<typeof createFixture, keyof ApiEditResponse>>().toEqualTypeOf<never>();
 expectTypeOf<ExtraKeys<typeof createFixture.edit, keyof ApiEditResult>>().toEqualTypeOf<never>();
@@ -47,6 +55,8 @@ expectTypeOf<ExtraKeys<typeof nochangeFixture.edit, keyof ApiEditResult>>().toEq
 expectTypeOf<
   ExtraKeys<typeof newsectionFixture.edit, keyof ApiEditResult>
 >().toEqualTypeOf<never>();
+expectTypeOf<ExtraKeys<typeof redirectFixture, keyof ApiEditResponse>>().toEqualTypeOf<never>();
+expectTypeOf<ExtraKeys<typeof redirectFixture.edit, keyof ApiEditResult>>().toEqualTypeOf<never>();
 
 // In-band failure branch (ConfirmEdit aborted the save): `result: "Failure"`
 // plus the captcha challenge instead of revision ids.

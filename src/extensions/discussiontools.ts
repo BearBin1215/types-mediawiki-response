@@ -176,10 +176,13 @@ export interface ApiDiscussionToolsFoundComment {
   shouldredirect?: boolean;
 }
 
-/** Response of `action=discussiontoolsfindcomment` (a list of candidates). */
+/** Response of `action=discussiontoolsfindcomment`. */
 export interface ApiDiscussionToolsFindCommentResponse extends ApiEnvelope {
-  /** Result of `action=discussiontoolsfindcomment`; one entry per candidate comment. */
-  discussiontoolsfindcomment: ApiDiscussionToolsFoundComment[];
+  /**
+   * One entry per candidate comment. Absent when the lookup matched nothing:
+   * the module writes the key only while emitting matches.
+   */
+  discussiontoolsfindcomment?: ApiDiscussionToolsFoundComment[];
 }
 
 /**

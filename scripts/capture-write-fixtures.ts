@@ -74,6 +74,14 @@ capEdit(
   "Section body text.",
   '-d "section=new" --data-urlencode "sectiontitle=A new section"',
 );
+// `redirect=1` follows the redirect and reports the pair at the root. Fixed
+// titles (no `$SUF`) keep the captured `from`/`to` stable.
+capEdit("_mk-rd-target", "Fixture redirect target", "Target body");
+capEdit("_mk-rd-source", "Fixture redirect source", "#REDIRECT [[Fixture redirect target]]");
+cap(
+  "core/edit/redirect.json",
+  `-d "action=edit" --data-urlencode "title=Fixture redirect source" -d "redirect=1" --data-urlencode "appendtext= More body"`,
+);
 
 // --- action=move outcomes ---
 capEdit("_mk-mv1", "MF $SUF", "content to move");
@@ -156,6 +164,12 @@ watch(
 watch(
   "core/watch/unwatch.json",
   `-d "action=watch" -d "unwatch=1" --data-urlencode "titles=Fixture edit target $SUF"`,
+);
+watch("core/watch/watch-missing-pageid.json", `-d "action=watch" -d "pageids=999999"`);
+watch("core/watch/watch-missing-revid.json", `-d "action=watch" -d "revids=999998"`);
+watch(
+  "core/watch/watch-invalid-title.json",
+  `-d "action=watch" --data-urlencode "titles=Bad[Title"`,
 );
 
 // --- prop=info, auth-gated inprops (needs a session that actually watches one of

@@ -353,24 +353,28 @@ export interface ApiQueryNormalized {
 }
 
 /**
- * Framework identity fields present on every `query.pages` entry, regardless
- * of which `prop=` modules were requested.
+ * Identity and problem-marker fields shared by page sets: present on every
+ * `query.pages` entry, and reused by action responses that resolve a page set
+ * (`action=purge`, `action=watch`, …).
  */
 export interface ApiPageIdentity {
   /**
-   * Page id. Absent when the id is unknown: a missing page requested by page
-   * id keeps its `pageid` alongside `missing`, while title-supplied
-   * missing/invalid pages and special pages carry no `pageid`.
+   * Page id. Absent when the id is unknown: an entry requested by page id keeps
+   * its `pageid` alongside `missing`, while title-supplied missing/invalid
+   * entries and special pages carry no `pageid`.
    */
   pageid?: number;
 
   /** Namespace index. */
   ns?: NamespaceIndex;
 
-  /** Full, normalized page title. */
+  /**
+   * Page title. For a missing or invalid entry it may be the title as supplied
+   * rather than a fully normalized form.
+   */
   title?: string;
 
-  /** `true` when the page does not exist. */
+  /** `true` when the page (or the referenced revision) does not exist. */
   missing?: Flag;
 
   /**
@@ -474,7 +478,10 @@ export type QueryPageExisting<K extends keyof ApiPage> = Require<
   "pageid" | "ns" | "title" | Extract<K, PropConstantKeys>
 >;
 
-/** A `{ from, to }` title pair emitted by the query framework. */
+/**
+ * A `{ from, to }` title pair emitted by the query framework, and by actions
+ * that report a followed redirect.
+ */
 export interface ApiQueryTitlePair {
   /** The title as supplied. */
   from?: string;

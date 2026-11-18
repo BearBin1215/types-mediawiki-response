@@ -381,6 +381,14 @@ async function main(): Promise<void> {
         `-d "action=discussiontoolspageinfo" --data-urlencode "page=Talk:Gap discuss" -d "prop=threaditemshtml|transcludedfrom"`,
       ),
     );
+    // No match: the module writes no root key, so the response body is `{}`.
+    emit(
+      "discussiontoolsfindcomment-empty.json",
+      call(
+        CAP,
+        `-d "action=discussiontoolsfindcomment" --data-urlencode "idorname=h-Nonexistent_20260101000000"`,
+      ),
+    );
     emit(
       "visualeditor.json",
       call(CAP, `-d "action=visualeditor" --data-urlencode "page=Gap discuss" -d "paction=parse"`),

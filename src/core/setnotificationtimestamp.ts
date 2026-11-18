@@ -10,34 +10,22 @@
  *
  * @see https://www.mediawiki.org/wiki/API:Setnotificationtimestamp
  */
-import type { Flag, NamespaceIndex, Timestamp } from "../common";
+import type { Flag, Timestamp } from "../common";
 import type { ApiEnvelope } from "../envelope";
+import type { ApiPageIdentity } from "./query";
 
-/** One page entry of an `action=setnotificationtimestamp` response. */
-export interface ApiSetNotificationTimestampEntry {
-  /** Namespace index. */
-  ns: NamespaceIndex;
-
-  /** Page title. */
-  title: string;
-
+/**
+ * One entry of the per-page result: the outcome for a targeted page, or a
+ * problem entry for an input it could not resolve (`pageid=` / `revid=` that
+ * does not exist, or an invalid title). See {@link ApiPageIdentity} for the
+ * shared marker fields.
+ */
+export interface ApiSetNotificationTimestampEntry extends Omit<ApiPageIdentity, "special"> {
   /** New notification timestamp, or `""` when there is nothing pending. */
   notificationtimestamp?: Timestamp | "";
 
-  /** The title does not correspond to an existing page. A {@link Flag}. */
-  missing?: Flag;
-
-  /** A `missing` title that is nonetheless "known". A {@link Flag}. */
-  known?: Flag;
-
-  /** The supplied title/revision id is not valid. A {@link Flag}. */
-  invalid?: Flag;
-
   /** The (logged-in) user is not watching this page, so nothing was set. A {@link Flag}. */
   notwatched?: Flag;
-
-  /** Page id of a missing page (`titles`/`pageids` input). */
-  pageid?: number;
 
   /** Revision id of a missing revision (`revids` input). */
   revid?: number;

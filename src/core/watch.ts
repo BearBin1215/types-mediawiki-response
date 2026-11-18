@@ -1,21 +1,30 @@
 /**
  * `action=watch` response — adds/removes pages from the watchlist; needs CSRF.
- * The result is a top-level `watch` **array** (one entry per title) in pageset
- * mode (`titles`/`pageids`/`revids`), a **single object** with the legacy
- * `title` parameter. Requires the `watch` token (`meta=tokens&type=watch`).
+ * The result is a top-level `watch` **array** (one entry per requested page) in
+ * page-set mode (`titles`/`pageids`/`revids`), a **single object** with the
+ * legacy `title` parameter. Requires the `watch` token
+ * (`meta=tokens&type=watch`).
+ *
+ * Inputs the page set cannot resolve come back as problem entries carrying only
+ * the unresolved id or title; see {@link ApiPageIdentity} for their shared
+ * marker fields.
  *
  * @see https://www.mediawiki.org/wiki/API:Watch
  */
-import type { ApiWatchlistLabel, Expiry, NamespaceIndex, ApiSpecMessage } from "../common";
+import type { ApiWatchlistLabel, Expiry, ApiSpecMessage } from "../common";
 import type { ApiEnvelope, ApiError, ApiMessage } from "../envelope";
+import type { ApiPageIdentity } from "./query";
 
-/** One watched/unwatched page. */
-export interface ApiWatchEntry {
-  /** Page title. */
-  title: string;
+/**
+ * One entry of `watch`: an applied outcome, or a problem entry for an
+ * unresolved input.
+ */
+export interface ApiWatchEntry extends Omit<ApiPageIdentity, "known"> {
+  /** Revision id of an unresolved `revids=` value. */
+  revid?: number;
 
-  /** Namespace index. */
-  ns: NamespaceIndex;
+  /** Interwiki prefix of an unresolved interwiki title. */
+  iw?: string;
 
   /** The page was added to the watchlist. A real `boolean`. */
   watched?: boolean;
@@ -35,8 +44,8 @@ export interface ApiWatchEntry {
   expiry?: Expiry;
 
   /**
-   * In-band messages when the watch/unwatch operation failed (pageset mode; the
-   * legacy `title` mode dies with a top-level error instead). Heterogeneous:
+   * In-band messages when the watch/unwatch operation failed (page-set mode;
+   * the legacy `title` mode dies with a top-level error instead). Heterogeneous:
    * messages raised by the operation itself follow the request's `errorformat`
    * ({@link ApiSpecMessage} under `bc`, {@link ApiMessage} under a modern one),
    * while a watchlist-label failure carries the legacy `{ code, info }` shape

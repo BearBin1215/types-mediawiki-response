@@ -1,0 +1,10 @@
+{
+  "batchcomplete": true,
+  "setnotificationtimestamp": [
+    {
+      "title": "Bad[Title",
+      "invalidreason": "The requested page title contains invalid characters: \"[\".",
+      "invalid": true
+    }
+  ]
+}

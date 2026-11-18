@@ -7,6 +7,7 @@ import type {
   ApiDiscussionToolsComment,
   ApiDiscussionToolsCompareResponse,
   ApiDiscussionToolsFindCommentResponse,
+  ApiDiscussionToolsFoundComment,
   ApiDiscussionToolsGetSubscriptionsResponse,
   ApiDiscussionToolsPageInfoResponse,
   ApiDiscussionToolsSubscribeResponse,
@@ -16,6 +17,7 @@ import type { ExtraKeys } from "../typeutil";
 import type { Timestamp } from "../../src";
 import activityFixture from "../fixtures/extensions/discussiontoolspageinfo-activity.json";
 import pageInfoFixture from "../fixtures/extensions/discussiontoolspageinfo.json";
+import findCommentEmptyFixture from "../fixtures/extensions/discussiontoolsfindcomment-empty.json";
 
 // `discussiontoolspageinfo`: a reply tree with nested `replies`, plus the
 // per-comment transclusion map keyed by comment id and name (`false` local,
@@ -69,6 +71,10 @@ export const findCommentSample = {
     },
   ],
 } satisfies ApiDiscussionToolsFindCommentResponse;
+
+// No candidate matched: the module never writes the key, leaving an empty
+// object (1.43.11 local capture).
+export const findCommentEmptySample = {} satisfies ApiDiscussionToolsFindCommentResponse;
 
 export const subscriptionsSample = {
   subscriptions: {
@@ -135,6 +141,14 @@ expectTypeOf<ApiDiscussionToolsComment>()
 expectTypeOf<ApiDiscussionToolsGetSubscriptionsResponse["subscriptions"]>().toEqualTypeOf<
   Record<string, number>
 >();
+
+// The candidate list is absent when the lookup matched nothing.
+expectTypeOf<ApiDiscussionToolsFindCommentResponse>()
+  .toHaveProperty("discussiontoolsfindcomment")
+  .toEqualTypeOf<ApiDiscussionToolsFoundComment[] | undefined>();
+
+// The captured miss is `{}`: no envelope key is written either.
+expectTypeOf<keyof typeof findCommentEmptyFixture>().toEqualTypeOf<never>();
 
 // --- real fixture (fixtures/extensions/discussiontoolspageinfo.json) ---
 

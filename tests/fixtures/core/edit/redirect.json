@@ -1,0 +1,16 @@
+{
+  "redirects": {
+    "from": "Fixture redirect source",
+    "to": "Fixture redirect target"
+  },
+  "edit": {
+    "result": "Success",
+    "pageid": 2,
+    "title": "Fixture redirect target",
+    "contentmodel": "wikitext",
+    "oldrevid": 4,
+    "newrevid": 6,
+    "newtimestamp": "2026-11-18T08:02:06Z",
+    "watched": true
+  }
+}

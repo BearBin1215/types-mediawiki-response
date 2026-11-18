@@ -7,6 +7,9 @@ import type { ApiWatchEntry, ApiWatchResponse } from "../../../src";
 import type { ExtraKeys } from "../../typeutil";
 import watchFixture from "../../fixtures/core/watch/watch.json";
 import unwatchFixture from "../../fixtures/core/watch/unwatch.json";
+import missingPageIdFixture from "../../fixtures/core/watch/watch-missing-pageid.json";
+import missingRevidFixture from "../../fixtures/core/watch/watch-missing-revid.json";
+import invalidTitleFixture from "../../fixtures/core/watch/watch-invalid-title.json";
 
 export const watchSample = {
   batchcomplete: true,
@@ -17,6 +20,13 @@ export const watchSample = {
 export const legacyTitleSample = {
   batchcomplete: true,
   watch: { title: "Fixture edit target", ns: 0, watched: true },
+} satisfies ApiWatchResponse;
+
+// The interwiki branch has no live capture; the id/title problem-entry shapes
+// are covered by the fixtures below.
+export const problemInterwikiSample = {
+  batchcomplete: true,
+  watch: [{ title: "mw:MediaWiki", iw: "mw" }],
 } satisfies ApiWatchResponse;
 
 // A modern `errorformat` renders the in-band messages as `ApiMessage`s.
@@ -49,10 +59,30 @@ expectTypeOf<ApiWatchResponse>()
 expectTypeOf<ApiWatchEntry>().toHaveProperty("watched").toEqualTypeOf<boolean | undefined>();
 expectTypeOf<ApiWatchEntry>().toHaveProperty("unwatched").toEqualTypeOf<boolean | undefined>();
 
+// The identity triple is optional: problem entries may lack a resolved title.
+expectTypeOf<ApiWatchEntry>().toHaveProperty("title").toEqualTypeOf<string | undefined>();
+expectTypeOf<ApiWatchEntry>().toHaveProperty("ns").toEqualTypeOf<number | undefined>();
+expectTypeOf<ApiWatchEntry>().toHaveProperty("pageid").toEqualTypeOf<number | undefined>();
+
+// watch never reports `known`: its page set filters out `missingTitles`.
+expectTypeOf<ApiWatchEntry>().not.toHaveProperty("known");
+
 expectTypeOf<ExtraKeys<typeof watchFixture, keyof ApiWatchResponse>>().toEqualTypeOf<never>();
 expectTypeOf<
   ExtraKeys<(typeof watchFixture.watch)[number], keyof ApiWatchEntry>
 >().toEqualTypeOf<never>();
 expectTypeOf<
   ExtraKeys<(typeof unwatchFixture.watch)[number], keyof ApiWatchEntry>
+>().toEqualTypeOf<never>();
+
+// Captured problem entries (1.43.11): `ns`/`title` are absent, and every
+// captured key is declared on the type.
+expectTypeOf<
+  ExtraKeys<(typeof missingPageIdFixture.watch)[number], keyof ApiWatchEntry>
+>().toEqualTypeOf<never>();
+expectTypeOf<
+  ExtraKeys<(typeof missingRevidFixture.watch)[number], keyof ApiWatchEntry>
+>().toEqualTypeOf<never>();
+expectTypeOf<
+  ExtraKeys<(typeof invalidTitleFixture.watch)[number], keyof ApiWatchEntry>
 >().toEqualTypeOf<never>();
